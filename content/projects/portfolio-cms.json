@@ -1,0 +1,112 @@
+{
+  "id": "cmrnoago6002zygbc0k8hlfit",
+  "title": "Portfolio CMS",
+  "slug": "portfolio-cms",
+  "subtitle": null,
+  "summary": "Headless CMS for managing portfolio content with rich editing.",
+  "shortDescription": "Headless CMS for managing portfolio content with rich editing.",
+  "description": "A headless CMS specifically designed for portfolio websites. Features include rich text editing with markdown support, media library with image optimization, SEO management, custom fields, and an API-first approach. Supports multiple content types including projects, blog posts, certifications, and testimonials.",
+  "problemStatement": null,
+  "solution": null,
+  "background": null,
+  "objectives": [],
+  "features": [],
+  "architecture": null,
+  "folderStructure": null,
+  "technologyStack": [
+    {
+      "name": "Next.js"
+    },
+    {
+      "name": "TypeScript"
+    },
+    {
+      "name": "Prisma"
+    },
+    {
+      "name": "PostgreSQL"
+    },
+    {
+      "name": "Tailwind CSS"
+    },
+    {
+      "name": "TipTap Editor"
+    }
+  ],
+  "technologies": [
+    "Next.js",
+    "TypeScript",
+    "Prisma",
+    "PostgreSQL",
+    "Tailwind CSS",
+    "TipTap Editor"
+  ],
+  "hardware": [],
+  "software": [],
+  "tools": [],
+  "difficulty": "advanced",
+  "status": "PUBLISHED",
+  "category": {
+    "name": "Software Engineering",
+    "slug": "software-engineering"
+  },
+  "subCategory": null,
+  "client": null,
+  "course": null,
+  "semester": null,
+  "year": 2024,
+  "thumbnail": null,
+  "banner": null,
+  "screenshots": [],
+  "gallery": [],
+  "videos": [],
+  "demoLink": null,
+  "githubLink": "https://github.com",
+  "linkedinLink": null,
+  "documentation": null,
+  "caseStudy": null,
+  "futureImprovements": null,
+  "testing": null,
+  "deployment": null,
+  "performance": null,
+  "seoDescription": null,
+  "metrics": [],
+  "skillsLearned": [
+    "Next.js",
+    "TypeScript",
+    "Prisma",
+    "PostgreSQL",
+    "Tailwind CSS",
+    "TipTap Editor"
+  ],
+  "lessonsLearned": null,
+  "tags": [
+    {
+      "name": "typescript",
+      "slug": "typescript"
+    },
+    {
+      "name": "prisma",
+      "slug": "prisma"
+    },
+    {
+      "name": "nextjs",
+      "slug": "nextjs"
+    },
+    {
+      "name": "api",
+      "slug": "api"
+    }
+  ],
+  "searchKeywords": [],
+  "featured": false,
+  "pinned": false,
+  "visibility": "PUBLIC",
+  "icon": null,
+  "color": null,
+  "timeline": [],
+  "seo": null,
+  "publishedAt": "2026-07-16T15:37:34.036Z",
+  "createdAt": "2026-07-16T15:37:34.182Z",
+  "updatedAt": "2026-07-16T15:37:34.182Z"
+}

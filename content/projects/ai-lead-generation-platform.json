@@ -1,0 +1,116 @@
+{
+  "id": "cmrnoaj1o0034ygbcyse0phqj",
+  "title": "AI Lead Generation Platform",
+  "slug": "ai-lead-generation-platform",
+  "subtitle": null,
+  "summary": "Intelligent lead scoring and generation using ML models.",
+  "shortDescription": "Intelligent lead scoring and generation using ML models.",
+  "description": "An AI-powered lead generation platform that scores and prioritizes leads using machine learning. Features web scraping for lead discovery, enrichment via public APIs, intelligent scoring based on historical conversion data, automated outreach sequences, and detailed analytics dashboard.",
+  "problemStatement": null,
+  "solution": null,
+  "background": null,
+  "objectives": [],
+  "features": [],
+  "architecture": null,
+  "folderStructure": null,
+  "technologyStack": [
+    {
+      "name": "Python"
+    },
+    {
+      "name": "Scikit-learn"
+    },
+    {
+      "name": "FastAPI"
+    },
+    {
+      "name": "PostgreSQL"
+    },
+    {
+      "name": "React"
+    },
+    {
+      "name": "n8n"
+    }
+  ],
+  "technologies": [
+    "Python",
+    "Scikit-learn",
+    "FastAPI",
+    "PostgreSQL",
+    "React",
+    "n8n"
+  ],
+  "hardware": [],
+  "software": [],
+  "tools": [],
+  "difficulty": "expert",
+  "status": "PUBLISHED",
+  "category": {
+    "name": "Artificial Intelligence",
+    "slug": "artificial-intelligence"
+  },
+  "subCategory": null,
+  "client": null,
+  "course": null,
+  "semester": null,
+  "year": 2024,
+  "thumbnail": null,
+  "banner": null,
+  "screenshots": [],
+  "gallery": [],
+  "videos": [],
+  "demoLink": null,
+  "githubLink": "https://github.com",
+  "linkedinLink": null,
+  "documentation": null,
+  "caseStudy": null,
+  "futureImprovements": null,
+  "testing": null,
+  "deployment": null,
+  "performance": null,
+  "seoDescription": null,
+  "metrics": [],
+  "skillsLearned": [
+    "Python",
+    "Scikit-learn",
+    "FastAPI",
+    "PostgreSQL",
+    "React",
+    "n8n"
+  ],
+  "lessonsLearned": null,
+  "tags": [
+    {
+      "name": "python",
+      "slug": "python"
+    },
+    {
+      "name": "ai",
+      "slug": "ai"
+    },
+    {
+      "name": "machine-learning",
+      "slug": "machine-learning"
+    },
+    {
+      "name": "automation",
+      "slug": "automation"
+    },
+    {
+      "name": "api",
+      "slug": "api"
+    }
+  ],
+  "searchKeywords": [],
+  "featured": true,
+  "pinned": false,
+  "visibility": "PUBLIC",
+  "icon": null,
+  "color": null,
+  "timeline": [],
+  "seo": null,
+  "publishedAt": "2026-07-16T15:37:37.259Z",
+  "createdAt": "2026-07-16T15:37:37.260Z",
+  "updatedAt": "2026-07-16T15:37:37.260Z"
+}

@@ -1,0 +1,83 @@
+{
+  "id": "cmri2lbby000sz4bcut52nvu2",
+  "title": "Real-Time Analytics Dashboard",
+  "slug": "real-time-analytics-dashboard",
+  "subtitle": null,
+  "summary": null,
+  "shortDescription": null,
+  "description": "A real-time analytics dashboard processing millions of events per day, with customizable charts, alerting, and anomaly detection powered by machine learning.",
+  "problemStatement": null,
+  "solution": "Built a streaming data pipeline using Kafka for event ingestion, processed with Apache Flink, and served via a WebSocket-powered dashboard.",
+  "background": null,
+  "objectives": [],
+  "features": [],
+  "architecture": "Next.js frontend with WebSocket connections for real-time updates. Python FastAPI backend for data processing. Kafka for event streaming. TimescaleDB for time-series data storage. Docker Compose for local development.",
+  "folderStructure": null,
+  "technologyStack": [],
+  "technologies": [],
+  "hardware": [],
+  "software": [],
+  "tools": [],
+  "difficulty": null,
+  "status": "PUBLISHED",
+  "category": {
+    "name": "Web App",
+    "slug": "web-app"
+  },
+  "subCategory": null,
+  "client": null,
+  "course": null,
+  "semester": null,
+  "year": null,
+  "thumbnail": null,
+  "banner": null,
+  "screenshots": [],
+  "gallery": [
+    {
+      "url": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80",
+      "alt": "Analytics dashboard",
+      "caption": null,
+      "width": null,
+      "height": null
+    }
+  ],
+  "videos": [],
+  "demoLink": null,
+  "githubLink": null,
+  "linkedinLink": null,
+  "documentation": null,
+  "caseStudy": null,
+  "futureImprovements": null,
+  "testing": null,
+  "deployment": null,
+  "performance": null,
+  "seoDescription": null,
+  "metrics": [],
+  "skillsLearned": [],
+  "lessonsLearned": null,
+  "tags": [
+    {
+      "name": "next.js",
+      "slug": "next.js"
+    },
+    {
+      "name": "docker",
+      "slug": "docker"
+    },
+    {
+      "name": "python",
+      "slug": "python"
+    }
+  ],
+  "searchKeywords": [],
+  "featured": true,
+  "pinned": false,
+  "visibility": "PUBLIC",
+  "icon": null,
+  "color": null,
+  "timeline": [],
+  "seo": null,
+  "publishedAt": "2026-05-10T00:00:00.000Z",
+  "createdAt": "2026-07-12T17:31:18.046Z",
+  "updatedAt": "2026-07-12T17:31:18.046Z"
+}

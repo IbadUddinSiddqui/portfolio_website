@@ -1,0 +1,117 @@
+{
+  "id": "cmrnoas80003kygbcxuv8uu9j",
+  "title": "ESP32 Smart Home System",
+  "slug": "esp32-smart-home-system",
+  "subtitle": null,
+  "summary": "Complete smart home automation using ESP32 with WiFi control.",
+  "shortDescription": "Complete smart home automation using ESP32 with WiFi control.",
+  "description": "A comprehensive smart home system built around the ESP32 microcontroller. Features WiFi-enabled control of lights, fans, and appliances, temperature/humidity monitoring, motion detection, automated scheduling, and a web dashboard for remote control. Supports MQTT protocol for reliable communication.",
+  "problemStatement": null,
+  "solution": null,
+  "background": null,
+  "objectives": [],
+  "features": [],
+  "architecture": null,
+  "folderStructure": null,
+  "technologyStack": [
+    {
+      "name": "ESP32"
+    },
+    {
+      "name": "Arduino"
+    },
+    {
+      "name": "C++"
+    },
+    {
+      "name": "MQTT"
+    },
+    {
+      "name": "WiFi"
+    },
+    {
+      "name": "Sensors"
+    },
+    {
+      "name": "Home Assistant"
+    }
+  ],
+  "technologies": [
+    "ESP32",
+    "Arduino",
+    "C++",
+    "MQTT",
+    "WiFi",
+    "Sensors",
+    "Home Assistant"
+  ],
+  "hardware": [],
+  "software": [],
+  "tools": [],
+  "difficulty": "advanced",
+  "status": "PUBLISHED",
+  "category": {
+    "name": "IoT & Embedded Systems",
+    "slug": "iot-embedded-systems"
+  },
+  "subCategory": null,
+  "client": null,
+  "course": null,
+  "semester": null,
+  "year": 2024,
+  "thumbnail": null,
+  "banner": null,
+  "screenshots": [],
+  "gallery": [],
+  "videos": [],
+  "demoLink": null,
+  "githubLink": "https://github.com",
+  "linkedinLink": null,
+  "documentation": null,
+  "caseStudy": null,
+  "futureImprovements": null,
+  "testing": null,
+  "deployment": null,
+  "performance": null,
+  "seoDescription": null,
+  "metrics": [],
+  "skillsLearned": [
+    "ESP32",
+    "Arduino",
+    "C++",
+    "MQTT",
+    "WiFi",
+    "Sensors",
+    "Home Assistant"
+  ],
+  "lessonsLearned": null,
+  "tags": [
+    {
+      "name": "iot",
+      "slug": "iot"
+    },
+    {
+      "name": "embedded",
+      "slug": "embedded"
+    },
+    {
+      "name": "arduino",
+      "slug": "arduino"
+    },
+    {
+      "name": "esp32",
+      "slug": "esp32"
+    }
+  ],
+  "searchKeywords": [],
+  "featured": true,
+  "pinned": false,
+  "visibility": "PUBLIC",
+  "icon": null,
+  "color": null,
+  "timeline": [],
+  "seo": null,
+  "publishedAt": "2026-07-16T15:37:49.151Z",
+  "createdAt": "2026-07-16T15:37:49.152Z",
+  "updatedAt": "2026-07-16T15:37:49.152Z"
+}

@@ -1,0 +1,23 @@
+{
+  "id": "cmrnpgjvz003sesbci8ey1nkn",
+  "title": "Responsive Web Design",
+  "issuer": "freeCodeCamp",
+  "slug": "responsive-web-design",
+  "description": null,
+  "issueDate": "2024-01-01T00:00:00.000Z",
+  "expiryDate": null,
+  "credentialId": null,
+  "credentialUrl": null,
+  "image": null,
+  "skills": [
+    "HTML",
+    "CSS",
+    "Flexbox",
+    "Grid"
+  ],
+  "category": "Web Development",
+  "featured": true,
+  "order": 0,
+  "createdAt": "2026-07-16T16:10:17.903Z",
+  "updatedAt": "2026-07-16T16:10:17.903Z"
+}

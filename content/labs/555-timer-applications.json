@@ -1,0 +1,32 @@
+{
+  "id": "cmrnpghoh0038esbcx6v9glc2",
+  "title": "555 Timer Applications",
+  "slug": "555-timer-applications",
+  "summary": "Astable and monostable multivibrator circuits",
+  "description": null,
+  "category": "electronics",
+  "course": "Digital Electronics Lab",
+  "semester": "4th",
+  "year": 2023,
+  "objectives": [
+    "Understand 555 timer applications",
+    "Perform analysis and measurements",
+    "Document results and conclusions"
+  ],
+  "equipment": [],
+  "procedure": null,
+  "observations": null,
+  "results": null,
+  "conclusion": null,
+  "technologies": [],
+  "githubLink": null,
+  "reportLink": null,
+  "schematicLink": null,
+  "images": [],
+  "difficulty": "intermediate",
+  "status": "PUBLISHED",
+  "featured": false,
+  "order": 0,
+  "createdAt": "2026-07-16T16:10:15.042Z",
+  "updatedAt": "2026-07-16T16:10:15.042Z"
+}

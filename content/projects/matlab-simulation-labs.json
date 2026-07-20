@@ -1,0 +1,90 @@
+{
+  "id": "cmrnoawi8003yygbc4igc9hxe",
+  "title": "MATLAB Simulation Labs",
+  "slug": "matlab-simulation-labs",
+  "subtitle": null,
+  "summary": "Complete collection of MATLAB simulation experiments.",
+  "shortDescription": "Complete collection of MATLAB simulation experiments.",
+  "description": "A comprehensive collection of MATLAB simulation labs covering signal processing, communication systems, control systems, and image processing. Includes GUI applications, data visualization, algorithm implementation, and performance analysis with detailed documentation.",
+  "problemStatement": null,
+  "solution": null,
+  "background": null,
+  "objectives": [],
+  "features": [],
+  "architecture": null,
+  "folderStructure": null,
+  "technologyStack": [
+    {
+      "name": "MATLAB"
+    },
+    {
+      "name": "Simulink"
+    },
+    {
+      "name": "Signal Processing"
+    },
+    {
+      "name": "Image Processing"
+    }
+  ],
+  "technologies": [
+    "MATLAB",
+    "Simulink",
+    "Signal Processing",
+    "Image Processing"
+  ],
+  "hardware": [],
+  "software": [],
+  "tools": [],
+  "difficulty": "advanced",
+  "status": "PUBLISHED",
+  "category": {
+    "name": "Engineering Simulations",
+    "slug": "engineering-simulations"
+  },
+  "subCategory": null,
+  "client": null,
+  "course": null,
+  "semester": null,
+  "year": 2024,
+  "thumbnail": null,
+  "banner": null,
+  "screenshots": [],
+  "gallery": [],
+  "videos": [],
+  "demoLink": null,
+  "githubLink": "https://github.com",
+  "linkedinLink": null,
+  "documentation": null,
+  "caseStudy": null,
+  "futureImprovements": null,
+  "testing": null,
+  "deployment": null,
+  "performance": null,
+  "seoDescription": null,
+  "metrics": [],
+  "skillsLearned": [
+    "MATLAB",
+    "Simulink",
+    "Signal Processing",
+    "Image Processing"
+  ],
+  "lessonsLearned": null,
+  "tags": [
+    {
+      "name": "matlab",
+      "slug": "matlab"
+    }
+  ],
+  "searchKeywords": [],
+  "featured": true,
+  "pinned": false,
+  "visibility": "PUBLIC",
+  "icon": null,
+  "color": null,
+  "timeline": [],
+  "seo": null,
+  "publishedAt": "2026-07-16T15:37:54.699Z",
+  "createdAt": "2026-07-16T15:37:54.704Z",
+  "updatedAt": "2026-07-16T15:37:54.704Z"
+}

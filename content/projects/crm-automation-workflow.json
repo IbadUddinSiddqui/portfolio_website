@@ -1,0 +1,98 @@
+{
+  "id": "cmrnoaqnp003gygbces07ip60",
+  "title": "CRM Automation Workflow",
+  "slug": "crm-automation-workflow",
+  "subtitle": null,
+  "summary": "Automated CRM sync and lead management pipeline.",
+  "shortDescription": "Automated CRM sync and lead management pipeline.",
+  "description": "A comprehensive CRM automation that syncs leads from multiple sources, tracks interactions, automates follow-ups, and generates performance reports. Integrates with HubSpot and custom database for complete pipeline visibility.",
+  "problemStatement": null,
+  "solution": null,
+  "background": null,
+  "objectives": [],
+  "features": [],
+  "architecture": null,
+  "folderStructure": null,
+  "technologyStack": [
+    {
+      "name": "n8n"
+    },
+    {
+      "name": "HubSpot API"
+    },
+    {
+      "name": "PostgreSQL"
+    },
+    {
+      "name": "OpenAI API"
+    }
+  ],
+  "technologies": [
+    "n8n",
+    "HubSpot API",
+    "PostgreSQL",
+    "OpenAI API"
+  ],
+  "hardware": [],
+  "software": [],
+  "tools": [],
+  "difficulty": "advanced",
+  "status": "PUBLISHED",
+  "category": {
+    "name": "Automation",
+    "slug": "automation"
+  },
+  "subCategory": null,
+  "client": null,
+  "course": null,
+  "semester": null,
+  "year": 2024,
+  "thumbnail": null,
+  "banner": null,
+  "screenshots": [],
+  "gallery": [],
+  "videos": [],
+  "demoLink": null,
+  "githubLink": "https://github.com",
+  "linkedinLink": null,
+  "documentation": null,
+  "caseStudy": null,
+  "futureImprovements": null,
+  "testing": null,
+  "deployment": null,
+  "performance": null,
+  "seoDescription": null,
+  "metrics": [],
+  "skillsLearned": [
+    "n8n",
+    "HubSpot API",
+    "PostgreSQL",
+    "OpenAI API"
+  ],
+  "lessonsLearned": null,
+  "tags": [
+    {
+      "name": "automation",
+      "slug": "automation"
+    },
+    {
+      "name": "n8n",
+      "slug": "n8n"
+    },
+    {
+      "name": "api",
+      "slug": "api"
+    }
+  ],
+  "searchKeywords": [],
+  "featured": false,
+  "pinned": false,
+  "visibility": "PUBLIC",
+  "icon": null,
+  "color": null,
+  "timeline": [],
+  "seo": null,
+  "publishedAt": "2026-07-16T15:37:47.125Z",
+  "createdAt": "2026-07-16T15:37:47.125Z",
+  "updatedAt": "2026-07-16T15:37:47.125Z"
+}

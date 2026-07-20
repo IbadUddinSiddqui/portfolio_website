@@ -1,0 +1,36 @@
+{
+  "id": "cmrnpgg0h002uesbcsvuv4l74",
+  "title": "GitHub → Portfolio Sync",
+  "slug": "github-portfolio-sync",
+  "summary": "Auto-sync repositories to portfolio",
+  "description": "Monitors specified GitHub repos, fetches README/stars/topics, and syncs to portfolio project entries via API. Runs daily via cron trigger.",
+  "trigger": "Schedule (daily) + Webhook",
+  "purpose": "Keep portfolio automatically updated with latest GitHub activity and metrics.",
+  "services": [
+    "GitHub API",
+    "Portfolio API",
+    "n8n"
+  ],
+  "flowDiagram": null,
+  "nodes": [],
+  "inputs": [],
+  "outputs": [],
+  "futureImprovements": null,
+  "difficulty": "intermediate",
+  "tools": [
+    "n8n",
+    "GitHub",
+    "Webhooks"
+  ],
+  "technologies": [
+    "n8n",
+    "TypeScript",
+    "GitHub API"
+  ],
+  "category": "github",
+  "status": "PUBLISHED",
+  "featured": false,
+  "order": 0,
+  "createdAt": "2026-07-16T16:10:12.881Z",
+  "updatedAt": "2026-07-16T16:10:12.881Z"
+}

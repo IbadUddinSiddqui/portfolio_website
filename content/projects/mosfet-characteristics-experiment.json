@@ -1,0 +1,95 @@
+{
+  "id": "cmrnoavxb003wygbcbnefiq7l",
+  "title": "MOSFET Characteristics Experiment",
+  "slug": "mosfet-characteristics-experiment",
+  "subtitle": null,
+  "summary": "Characterization of MOSFET transistors in various configurations.",
+  "shortDescription": "Characterization of MOSFET transistors in various configurations.",
+  "description": "Experimental characterization of MOSFET transistors including threshold voltage measurement, I-V characteristics, transfer curves, and switching behavior. Tests in common-source, common-drain, and common-gate configurations. Results validated against theoretical models.",
+  "problemStatement": null,
+  "solution": null,
+  "background": null,
+  "objectives": [],
+  "features": [],
+  "architecture": null,
+  "folderStructure": null,
+  "technologyStack": [
+    {
+      "name": "MOSFET"
+    },
+    {
+      "name": "Transistors"
+    },
+    {
+      "name": "Power Supply"
+    },
+    {
+      "name": "Multimeter"
+    },
+    {
+      "name": "Oscilloscope"
+    }
+  ],
+  "technologies": [
+    "MOSFET",
+    "Transistors",
+    "Power Supply",
+    "Multimeter",
+    "Oscilloscope"
+  ],
+  "hardware": [],
+  "software": [],
+  "tools": [],
+  "difficulty": "advanced",
+  "status": "PUBLISHED",
+  "category": {
+    "name": "Electronics",
+    "slug": "electronics"
+  },
+  "subCategory": null,
+  "client": null,
+  "course": null,
+  "semester": null,
+  "year": 2024,
+  "thumbnail": null,
+  "banner": null,
+  "screenshots": [],
+  "gallery": [],
+  "videos": [],
+  "demoLink": null,
+  "githubLink": "https://github.com",
+  "linkedinLink": null,
+  "documentation": null,
+  "caseStudy": null,
+  "futureImprovements": null,
+  "testing": null,
+  "deployment": null,
+  "performance": null,
+  "seoDescription": null,
+  "metrics": [],
+  "skillsLearned": [
+    "MOSFET",
+    "Transistors",
+    "Power Supply",
+    "Multimeter",
+    "Oscilloscope"
+  ],
+  "lessonsLearned": null,
+  "tags": [
+    {
+      "name": "electronics",
+      "slug": "electronics"
+    }
+  ],
+  "searchKeywords": [],
+  "featured": false,
+  "pinned": false,
+  "visibility": "PUBLIC",
+  "icon": null,
+  "color": null,
+  "timeline": [],
+  "seo": null,
+  "publishedAt": "2026-07-16T15:37:53.949Z",
+  "createdAt": "2026-07-16T15:37:53.951Z",
+  "updatedAt": "2026-07-16T15:37:53.951Z"
+}

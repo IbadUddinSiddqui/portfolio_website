@@ -1,0 +1,21 @@
+{
+  "id": "cmrnpgl9y0044esbcaordsp37",
+  "title": "The Complete Guide to PCB Design",
+  "slug": "the-complete-guide-to-pcb-design",
+  "content": "# The Complete Guide to PCB Design\n\n## Step 1: Schematic Design\nStart with a clear schematic using KiCad or OrCAD. Every component should have a footprint assigned.\n\n## Step 2: PCB Layout\n- Place components strategically\n- Route traces carefully\n- Consider signal integrity\n- Add ground planes\n\n## Step 3: Design Rules\n- Minimum trace width: 0.25mm\n- Minimum clearance: 0.25mm\n- Via diameter: 0.6mm\n- Hole size: 0.3mm\n\n## Step 4: Manufacturing\nGenerate Gerber files and order from PCB manufacturers like JLCPCB or PCBWay.\n\n## Tips\n- Always double-check footprints\n- Use thermal relief for soldering\n- Add test points\n- Document your design",
+  "excerpt": "From schematic to manufactured PCB — a step-by-step guide.",
+  "coverImage": null,
+  "category": "Hardware",
+  "tags": [
+    "pcb",
+    "electronics",
+    "design"
+  ],
+  "readingTime": 3,
+  "published": true,
+  "featured": true,
+  "seo": null,
+  "publishedAt": "2026-07-16T16:10:19.699Z",
+  "createdAt": "2026-07-16T16:10:19.702Z",
+  "updatedAt": "2026-07-16T16:10:19.702Z"
+}

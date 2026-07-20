@@ -1,0 +1,32 @@
+{
+  "id": "cmrnpgh8l0034esbcb9mxnljd",
+  "title": "Zener Diode Voltage Regulation",
+  "slug": "zener-diode-voltage-regulation",
+  "summary": "Designed and tested Zener diode regulator circuits",
+  "description": null,
+  "category": "electronics",
+  "course": "Electronics Lab I",
+  "semester": "2nd",
+  "year": 2022,
+  "objectives": [
+    "Understand zener diode voltage regulation",
+    "Perform analysis and measurements",
+    "Document results and conclusions"
+  ],
+  "equipment": [],
+  "procedure": null,
+  "observations": null,
+  "results": null,
+  "conclusion": null,
+  "technologies": [],
+  "githubLink": null,
+  "reportLink": null,
+  "schematicLink": null,
+  "images": [],
+  "difficulty": "intermediate",
+  "status": "PUBLISHED",
+  "featured": false,
+  "order": 0,
+  "createdAt": "2026-07-16T16:10:14.469Z",
+  "updatedAt": "2026-07-16T16:10:14.469Z"
+}

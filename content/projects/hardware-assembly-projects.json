@@ -1,0 +1,95 @@
+{
+  "id": "cmrnoaue8003qygbcliuipz9y",
+  "title": "Hardware Assembly Projects",
+  "slug": "hardware-assembly-projects",
+  "subtitle": null,
+  "summary": "Step-by-step hardware assembly of various electronic circuits.",
+  "shortDescription": "Step-by-step hardware assembly of various electronic circuits.",
+  "description": "Documentation of hardware assembly projects including soldering techniques, component identification, circuit testing, and troubleshooting. Projects range from simple LED circuits to complex microcontroller systems. Emphasizes proper technique and safety.",
+  "problemStatement": null,
+  "solution": null,
+  "background": null,
+  "objectives": [],
+  "features": [],
+  "architecture": null,
+  "folderStructure": null,
+  "technologyStack": [
+    {
+      "name": "Soldering"
+    },
+    {
+      "name": "Multimeter"
+    },
+    {
+      "name": "Oscilloscope"
+    },
+    {
+      "name": "Breadboard"
+    },
+    {
+      "name": "Components"
+    }
+  ],
+  "technologies": [
+    "Soldering",
+    "Multimeter",
+    "Oscilloscope",
+    "Breadboard",
+    "Components"
+  ],
+  "hardware": [],
+  "software": [],
+  "tools": [],
+  "difficulty": "beginner",
+  "status": "PUBLISHED",
+  "category": {
+    "name": "Electronics",
+    "slug": "electronics"
+  },
+  "subCategory": null,
+  "client": null,
+  "course": null,
+  "semester": null,
+  "year": 2023,
+  "thumbnail": null,
+  "banner": null,
+  "screenshots": [],
+  "gallery": [],
+  "videos": [],
+  "demoLink": null,
+  "githubLink": null,
+  "linkedinLink": null,
+  "documentation": null,
+  "caseStudy": null,
+  "futureImprovements": null,
+  "testing": null,
+  "deployment": null,
+  "performance": null,
+  "seoDescription": null,
+  "metrics": [],
+  "skillsLearned": [
+    "Soldering",
+    "Multimeter",
+    "Oscilloscope",
+    "Breadboard",
+    "Components"
+  ],
+  "lessonsLearned": null,
+  "tags": [
+    {
+      "name": "electronics",
+      "slug": "electronics"
+    }
+  ],
+  "searchKeywords": [],
+  "featured": false,
+  "pinned": false,
+  "visibility": "PUBLIC",
+  "icon": null,
+  "color": null,
+  "timeline": [],
+  "seo": null,
+  "publishedAt": "2026-07-16T15:37:51.961Z",
+  "createdAt": "2026-07-16T15:37:51.969Z",
+  "updatedAt": "2026-07-16T15:37:51.969Z"
+}

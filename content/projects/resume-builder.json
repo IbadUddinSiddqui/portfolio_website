@@ -1,0 +1,112 @@
+{
+  "id": "cmrnoaeny002wygbcjbskq8ox",
+  "title": "Resume Builder",
+  "slug": "resume-builder",
+  "subtitle": null,
+  "summary": "AI-powered resume builder with templates and export options.",
+  "shortDescription": "AI-powered resume builder with templates and export options.",
+  "description": "A modern resume builder application that helps users create professional resumes with AI-powered content suggestions. Features multiple templates, real-time preview, custom sections, ATS keyword optimization, and export to PDF/JSON. Built with a drag-and-drop interface and intelligent formatting engine.",
+  "problemStatement": null,
+  "solution": null,
+  "background": null,
+  "objectives": [],
+  "features": [],
+  "architecture": null,
+  "folderStructure": null,
+  "technologyStack": [
+    {
+      "name": "React"
+    },
+    {
+      "name": "TypeScript"
+    },
+    {
+      "name": "Next.js"
+    },
+    {
+      "name": "Tailwind CSS"
+    },
+    {
+      "name": "Prisma"
+    },
+    {
+      "name": "PostgreSQL"
+    }
+  ],
+  "technologies": [
+    "React",
+    "TypeScript",
+    "Next.js",
+    "Tailwind CSS",
+    "Prisma",
+    "PostgreSQL"
+  ],
+  "hardware": [],
+  "software": [],
+  "tools": [],
+  "difficulty": "advanced",
+  "status": "PUBLISHED",
+  "category": {
+    "name": "Software Engineering",
+    "slug": "software-engineering"
+  },
+  "subCategory": null,
+  "client": null,
+  "course": null,
+  "semester": null,
+  "year": 2024,
+  "thumbnail": null,
+  "banner": null,
+  "screenshots": [],
+  "gallery": [],
+  "videos": [],
+  "demoLink": "https://resume-builder.vercel.app",
+  "githubLink": "https://github.com",
+  "linkedinLink": null,
+  "documentation": null,
+  "caseStudy": null,
+  "futureImprovements": null,
+  "testing": null,
+  "deployment": null,
+  "performance": null,
+  "seoDescription": null,
+  "metrics": [],
+  "skillsLearned": [
+    "React",
+    "TypeScript",
+    "Next.js",
+    "Tailwind CSS",
+    "Prisma",
+    "PostgreSQL"
+  ],
+  "lessonsLearned": null,
+  "tags": [
+    {
+      "name": "react",
+      "slug": "react"
+    },
+    {
+      "name": "typescript",
+      "slug": "typescript"
+    },
+    {
+      "name": "nextjs",
+      "slug": "nextjs"
+    },
+    {
+      "name": "api",
+      "slug": "api"
+    }
+  ],
+  "searchKeywords": [],
+  "featured": true,
+  "pinned": false,
+  "visibility": "PUBLIC",
+  "icon": null,
+  "color": null,
+  "timeline": [],
+  "seo": null,
+  "publishedAt": "2026-07-16T15:37:31.581Z",
+  "createdAt": "2026-07-16T15:37:31.582Z",
+  "updatedAt": "2026-07-16T15:37:31.582Z"
+}

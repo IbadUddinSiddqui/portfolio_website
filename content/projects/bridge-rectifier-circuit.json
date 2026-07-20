@@ -1,0 +1,99 @@
+{
+  "id": "cmrnoaurx003sygbcj1rkzycn",
+  "title": "Bridge Rectifier Circuit",
+  "slug": "bridge-rectifier-circuit",
+  "subtitle": null,
+  "summary": "Full-wave bridge rectifier design and analysis.",
+  "shortDescription": "Full-wave bridge rectifier design and analysis.",
+  "description": "Designed, simulated, and built a full-wave bridge rectifier circuit. Includes theoretical analysis, simulation in Multisim, PCB design, and physical testing with oscilloscope measurements. Compares half-wave vs full-wave rectification efficiency.",
+  "problemStatement": null,
+  "solution": null,
+  "background": null,
+  "objectives": [],
+  "features": [],
+  "architecture": null,
+  "folderStructure": null,
+  "technologyStack": [
+    {
+      "name": "Diodes"
+    },
+    {
+      "name": "Capacitors"
+    },
+    {
+      "name": "Multisim"
+    },
+    {
+      "name": "Oscilloscope"
+    },
+    {
+      "name": "PCB"
+    }
+  ],
+  "technologies": [
+    "Diodes",
+    "Capacitors",
+    "Multisim",
+    "Oscilloscope",
+    "PCB"
+  ],
+  "hardware": [],
+  "software": [],
+  "tools": [],
+  "difficulty": "intermediate",
+  "status": "PUBLISHED",
+  "category": {
+    "name": "Electronics",
+    "slug": "electronics"
+  },
+  "subCategory": null,
+  "client": null,
+  "course": null,
+  "semester": null,
+  "year": 2023,
+  "thumbnail": null,
+  "banner": null,
+  "screenshots": [],
+  "gallery": [],
+  "videos": [],
+  "demoLink": null,
+  "githubLink": "https://github.com",
+  "linkedinLink": null,
+  "documentation": null,
+  "caseStudy": null,
+  "futureImprovements": null,
+  "testing": null,
+  "deployment": null,
+  "performance": null,
+  "seoDescription": null,
+  "metrics": [],
+  "skillsLearned": [
+    "Diodes",
+    "Capacitors",
+    "Multisim",
+    "Oscilloscope",
+    "PCB"
+  ],
+  "lessonsLearned": null,
+  "tags": [
+    {
+      "name": "electronics",
+      "slug": "electronics"
+    },
+    {
+      "name": "multisim",
+      "slug": "multisim"
+    }
+  ],
+  "searchKeywords": [],
+  "featured": false,
+  "pinned": false,
+  "visibility": "PUBLIC",
+  "icon": null,
+  "color": null,
+  "timeline": [],
+  "seo": null,
+  "publishedAt": "2026-07-16T15:37:52.461Z",
+  "createdAt": "2026-07-16T15:37:52.462Z",
+  "updatedAt": "2026-07-16T15:37:52.462Z"
+}

@@ -1,0 +1,32 @@
+{
+  "id": "cmrnpgi2a003besbcp5jrz0wm",
+  "title": "MATLAB: Signal Processing Basics",
+  "slug": "matlab-signal-processing-basics",
+  "summary": "FFT, filtering, and signal analysis in MATLAB",
+  "description": null,
+  "category": "matlab",
+  "course": "Signal Processing Lab",
+  "semester": "4th",
+  "year": 2023,
+  "objectives": [
+    "Understand matlab: signal processing basics",
+    "Perform analysis and measurements",
+    "Document results and conclusions"
+  ],
+  "equipment": [],
+  "procedure": null,
+  "observations": null,
+  "results": null,
+  "conclusion": null,
+  "technologies": [],
+  "githubLink": null,
+  "reportLink": null,
+  "schematicLink": null,
+  "images": [],
+  "difficulty": "advanced",
+  "status": "PUBLISHED",
+  "featured": false,
+  "order": 0,
+  "createdAt": "2026-07-16T16:10:15.538Z",
+  "updatedAt": "2026-07-16T16:10:15.538Z"
+}

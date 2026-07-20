@@ -1,0 +1,32 @@
+{
+  "id": "cmrnpght50039esbc1f86i1fo",
+  "title": "Arduino Sensor Interfacing",
+  "slug": "arduino-sensor-interfacing",
+  "summary": "Reading temperature, humidity, and distance sensors with Arduino",
+  "description": null,
+  "category": "programming",
+  "course": "Embedded Systems Lab",
+  "semester": "5th",
+  "year": 2024,
+  "objectives": [
+    "Understand arduino sensor interfacing",
+    "Perform analysis and measurements",
+    "Document results and conclusions"
+  ],
+  "equipment": [],
+  "procedure": null,
+  "observations": null,
+  "results": null,
+  "conclusion": null,
+  "technologies": [],
+  "githubLink": null,
+  "reportLink": null,
+  "schematicLink": null,
+  "images": [],
+  "difficulty": "intermediate",
+  "status": "PUBLISHED",
+  "featured": false,
+  "order": 0,
+  "createdAt": "2026-07-16T16:10:15.209Z",
+  "updatedAt": "2026-07-16T16:10:15.209Z"
+}

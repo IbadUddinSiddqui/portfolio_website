@@ -1,0 +1,36 @@
+{
+  "id": "cmrnpgglf002zesbcuf96ovqm",
+  "title": "Client Proposal Generator",
+  "slug": "client-proposal-generator",
+  "summary": "AI-generated client proposals and quotes",
+  "description": "Takes project requirements, generates personalized proposal content via AI, formats into PDF with professional template, and sends via email with tracking.",
+  "trigger": "Manual (form submission)",
+  "purpose": "Dramatically reduce proposal creation time while maintaining quality.",
+  "services": [
+    "OpenAI API",
+    "PDF Generator",
+    "Gmail API"
+  ],
+  "flowDiagram": null,
+  "nodes": [],
+  "inputs": [],
+  "outputs": [],
+  "futureImprovements": null,
+  "difficulty": "intermediate",
+  "tools": [
+    "n8n",
+    "OpenAI",
+    "PDF Generator"
+  ],
+  "technologies": [
+    "n8n",
+    "OpenAI",
+    "PDF"
+  ],
+  "category": "crm",
+  "status": "PUBLISHED",
+  "featured": false,
+  "order": 0,
+  "createdAt": "2026-07-16T16:10:13.635Z",
+  "updatedAt": "2026-07-16T16:10:13.635Z"
+}

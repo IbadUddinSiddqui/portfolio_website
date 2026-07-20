@@ -1,0 +1,32 @@
+{
+  "id": "cmrnpgh2w0033esbc0d45pwma",
+  "title": "Diode V-I Characteristics",
+  "slug": "diode-v-i-characteristics",
+  "summary": "Measured forward/reverse bias characteristics of Si and Ge diodes",
+  "description": null,
+  "category": "electronics",
+  "course": "Electronics Lab I",
+  "semester": "2nd",
+  "year": 2022,
+  "objectives": [
+    "Understand diode v-i characteristics",
+    "Perform analysis and measurements",
+    "Document results and conclusions"
+  ],
+  "equipment": [],
+  "procedure": null,
+  "observations": null,
+  "results": null,
+  "conclusion": null,
+  "technologies": [],
+  "githubLink": null,
+  "reportLink": null,
+  "schematicLink": null,
+  "images": [],
+  "difficulty": "beginner",
+  "status": "PUBLISHED",
+  "featured": false,
+  "order": 0,
+  "createdAt": "2026-07-16T16:10:14.264Z",
+  "updatedAt": "2026-07-16T16:10:14.264Z"
+}

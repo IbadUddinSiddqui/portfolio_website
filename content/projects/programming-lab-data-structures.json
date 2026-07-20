@@ -1,0 +1,85 @@
+{
+  "id": "cmrnoayzr0048ygbctojweppz",
+  "title": "Programming Lab: Data Structures",
+  "slug": "programming-lab-data-structures",
+  "subtitle": null,
+  "summary": "Implementation of fundamental data structures in C++.",
+  "shortDescription": "Implementation of fundamental data structures in C++.",
+  "description": "Implemented core data structures including arrays, linked lists, stacks, queues, trees, graphs, and hash tables. Each implementation includes insertion, deletion, search, and traversal operations with complexity analysis.",
+  "problemStatement": null,
+  "solution": null,
+  "background": null,
+  "objectives": [],
+  "features": [],
+  "architecture": null,
+  "folderStructure": null,
+  "technologyStack": [
+    {
+      "name": "C++"
+    },
+    {
+      "name": "Data Structures"
+    },
+    {
+      "name": "Algorithms"
+    }
+  ],
+  "technologies": [
+    "C++",
+    "Data Structures",
+    "Algorithms"
+  ],
+  "hardware": [],
+  "software": [],
+  "tools": [],
+  "difficulty": "intermediate",
+  "status": "PUBLISHED",
+  "category": {
+    "name": "Software Engineering",
+    "slug": "software-engineering"
+  },
+  "subCategory": null,
+  "client": null,
+  "course": "Computer Programming",
+  "semester": "2nd",
+  "year": 2023,
+  "thumbnail": null,
+  "banner": null,
+  "screenshots": [],
+  "gallery": [],
+  "videos": [],
+  "demoLink": null,
+  "githubLink": "https://github.com",
+  "linkedinLink": null,
+  "documentation": null,
+  "caseStudy": null,
+  "futureImprovements": null,
+  "testing": null,
+  "deployment": null,
+  "performance": null,
+  "seoDescription": null,
+  "metrics": [],
+  "skillsLearned": [
+    "C++",
+    "Data Structures",
+    "Algorithms"
+  ],
+  "lessonsLearned": null,
+  "tags": [
+    {
+      "name": "embedded",
+      "slug": "embedded"
+    }
+  ],
+  "searchKeywords": [],
+  "featured": false,
+  "pinned": false,
+  "visibility": "PUBLIC",
+  "icon": null,
+  "color": null,
+  "timeline": [],
+  "seo": null,
+  "publishedAt": "2026-07-16T15:37:57.920Z",
+  "createdAt": "2026-07-16T15:37:57.927Z",
+  "updatedAt": "2026-07-16T15:37:57.927Z"
+}

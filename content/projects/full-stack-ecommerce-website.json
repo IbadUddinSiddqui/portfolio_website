@@ -1,0 +1,130 @@
+{
+  "id": "cmrnoadur002vygbcdq1frw2h",
+  "title": "Full Stack Ecommerce Website",
+  "slug": "full-stack-ecommerce-website",
+  "subtitle": null,
+  "summary": "Complete ecommerce platform with product management, cart, and payments.",
+  "shortDescription": "Complete ecommerce platform with product management, cart, and payments.",
+  "description": "A production-grade ecommerce platform built with Next.js, featuring product catalog with advanced filtering, shopping cart with persistent state, Stripe payment integration, order management dashboard, and admin panel for inventory management. Includes SEO optimization, responsive design, and performance optimization.",
+  "problemStatement": null,
+  "solution": null,
+  "background": null,
+  "objectives": [],
+  "features": [],
+  "architecture": null,
+  "folderStructure": null,
+  "technologyStack": [
+    {
+      "name": "Next.js"
+    },
+    {
+      "name": "TypeScript"
+    },
+    {
+      "name": "Prisma"
+    },
+    {
+      "name": "PostgreSQL"
+    },
+    {
+      "name": "Stripe"
+    },
+    {
+      "name": "Tailwind CSS"
+    },
+    {
+      "name": "Redis"
+    },
+    {
+      "name": "Docker"
+    }
+  ],
+  "technologies": [
+    "Next.js",
+    "TypeScript",
+    "Prisma",
+    "PostgreSQL",
+    "Stripe",
+    "Tailwind CSS",
+    "Redis",
+    "Docker"
+  ],
+  "hardware": [],
+  "software": [],
+  "tools": [],
+  "difficulty": "advanced",
+  "status": "PUBLISHED",
+  "category": {
+    "name": "Full Stack Development",
+    "slug": "full-stack-development"
+  },
+  "subCategory": null,
+  "client": null,
+  "course": null,
+  "semester": null,
+  "year": 2024,
+  "thumbnail": null,
+  "banner": null,
+  "screenshots": [],
+  "gallery": [],
+  "videos": [],
+  "demoLink": "https://demo-ecommerce.vercel.app",
+  "githubLink": "https://github.com",
+  "linkedinLink": null,
+  "documentation": null,
+  "caseStudy": null,
+  "futureImprovements": null,
+  "testing": null,
+  "deployment": null,
+  "performance": null,
+  "seoDescription": null,
+  "metrics": [],
+  "skillsLearned": [
+    "Next.js",
+    "TypeScript",
+    "Prisma",
+    "PostgreSQL",
+    "Stripe",
+    "Tailwind CSS",
+    "Redis",
+    "Docker"
+  ],
+  "lessonsLearned": null,
+  "tags": [
+    {
+      "name": "react",
+      "slug": "react"
+    },
+    {
+      "name": "typescript",
+      "slug": "typescript"
+    },
+    {
+      "name": "prisma",
+      "slug": "prisma"
+    },
+    {
+      "name": "nextjs",
+      "slug": "nextjs"
+    },
+    {
+      "name": "ecommerce",
+      "slug": "ecommerce"
+    },
+    {
+      "name": "api",
+      "slug": "api"
+    }
+  ],
+  "searchKeywords": [],
+  "featured": true,
+  "pinned": false,
+  "visibility": "PUBLIC",
+  "icon": null,
+  "color": null,
+  "timeline": [],
+  "seo": null,
+  "publishedAt": "2026-07-16T15:37:30.522Z",
+  "createdAt": "2026-07-16T15:37:30.531Z",
+  "updatedAt": "2026-07-16T15:37:30.531Z"
+}

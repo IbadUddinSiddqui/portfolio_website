@@ -1,0 +1,65 @@
+{
+  "id": "cmrno9m4w000l9wbc695n0mc5",
+  "name": "Hardware & Electronics",
+  "slug": "hardware-electronics",
+  "icon": "Cpu",
+  "color": "#ef4444",
+  "skills": [
+    {
+      "id": "cmrno9p8j00149wbcw05lfh6g",
+      "name": "Arduino",
+      "slug": "arduino",
+      "icon": null,
+      "color": null,
+      "level": 80
+    },
+    {
+      "id": "cmrno9pbk00159wbcy7803j8j",
+      "name": "ESP32",
+      "slug": "esp32",
+      "icon": null,
+      "color": null,
+      "level": 70
+    },
+    {
+      "id": "cmrno9pfu00169wbc0m1a2bxa",
+      "name": "PCB Design",
+      "slug": "pcb-design",
+      "icon": null,
+      "color": null,
+      "level": 65
+    },
+    {
+      "id": "cmrno9pju00179wbcq9q63l6n",
+      "name": "Circuit Design",
+      "slug": "circuit-design",
+      "icon": null,
+      "color": null,
+      "level": 75
+    },
+    {
+      "id": "cmrno9pnb00189wbcydb8csdx",
+      "name": "Soldering",
+      "slug": "soldering",
+      "icon": null,
+      "color": null,
+      "level": 70
+    },
+    {
+      "id": "cmrno9prg00199wbcxfrm1kxg",
+      "name": "Multisim",
+      "slug": "multisim",
+      "icon": null,
+      "color": null,
+      "level": 70
+    },
+    {
+      "id": "cmrno9pw6001a9wbcvd2w4cvq",
+      "name": "OrCAD",
+      "slug": "orcad",
+      "icon": null,
+      "color": null,
+      "level": 55
+    }
+  ]
+}

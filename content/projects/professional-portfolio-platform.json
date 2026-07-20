@@ -1,0 +1,130 @@
+{
+  "id": "cmrnoafmh002yygbckh5r88uf",
+  "title": "Professional Portfolio Platform",
+  "slug": "professional-portfolio-platform",
+  "subtitle": null,
+  "summary": "The portfolio platform you're viewing — a complete CMS-powered portfolio.",
+  "shortDescription": "The portfolio platform you're viewing — a complete CMS-powered portfolio.",
+  "description": "A premium portfolio platform built as a reusable template for engineers and developers. Features a full CMS with project management, blog engine, contact management, and dynamic homepage sections. Designed with performance, accessibility, and scalability in mind. Can be customized for any professional.",
+  "problemStatement": null,
+  "solution": null,
+  "background": null,
+  "objectives": [],
+  "features": [],
+  "architecture": null,
+  "folderStructure": null,
+  "technologyStack": [
+    {
+      "name": "Next.js"
+    },
+    {
+      "name": "TypeScript"
+    },
+    {
+      "name": "Prisma"
+    },
+    {
+      "name": "SQLite"
+    },
+    {
+      "name": "Tailwind CSS"
+    },
+    {
+      "name": "Motion"
+    },
+    {
+      "name": "Lucide"
+    },
+    {
+      "name": "Radix UI"
+    }
+  ],
+  "technologies": [
+    "Next.js",
+    "TypeScript",
+    "Prisma",
+    "SQLite",
+    "Tailwind CSS",
+    "Motion",
+    "Lucide",
+    "Radix UI"
+  ],
+  "hardware": [],
+  "software": [],
+  "tools": [],
+  "difficulty": "expert",
+  "status": "PUBLISHED",
+  "category": {
+    "name": "Full Stack Development",
+    "slug": "full-stack-development"
+  },
+  "subCategory": null,
+  "client": null,
+  "course": null,
+  "semester": null,
+  "year": 2024,
+  "thumbnail": null,
+  "banner": null,
+  "screenshots": [],
+  "gallery": [],
+  "videos": [],
+  "demoLink": "https://portfolio.vercel.app",
+  "githubLink": "https://github.com",
+  "linkedinLink": null,
+  "documentation": null,
+  "caseStudy": null,
+  "futureImprovements": null,
+  "testing": null,
+  "deployment": null,
+  "performance": null,
+  "seoDescription": null,
+  "metrics": [],
+  "skillsLearned": [
+    "Next.js",
+    "TypeScript",
+    "Prisma",
+    "SQLite",
+    "Tailwind CSS",
+    "Motion",
+    "Lucide",
+    "Radix UI"
+  ],
+  "lessonsLearned": null,
+  "tags": [
+    {
+      "name": "react",
+      "slug": "react"
+    },
+    {
+      "name": "typescript",
+      "slug": "typescript"
+    },
+    {
+      "name": "prisma",
+      "slug": "prisma"
+    },
+    {
+      "name": "nextjs",
+      "slug": "nextjs"
+    },
+    {
+      "name": "tailwindcss",
+      "slug": "tailwindcss"
+    },
+    {
+      "name": "open-source",
+      "slug": "open-source"
+    }
+  ],
+  "searchKeywords": [],
+  "featured": true,
+  "pinned": false,
+  "visibility": "PUBLIC",
+  "icon": null,
+  "color": null,
+  "timeline": [],
+  "seo": null,
+  "publishedAt": "2026-07-16T15:37:32.784Z",
+  "createdAt": "2026-07-16T15:37:32.825Z",
+  "updatedAt": "2026-07-16T15:37:32.825Z"
+}

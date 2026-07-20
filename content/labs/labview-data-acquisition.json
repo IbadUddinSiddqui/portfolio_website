@@ -1,0 +1,32 @@
+{
+  "id": "cmrnpgi93003desbc95veizd8",
+  "title": "LabVIEW: Data Acquisition",
+  "slug": "labview-data-acquisition",
+  "summary": "DAQ system design with virtual instrumentation",
+  "description": null,
+  "category": "labview",
+  "course": "Instrumentation Lab",
+  "semester": "5th",
+  "year": 2024,
+  "objectives": [
+    "Understand labview: data acquisition",
+    "Perform analysis and measurements",
+    "Document results and conclusions"
+  ],
+  "equipment": [],
+  "procedure": null,
+  "observations": null,
+  "results": null,
+  "conclusion": null,
+  "technologies": [],
+  "githubLink": null,
+  "reportLink": null,
+  "schematicLink": null,
+  "images": [],
+  "difficulty": "intermediate",
+  "status": "PUBLISHED",
+  "featured": false,
+  "order": 0,
+  "createdAt": "2026-07-16T16:10:15.783Z",
+  "updatedAt": "2026-07-16T16:10:15.783Z"
+}

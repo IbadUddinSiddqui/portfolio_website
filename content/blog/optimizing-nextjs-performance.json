@@ -1,0 +1,21 @@
+{
+  "id": "cmri2lc130014z4bchq1jy8lc",
+  "title": "Optimizing Next.js Performance: A Practical Guide",
+  "slug": "optimizing-nextjs-performance",
+  "content": "# Optimizing Next.js Performance\n\nPerformance optimization is crucial for modern web applications. Here are practical strategies I've used in production Next.js apps.\n\n## Server Components by Default\n\nUse server components wherever possible. They reduce the JavaScript bundle size:\n\n```tsx\nexport default async function Page() {\n  const data = await fetchData();\n  return <div>{data.map(item => <Card key={item.id} />)}</div>;\n}\n```\n\n## Image Optimization\n\nAlways use Next.js Image component for automatic optimization:\n\n```tsx\nimport Image from \"next/image\";\n\n<Image\n  src=\"/hero.jpg\"\n  alt=\"Hero image\"\n  width={1200}\n  height={630}\n  priority\n/>\n```\n\n## ISR for Dynamic Content\n\nIncremental Static Regeneration gives you the best of both worlds:\n\n```tsx\nexport const revalidate = 3600;\n```\n\nThese optimizations can reduce Lighthouse scores from 60 to 95+.",
+  "excerpt": "Practical strategies for optimizing Next.js applications including server components, image optimization, and ISR.",
+  "coverImage": null,
+  "category": null,
+  "tags": [
+    "Next.js",
+    "Performance",
+    "TypeScript"
+  ],
+  "readingTime": null,
+  "published": true,
+  "featured": false,
+  "seo": null,
+  "publishedAt": "2026-05-15T00:00:00.000Z",
+  "createdAt": "2026-07-12T17:31:18.951Z",
+  "updatedAt": "2026-07-12T17:31:18.951Z"
+}

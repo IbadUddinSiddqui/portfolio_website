@@ -1,0 +1,90 @@
+{
+  "id": "cmrnoaytd0047ygbcgzwv2e0b",
+  "title": "Electronics Lab: Operational Amplifiers",
+  "slug": "electronics-lab-operational-amplifiers",
+  "subtitle": null,
+  "summary": "Op-amp configurations: inverting, non-inverting, summing, and differencing.",
+  "shortDescription": "Op-amp configurations: inverting, non-inverting, summing, and differencing.",
+  "description": "Experimental study of operational amplifier configurations. Built and tested inverting, non-inverting, summing amplifier, and difference amplifier circuits. Measured gain, bandwidth, input/output impedance, and slew rate.",
+  "problemStatement": null,
+  "solution": null,
+  "background": null,
+  "objectives": [],
+  "features": [],
+  "architecture": null,
+  "folderStructure": null,
+  "technologyStack": [
+    {
+      "name": "Op-Amp"
+    },
+    {
+      "name": "Resistors"
+    },
+    {
+      "name": "Function Generator"
+    },
+    {
+      "name": "Oscilloscope"
+    }
+  ],
+  "technologies": [
+    "Op-Amp",
+    "Resistors",
+    "Function Generator",
+    "Oscilloscope"
+  ],
+  "hardware": [],
+  "software": [],
+  "tools": [],
+  "difficulty": "intermediate",
+  "status": "PUBLISHED",
+  "category": {
+    "name": "Electronics",
+    "slug": "electronics"
+  },
+  "subCategory": null,
+  "client": null,
+  "course": null,
+  "semester": null,
+  "year": 2023,
+  "thumbnail": null,
+  "banner": null,
+  "screenshots": [],
+  "gallery": [],
+  "videos": [],
+  "demoLink": null,
+  "githubLink": null,
+  "linkedinLink": null,
+  "documentation": null,
+  "caseStudy": null,
+  "futureImprovements": null,
+  "testing": null,
+  "deployment": null,
+  "performance": null,
+  "seoDescription": null,
+  "metrics": [],
+  "skillsLearned": [
+    "Op-Amp",
+    "Resistors",
+    "Function Generator",
+    "Oscilloscope"
+  ],
+  "lessonsLearned": null,
+  "tags": [
+    {
+      "name": "electronics",
+      "slug": "electronics"
+    }
+  ],
+  "searchKeywords": [],
+  "featured": false,
+  "pinned": false,
+  "visibility": "PUBLIC",
+  "icon": null,
+  "color": null,
+  "timeline": [],
+  "seo": null,
+  "publishedAt": "2026-07-16T15:37:57.696Z",
+  "createdAt": "2026-07-16T15:37:57.697Z",
+  "updatedAt": "2026-07-16T15:37:57.697Z"
+}

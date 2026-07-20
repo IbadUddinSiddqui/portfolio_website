@@ -1,0 +1,111 @@
+{
+  "id": "cmrnoalmv0038ygbccb1ensdw",
+  "title": "Shopify Storefront API Integration",
+  "slug": "shopify-storefront-api-integration",
+  "subtitle": null,
+  "summary": "Custom storefront built with Shopify's Storefront API and GraphQL.",
+  "shortDescription": "Custom storefront built with Shopify's Storefront API and GraphQL.",
+  "description": "Built a custom storefront experience using Shopify's Storefront API and GraphQL. Features include real-time product syncing, custom cart implementation, checkout integration, and personalized product recommendations. The headless approach enabled faster page loads and complete design freedom.",
+  "problemStatement": null,
+  "solution": null,
+  "background": null,
+  "objectives": [],
+  "features": [],
+  "architecture": null,
+  "folderStructure": null,
+  "technologyStack": [
+    {
+      "name": "React"
+    },
+    {
+      "name": "Next.js"
+    },
+    {
+      "name": "GraphQL"
+    },
+    {
+      "name": "Shopify Storefront API"
+    },
+    {
+      "name": "TypeScript"
+    }
+  ],
+  "technologies": [
+    "React",
+    "Next.js",
+    "GraphQL",
+    "Shopify Storefront API",
+    "TypeScript"
+  ],
+  "hardware": [],
+  "software": [],
+  "tools": [],
+  "difficulty": "advanced",
+  "status": "PUBLISHED",
+  "category": {
+    "name": "Client Work",
+    "slug": "client-work"
+  },
+  "subCategory": null,
+  "client": null,
+  "course": null,
+  "semester": null,
+  "year": 2024,
+  "thumbnail": null,
+  "banner": null,
+  "screenshots": [],
+  "gallery": [],
+  "videos": [],
+  "demoLink": null,
+  "githubLink": "https://github.com",
+  "linkedinLink": null,
+  "documentation": null,
+  "caseStudy": null,
+  "futureImprovements": null,
+  "testing": null,
+  "deployment": null,
+  "performance": null,
+  "seoDescription": null,
+  "metrics": [],
+  "skillsLearned": [
+    "React",
+    "Next.js",
+    "GraphQL",
+    "Shopify Storefront API",
+    "TypeScript"
+  ],
+  "lessonsLearned": null,
+  "tags": [
+    {
+      "name": "graphql",
+      "slug": "graphql"
+    },
+    {
+      "name": "nextjs",
+      "slug": "nextjs"
+    },
+    {
+      "name": "shopify",
+      "slug": "shopify"
+    },
+    {
+      "name": "ecommerce",
+      "slug": "ecommerce"
+    },
+    {
+      "name": "api",
+      "slug": "api"
+    }
+  ],
+  "searchKeywords": [],
+  "featured": false,
+  "pinned": false,
+  "visibility": "PUBLIC",
+  "icon": null,
+  "color": null,
+  "timeline": [],
+  "seo": null,
+  "publishedAt": "2026-07-16T15:37:40.614Z",
+  "createdAt": "2026-07-16T15:37:40.615Z",
+  "updatedAt": "2026-07-16T15:37:40.615Z"
+}

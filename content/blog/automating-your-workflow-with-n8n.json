@@ -1,0 +1,21 @@
+{
+  "id": "cmrnpgkz70042esbcbt1bqtck",
+  "title": "Automating Your Workflow with n8n",
+  "slug": "automating-your-workflow-with-n8n",
+  "content": "# Automating Your Workflow with n8n\n\nn8n is an open-source workflow automation tool that connects services and automates tasks.\n\n## Key Concepts\n- Nodes: Individual actions or triggers\n- Workflows: Connected sequences of nodes\n- Triggers: Events that start workflows\n\n## Example Workflows\n1. GitHub → Portfolio Sync\n2. LinkedIn Post Generator\n3. PDF OCR Pipeline\n4. Lead Generation\n\n## Why n8n?\n- Self-hosted for privacy\n- 300+ integrations\n- Visual editor\n- Code nodes when you need custom logic\n- Free and open-source",
+  "excerpt": "How to build powerful automation workflows without writing code.",
+  "coverImage": null,
+  "category": "Automation",
+  "tags": [
+    "automation",
+    "n8n",
+    "workflow"
+  ],
+  "readingTime": 3,
+  "published": true,
+  "featured": true,
+  "seo": null,
+  "publishedAt": "2026-07-16T16:10:19.312Z",
+  "createdAt": "2026-07-16T16:10:19.315Z",
+  "updatedAt": "2026-07-16T16:10:19.315Z"
+}

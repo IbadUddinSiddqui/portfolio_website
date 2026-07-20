@@ -1,0 +1,32 @@
+{
+  "id": "cmrnpghl50037esbc8d43cpfx",
+  "title": "Active Filters Design",
+  "slug": "active-filters-design",
+  "summary": "Low-pass, high-pass, and band-pass filters using op-amps",
+  "description": null,
+  "category": "electronics",
+  "course": "Electronics Lab III",
+  "semester": "4th",
+  "year": 2023,
+  "objectives": [
+    "Understand active filters design",
+    "Perform analysis and measurements",
+    "Document results and conclusions"
+  ],
+  "equipment": [],
+  "procedure": null,
+  "observations": null,
+  "results": null,
+  "conclusion": null,
+  "technologies": [],
+  "githubLink": null,
+  "reportLink": null,
+  "schematicLink": null,
+  "images": [],
+  "difficulty": "advanced",
+  "status": "PUBLISHED",
+  "featured": false,
+  "order": 0,
+  "createdAt": "2026-07-16T16:10:14.921Z",
+  "updatedAt": "2026-07-16T16:10:14.921Z"
+}

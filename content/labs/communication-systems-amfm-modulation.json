@@ -1,0 +1,32 @@
+{
+  "id": "cmrnpgizi003kesbc20l8htem",
+  "title": "Communication Systems: AM/FM Modulation",
+  "slug": "communication-systems-amfm-modulation",
+  "summary": "Amplitude and frequency modulation/demodulation experiments",
+  "description": null,
+  "category": "matlab",
+  "course": "Communication Systems Lab",
+  "semester": "5th",
+  "year": 2024,
+  "objectives": [
+    "Understand communication systems: am/fm modulation",
+    "Perform analysis and measurements",
+    "Document results and conclusions"
+  ],
+  "equipment": [],
+  "procedure": null,
+  "observations": null,
+  "results": null,
+  "conclusion": null,
+  "technologies": [],
+  "githubLink": null,
+  "reportLink": null,
+  "schematicLink": null,
+  "images": [],
+  "difficulty": "advanced",
+  "status": "PUBLISHED",
+  "featured": false,
+  "order": 0,
+  "createdAt": "2026-07-16T16:10:16.734Z",
+  "updatedAt": "2026-07-16T16:10:16.734Z"
+}

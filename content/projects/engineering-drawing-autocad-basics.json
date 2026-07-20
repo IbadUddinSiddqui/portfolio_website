@@ -1,0 +1,75 @@
+{
+  "id": "cmrnoazos004bygbcvr4z8z5v",
+  "title": "Engineering Drawing: AutoCAD Basics",
+  "slug": "engineering-drawing-autocad-basics",
+  "subtitle": null,
+  "summary": "Introduction to engineering drawing using AutoCAD.",
+  "shortDescription": "Introduction to engineering drawing using AutoCAD.",
+  "description": "Learning the fundamentals of engineering drawing using AutoCAD. Covers 2D drafting, dimensioning, layers, blocks, and plotting. Created mechanical part drawings, architectural floor plans, and electrical schematics.",
+  "problemStatement": null,
+  "solution": null,
+  "background": null,
+  "objectives": [],
+  "features": [],
+  "architecture": null,
+  "folderStructure": null,
+  "technologyStack": [
+    {
+      "name": "AutoCAD"
+    },
+    {
+      "name": "Engineering Drawing"
+    }
+  ],
+  "technologies": [
+    "AutoCAD",
+    "Engineering Drawing"
+  ],
+  "hardware": [],
+  "software": [],
+  "tools": [],
+  "difficulty": "beginner",
+  "status": "PUBLISHED",
+  "category": {
+    "name": "Software Engineering",
+    "slug": "software-engineering"
+  },
+  "subCategory": null,
+  "client": null,
+  "course": "Electronic Engineering Drawing",
+  "semester": "1st",
+  "year": 2022,
+  "thumbnail": null,
+  "banner": null,
+  "screenshots": [],
+  "gallery": [],
+  "videos": [],
+  "demoLink": null,
+  "githubLink": null,
+  "linkedinLink": null,
+  "documentation": null,
+  "caseStudy": null,
+  "futureImprovements": null,
+  "testing": null,
+  "deployment": null,
+  "performance": null,
+  "seoDescription": null,
+  "metrics": [],
+  "skillsLearned": [
+    "AutoCAD",
+    "Engineering Drawing"
+  ],
+  "lessonsLearned": null,
+  "tags": [],
+  "searchKeywords": [],
+  "featured": false,
+  "pinned": false,
+  "visibility": "PUBLIC",
+  "icon": null,
+  "color": null,
+  "timeline": [],
+  "seo": null,
+  "publishedAt": "2026-07-16T15:37:58.808Z",
+  "createdAt": "2026-07-16T15:37:58.828Z",
+  "updatedAt": "2026-07-16T15:37:58.828Z"
+}

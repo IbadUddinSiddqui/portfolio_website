@@ -1,0 +1,103 @@
+{
+  "id": "cmrnoaxyk0043ygbcjrt2nvei",
+  "title": "Resume Builder Hackathon Project",
+  "slug": "resume-builder-hackathon-project",
+  "subtitle": null,
+  "summary": "Won Best Technical Implementation at university hackathon.",
+  "shortDescription": "Won Best Technical Implementation at university hackathon.",
+  "description": "A rapid-prototyped resume builder created during a 48-hour university hackathon. Features real-time preview, multiple templates, markdown support, and PDF export. Implemented a custom rendering engine for instant preview updates. Won the 'Best Technical Implementation' award.",
+  "problemStatement": null,
+  "solution": null,
+  "background": null,
+  "objectives": [],
+  "features": [],
+  "architecture": null,
+  "folderStructure": null,
+  "technologyStack": [
+    {
+      "name": "React"
+    },
+    {
+      "name": "TypeScript"
+    },
+    {
+      "name": "Tailwind CSS"
+    },
+    {
+      "name": "LocalStorage"
+    },
+    {
+      "name": "HTML/CSS"
+    }
+  ],
+  "technologies": [
+    "React",
+    "TypeScript",
+    "Tailwind CSS",
+    "LocalStorage",
+    "HTML/CSS"
+  ],
+  "hardware": [],
+  "software": [],
+  "tools": [],
+  "difficulty": "intermediate",
+  "status": "PUBLISHED",
+  "category": {
+    "name": "Hackathons",
+    "slug": "hackathons"
+  },
+  "subCategory": null,
+  "client": null,
+  "course": null,
+  "semester": null,
+  "year": 2024,
+  "thumbnail": null,
+  "banner": null,
+  "screenshots": [],
+  "gallery": [],
+  "videos": [],
+  "demoLink": null,
+  "githubLink": "https://github.com",
+  "linkedinLink": null,
+  "documentation": null,
+  "caseStudy": null,
+  "futureImprovements": null,
+  "testing": null,
+  "deployment": null,
+  "performance": null,
+  "seoDescription": null,
+  "metrics": [],
+  "skillsLearned": [
+    "React",
+    "TypeScript",
+    "Tailwind CSS",
+    "LocalStorage",
+    "HTML/CSS"
+  ],
+  "lessonsLearned": null,
+  "tags": [
+    {
+      "name": "react",
+      "slug": "react"
+    },
+    {
+      "name": "typescript",
+      "slug": "typescript"
+    },
+    {
+      "name": "hackathon",
+      "slug": "hackathon"
+    }
+  ],
+  "searchKeywords": [],
+  "featured": true,
+  "pinned": false,
+  "visibility": "PUBLIC",
+  "icon": null,
+  "color": null,
+  "timeline": [],
+  "seo": null,
+  "publishedAt": "2026-07-16T15:37:56.587Z",
+  "createdAt": "2026-07-16T15:37:56.588Z",
+  "updatedAt": "2026-07-16T15:37:56.588Z"
+}

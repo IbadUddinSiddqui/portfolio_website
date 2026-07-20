@@ -1,0 +1,90 @@
+{
+  "id": "cmrnoay9y0044ygbcs3rik2d2",
+  "title": "Electronics Lab: Diode Characteristics",
+  "slug": "electronics-lab-diode-characteristics",
+  "subtitle": null,
+  "summary": "Experiment on V-I characteristics of silicon and germanium diodes.",
+  "shortDescription": "Experiment on V-I characteristics of silicon and germanium diodes.",
+  "description": "Measured and analyzed the voltage-current characteristics of silicon and germanium diodes. Determined forward voltage drop, reverse leakage current, and breakdown voltage. Compared theoretical models with experimental results.",
+  "problemStatement": null,
+  "solution": null,
+  "background": null,
+  "objectives": [],
+  "features": [],
+  "architecture": null,
+  "folderStructure": null,
+  "technologyStack": [
+    {
+      "name": "Diodes"
+    },
+    {
+      "name": "Power Supply"
+    },
+    {
+      "name": "Multimeter"
+    },
+    {
+      "name": "Breadboard"
+    }
+  ],
+  "technologies": [
+    "Diodes",
+    "Power Supply",
+    "Multimeter",
+    "Breadboard"
+  ],
+  "hardware": [],
+  "software": [],
+  "tools": [],
+  "difficulty": "beginner",
+  "status": "PUBLISHED",
+  "category": {
+    "name": "Electronics",
+    "slug": "electronics"
+  },
+  "subCategory": null,
+  "client": null,
+  "course": null,
+  "semester": null,
+  "year": 2023,
+  "thumbnail": null,
+  "banner": null,
+  "screenshots": [],
+  "gallery": [],
+  "videos": [],
+  "demoLink": null,
+  "githubLink": null,
+  "linkedinLink": null,
+  "documentation": null,
+  "caseStudy": null,
+  "futureImprovements": null,
+  "testing": null,
+  "deployment": null,
+  "performance": null,
+  "seoDescription": null,
+  "metrics": [],
+  "skillsLearned": [
+    "Diodes",
+    "Power Supply",
+    "Multimeter",
+    "Breadboard"
+  ],
+  "lessonsLearned": null,
+  "tags": [
+    {
+      "name": "electronics",
+      "slug": "electronics"
+    }
+  ],
+  "searchKeywords": [],
+  "featured": false,
+  "pinned": false,
+  "visibility": "PUBLIC",
+  "icon": null,
+  "color": null,
+  "timeline": [],
+  "seo": null,
+  "publishedAt": "2026-07-16T15:37:56.997Z",
+  "createdAt": "2026-07-16T15:37:56.998Z",
+  "updatedAt": "2026-07-16T15:37:56.998Z"
+}

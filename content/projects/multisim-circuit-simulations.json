@@ -1,0 +1,94 @@
+{
+  "id": "cmrnoax020040ygbceqwzoeov",
+  "title": "Multisim Circuit Simulations",
+  "slug": "multisim-circuit-simulations",
+  "subtitle": null,
+  "summary": "Analog and digital circuit simulations using NI Multisim.",
+  "shortDescription": "Analog and digital circuit simulations using NI Multisim.",
+  "description": "A comprehensive collection of Multisim circuit simulations covering analog circuits (amplifiers, filters, oscillators, power supplies) and digital circuits (logic gates, counters, registers, ALUs). Each simulation includes theoretical analysis, component selection, and result validation.",
+  "problemStatement": null,
+  "solution": null,
+  "background": null,
+  "objectives": [],
+  "features": [],
+  "architecture": null,
+  "folderStructure": null,
+  "technologyStack": [
+    {
+      "name": "Multisim"
+    },
+    {
+      "name": "Analog Circuits"
+    },
+    {
+      "name": "Digital Circuits"
+    },
+    {
+      "name": "Simulation"
+    }
+  ],
+  "technologies": [
+    "Multisim",
+    "Analog Circuits",
+    "Digital Circuits",
+    "Simulation"
+  ],
+  "hardware": [],
+  "software": [],
+  "tools": [],
+  "difficulty": "intermediate",
+  "status": "PUBLISHED",
+  "category": {
+    "name": "Engineering Simulations",
+    "slug": "engineering-simulations"
+  },
+  "subCategory": null,
+  "client": null,
+  "course": null,
+  "semester": null,
+  "year": 2023,
+  "thumbnail": null,
+  "banner": null,
+  "screenshots": [],
+  "gallery": [],
+  "videos": [],
+  "demoLink": null,
+  "githubLink": "https://github.com",
+  "linkedinLink": null,
+  "documentation": null,
+  "caseStudy": null,
+  "futureImprovements": null,
+  "testing": null,
+  "deployment": null,
+  "performance": null,
+  "seoDescription": null,
+  "metrics": [],
+  "skillsLearned": [
+    "Multisim",
+    "Analog Circuits",
+    "Digital Circuits",
+    "Simulation"
+  ],
+  "lessonsLearned": null,
+  "tags": [
+    {
+      "name": "electronics",
+      "slug": "electronics"
+    },
+    {
+      "name": "multisim",
+      "slug": "multisim"
+    }
+  ],
+  "searchKeywords": [],
+  "featured": true,
+  "pinned": false,
+  "visibility": "PUBLIC",
+  "icon": null,
+  "color": null,
+  "timeline": [],
+  "seo": null,
+  "publishedAt": "2026-07-16T15:37:55.335Z",
+  "createdAt": "2026-07-16T15:37:55.346Z",
+  "updatedAt": "2026-07-16T15:37:55.346Z"
+}

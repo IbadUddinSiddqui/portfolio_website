@@ -1,0 +1,65 @@
+{
+  "id": "cmrno9llk000h9wbcndxofkd3",
+  "name": "Frontend",
+  "slug": "frontend",
+  "icon": "Code2",
+  "color": "#3b82f6",
+  "skills": [
+    {
+      "id": "cmrno9mhc000n9wbcltxnplkt",
+      "name": "React",
+      "slug": "react",
+      "icon": null,
+      "color": null,
+      "level": 90
+    },
+    {
+      "id": "cmrno9n7q000o9wbcac30hqx0",
+      "name": "Next.js",
+      "slug": "nextjs",
+      "icon": null,
+      "color": null,
+      "level": 85
+    },
+    {
+      "id": "cmrno9niy000p9wbci0mnorai",
+      "name": "TypeScript",
+      "slug": "typescript",
+      "icon": null,
+      "color": null,
+      "level": 85
+    },
+    {
+      "id": "cmrno9npy000q9wbcganzqsby",
+      "name": "JavaScript",
+      "slug": "javascript",
+      "icon": null,
+      "color": null,
+      "level": 90
+    },
+    {
+      "id": "cmrno9nuk000r9wbcfm5u1xcp",
+      "name": "Tailwind CSS",
+      "slug": "tailwind-css",
+      "icon": null,
+      "color": null,
+      "level": 90
+    },
+    {
+      "id": "cmrno9nyh000s9wbc18mbpt4u",
+      "name": "HTML/CSS",
+      "slug": "htmlcss",
+      "icon": null,
+      "color": null,
+      "level": 95
+    },
+    {
+      "id": "cmrno9qtd001g9wbcx8imvcw1",
+      "name": "Shopify",
+      "slug": "shopify",
+      "icon": null,
+      "color": null,
+      "level": 70
+    }
+  ]
+}

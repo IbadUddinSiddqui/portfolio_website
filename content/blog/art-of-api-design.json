@@ -1,0 +1,21 @@
+{
+  "id": "cmri2lc130017z4bcjbe7qor1",
+  "title": "The Art of API Design",
+  "slug": "art-of-api-design",
+  "content": "# The Art of API Design\n\nGood API design is about consistency, predictability, and developer experience.\n\n## Consistency is King\n\n- Use consistent naming conventions\n- Follow RESTful patterns\n- Return consistent error formats\n\n## Error Handling\n\n```json\n{\n  \"error\": {\n    \"code\": \"VALIDATION_ERROR\",\n    \"message\": \"Email is required\",\n    \"field\": \"email\"\n  }\n}\n```\n\nA well-designed API is a joy to work with.",
+  "excerpt": "Principles for designing APIs that developers love to work with.",
+  "coverImage": null,
+  "category": null,
+  "tags": [
+    "API",
+    "REST",
+    "Node.js"
+  ],
+  "readingTime": null,
+  "published": false,
+  "featured": false,
+  "seo": null,
+  "publishedAt": null,
+  "createdAt": "2026-07-12T17:31:18.951Z",
+  "updatedAt": "2026-07-12T17:31:18.951Z"
+}

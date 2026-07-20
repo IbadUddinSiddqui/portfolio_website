@@ -1,0 +1,21 @@
+{
+  "id": "cmri2lc130016z4bcif982757",
+  "title": "Getting Started with Prisma and SQLite",
+  "slug": "getting-started-prisma-sqlite",
+  "content": "# Getting Started with Prisma and SQLite\n\nPrisma makes database access type-safe and developer-friendly.\n\n## Installation\n\n```bash\nnpm install @prisma/client\nnpm install -D prisma\nnpx prisma init\n```\n\n## Schema Definition\n\n```prisma\ngenerator client {\n  provider = \"prisma-client-js\"\n}\n\ndatasource db {\n  provider = \"sqlite\"\n  url      = env(\"DATABASE_URL\")\n}\n\nmodel User {\n  id    String @id @default(cuid())\n  email String @unique\n  name  String?\n}\n```\n\nPrisma with SQLite is perfect for prototyping, portfolios, and small to medium applications.",
+  "excerpt": "A beginner-friendly guide to setting up Prisma ORM with SQLite, including schema design and common query patterns.",
+  "coverImage": null,
+  "category": null,
+  "tags": [
+    "Prisma",
+    "SQLite",
+    "TypeScript"
+  ],
+  "readingTime": null,
+  "published": true,
+  "featured": false,
+  "seo": null,
+  "publishedAt": "2026-03-10T00:00:00.000Z",
+  "createdAt": "2026-07-12T17:31:18.951Z",
+  "updatedAt": "2026-07-12T17:31:18.951Z"
+}

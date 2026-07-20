@@ -1,0 +1,100 @@
+{
+  "id": "cmrnoaxrr0042ygbcen3u8i8p",
+  "title": "Hand Crank Emergency Charger",
+  "slug": "hand-crank-emergency-charger",
+  "subtitle": null,
+  "summary": "Portable hand-crank generator for emergency device charging.",
+  "shortDescription": "Portable hand-crank generator for emergency device charging.",
+  "description": "Designed and built a hand-crank emergency charger that converts mechanical energy to electrical energy. Features include a DC motor as generator, voltage regulation circuitry, USB output, rechargeable battery storage, and ergonomic crank mechanism. Provides emergency power for mobile devices during outages.",
+  "problemStatement": null,
+  "solution": null,
+  "background": null,
+  "objectives": [],
+  "features": [],
+  "architecture": null,
+  "folderStructure": null,
+  "technologyStack": [
+    {
+      "name": "DC Motor"
+    },
+    {
+      "name": "Voltage Regulator"
+    },
+    {
+      "name": "Rectifier"
+    },
+    {
+      "name": "Battery"
+    },
+    {
+      "name": "USB"
+    },
+    {
+      "name": "3D Printing"
+    }
+  ],
+  "technologies": [
+    "DC Motor",
+    "Voltage Regulator",
+    "Rectifier",
+    "Battery",
+    "USB",
+    "3D Printing"
+  ],
+  "hardware": [],
+  "software": [],
+  "tools": [],
+  "difficulty": "intermediate",
+  "status": "PUBLISHED",
+  "category": {
+    "name": "Electronics",
+    "slug": "electronics"
+  },
+  "subCategory": null,
+  "client": null,
+  "course": null,
+  "semester": null,
+  "year": 2023,
+  "thumbnail": null,
+  "banner": null,
+  "screenshots": [],
+  "gallery": [],
+  "videos": [],
+  "demoLink": null,
+  "githubLink": "https://github.com",
+  "linkedinLink": null,
+  "documentation": null,
+  "caseStudy": null,
+  "futureImprovements": null,
+  "testing": null,
+  "deployment": null,
+  "performance": null,
+  "seoDescription": null,
+  "metrics": [],
+  "skillsLearned": [
+    "DC Motor",
+    "Voltage Regulator",
+    "Rectifier",
+    "Battery",
+    "USB",
+    "3D Printing"
+  ],
+  "lessonsLearned": null,
+  "tags": [
+    {
+      "name": "electronics",
+      "slug": "electronics"
+    }
+  ],
+  "searchKeywords": [],
+  "featured": true,
+  "pinned": false,
+  "visibility": "PUBLIC",
+  "icon": null,
+  "color": null,
+  "timeline": [],
+  "seo": null,
+  "publishedAt": "2026-07-16T15:37:56.343Z",
+  "createdAt": "2026-07-16T15:37:56.343Z",
+  "updatedAt": "2026-07-16T15:37:56.343Z"
+}

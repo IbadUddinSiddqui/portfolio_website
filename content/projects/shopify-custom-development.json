@@ -1,0 +1,103 @@
+{
+  "id": "cmrnoanl4003aygbcwo5uc177",
+  "title": "Shopify Custom Development",
+  "slug": "shopify-custom-development",
+  "subtitle": null,
+  "summary": "Custom Shopify apps and theme development services.",
+  "shortDescription": "Custom Shopify apps and theme development services.",
+  "description": "A collection of custom Shopify development projects including bespoke theme modifications, custom app integrations, checkout customizations, and performance optimizations. Worked with multiple clients to extend Shopify's capabilities beyond standard offerings.",
+  "problemStatement": null,
+  "solution": null,
+  "background": null,
+  "objectives": [],
+  "features": [],
+  "architecture": null,
+  "folderStructure": null,
+  "technologyStack": [
+    {
+      "name": "Shopify"
+    },
+    {
+      "name": "Liquid"
+    },
+    {
+      "name": "Node.js"
+    },
+    {
+      "name": "React"
+    },
+    {
+      "name": "Shopify Polaris"
+    }
+  ],
+  "technologies": [
+    "Shopify",
+    "Liquid",
+    "Node.js",
+    "React",
+    "Shopify Polaris"
+  ],
+  "hardware": [],
+  "software": [],
+  "tools": [],
+  "difficulty": "intermediate",
+  "status": "PUBLISHED",
+  "category": {
+    "name": "Client Work",
+    "slug": "client-work"
+  },
+  "subCategory": null,
+  "client": null,
+  "course": null,
+  "semester": null,
+  "year": 2024,
+  "thumbnail": null,
+  "banner": null,
+  "screenshots": [],
+  "gallery": [],
+  "videos": [],
+  "demoLink": null,
+  "githubLink": null,
+  "linkedinLink": null,
+  "documentation": null,
+  "caseStudy": null,
+  "futureImprovements": null,
+  "testing": null,
+  "deployment": null,
+  "performance": null,
+  "seoDescription": null,
+  "metrics": [],
+  "skillsLearned": [
+    "Shopify",
+    "Liquid",
+    "Node.js",
+    "React",
+    "Shopify Polaris"
+  ],
+  "lessonsLearned": null,
+  "tags": [
+    {
+      "name": "shopify",
+      "slug": "shopify"
+    },
+    {
+      "name": "ecommerce",
+      "slug": "ecommerce"
+    },
+    {
+      "name": "api",
+      "slug": "api"
+    }
+  ],
+  "searchKeywords": [],
+  "featured": false,
+  "pinned": false,
+  "visibility": "PUBLIC",
+  "icon": null,
+  "color": null,
+  "timeline": [],
+  "seo": null,
+  "publishedAt": "2026-07-16T15:37:42.761Z",
+  "createdAt": "2026-07-16T15:37:43.144Z",
+  "updatedAt": "2026-07-16T15:37:43.144Z"
+}

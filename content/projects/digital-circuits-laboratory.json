@@ -1,0 +1,95 @@
+{
+  "id": "cmrnoavph003vygbc77uo2lvd",
+  "title": "Digital Circuits Laboratory",
+  "slug": "digital-circuits-laboratory",
+  "subtitle": null,
+  "summary": "Digital logic design experiments from basic gates to counters.",
+  "shortDescription": "Digital logic design experiments from basic gates to counters.",
+  "description": "A series of digital logic experiments covering basic gates, combinational logic, flip-flops, counters, shift registers, multiplexers, and basic memory circuits. Built using 74-series TTL ICs and verified with logic analyzers.",
+  "problemStatement": null,
+  "solution": null,
+  "background": null,
+  "objectives": [],
+  "features": [],
+  "architecture": null,
+  "folderStructure": null,
+  "technologyStack": [
+    {
+      "name": "TTL ICs"
+    },
+    {
+      "name": "Logic Gates"
+    },
+    {
+      "name": "Flip-Flops"
+    },
+    {
+      "name": "Counters"
+    },
+    {
+      "name": "Breadboard"
+    }
+  ],
+  "technologies": [
+    "TTL ICs",
+    "Logic Gates",
+    "Flip-Flops",
+    "Counters",
+    "Breadboard"
+  ],
+  "hardware": [],
+  "software": [],
+  "tools": [],
+  "difficulty": "intermediate",
+  "status": "PUBLISHED",
+  "category": {
+    "name": "Electronics",
+    "slug": "electronics"
+  },
+  "subCategory": null,
+  "client": null,
+  "course": null,
+  "semester": null,
+  "year": 2023,
+  "thumbnail": null,
+  "banner": null,
+  "screenshots": [],
+  "gallery": [],
+  "videos": [],
+  "demoLink": null,
+  "githubLink": null,
+  "linkedinLink": null,
+  "documentation": null,
+  "caseStudy": null,
+  "futureImprovements": null,
+  "testing": null,
+  "deployment": null,
+  "performance": null,
+  "seoDescription": null,
+  "metrics": [],
+  "skillsLearned": [
+    "TTL ICs",
+    "Logic Gates",
+    "Flip-Flops",
+    "Counters",
+    "Breadboard"
+  ],
+  "lessonsLearned": null,
+  "tags": [
+    {
+      "name": "electronics",
+      "slug": "electronics"
+    }
+  ],
+  "searchKeywords": [],
+  "featured": false,
+  "pinned": false,
+  "visibility": "PUBLIC",
+  "icon": null,
+  "color": null,
+  "timeline": [],
+  "seo": null,
+  "publishedAt": "2026-07-16T15:37:53.668Z",
+  "createdAt": "2026-07-16T15:37:53.669Z",
+  "updatedAt": "2026-07-16T15:37:53.669Z"
+}

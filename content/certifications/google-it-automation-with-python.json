@@ -1,0 +1,23 @@
+{
+  "id": "cmrnpgj92003mesbcl1g1ioww",
+  "title": "Google IT Automation with Python",
+  "issuer": "Google / Coursera",
+  "slug": "google-it-automation-with-python",
+  "description": null,
+  "issueDate": "2024-01-01T00:00:00.000Z",
+  "expiryDate": null,
+  "credentialId": null,
+  "credentialUrl": null,
+  "image": null,
+  "skills": [
+    "Python",
+    "Automation",
+    "Git",
+    "Troubleshooting"
+  ],
+  "category": "Automation",
+  "featured": true,
+  "order": 0,
+  "createdAt": "2026-07-16T16:10:17.078Z",
+  "updatedAt": "2026-07-16T16:10:17.078Z"
+}

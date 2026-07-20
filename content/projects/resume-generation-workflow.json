@@ -1,0 +1,98 @@
+{
+  "id": "cmrnoar2a003hygbcy0bf6ldh",
+  "title": "Resume Generation Workflow",
+  "slug": "resume-generation-workflow",
+  "subtitle": null,
+  "summary": "Automated resume generation from portfolio data.",
+  "shortDescription": "Automated resume generation from portfolio data.",
+  "description": "An automated workflow that generates tailored resumes from portfolio data. Extracts relevant projects, skills, and experience based on the target role, formats into professional templates, and exports as PDF. Supports multiple templates and ATS optimization.",
+  "problemStatement": null,
+  "solution": null,
+  "background": null,
+  "objectives": [],
+  "features": [],
+  "architecture": null,
+  "folderStructure": null,
+  "technologyStack": [
+    {
+      "name": "n8n"
+    },
+    {
+      "name": "OpenAI API"
+    },
+    {
+      "name": "PDF Generator"
+    },
+    {
+      "name": "Next.js"
+    }
+  ],
+  "technologies": [
+    "n8n",
+    "OpenAI API",
+    "PDF Generator",
+    "Next.js"
+  ],
+  "hardware": [],
+  "software": [],
+  "tools": [],
+  "difficulty": "intermediate",
+  "status": "PUBLISHED",
+  "category": {
+    "name": "Automation",
+    "slug": "automation"
+  },
+  "subCategory": null,
+  "client": null,
+  "course": null,
+  "semester": null,
+  "year": 2024,
+  "thumbnail": null,
+  "banner": null,
+  "screenshots": [],
+  "gallery": [],
+  "videos": [],
+  "demoLink": null,
+  "githubLink": "https://github.com",
+  "linkedinLink": null,
+  "documentation": null,
+  "caseStudy": null,
+  "futureImprovements": null,
+  "testing": null,
+  "deployment": null,
+  "performance": null,
+  "seoDescription": null,
+  "metrics": [],
+  "skillsLearned": [
+    "n8n",
+    "OpenAI API",
+    "PDF Generator",
+    "Next.js"
+  ],
+  "lessonsLearned": null,
+  "tags": [
+    {
+      "name": "ai",
+      "slug": "ai"
+    },
+    {
+      "name": "automation",
+      "slug": "automation"
+    },
+    {
+      "name": "n8n",
+      "slug": "n8n"
+    }
+  ],
+  "searchKeywords": [],
+  "featured": false,
+  "pinned": false,
+  "visibility": "PUBLIC",
+  "icon": null,
+  "color": null,
+  "timeline": [],
+  "seo": null,
+  "publishedAt": "2026-07-16T15:37:47.648Z",
+  "createdAt": "2026-07-16T15:37:47.650Z",
+  "updatedAt": "2026-07-16T15:37:47.650Z"
+}

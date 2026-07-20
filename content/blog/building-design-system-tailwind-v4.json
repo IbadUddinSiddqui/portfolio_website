@@ -1,0 +1,21 @@
+{
+  "id": "cmri2lc130013z4bc7k0v53y6",
+  "title": "Building a Design System with Tailwind CSS v4",
+  "slug": "building-design-system-tailwind-v4",
+  "content": "# Building a Design System with Tailwind CSS v4\n\nTailwind CSS v4 introduces a new API that makes building design systems more powerful than ever. In this post, I'll walk through the key concepts.\n\n## The @theme Directive\n\nThe `@theme` directive lets you define design tokens in CSS:\n\n```css\n@theme inline {\n  --color-primary: var(--primary);\n  --color-secondary: var(--secondary);\n  --radius-lg: 0.75rem;\n}\n```\n\n## CSS Variables for Theming\n\nUsing CSS variables with Tailwind v4 makes dark mode and theming seamless:\n\n```css\n:root {\n  --background: #FFFFFF;\n  --foreground: #0A0A0B;\n}\n\n.dark {\n  --background: #0A0A0B;\n  --foreground: #FAFAFA;\n}\n```\n\nThis is just the beginning. The new API opens up many possibilities.",
+  "excerpt": "Building a modern design system using Tailwind CSS v4's new @theme directive and CSS variables.",
+  "coverImage": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=1200&q=80",
+  "category": null,
+  "tags": [
+    "Next.js",
+    "TypeScript",
+    "Tailwind CSS"
+  ],
+  "readingTime": null,
+  "published": true,
+  "featured": false,
+  "seo": null,
+  "publishedAt": "2026-06-01T00:00:00.000Z",
+  "createdAt": "2026-07-12T17:31:18.951Z",
+  "updatedAt": "2026-07-12T17:31:18.951Z"
+}

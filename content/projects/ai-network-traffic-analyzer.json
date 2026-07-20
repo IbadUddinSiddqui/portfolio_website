@@ -1,0 +1,126 @@
+{
+  "id": "cmrnoadb2002uygbcrfjer2sx",
+  "title": "AI Network Traffic Analyzer",
+  "slug": "ai-network-traffic-analyzer",
+  "subtitle": null,
+  "summary": "Real-time network traffic analysis with ML-powered anomaly detection.",
+  "shortDescription": "Real-time network traffic analysis with ML-powered anomaly detection.",
+  "description": "Built a sophisticated network traffic analysis tool that captures, analyzes, and visualizes network packets in real-time. Uses machine learning algorithms to detect anomalies, potential threats, and bandwidth hogs. Features a modern dashboard with live graphs, historical data analysis, and automated alerting.",
+  "problemStatement": null,
+  "solution": null,
+  "background": null,
+  "objectives": [],
+  "features": [],
+  "architecture": null,
+  "folderStructure": null,
+  "technologyStack": [
+    {
+      "name": "Python"
+    },
+    {
+      "name": "TensorFlow"
+    },
+    {
+      "name": "Scikit-learn"
+    },
+    {
+      "name": "Flask"
+    },
+    {
+      "name": "React"
+    },
+    {
+      "name": "D3.js"
+    },
+    {
+      "name": "WebSocket"
+    },
+    {
+      "name": "pcap"
+    }
+  ],
+  "technologies": [
+    "Python",
+    "TensorFlow",
+    "Scikit-learn",
+    "Flask",
+    "React",
+    "D3.js",
+    "WebSocket",
+    "pcap"
+  ],
+  "hardware": [],
+  "software": [],
+  "tools": [],
+  "difficulty": "advanced",
+  "status": "PUBLISHED",
+  "category": {
+    "name": "Artificial Intelligence",
+    "slug": "artificial-intelligence"
+  },
+  "subCategory": null,
+  "client": null,
+  "course": null,
+  "semester": null,
+  "year": 2024,
+  "thumbnail": null,
+  "banner": null,
+  "screenshots": [],
+  "gallery": [],
+  "videos": [],
+  "demoLink": null,
+  "githubLink": "https://github.com",
+  "linkedinLink": null,
+  "documentation": null,
+  "caseStudy": null,
+  "futureImprovements": null,
+  "testing": null,
+  "deployment": null,
+  "performance": null,
+  "seoDescription": null,
+  "metrics": [],
+  "skillsLearned": [
+    "Python",
+    "TensorFlow",
+    "Scikit-learn",
+    "Flask",
+    "React",
+    "D3.js",
+    "WebSocket",
+    "pcap"
+  ],
+  "lessonsLearned": null,
+  "tags": [
+    {
+      "name": "react",
+      "slug": "react"
+    },
+    {
+      "name": "python",
+      "slug": "python"
+    },
+    {
+      "name": "ai",
+      "slug": "ai"
+    },
+    {
+      "name": "machine-learning",
+      "slug": "machine-learning"
+    },
+    {
+      "name": "networking",
+      "slug": "networking"
+    }
+  ],
+  "searchKeywords": [],
+  "featured": true,
+  "pinned": false,
+  "visibility": "PUBLIC",
+  "icon": null,
+  "color": null,
+  "timeline": [],
+  "seo": null,
+  "publishedAt": "2026-07-16T15:37:29.814Z",
+  "createdAt": "2026-07-16T15:37:29.822Z",
+  "updatedAt": "2026-07-16T15:37:29.822Z"
+}

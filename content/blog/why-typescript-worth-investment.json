@@ -1,0 +1,20 @@
+{
+  "id": "cmri2lc130015z4bc9ia6eecl",
+  "title": "Why TypeScript is Worth the Investment",
+  "slug": "why-typescript-worth-investment",
+  "content": "# Why TypeScript is Worth the Investment\n\nAfter working with TypeScript for over 5 years, here's why I believe it's essential for any serious project.\n\n## Catch Bugs Before Runtime\n\nTypeScript catches entire categories of bugs at compile time:\n\n```typescript\ninterface User {\n  id: string;\n  email: string;\n  name?: string;\n}\n\nfunction greet(user: User): string {\n  return `Hello, ${user.name ?? \"Guest\"}!`;\n}\n```\n\n## Better Developer Experience\n\nAutocomplete, refactoring, and documentation are dramatically better with TypeScript.\n\n## Key Takeaways\n\n- Start with strict mode\n- Use type inference where possible\n- Avoid `any` unless absolutely necessary\n- Leverage discriminated unions for state management",
+  "excerpt": "Five years of TypeScript experience distilled into practical advice on why strict typing pays off.",
+  "coverImage": null,
+  "category": null,
+  "tags": [
+    "TypeScript",
+    "JavaScript"
+  ],
+  "readingTime": null,
+  "published": true,
+  "featured": false,
+  "seo": null,
+  "publishedAt": "2026-04-20T00:00:00.000Z",
+  "createdAt": "2026-07-12T17:31:18.951Z",
+  "updatedAt": "2026-07-12T17:31:18.951Z"
+}

@@ -1,0 +1,22 @@
+{
+  "id": "cmrnpgjof003qesbcoskd31v9",
+  "title": "MATLAB Fundamentals",
+  "issuer": "MathWorks",
+  "slug": "matlab-fundamentals",
+  "description": null,
+  "issueDate": "2024-01-01T00:00:00.000Z",
+  "expiryDate": null,
+  "credentialId": null,
+  "credentialUrl": null,
+  "image": null,
+  "skills": [
+    "MATLAB",
+    "Simulink",
+    "Data Analysis"
+  ],
+  "category": "Engineering Software",
+  "featured": true,
+  "order": 0,
+  "createdAt": "2026-07-16T16:10:17.631Z",
+  "updatedAt": "2026-07-16T16:10:17.631Z"
+}

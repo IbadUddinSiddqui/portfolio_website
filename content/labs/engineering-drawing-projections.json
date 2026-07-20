@@ -1,0 +1,32 @@
+{
+  "id": "cmrnpgipy003hesbcehrmaqh1",
+  "title": "Engineering Drawing: Projections",
+  "slug": "engineering-drawing-projections",
+  "summary": "Orthographic and isometric projection practice",
+  "description": null,
+  "category": "drawing",
+  "course": "Engineering Drawing",
+  "semester": "1st",
+  "year": 2021,
+  "objectives": [
+    "Understand engineering drawing: projections",
+    "Perform analysis and measurements",
+    "Document results and conclusions"
+  ],
+  "equipment": [],
+  "procedure": null,
+  "observations": null,
+  "results": null,
+  "conclusion": null,
+  "technologies": [],
+  "githubLink": null,
+  "reportLink": null,
+  "schematicLink": null,
+  "images": [],
+  "difficulty": "beginner",
+  "status": "PUBLISHED",
+  "featured": false,
+  "order": 0,
+  "createdAt": "2026-07-16T16:10:16.390Z",
+  "updatedAt": "2026-07-16T16:10:16.390Z"
+}

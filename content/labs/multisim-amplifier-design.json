@@ -1,0 +1,32 @@
+{
+  "id": "cmrnpgihs003fesbcb78v7330",
+  "title": "Multisim: Amplifier Design",
+  "slug": "multisim-amplifier-design",
+  "summary": "CE, CB, and CC amplifier simulation and analysis",
+  "description": null,
+  "category": "multisim",
+  "course": "Electronics Lab II",
+  "semester": "3rd",
+  "year": 2023,
+  "objectives": [
+    "Understand multisim: amplifier design",
+    "Perform analysis and measurements",
+    "Document results and conclusions"
+  ],
+  "equipment": [],
+  "procedure": null,
+  "observations": null,
+  "results": null,
+  "conclusion": null,
+  "technologies": [],
+  "githubLink": null,
+  "reportLink": null,
+  "schematicLink": null,
+  "images": [],
+  "difficulty": "intermediate",
+  "status": "PUBLISHED",
+  "featured": false,
+  "order": 0,
+  "createdAt": "2026-07-16T16:10:16.096Z",
+  "updatedAt": "2026-07-16T16:10:16.096Z"
+}

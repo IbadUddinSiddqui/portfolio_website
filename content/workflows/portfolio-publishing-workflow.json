@@ -1,0 +1,35 @@
+{
+  "id": "cmrnpgg91002wesbcyipa8fdm",
+  "title": "Portfolio Publishing Workflow",
+  "slug": "portfolio-publishing-workflow",
+  "summary": "Automated publishing pipeline with SEO",
+  "description": "Handles complete publishing workflow: content review → SEO optimization → social media announcement → performance monitoring. Integrates with CMS and analytics.",
+  "trigger": "Manual (publish button in CMS)",
+  "purpose": "Streamline publishing with automated SEO checks, social posting, and monitoring.",
+  "services": [
+    "Portfolio CMS",
+    "LinkedIn API",
+    "Search Console API"
+  ],
+  "flowDiagram": null,
+  "nodes": [],
+  "inputs": [],
+  "outputs": [],
+  "futureImprovements": null,
+  "difficulty": "intermediate",
+  "tools": [
+    "n8n",
+    "GitHub Actions"
+  ],
+  "technologies": [
+    "n8n",
+    "Next.js",
+    "SEO"
+  ],
+  "category": "portfolio",
+  "status": "PUBLISHED",
+  "featured": false,
+  "order": 0,
+  "createdAt": "2026-07-16T16:10:13.189Z",
+  "updatedAt": "2026-07-16T16:10:13.189Z"
+}

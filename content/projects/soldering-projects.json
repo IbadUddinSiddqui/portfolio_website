@@ -1,0 +1,95 @@
+{
+  "id": "cmrnoaulb003rygbc4ampteq5",
+  "title": "Soldering Projects",
+  "slug": "soldering-projects",
+  "subtitle": null,
+  "summary": "Soldering skills development through practical projects.",
+  "shortDescription": "Soldering skills development through practical projects.",
+  "description": "A progression of soldering projects from basic through-hole components to surface-mount soldering. Includes practice boards, kit assembly, repair work, and custom circuit building. Emphasis on proper technique, joint inspection, and safety.",
+  "problemStatement": null,
+  "solution": null,
+  "background": null,
+  "objectives": [],
+  "features": [],
+  "architecture": null,
+  "folderStructure": null,
+  "technologyStack": [
+    {
+      "name": "Soldering Iron"
+    },
+    {
+      "name": "Flux"
+    },
+    {
+      "name": "Solder"
+    },
+    {
+      "name": "Desoldering"
+    },
+    {
+      "name": "Magnifier"
+    }
+  ],
+  "technologies": [
+    "Soldering Iron",
+    "Flux",
+    "Solder",
+    "Desoldering",
+    "Magnifier"
+  ],
+  "hardware": [],
+  "software": [],
+  "tools": [],
+  "difficulty": "beginner",
+  "status": "PUBLISHED",
+  "category": {
+    "name": "Electronics",
+    "slug": "electronics"
+  },
+  "subCategory": null,
+  "client": null,
+  "course": null,
+  "semester": null,
+  "year": 2023,
+  "thumbnail": null,
+  "banner": null,
+  "screenshots": [],
+  "gallery": [],
+  "videos": [],
+  "demoLink": null,
+  "githubLink": null,
+  "linkedinLink": null,
+  "documentation": null,
+  "caseStudy": null,
+  "futureImprovements": null,
+  "testing": null,
+  "deployment": null,
+  "performance": null,
+  "seoDescription": null,
+  "metrics": [],
+  "skillsLearned": [
+    "Soldering Iron",
+    "Flux",
+    "Solder",
+    "Desoldering",
+    "Magnifier"
+  ],
+  "lessonsLearned": null,
+  "tags": [
+    {
+      "name": "electronics",
+      "slug": "electronics"
+    }
+  ],
+  "searchKeywords": [],
+  "featured": false,
+  "pinned": false,
+  "visibility": "PUBLIC",
+  "icon": null,
+  "color": null,
+  "timeline": [],
+  "seo": null,
+  "publishedAt": "2026-07-16T15:37:52.221Z",
+  "createdAt": "2026-07-16T15:37:52.223Z",
+  "updatedAt": "2026-07-16T15:37:52.223Z"
+}

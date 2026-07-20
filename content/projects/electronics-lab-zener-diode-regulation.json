@@ -1,0 +1,90 @@
+{
+  "id": "cmrnoaygd0045ygbcoh8bbfe9",
+  "title": "Electronics Lab: Zener Diode Regulation",
+  "slug": "electronics-lab-zener-diode-regulation",
+  "subtitle": null,
+  "summary": "Zener diode voltage regulator design and testing.",
+  "shortDescription": "Zener diode voltage regulator design and testing.",
+  "description": "Designed and tested a Zener diode voltage regulator circuit. Measured load regulation, line regulation, and output impedance. Analyzed the effect of series resistance on regulation performance.",
+  "problemStatement": null,
+  "solution": null,
+  "background": null,
+  "objectives": [],
+  "features": [],
+  "architecture": null,
+  "folderStructure": null,
+  "technologyStack": [
+    {
+      "name": "Zener Diode"
+    },
+    {
+      "name": "Resistors"
+    },
+    {
+      "name": "Power Supply"
+    },
+    {
+      "name": "Multimeter"
+    }
+  ],
+  "technologies": [
+    "Zener Diode",
+    "Resistors",
+    "Power Supply",
+    "Multimeter"
+  ],
+  "hardware": [],
+  "software": [],
+  "tools": [],
+  "difficulty": "intermediate",
+  "status": "PUBLISHED",
+  "category": {
+    "name": "Electronics",
+    "slug": "electronics"
+  },
+  "subCategory": null,
+  "client": null,
+  "course": null,
+  "semester": null,
+  "year": 2023,
+  "thumbnail": null,
+  "banner": null,
+  "screenshots": [],
+  "gallery": [],
+  "videos": [],
+  "demoLink": null,
+  "githubLink": null,
+  "linkedinLink": null,
+  "documentation": null,
+  "caseStudy": null,
+  "futureImprovements": null,
+  "testing": null,
+  "deployment": null,
+  "performance": null,
+  "seoDescription": null,
+  "metrics": [],
+  "skillsLearned": [
+    "Zener Diode",
+    "Resistors",
+    "Power Supply",
+    "Multimeter"
+  ],
+  "lessonsLearned": null,
+  "tags": [
+    {
+      "name": "electronics",
+      "slug": "electronics"
+    }
+  ],
+  "searchKeywords": [],
+  "featured": false,
+  "pinned": false,
+  "visibility": "PUBLIC",
+  "icon": null,
+  "color": null,
+  "timeline": [],
+  "seo": null,
+  "publishedAt": "2026-07-16T15:37:57.229Z",
+  "createdAt": "2026-07-16T15:37:57.229Z",
+  "updatedAt": "2026-07-16T15:37:57.229Z"
+}

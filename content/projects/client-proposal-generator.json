@@ -1,0 +1,98 @@
+{
+  "id": "cmrnoapm1003dygbco6mj1w4d",
+  "title": "Client Proposal Generator",
+  "slug": "client-proposal-generator",
+  "subtitle": null,
+  "summary": "Automated proposal generation with AI-powered content.",
+  "shortDescription": "Automated proposal generation with AI-powered content.",
+  "description": "An n8n workflow that generates professional client proposals automatically. Takes project requirements, generates personalized content using AI, formats into a beautiful PDF, and sends via email. Includes template management, pricing calculator, and approval tracking.",
+  "problemStatement": null,
+  "solution": null,
+  "background": null,
+  "objectives": [],
+  "features": [],
+  "architecture": null,
+  "folderStructure": null,
+  "technologyStack": [
+    {
+      "name": "n8n"
+    },
+    {
+      "name": "OpenAI API"
+    },
+    {
+      "name": "PDF Generator"
+    },
+    {
+      "name": "Gmail API"
+    }
+  ],
+  "technologies": [
+    "n8n",
+    "OpenAI API",
+    "PDF Generator",
+    "Gmail API"
+  ],
+  "hardware": [],
+  "software": [],
+  "tools": [],
+  "difficulty": "intermediate",
+  "status": "PUBLISHED",
+  "category": {
+    "name": "Automation",
+    "slug": "automation"
+  },
+  "subCategory": null,
+  "client": null,
+  "course": null,
+  "semester": null,
+  "year": 2024,
+  "thumbnail": null,
+  "banner": null,
+  "screenshots": [],
+  "gallery": [],
+  "videos": [],
+  "demoLink": null,
+  "githubLink": "https://github.com",
+  "linkedinLink": null,
+  "documentation": null,
+  "caseStudy": null,
+  "futureImprovements": null,
+  "testing": null,
+  "deployment": null,
+  "performance": null,
+  "seoDescription": null,
+  "metrics": [],
+  "skillsLearned": [
+    "n8n",
+    "OpenAI API",
+    "PDF Generator",
+    "Gmail API"
+  ],
+  "lessonsLearned": null,
+  "tags": [
+    {
+      "name": "ai",
+      "slug": "ai"
+    },
+    {
+      "name": "automation",
+      "slug": "automation"
+    },
+    {
+      "name": "n8n",
+      "slug": "n8n"
+    }
+  ],
+  "searchKeywords": [],
+  "featured": false,
+  "pinned": false,
+  "visibility": "PUBLIC",
+  "icon": null,
+  "color": null,
+  "timeline": [],
+  "seo": null,
+  "publishedAt": "2026-07-16T15:37:45.769Z",
+  "createdAt": "2026-07-16T15:37:45.769Z",
+  "updatedAt": "2026-07-16T15:37:45.769Z"
+}

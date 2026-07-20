@@ -1,0 +1,104 @@
+{
+  "id": "cmrnoav1n003tygbcii0nwgi1",
+  "title": "DC Power Supply Design",
+  "slug": "dc-power-supply-design",
+  "subtitle": null,
+  "summary": "Variable DC power supply with voltage regulation.",
+  "shortDescription": "Variable DC power supply with voltage regulation.",
+  "description": "Designed and built a variable DC power supply with adjustable voltage (1.2V-24V) and current limiting. Features include LM317 regulator, bridge rectifier, filter capacitors, voltmeter display, and overload protection. Housed in a custom enclosure with proper ventilation.",
+  "problemStatement": null,
+  "solution": null,
+  "background": null,
+  "objectives": [],
+  "features": [],
+  "architecture": null,
+  "folderStructure": null,
+  "technologyStack": [
+    {
+      "name": "LM317"
+    },
+    {
+      "name": "Transformer"
+    },
+    {
+      "name": "Rectifier"
+    },
+    {
+      "name": "Capacitors"
+    },
+    {
+      "name": "Heatsink"
+    },
+    {
+      "name": "PCB"
+    }
+  ],
+  "technologies": [
+    "LM317",
+    "Transformer",
+    "Rectifier",
+    "Capacitors",
+    "Heatsink",
+    "PCB"
+  ],
+  "hardware": [],
+  "software": [],
+  "tools": [],
+  "difficulty": "advanced",
+  "status": "PUBLISHED",
+  "category": {
+    "name": "Electronics",
+    "slug": "electronics"
+  },
+  "subCategory": null,
+  "client": null,
+  "course": null,
+  "semester": null,
+  "year": 2023,
+  "thumbnail": null,
+  "banner": null,
+  "screenshots": [],
+  "gallery": [],
+  "videos": [],
+  "demoLink": null,
+  "githubLink": "https://github.com",
+  "linkedinLink": null,
+  "documentation": null,
+  "caseStudy": null,
+  "futureImprovements": null,
+  "testing": null,
+  "deployment": null,
+  "performance": null,
+  "seoDescription": null,
+  "metrics": [],
+  "skillsLearned": [
+    "LM317",
+    "Transformer",
+    "Rectifier",
+    "Capacitors",
+    "Heatsink",
+    "PCB"
+  ],
+  "lessonsLearned": null,
+  "tags": [
+    {
+      "name": "electronics",
+      "slug": "electronics"
+    },
+    {
+      "name": "pcb",
+      "slug": "pcb"
+    }
+  ],
+  "searchKeywords": [],
+  "featured": false,
+  "pinned": false,
+  "visibility": "PUBLIC",
+  "icon": null,
+  "color": null,
+  "timeline": [],
+  "seo": null,
+  "publishedAt": "2026-07-16T15:37:52.810Z",
+  "createdAt": "2026-07-16T15:37:52.811Z",
+  "updatedAt": "2026-07-16T15:37:52.811Z"
+}

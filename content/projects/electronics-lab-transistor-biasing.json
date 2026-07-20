@@ -1,0 +1,95 @@
+{
+  "id": "cmrnoaynq0046ygbchxln8u3x",
+  "title": "Electronics Lab: Transistor Biasing",
+  "slug": "electronics-lab-transistor-biasing",
+  "subtitle": null,
+  "summary": "BJT biasing circuits: fixed bias, voltage divider, and self-bias.",
+  "shortDescription": "BJT biasing circuits: fixed bias, voltage divider, and self-bias.",
+  "description": "Experiment on BJT biasing configurations including fixed bias, voltage divider bias, and self-bias (emitter bias). Measured Q-point stability, analyzed thermal runaway prevention, and compared biasing methods.",
+  "problemStatement": null,
+  "solution": null,
+  "background": null,
+  "objectives": [],
+  "features": [],
+  "architecture": null,
+  "folderStructure": null,
+  "technologyStack": [
+    {
+      "name": "Transistors"
+    },
+    {
+      "name": "Resistors"
+    },
+    {
+      "name": "Power Supply"
+    },
+    {
+      "name": "Multimeter"
+    },
+    {
+      "name": "Oscilloscope"
+    }
+  ],
+  "technologies": [
+    "Transistors",
+    "Resistors",
+    "Power Supply",
+    "Multimeter",
+    "Oscilloscope"
+  ],
+  "hardware": [],
+  "software": [],
+  "tools": [],
+  "difficulty": "intermediate",
+  "status": "PUBLISHED",
+  "category": {
+    "name": "Electronics",
+    "slug": "electronics"
+  },
+  "subCategory": null,
+  "client": null,
+  "course": null,
+  "semester": null,
+  "year": 2023,
+  "thumbnail": null,
+  "banner": null,
+  "screenshots": [],
+  "gallery": [],
+  "videos": [],
+  "demoLink": null,
+  "githubLink": null,
+  "linkedinLink": null,
+  "documentation": null,
+  "caseStudy": null,
+  "futureImprovements": null,
+  "testing": null,
+  "deployment": null,
+  "performance": null,
+  "seoDescription": null,
+  "metrics": [],
+  "skillsLearned": [
+    "Transistors",
+    "Resistors",
+    "Power Supply",
+    "Multimeter",
+    "Oscilloscope"
+  ],
+  "lessonsLearned": null,
+  "tags": [
+    {
+      "name": "electronics",
+      "slug": "electronics"
+    }
+  ],
+  "searchKeywords": [],
+  "featured": false,
+  "pinned": false,
+  "visibility": "PUBLIC",
+  "icon": null,
+  "color": null,
+  "timeline": [],
+  "seo": null,
+  "publishedAt": "2026-07-16T15:37:57.491Z",
+  "createdAt": "2026-07-16T15:37:57.494Z",
+  "updatedAt": "2026-07-16T15:37:57.494Z"
+}

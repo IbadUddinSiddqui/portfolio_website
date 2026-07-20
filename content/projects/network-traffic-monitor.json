@@ -1,0 +1,103 @@
+{
+  "id": "cmrnoazxj004dygbcdz80gnul",
+  "title": "Network Traffic Monitor",
+  "slug": "network-traffic-monitor",
+  "subtitle": null,
+  "summary": "Real-time network monitoring and bandwidth analysis tool.",
+  "shortDescription": "Real-time network monitoring and bandwidth analysis tool.",
+  "description": "Built a network monitoring tool that captures and analyzes network traffic in real-time. Features bandwidth usage graphs, protocol distribution, top talkers identification, and alert configuration for unusual traffic patterns.",
+  "problemStatement": null,
+  "solution": null,
+  "background": null,
+  "objectives": [],
+  "features": [],
+  "architecture": null,
+  "folderStructure": null,
+  "technologyStack": [
+    {
+      "name": "Python"
+    },
+    {
+      "name": "pcap"
+    },
+    {
+      "name": "Flask"
+    },
+    {
+      "name": "D3.js"
+    },
+    {
+      "name": "WebSocket"
+    }
+  ],
+  "technologies": [
+    "Python",
+    "pcap",
+    "Flask",
+    "D3.js",
+    "WebSocket"
+  ],
+  "hardware": [],
+  "software": [],
+  "tools": [],
+  "difficulty": "advanced",
+  "status": "PUBLISHED",
+  "category": {
+    "name": "Software Engineering",
+    "slug": "software-engineering"
+  },
+  "subCategory": null,
+  "client": null,
+  "course": null,
+  "semester": null,
+  "year": 2024,
+  "thumbnail": null,
+  "banner": null,
+  "screenshots": [],
+  "gallery": [],
+  "videos": [],
+  "demoLink": null,
+  "githubLink": "https://github.com",
+  "linkedinLink": null,
+  "documentation": null,
+  "caseStudy": null,
+  "futureImprovements": null,
+  "testing": null,
+  "deployment": null,
+  "performance": null,
+  "seoDescription": null,
+  "metrics": [],
+  "skillsLearned": [
+    "Python",
+    "pcap",
+    "Flask",
+    "D3.js",
+    "WebSocket"
+  ],
+  "lessonsLearned": null,
+  "tags": [
+    {
+      "name": "python",
+      "slug": "python"
+    },
+    {
+      "name": "networking",
+      "slug": "networking"
+    },
+    {
+      "name": "api",
+      "slug": "api"
+    }
+  ],
+  "searchKeywords": [],
+  "featured": false,
+  "pinned": false,
+  "visibility": "PUBLIC",
+  "icon": null,
+  "color": null,
+  "timeline": [],
+  "seo": null,
+  "publishedAt": "2026-07-16T15:37:59.142Z",
+  "createdAt": "2026-07-16T15:37:59.143Z",
+  "updatedAt": "2026-07-16T15:37:59.143Z"
+}

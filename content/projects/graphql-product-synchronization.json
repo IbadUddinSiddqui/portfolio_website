@@ -1,0 +1,107 @@
+{
+  "id": "cmrnoamjo0039ygbca6572or2",
+  "title": "GraphQL Product Synchronization",
+  "slug": "graphql-product-synchronization",
+  "subtitle": null,
+  "summary": "Multi-platform product sync engine using GraphQL.",
+  "shortDescription": "Multi-platform product sync engine using GraphQL.",
+  "description": "A robust product synchronization system that keeps product data consistent across Shopify, the portfolio site, and other platforms. Uses GraphQL for efficient data fetching, handles variant matching, inventory syncing, and price updates with conflict resolution.",
+  "problemStatement": null,
+  "solution": null,
+  "background": null,
+  "objectives": [],
+  "features": [],
+  "architecture": null,
+  "folderStructure": null,
+  "technologyStack": [
+    {
+      "name": "GraphQL"
+    },
+    {
+      "name": "Node.js"
+    },
+    {
+      "name": "Shopify API"
+    },
+    {
+      "name": "PostgreSQL"
+    },
+    {
+      "name": "Redis"
+    }
+  ],
+  "technologies": [
+    "GraphQL",
+    "Node.js",
+    "Shopify API",
+    "PostgreSQL",
+    "Redis"
+  ],
+  "hardware": [],
+  "software": [],
+  "tools": [],
+  "difficulty": "advanced",
+  "status": "PUBLISHED",
+  "category": {
+    "name": "Client Work",
+    "slug": "client-work"
+  },
+  "subCategory": null,
+  "client": null,
+  "course": null,
+  "semester": null,
+  "year": 2024,
+  "thumbnail": null,
+  "banner": null,
+  "screenshots": [],
+  "gallery": [],
+  "videos": [],
+  "demoLink": null,
+  "githubLink": "https://github.com",
+  "linkedinLink": null,
+  "documentation": null,
+  "caseStudy": null,
+  "futureImprovements": null,
+  "testing": null,
+  "deployment": null,
+  "performance": null,
+  "seoDescription": null,
+  "metrics": [],
+  "skillsLearned": [
+    "GraphQL",
+    "Node.js",
+    "Shopify API",
+    "PostgreSQL",
+    "Redis"
+  ],
+  "lessonsLearned": null,
+  "tags": [
+    {
+      "name": "graphql",
+      "slug": "graphql"
+    },
+    {
+      "name": "automation",
+      "slug": "automation"
+    },
+    {
+      "name": "shopify",
+      "slug": "shopify"
+    },
+    {
+      "name": "api",
+      "slug": "api"
+    }
+  ],
+  "searchKeywords": [],
+  "featured": false,
+  "pinned": false,
+  "visibility": "PUBLIC",
+  "icon": null,
+  "color": null,
+  "timeline": [],
+  "seo": null,
+  "publishedAt": "2026-07-16T15:37:41.776Z",
+  "createdAt": "2026-07-16T15:37:41.796Z",
+  "updatedAt": "2026-07-16T15:37:41.796Z"
+}

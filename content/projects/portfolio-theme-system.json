@@ -1,0 +1,103 @@
+{
+  "id": "cmrnob0ar004eygbc0hgd0kid",
+  "title": "Portfolio Theme System",
+  "slug": "portfolio-theme-system",
+  "subtitle": null,
+  "summary": "Customizable theme engine for portfolio websites.",
+  "shortDescription": "Customizable theme engine for portfolio websites.",
+  "description": "Built a complete theme system for portfolio websites with light/dark modes, accent color customization, glass effect variants, and layout options. Users can customize colors, fonts, spacing, and animations through a visual editor.",
+  "problemStatement": null,
+  "solution": null,
+  "background": null,
+  "objectives": [],
+  "features": [],
+  "architecture": null,
+  "folderStructure": null,
+  "technologyStack": [
+    {
+      "name": "Next.js"
+    },
+    {
+      "name": "TypeScript"
+    },
+    {
+      "name": "Tailwind CSS"
+    },
+    {
+      "name": "CSS Variables"
+    },
+    {
+      "name": "Radix UI"
+    }
+  ],
+  "technologies": [
+    "Next.js",
+    "TypeScript",
+    "Tailwind CSS",
+    "CSS Variables",
+    "Radix UI"
+  ],
+  "hardware": [],
+  "software": [],
+  "tools": [],
+  "difficulty": "intermediate",
+  "status": "PUBLISHED",
+  "category": {
+    "name": "Software Engineering",
+    "slug": "software-engineering"
+  },
+  "subCategory": null,
+  "client": null,
+  "course": null,
+  "semester": null,
+  "year": 2024,
+  "thumbnail": null,
+  "banner": null,
+  "screenshots": [],
+  "gallery": [],
+  "videos": [],
+  "demoLink": null,
+  "githubLink": "https://github.com",
+  "linkedinLink": null,
+  "documentation": null,
+  "caseStudy": null,
+  "futureImprovements": null,
+  "testing": null,
+  "deployment": null,
+  "performance": null,
+  "seoDescription": null,
+  "metrics": [],
+  "skillsLearned": [
+    "Next.js",
+    "TypeScript",
+    "Tailwind CSS",
+    "CSS Variables",
+    "Radix UI"
+  ],
+  "lessonsLearned": null,
+  "tags": [
+    {
+      "name": "react",
+      "slug": "react"
+    },
+    {
+      "name": "typescript",
+      "slug": "typescript"
+    },
+    {
+      "name": "nextjs",
+      "slug": "nextjs"
+    }
+  ],
+  "searchKeywords": [],
+  "featured": false,
+  "pinned": false,
+  "visibility": "PUBLIC",
+  "icon": null,
+  "color": null,
+  "timeline": [],
+  "seo": null,
+  "publishedAt": "2026-07-16T15:37:59.618Z",
+  "createdAt": "2026-07-16T15:37:59.619Z",
+  "updatedAt": "2026-07-16T15:37:59.619Z"
+}

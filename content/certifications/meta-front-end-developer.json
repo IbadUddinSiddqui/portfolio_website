@@ -1,0 +1,23 @@
+{
+  "id": "cmrnpgj4b003lesbcffmcep7n",
+  "title": "Meta Front-End Developer",
+  "issuer": "Meta / Coursera",
+  "slug": "meta-front-end-developer",
+  "description": null,
+  "issueDate": "2024-01-01T00:00:00.000Z",
+  "expiryDate": null,
+  "credentialId": null,
+  "credentialUrl": null,
+  "image": null,
+  "skills": [
+    "React",
+    "HTML/CSS",
+    "JavaScript",
+    "Version Control"
+  ],
+  "category": "Software Development",
+  "featured": true,
+  "order": 0,
+  "createdAt": "2026-07-16T16:10:16.907Z",
+  "updatedAt": "2026-07-16T16:10:16.907Z"
+}

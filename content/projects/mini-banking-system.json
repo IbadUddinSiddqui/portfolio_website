@@ -1,0 +1,99 @@
+{
+  "id": "cmrnoai1o0032ygbc7cabxtte",
+  "title": "Mini Banking System",
+  "slug": "mini-banking-system",
+  "subtitle": null,
+  "summary": "Simulated banking system with transactions and account management.",
+  "shortDescription": "Simulated banking system with transactions and account management.",
+  "description": "A mini banking system simulation featuring account creation, deposits, withdrawals, fund transfers, transaction history, and balance tracking. Built with secure authentication and comprehensive logging. Includes a modern dashboard with spending analytics and financial summaries.",
+  "problemStatement": null,
+  "solution": null,
+  "background": null,
+  "objectives": [],
+  "features": [],
+  "architecture": null,
+  "folderStructure": null,
+  "technologyStack": [
+    {
+      "name": "Python"
+    },
+    {
+      "name": "Flask"
+    },
+    {
+      "name": "SQLite"
+    },
+    {
+      "name": "HTML/CSS"
+    },
+    {
+      "name": "JavaScript"
+    }
+  ],
+  "technologies": [
+    "Python",
+    "Flask",
+    "SQLite",
+    "HTML/CSS",
+    "JavaScript"
+  ],
+  "hardware": [],
+  "software": [],
+  "tools": [],
+  "difficulty": "intermediate",
+  "status": "PUBLISHED",
+  "category": {
+    "name": "Software Engineering",
+    "slug": "software-engineering"
+  },
+  "subCategory": null,
+  "client": null,
+  "course": null,
+  "semester": null,
+  "year": 2023,
+  "thumbnail": null,
+  "banner": null,
+  "screenshots": [],
+  "gallery": [],
+  "videos": [],
+  "demoLink": null,
+  "githubLink": "https://github.com",
+  "linkedinLink": null,
+  "documentation": null,
+  "caseStudy": null,
+  "futureImprovements": null,
+  "testing": null,
+  "deployment": null,
+  "performance": null,
+  "seoDescription": null,
+  "metrics": [],
+  "skillsLearned": [
+    "Python",
+    "Flask",
+    "SQLite",
+    "HTML/CSS",
+    "JavaScript"
+  ],
+  "lessonsLearned": null,
+  "tags": [
+    {
+      "name": "python",
+      "slug": "python"
+    },
+    {
+      "name": "api",
+      "slug": "api"
+    }
+  ],
+  "searchKeywords": [],
+  "featured": false,
+  "pinned": false,
+  "visibility": "PUBLIC",
+  "icon": null,
+  "color": null,
+  "timeline": [],
+  "seo": null,
+  "publishedAt": "2026-07-16T15:37:35.964Z",
+  "createdAt": "2026-07-16T15:37:35.964Z",
+  "updatedAt": "2026-07-16T15:37:35.964Z"
+}

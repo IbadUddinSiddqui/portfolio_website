@@ -1,0 +1,17 @@
+{
+  "id": "cmrno9ma5000m9wbccaz9bpkj",
+  "name": "Design",
+  "slug": "design",
+  "icon": "Palette",
+  "color": "#ec4899",
+  "skills": [
+    {
+      "id": "cmrno9qnz001f9wbcpt47j4fb",
+      "name": "Figma",
+      "slug": "figma",
+      "icon": null,
+      "color": null,
+      "level": 65
+    }
+  ]
+}

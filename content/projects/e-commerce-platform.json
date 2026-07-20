@@ -1,0 +1,110 @@
+{
+  "id": "cmri2lb4q000qz4bcuodhh2w7",
+  "title": "E-Commerce Platform",
+  "slug": "e-commerce-platform",
+  "subtitle": null,
+  "summary": null,
+  "shortDescription": null,
+  "description": "A full-featured e-commerce platform built with Next.js, featuring real-time inventory management, payment processing with Stripe, and an admin dashboard. Handles 10k+ daily transactions with sub-100ms response times.",
+  "problemStatement": null,
+  "solution": "Built a server-rendered Next.js frontend with ISR for product pages, Redis for cart state, and a PostgreSQL database with read replicas for query performance.",
+  "background": null,
+  "objectives": [],
+  "features": [],
+  "architecture": "Next.js 15 App Router with server components for product listing, client components for cart interactions. Stripe Checkout for PCI-compliant payments. Prisma ORM with PostgreSQL. Redis for session and cart caching. Deployed on Vercel with edge functions for API routes.",
+  "folderStructure": null,
+  "technologyStack": [],
+  "technologies": [],
+  "hardware": [],
+  "software": [],
+  "tools": [],
+  "difficulty": null,
+  "status": "PUBLISHED",
+  "category": {
+    "name": "Web App",
+    "slug": "web-app"
+  },
+  "subCategory": null,
+  "client": null,
+  "course": null,
+  "semester": null,
+  "year": null,
+  "thumbnail": null,
+  "banner": null,
+  "screenshots": [],
+  "gallery": [
+    {
+      "url": "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&q=80",
+      "alt": "E-commerce dashboard",
+      "caption": null,
+      "width": null,
+      "height": null
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&q=80",
+      "alt": "Product catalog",
+      "caption": null,
+      "width": null,
+      "height": null
+    }
+  ],
+  "videos": [],
+  "demoLink": null,
+  "githubLink": null,
+  "linkedinLink": null,
+  "documentation": null,
+  "caseStudy": null,
+  "futureImprovements": null,
+  "testing": null,
+  "deployment": null,
+  "performance": null,
+  "seoDescription": null,
+  "metrics": [],
+  "skillsLearned": [],
+  "lessonsLearned": null,
+  "tags": [
+    {
+      "name": "next.js",
+      "slug": "next.js"
+    },
+    {
+      "name": "react",
+      "slug": "react"
+    },
+    {
+      "name": "typescript",
+      "slug": "typescript"
+    },
+    {
+      "name": "prisma",
+      "slug": "prisma"
+    }
+  ],
+  "searchKeywords": [],
+  "featured": true,
+  "pinned": true,
+  "visibility": "PUBLIC",
+  "icon": null,
+  "color": null,
+  "timeline": [
+    {
+      "date": "2025-10-01T00:00:00.000Z",
+      "title": "Project Kickoff",
+      "description": "Requirements gathering and architecture design phase."
+    },
+    {
+      "date": "2025-11-15T00:00:00.000Z",
+      "title": "MVP Launch",
+      "description": "Core e-commerce functionality deployed with basic product management."
+    },
+    {
+      "date": "2026-01-10T00:00:00.000Z",
+      "title": "Full Launch",
+      "description": "Complete platform with payments, inventory, and admin dashboard."
+    }
+  ],
+  "seo": null,
+  "publishedAt": "2026-01-15T00:00:00.000Z",
+  "createdAt": "2026-07-12T17:31:17.786Z",
+  "updatedAt": "2026-07-12T17:31:17.786Z"
+}

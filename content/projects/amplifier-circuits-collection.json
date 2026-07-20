@@ -1,0 +1,99 @@
+{
+  "id": "cmrnoaw4k003xygbc63h8gu78",
+  "title": "Amplifier Circuits Collection",
+  "slug": "amplifier-circuits-collection",
+  "subtitle": null,
+  "summary": "Various amplifier designs: common emitter, op-amp, differential, push-pull.",
+  "shortDescription": "Various amplifier designs: common emitter, op-amp, differential, push-pull.",
+  "description": "A collection of amplifier circuit designs including common-emitter transistor amplifiers, operational amplifier circuits (inverting, non-inverting, instrumentation), differential amplifiers, push-pull output stages, and multistage amplifiers. Includes frequency response analysis and distortion measurements.",
+  "problemStatement": null,
+  "solution": null,
+  "background": null,
+  "objectives": [],
+  "features": [],
+  "architecture": null,
+  "folderStructure": null,
+  "technologyStack": [
+    {
+      "name": "Transistors"
+    },
+    {
+      "name": "Op-Amps"
+    },
+    {
+      "name": "Multisim"
+    },
+    {
+      "name": "Oscilloscope"
+    },
+    {
+      "name": "Function Generator"
+    }
+  ],
+  "technologies": [
+    "Transistors",
+    "Op-Amps",
+    "Multisim",
+    "Oscilloscope",
+    "Function Generator"
+  ],
+  "hardware": [],
+  "software": [],
+  "tools": [],
+  "difficulty": "advanced",
+  "status": "PUBLISHED",
+  "category": {
+    "name": "Electronics",
+    "slug": "electronics"
+  },
+  "subCategory": null,
+  "client": null,
+  "course": null,
+  "semester": null,
+  "year": 2023,
+  "thumbnail": null,
+  "banner": null,
+  "screenshots": [],
+  "gallery": [],
+  "videos": [],
+  "demoLink": null,
+  "githubLink": "https://github.com",
+  "linkedinLink": null,
+  "documentation": null,
+  "caseStudy": null,
+  "futureImprovements": null,
+  "testing": null,
+  "deployment": null,
+  "performance": null,
+  "seoDescription": null,
+  "metrics": [],
+  "skillsLearned": [
+    "Transistors",
+    "Op-Amps",
+    "Multisim",
+    "Oscilloscope",
+    "Function Generator"
+  ],
+  "lessonsLearned": null,
+  "tags": [
+    {
+      "name": "electronics",
+      "slug": "electronics"
+    },
+    {
+      "name": "multisim",
+      "slug": "multisim"
+    }
+  ],
+  "searchKeywords": [],
+  "featured": false,
+  "pinned": false,
+  "visibility": "PUBLIC",
+  "icon": null,
+  "color": null,
+  "timeline": [],
+  "seo": null,
+  "publishedAt": "2026-07-16T15:37:54.211Z",
+  "createdAt": "2026-07-16T15:37:54.213Z",
+  "updatedAt": "2026-07-16T15:37:54.213Z"
+}

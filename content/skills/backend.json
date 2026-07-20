@@ -1,0 +1,73 @@
+{
+  "id": "cmrno9lpt000i9wbc9c98cxvo",
+  "name": "Backend",
+  "slug": "backend",
+  "icon": "Server",
+  "color": "#10b981",
+  "skills": [
+    {
+      "id": "cmrno9o1s000t9wbc1utbbx3d",
+      "name": "Node.js",
+      "slug": "nodejs",
+      "icon": null,
+      "color": null,
+      "level": 80
+    },
+    {
+      "id": "cmrno9o5m000u9wbc5trgzfjf",
+      "name": "Python",
+      "slug": "python",
+      "icon": null,
+      "color": null,
+      "level": 75
+    },
+    {
+      "id": "cmrno9o8j000v9wbcs83tb724",
+      "name": "PostgreSQL",
+      "slug": "postgresql",
+      "icon": null,
+      "color": null,
+      "level": 70
+    },
+    {
+      "id": "cmrno9odb000w9wbcfe2ss0nq",
+      "name": "SQLite",
+      "slug": "sqlite",
+      "icon": null,
+      "color": null,
+      "level": 75
+    },
+    {
+      "id": "cmrno9oh4000x9wbctkqmywj1",
+      "name": "REST APIs",
+      "slug": "rest-apis",
+      "icon": null,
+      "color": null,
+      "level": 85
+    },
+    {
+      "id": "cmrno9olg000y9wbcdve92yzs",
+      "name": "GraphQL",
+      "slug": "graphql",
+      "icon": null,
+      "color": null,
+      "level": 65
+    },
+    {
+      "id": "cmrno9ooq000z9wbc4275w605",
+      "name": "Prisma",
+      "slug": "prisma",
+      "icon": null,
+      "color": null,
+      "level": 80
+    },
+    {
+      "id": "cmrno9otp00109wbcjku416xh",
+      "name": "MongoDB",
+      "slug": "mongodb",
+      "icon": null,
+      "color": null,
+      "level": 60
+    }
+  ]
+}

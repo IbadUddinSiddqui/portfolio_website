@@ -1,0 +1,36 @@
+{
+  "id": "cmrnpggyo0032esbcwhimpdzl",
+  "title": "Resume Generation Workflow",
+  "slug": "resume-generation-workflow",
+  "summary": "Auto-generate tailored resumes from portfolio",
+  "description": "Extracts relevant projects, skills, and experience from portfolio data based on target role. Formats into professional templates with ATS optimization. Exports as PDF.",
+  "trigger": "Manual (role selection)",
+  "purpose": "Generate customized resumes instantly from up-to-date portfolio data.",
+  "services": [
+    "Portfolio API",
+    "OpenAI API",
+    "PDF Generator"
+  ],
+  "flowDiagram": null,
+  "nodes": [],
+  "inputs": [],
+  "outputs": [],
+  "futureImprovements": null,
+  "difficulty": "intermediate",
+  "tools": [
+    "n8n",
+    "OpenAI",
+    "PDF"
+  ],
+  "technologies": [
+    "n8n",
+    "Next.js",
+    "OpenAI"
+  ],
+  "category": "resume",
+  "status": "PUBLISHED",
+  "featured": false,
+  "order": 0,
+  "createdAt": "2026-07-16T16:10:14.112Z",
+  "updatedAt": "2026-07-16T16:10:14.112Z"
+}

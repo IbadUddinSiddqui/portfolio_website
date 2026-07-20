@@ -1,0 +1,32 @@
+{
+  "id": "cmrnpgit6003iesbcm7xv7bnd",
+  "title": "C++: Data Structures Implementation",
+  "slug": "c-data-structures-implementation",
+  "summary": "Arrays, linked lists, stacks, queues, trees, and graphs",
+  "description": null,
+  "category": "programming",
+  "course": "Computer Programming",
+  "semester": "2nd",
+  "year": 2022,
+  "objectives": [
+    "Understand c++: data structures implementation",
+    "Perform analysis and measurements",
+    "Document results and conclusions"
+  ],
+  "equipment": [],
+  "procedure": null,
+  "observations": null,
+  "results": null,
+  "conclusion": null,
+  "technologies": [],
+  "githubLink": null,
+  "reportLink": null,
+  "schematicLink": null,
+  "images": [],
+  "difficulty": "intermediate",
+  "status": "PUBLISHED",
+  "featured": false,
+  "order": 0,
+  "createdAt": "2026-07-16T16:10:16.506Z",
+  "updatedAt": "2026-07-16T16:10:16.506Z"
+}

@@ -1,0 +1,103 @@
+{
+  "id": "cmrnoaxc50041ygbceox4vglx",
+  "title": "OrCAD PCB Design Suite",
+  "slug": "orcad-pcb-design-suite",
+  "subtitle": null,
+  "summary": "Professional PCB design projects using OrCAD.",
+  "shortDescription": "Professional PCB design projects using OrCAD.",
+  "description": "Professional PCB design projects created with OrCAD Capture and PCB Editor. Includes multi-layer board designs, high-speed routing considerations, thermal management, and manufacturing output generation. Projects range from simple breakout boards to complex IoT devices.",
+  "problemStatement": null,
+  "solution": null,
+  "background": null,
+  "objectives": [],
+  "features": [],
+  "architecture": null,
+  "folderStructure": null,
+  "technologyStack": [
+    {
+      "name": "OrCAD"
+    },
+    {
+      "name": "PCB Design"
+    },
+    {
+      "name": "Schematic Capture"
+    },
+    {
+      "name": "Layout"
+    },
+    {
+      "name": "Gerber"
+    }
+  ],
+  "technologies": [
+    "OrCAD",
+    "PCB Design",
+    "Schematic Capture",
+    "Layout",
+    "Gerber"
+  ],
+  "hardware": [],
+  "software": [],
+  "tools": [],
+  "difficulty": "advanced",
+  "status": "PUBLISHED",
+  "category": {
+    "name": "PCB Design",
+    "slug": "pcb-design"
+  },
+  "subCategory": null,
+  "client": null,
+  "course": null,
+  "semester": null,
+  "year": 2024,
+  "thumbnail": null,
+  "banner": null,
+  "screenshots": [],
+  "gallery": [],
+  "videos": [],
+  "demoLink": null,
+  "githubLink": "https://github.com",
+  "linkedinLink": null,
+  "documentation": null,
+  "caseStudy": null,
+  "futureImprovements": null,
+  "testing": null,
+  "deployment": null,
+  "performance": null,
+  "seoDescription": null,
+  "metrics": [],
+  "skillsLearned": [
+    "OrCAD",
+    "PCB Design",
+    "Schematic Capture",
+    "Layout",
+    "Gerber"
+  ],
+  "lessonsLearned": null,
+  "tags": [
+    {
+      "name": "electronics",
+      "slug": "electronics"
+    },
+    {
+      "name": "pcb",
+      "slug": "pcb"
+    },
+    {
+      "name": "orcad",
+      "slug": "orcad"
+    }
+  ],
+  "searchKeywords": [],
+  "featured": true,
+  "pinned": false,
+  "visibility": "PUBLIC",
+  "icon": null,
+  "color": null,
+  "timeline": [],
+  "seo": null,
+  "publishedAt": "2026-07-16T15:37:55.781Z",
+  "createdAt": "2026-07-16T15:37:55.781Z",
+  "updatedAt": "2026-07-16T15:37:55.781Z"
+}

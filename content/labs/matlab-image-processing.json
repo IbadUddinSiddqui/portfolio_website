@@ -1,0 +1,32 @@
+{
+  "id": "cmrnpgi5t003cesbcx2kxuogg",
+  "title": "MATLAB: Image Processing",
+  "slug": "matlab-image-processing",
+  "summary": "Image filtering, edge detection, and transformation",
+  "description": null,
+  "category": "matlab",
+  "course": "Image Processing Lab",
+  "semester": "5th",
+  "year": 2024,
+  "objectives": [
+    "Understand matlab: image processing",
+    "Perform analysis and measurements",
+    "Document results and conclusions"
+  ],
+  "equipment": [],
+  "procedure": null,
+  "observations": null,
+  "results": null,
+  "conclusion": null,
+  "technologies": [],
+  "githubLink": null,
+  "reportLink": null,
+  "schematicLink": null,
+  "images": [],
+  "difficulty": "advanced",
+  "status": "PUBLISHED",
+  "featured": false,
+  "order": 0,
+  "createdAt": "2026-07-16T16:10:15.665Z",
+  "updatedAt": "2026-07-16T16:10:15.665Z"
+}

@@ -1,0 +1,83 @@
+{
+  "id": "cmri2lb85000rz4bc63lqx20z",
+  "title": "Design System Framework",
+  "slug": "design-system-framework",
+  "subtitle": null,
+  "summary": null,
+  "shortDescription": null,
+  "description": "A comprehensive design system with 50+ components, theming support, accessibility-first architecture, and a Figma plugin for seamless designer-developer collaboration.",
+  "problemStatement": null,
+  "solution": "Created a modular component library with Storybook documentation, automated visual regression testing, and a Figma plugin that syncs design tokens.",
+  "background": null,
+  "objectives": [],
+  "features": [],
+  "architecture": "React components built with Radix UI primitives for accessibility. Tailwind CSS for styling with CSS variables for theming. Turborepo for monorepo management. Changesets for versioning and changelog generation.",
+  "folderStructure": null,
+  "technologyStack": [],
+  "technologies": [],
+  "hardware": [],
+  "software": [],
+  "tools": [],
+  "difficulty": null,
+  "status": "PUBLISHED",
+  "category": {
+    "name": "Design System",
+    "slug": "design-system"
+  },
+  "subCategory": null,
+  "client": null,
+  "course": null,
+  "semester": null,
+  "year": null,
+  "thumbnail": null,
+  "banner": null,
+  "screenshots": [],
+  "gallery": [
+    {
+      "url": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=800&q=80",
+      "alt": "Design system components",
+      "caption": null,
+      "width": null,
+      "height": null
+    }
+  ],
+  "videos": [],
+  "demoLink": null,
+  "githubLink": null,
+  "linkedinLink": null,
+  "documentation": null,
+  "caseStudy": null,
+  "futureImprovements": null,
+  "testing": null,
+  "deployment": null,
+  "performance": null,
+  "seoDescription": null,
+  "metrics": [],
+  "skillsLearned": [],
+  "lessonsLearned": null,
+  "tags": [
+    {
+      "name": "react",
+      "slug": "react"
+    },
+    {
+      "name": "typescript",
+      "slug": "typescript"
+    },
+    {
+      "name": "tailwind",
+      "slug": "tailwind"
+    }
+  ],
+  "searchKeywords": [],
+  "featured": true,
+  "pinned": false,
+  "visibility": "PUBLIC",
+  "icon": null,
+  "color": null,
+  "timeline": [],
+  "seo": null,
+  "publishedAt": "2026-03-01T00:00:00.000Z",
+  "createdAt": "2026-07-12T17:31:17.909Z",
+  "updatedAt": "2026-07-12T17:31:17.909Z"
+}

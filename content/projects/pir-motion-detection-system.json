@@ -1,0 +1,103 @@
+{
+  "id": "cmrnoaso0003lygbcanx5vhjt",
+  "title": "PIR Motion Detection System",
+  "slug": "pir-motion-detection-system",
+  "subtitle": null,
+  "summary": "Passive infrared motion detection with alert system.",
+  "shortDescription": "Passive infrared motion detection with alert system.",
+  "description": "A PIR (Passive Infrared) motion detection system that triggers alerts when movement is detected. Features adjustable sensitivity, time delay, buzzer alarm, LED indicators, and logging. Expanded with WiFi module for remote notifications via smartphone.",
+  "problemStatement": null,
+  "solution": null,
+  "background": null,
+  "objectives": [],
+  "features": [],
+  "architecture": null,
+  "folderStructure": null,
+  "technologyStack": [
+    {
+      "name": "Arduino"
+    },
+    {
+      "name": "PIR Sensor"
+    },
+    {
+      "name": "C++"
+    },
+    {
+      "name": "Buzzer"
+    },
+    {
+      "name": "LED"
+    }
+  ],
+  "technologies": [
+    "Arduino",
+    "PIR Sensor",
+    "C++",
+    "Buzzer",
+    "LED"
+  ],
+  "hardware": [],
+  "software": [],
+  "tools": [],
+  "difficulty": "beginner",
+  "status": "PUBLISHED",
+  "category": {
+    "name": "IoT & Embedded Systems",
+    "slug": "iot-embedded-systems"
+  },
+  "subCategory": null,
+  "client": null,
+  "course": null,
+  "semester": null,
+  "year": 2023,
+  "thumbnail": null,
+  "banner": null,
+  "screenshots": [],
+  "gallery": [],
+  "videos": [],
+  "demoLink": null,
+  "githubLink": "https://github.com",
+  "linkedinLink": null,
+  "documentation": null,
+  "caseStudy": null,
+  "futureImprovements": null,
+  "testing": null,
+  "deployment": null,
+  "performance": null,
+  "seoDescription": null,
+  "metrics": [],
+  "skillsLearned": [
+    "Arduino",
+    "PIR Sensor",
+    "C++",
+    "Buzzer",
+    "LED"
+  ],
+  "lessonsLearned": null,
+  "tags": [
+    {
+      "name": "embedded",
+      "slug": "embedded"
+    },
+    {
+      "name": "arduino",
+      "slug": "arduino"
+    },
+    {
+      "name": "electronics",
+      "slug": "electronics"
+    }
+  ],
+  "searchKeywords": [],
+  "featured": false,
+  "pinned": false,
+  "visibility": "PUBLIC",
+  "icon": null,
+  "color": null,
+  "timeline": [],
+  "seo": null,
+  "publishedAt": "2026-07-16T15:37:49.727Z",
+  "createdAt": "2026-07-16T15:37:49.728Z",
+  "updatedAt": "2026-07-16T15:37:49.728Z"
+}

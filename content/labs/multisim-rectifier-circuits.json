@@ -1,0 +1,32 @@
+{
+  "id": "cmrnpgidd003eesbc6o7cxqrm",
+  "title": "Multisim: Rectifier Circuits",
+  "slug": "multisim-rectifier-circuits",
+  "summary": "Simulation of half-wave and full-wave rectifiers",
+  "description": null,
+  "category": "multisim",
+  "course": "Electronics Lab I",
+  "semester": "2nd",
+  "year": 2022,
+  "objectives": [
+    "Understand multisim: rectifier circuits",
+    "Perform analysis and measurements",
+    "Document results and conclusions"
+  ],
+  "equipment": [],
+  "procedure": null,
+  "observations": null,
+  "results": null,
+  "conclusion": null,
+  "technologies": [],
+  "githubLink": null,
+  "reportLink": null,
+  "schematicLink": null,
+  "images": [],
+  "difficulty": "beginner",
+  "status": "PUBLISHED",
+  "featured": false,
+  "order": 0,
+  "createdAt": "2026-07-16T16:10:15.937Z",
+  "updatedAt": "2026-07-16T16:10:15.937Z"
+}

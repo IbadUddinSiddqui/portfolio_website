@@ -1,0 +1,18 @@
+{
+  "id": "owner-1",
+  "name": "Ibad Uddin",
+  "title": "Software Engineer & Telecommunication Engineer",
+  "tagline": "Building premium digital experiences. Engineering the future, one project at a time.",
+  "bio": "Telecommunication Engineering student at NED University of Engineering & Technology with a passion for software engineering, AI, automation, IoT, and embedded systems. I build full-stack applications, design PCBs, experiment with electronics, and automate workflows. Always learning, always building.",
+  "avatar": null,
+  "resume": null,
+  "email": "ibad@example.com",
+  "phone": null,
+  "location": "Karachi, Pakistan",
+  "university": "NED University of Engineering & Technology",
+  "department": "Telecommunication Engineering",
+  "batch": "2025",
+  "website": null,
+  "createdAt": "2026-07-16T15:36:50.985Z",
+  "updatedAt": "2026-07-16T15:36:50.985Z"
+}

@@ -1,0 +1,99 @@
+{
+  "id": "cmrnoal420037ygbcuzq6b3sj",
+  "title": "EcoBambo Shopify Website",
+  "slug": "ecobambo-shopify-website",
+  "subtitle": null,
+  "summary": "Complete Shopify ecommerce store for sustainable bamboo products.",
+  "shortDescription": "Complete Shopify ecommerce store for sustainable bamboo products.",
+  "description": "Designed and developed a complete Shopify store for EcoBambo, a sustainable bamboo products brand. Custom theme development with Shopify Liquid, product catalog with variants, eco-friendly branding, blog integration, and SEO optimization. Resulted in 40% increase in conversion rate.",
+  "problemStatement": null,
+  "solution": null,
+  "background": null,
+  "objectives": [],
+  "features": [],
+  "architecture": null,
+  "folderStructure": null,
+  "technologyStack": [
+    {
+      "name": "Shopify"
+    },
+    {
+      "name": "Liquid"
+    },
+    {
+      "name": "HTML/CSS"
+    },
+    {
+      "name": "JavaScript"
+    },
+    {
+      "name": "Shopify API"
+    }
+  ],
+  "technologies": [
+    "Shopify",
+    "Liquid",
+    "HTML/CSS",
+    "JavaScript",
+    "Shopify API"
+  ],
+  "hardware": [],
+  "software": [],
+  "tools": [],
+  "difficulty": "advanced",
+  "status": "PUBLISHED",
+  "category": {
+    "name": "Client Work",
+    "slug": "client-work"
+  },
+  "subCategory": null,
+  "client": null,
+  "course": null,
+  "semester": null,
+  "year": 2024,
+  "thumbnail": null,
+  "banner": null,
+  "screenshots": [],
+  "gallery": [],
+  "videos": [],
+  "demoLink": "https://ecobambo.com",
+  "githubLink": null,
+  "linkedinLink": null,
+  "documentation": null,
+  "caseStudy": null,
+  "futureImprovements": null,
+  "testing": null,
+  "deployment": null,
+  "performance": null,
+  "seoDescription": null,
+  "metrics": [],
+  "skillsLearned": [
+    "Shopify",
+    "Liquid",
+    "HTML/CSS",
+    "JavaScript",
+    "Shopify API"
+  ],
+  "lessonsLearned": null,
+  "tags": [
+    {
+      "name": "shopify",
+      "slug": "shopify"
+    },
+    {
+      "name": "ecommerce",
+      "slug": "ecommerce"
+    }
+  ],
+  "searchKeywords": [],
+  "featured": true,
+  "pinned": false,
+  "visibility": "PUBLIC",
+  "icon": null,
+  "color": null,
+  "timeline": [],
+  "seo": null,
+  "publishedAt": "2026-07-16T15:37:39.197Z",
+  "createdAt": "2026-07-16T15:37:39.938Z",
+  "updatedAt": "2026-07-16T15:37:39.938Z"
+}

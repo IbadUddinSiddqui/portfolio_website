@@ -1,0 +1,72 @@
+{
+  "version": "1.1",
+  "description": "MCP server configuration for Freebuff portfolio project",
+  "mcpServers": {
+    "memory": {
+      "description": "Persistent knowledge graph for cross-session context and memory",
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-memory"],
+      "env": {},
+      "disabled": false,
+      "autoSync": true
+    },
+    "next-devtools": {
+      "description": "Next.js 16 dev tools - runtime errors, routes, server actions, project structure",
+      "command": "npx",
+      "args": ["-y", "next-devtools-mcp@latest"],
+      "env": {},
+      "disabled": false
+    },
+    "shadcn": {
+      "description": "shadcn/ui component registry - browse, search, and install components",
+      "command": "npx",
+      "args": ["-y", "shadcn@latest", "mcp"],
+      "env": {},
+      "disabled": false
+    },
+    "motion-dev": {
+      "description": "Motion.dev animation library - docs, code gen, validation (clone from GitHub)",
+      "command": "node",
+      "args": ["./mcp-servers/motion-dev-mcp/dist/index.js"],
+      "env": {},
+      "disabled": true,
+      "setupInstructions": "git clone https://github.com/Abhishekrajpurohit/motion-dev-mcp.git mcp-servers/motion-dev-mcp && cd mcp-servers/motion-dev-mcp && npm install && npm run build && npm run rebuild"
+    },
+    "filesystem": {
+      "description": "Secure file system operations (⚠ needs zod fix)",
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-filesystem", "."],
+      "env": {},
+      "disabled": true
+    },
+    "sequential-thinking": {
+      "description": "Step-by-step reasoning (⚠ needs zod fix)",
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-sequential-thinking"],
+      "env": {},
+      "disabled": true
+    },
+    "github": {
+      "description": "GitHub API integration - repos, issues, PRs, commits",
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-github"],
+      "env": { "GITHUB_TOKEN": "" },
+      "disabled": true
+    },
+    "postgres": {
+      "description": "PostgreSQL database queries and schema management",
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-postgres", "postgresql://localhost:5432/your_database"],
+      "env": {},
+      "disabled": true
+    },
+    "brave-search": {
+      "description": "Web search using Brave Search API",
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-brave-search"],
+      "env": { "BRAVE_API_KEY": "" },
+      "disabled": true
+    }
+  },
+  "defaultServer": "memory"
+}

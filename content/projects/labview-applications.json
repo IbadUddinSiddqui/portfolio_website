@@ -1,0 +1,90 @@
+{
+  "id": "cmrnoawqu003zygbccpptdpne",
+  "title": "LabVIEW Applications",
+  "slug": "labview-applications",
+  "subtitle": null,
+  "summary": "Virtual instrumentation projects using LabVIEW.",
+  "shortDescription": "Virtual instrumentation projects using LabVIEW.",
+  "description": "A collection of LabVIEW virtual instrumentation projects including data acquisition systems, signal generation and analysis, PID controllers, temperature monitoring, and automated test systems. Features professional front panels and efficient block diagrams.",
+  "problemStatement": null,
+  "solution": null,
+  "background": null,
+  "objectives": [],
+  "features": [],
+  "architecture": null,
+  "folderStructure": null,
+  "technologyStack": [
+    {
+      "name": "LabVIEW"
+    },
+    {
+      "name": "DAQ"
+    },
+    {
+      "name": "Signal Processing"
+    },
+    {
+      "name": "PID Control"
+    }
+  ],
+  "technologies": [
+    "LabVIEW",
+    "DAQ",
+    "Signal Processing",
+    "PID Control"
+  ],
+  "hardware": [],
+  "software": [],
+  "tools": [],
+  "difficulty": "intermediate",
+  "status": "PUBLISHED",
+  "category": {
+    "name": "Engineering Simulations",
+    "slug": "engineering-simulations"
+  },
+  "subCategory": null,
+  "client": null,
+  "course": null,
+  "semester": null,
+  "year": 2024,
+  "thumbnail": null,
+  "banner": null,
+  "screenshots": [],
+  "gallery": [],
+  "videos": [],
+  "demoLink": null,
+  "githubLink": "https://github.com",
+  "linkedinLink": null,
+  "documentation": null,
+  "caseStudy": null,
+  "futureImprovements": null,
+  "testing": null,
+  "deployment": null,
+  "performance": null,
+  "seoDescription": null,
+  "metrics": [],
+  "skillsLearned": [
+    "LabVIEW",
+    "DAQ",
+    "Signal Processing",
+    "PID Control"
+  ],
+  "lessonsLearned": null,
+  "tags": [
+    {
+      "name": "labview",
+      "slug": "labview"
+    }
+  ],
+  "searchKeywords": [],
+  "featured": false,
+  "pinned": false,
+  "visibility": "PUBLIC",
+  "icon": null,
+  "color": null,
+  "timeline": [],
+  "seo": null,
+  "publishedAt": "2026-07-16T15:37:55.013Z",
+  "createdAt": "2026-07-16T15:37:55.014Z",
+  "updatedAt": "2026-07-16T15:37:55.014Z"
+}

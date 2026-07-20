@@ -1,0 +1,32 @@
+{
+  "id": "cmrnpgilu003gesbct00jyh33",
+  "title": "OrCAD: PCB Layout Basics",
+  "slug": "orcad-pcb-layout-basics",
+  "summary": "Single-layer PCB design from schematic to Gerber",
+  "description": null,
+  "category": "orcad",
+  "course": "PCB Design Lab",
+  "semester": "6th",
+  "year": 2024,
+  "objectives": [
+    "Understand orcad: pcb layout basics",
+    "Perform analysis and measurements",
+    "Document results and conclusions"
+  ],
+  "equipment": [],
+  "procedure": null,
+  "observations": null,
+  "results": null,
+  "conclusion": null,
+  "technologies": [],
+  "githubLink": null,
+  "reportLink": null,
+  "schematicLink": null,
+  "images": [],
+  "difficulty": "intermediate",
+  "status": "PUBLISHED",
+  "featured": false,
+  "order": 0,
+  "createdAt": "2026-07-16T16:10:16.242Z",
+  "updatedAt": "2026-07-16T16:10:16.242Z"
+}

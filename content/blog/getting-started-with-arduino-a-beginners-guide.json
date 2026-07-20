@@ -1,0 +1,21 @@
+{
+  "id": "cmrnpgl3d0043esbct70v46eg",
+  "title": "Getting Started with Arduino: A Beginner's Guide",
+  "slug": "getting-started-with-arduino-a-beginners-guide",
+  "content": "# Getting Started with Arduino\n\n## What is Arduino?\nArduino is an open-source electronics platform based on easy-to-use hardware and software.\n\n## Getting Started\n1. Get an Arduino board (Uno is great for beginners)\n2. Install the Arduino IDE\n3. Learn basic electronics (LEDs, resistors, sensors)\n4. Start with simple projects\n\n## First Project: Blinking LED\n\n```cpp\nvoid setup() {\n  pinMode(13, OUTPUT);\n}\n\nvoid loop() {\n  digitalWrite(13, HIGH);\n  delay(1000);\n  digitalWrite(13, LOW);\n  delay(1000);\n}\n```\n\n## Beyond Basics\n- Sensors and actuators\n- Motor control with H-Bridge\n- Wireless communication with ESP32\n- IoT integrations",
+  "excerpt": "Everything you need to know to start building Arduino projects.",
+  "coverImage": null,
+  "category": "Hardware",
+  "tags": [
+    "arduino",
+    "embedded",
+    "electronics"
+  ],
+  "readingTime": 3,
+  "published": true,
+  "featured": true,
+  "seo": null,
+  "publishedAt": "2026-07-16T16:10:19.464Z",
+  "createdAt": "2026-07-16T16:10:19.465Z",
+  "updatedAt": "2026-07-16T16:10:19.465Z"
+}

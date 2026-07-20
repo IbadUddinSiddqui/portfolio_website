@@ -1,0 +1,80 @@
+{
+  "id": "cmrnoazst004cygbc3x1155ya",
+  "title": "Engineering Drawing: Circuit Schematics",
+  "slug": "engineering-drawing-circuit-schematics",
+  "subtitle": null,
+  "summary": "Creating professional circuit schematics using drafting software.",
+  "shortDescription": "Creating professional circuit schematics using drafting software.",
+  "description": "Focused on creating professional electronic circuit schematics following standard conventions. Covers component symbols, wiring, labeling, title blocks, and bill of materials generation. Created schematics for laboratory circuits.",
+  "problemStatement": null,
+  "solution": null,
+  "background": null,
+  "objectives": [],
+  "features": [],
+  "architecture": null,
+  "folderStructure": null,
+  "technologyStack": [
+    {
+      "name": "AutoCAD"
+    },
+    {
+      "name": "Engineering Drawing"
+    },
+    {
+      "name": "Schematic"
+    }
+  ],
+  "technologies": [
+    "AutoCAD",
+    "Engineering Drawing",
+    "Schematic"
+  ],
+  "hardware": [],
+  "software": [],
+  "tools": [],
+  "difficulty": "beginner",
+  "status": "PUBLISHED",
+  "category": {
+    "name": "Software Engineering",
+    "slug": "software-engineering"
+  },
+  "subCategory": null,
+  "client": null,
+  "course": "Electronic Engineering Drawing",
+  "semester": "1st",
+  "year": 2022,
+  "thumbnail": null,
+  "banner": null,
+  "screenshots": [],
+  "gallery": [],
+  "videos": [],
+  "demoLink": null,
+  "githubLink": null,
+  "linkedinLink": null,
+  "documentation": null,
+  "caseStudy": null,
+  "futureImprovements": null,
+  "testing": null,
+  "deployment": null,
+  "performance": null,
+  "seoDescription": null,
+  "metrics": [],
+  "skillsLearned": [
+    "AutoCAD",
+    "Engineering Drawing",
+    "Schematic"
+  ],
+  "lessonsLearned": null,
+  "tags": [],
+  "searchKeywords": [],
+  "featured": false,
+  "pinned": false,
+  "visibility": "PUBLIC",
+  "icon": null,
+  "color": null,
+  "timeline": [],
+  "seo": null,
+  "publishedAt": "2026-07-16T15:37:58.972Z",
+  "createdAt": "2026-07-16T15:37:58.973Z",
+  "updatedAt": "2026-07-16T15:37:58.973Z"
+}

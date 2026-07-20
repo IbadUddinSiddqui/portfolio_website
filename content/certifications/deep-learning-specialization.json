@@ -1,0 +1,23 @@
+{
+  "id": "cmrnpgjhg003oesbcapi6hijf",
+  "title": "Deep Learning Specialization",
+  "issuer": "DeepLearning.AI / Coursera",
+  "slug": "deep-learning-specialization",
+  "description": null,
+  "issueDate": "2024-01-01T00:00:00.000Z",
+  "expiryDate": null,
+  "credentialId": null,
+  "credentialUrl": null,
+  "image": null,
+  "skills": [
+    "Neural Networks",
+    "TensorFlow",
+    "CNNs",
+    "RNNs"
+  ],
+  "category": "AI & ML",
+  "featured": true,
+  "order": 0,
+  "createdAt": "2026-07-16T16:10:17.380Z",
+  "updatedAt": "2026-07-16T16:10:17.380Z"
+}

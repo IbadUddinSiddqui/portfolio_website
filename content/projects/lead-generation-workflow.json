@@ -1,0 +1,107 @@
+{
+  "id": "cmrnoap1t003cygbcn04g8pbk",
+  "title": "Lead Generation Workflow",
+  "slug": "lead-generation-workflow",
+  "subtitle": null,
+  "summary": "Automated multi-source lead generation and qualification pipeline.",
+  "shortDescription": "Automated multi-source lead generation and qualification pipeline.",
+  "description": "An end-to-end lead generation workflow that discovers leads from multiple sources (web scraping, LinkedIn, directories), enriches data, scores leads using ML, and automatically adds qualified leads to the CRM with personalized outreach templates.",
+  "problemStatement": null,
+  "solution": null,
+  "background": null,
+  "objectives": [],
+  "features": [],
+  "architecture": null,
+  "folderStructure": null,
+  "technologyStack": [
+    {
+      "name": "n8n"
+    },
+    {
+      "name": "Python"
+    },
+    {
+      "name": "OpenAI API"
+    },
+    {
+      "name": "HubSpot API"
+    },
+    {
+      "name": "PostgreSQL"
+    }
+  ],
+  "technologies": [
+    "n8n",
+    "Python",
+    "OpenAI API",
+    "HubSpot API",
+    "PostgreSQL"
+  ],
+  "hardware": [],
+  "software": [],
+  "tools": [],
+  "difficulty": "expert",
+  "status": "PUBLISHED",
+  "category": {
+    "name": "Automation",
+    "slug": "automation"
+  },
+  "subCategory": null,
+  "client": null,
+  "course": null,
+  "semester": null,
+  "year": 2024,
+  "thumbnail": null,
+  "banner": null,
+  "screenshots": [],
+  "gallery": [],
+  "videos": [],
+  "demoLink": null,
+  "githubLink": "https://github.com",
+  "linkedinLink": null,
+  "documentation": null,
+  "caseStudy": null,
+  "futureImprovements": null,
+  "testing": null,
+  "deployment": null,
+  "performance": null,
+  "seoDescription": null,
+  "metrics": [],
+  "skillsLearned": [
+    "n8n",
+    "Python",
+    "OpenAI API",
+    "HubSpot API",
+    "PostgreSQL"
+  ],
+  "lessonsLearned": null,
+  "tags": [
+    {
+      "name": "ai",
+      "slug": "ai"
+    },
+    {
+      "name": "automation",
+      "slug": "automation"
+    },
+    {
+      "name": "n8n",
+      "slug": "n8n"
+    },
+    {
+      "name": "api",
+      "slug": "api"
+    }
+  ],
+  "searchKeywords": [],
+  "featured": true,
+  "pinned": false,
+  "visibility": "PUBLIC",
+  "icon": null,
+  "color": null,
+  "timeline": [],
+  "seo": null,
+  "publishedAt": "2026-07-16T15:37:45.038Z",
+  "createdAt": "2026-07-16T15:37:45.044Z",
+  "updatedAt": "2026-07-16T15:37:45.044Z"
+}

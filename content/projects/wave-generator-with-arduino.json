@@ -1,0 +1,108 @@
+{
+  "id": "cmrnoaruq003jygbc7bbban5r",
+  "title": "Wave Generator with Arduino",
+  "slug": "wave-generator-with-arduino",
+  "subtitle": null,
+  "summary": "Arduino-based function generator producing sine, square, and triangle waves.",
+  "shortDescription": "Arduino-based function generator producing sine, square, and triangle waves.",
+  "description": "Built a versatile wave generator using Arduino that produces sine, square, triangle, and sawtooth waveforms. Features adjustable frequency (1Hz-10kHz), amplitude control, and LCD display. Uses DAC and PWM techniques for signal generation.",
+  "problemStatement": null,
+  "solution": null,
+  "background": null,
+  "objectives": [],
+  "features": [],
+  "architecture": null,
+  "folderStructure": null,
+  "technologyStack": [
+    {
+      "name": "Arduino"
+    },
+    {
+      "name": "C++"
+    },
+    {
+      "name": "DAC"
+    },
+    {
+      "name": "PWM"
+    },
+    {
+      "name": "LCD"
+    },
+    {
+      "name": "Oscilloscope"
+    }
+  ],
+  "technologies": [
+    "Arduino",
+    "C++",
+    "DAC",
+    "PWM",
+    "LCD",
+    "Oscilloscope"
+  ],
+  "hardware": [],
+  "software": [],
+  "tools": [],
+  "difficulty": "advanced",
+  "status": "PUBLISHED",
+  "category": {
+    "name": "IoT & Embedded Systems",
+    "slug": "iot-embedded-systems"
+  },
+  "subCategory": null,
+  "client": null,
+  "course": null,
+  "semester": null,
+  "year": 2023,
+  "thumbnail": null,
+  "banner": null,
+  "screenshots": [],
+  "gallery": [],
+  "videos": [],
+  "demoLink": null,
+  "githubLink": "https://github.com",
+  "linkedinLink": null,
+  "documentation": null,
+  "caseStudy": null,
+  "futureImprovements": null,
+  "testing": null,
+  "deployment": null,
+  "performance": null,
+  "seoDescription": null,
+  "metrics": [],
+  "skillsLearned": [
+    "Arduino",
+    "C++",
+    "DAC",
+    "PWM",
+    "LCD",
+    "Oscilloscope"
+  ],
+  "lessonsLearned": null,
+  "tags": [
+    {
+      "name": "embedded",
+      "slug": "embedded"
+    },
+    {
+      "name": "arduino",
+      "slug": "arduino"
+    },
+    {
+      "name": "electronics",
+      "slug": "electronics"
+    }
+  ],
+  "searchKeywords": [],
+  "featured": false,
+  "pinned": false,
+  "visibility": "PUBLIC",
+  "icon": null,
+  "color": null,
+  "timeline": [],
+  "seo": null,
+  "publishedAt": "2026-07-16T15:37:48.673Z",
+  "createdAt": "2026-07-16T15:37:48.674Z",
+  "updatedAt": "2026-07-16T15:37:48.674Z"
+}

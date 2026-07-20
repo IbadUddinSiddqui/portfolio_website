@@ -1,0 +1,94 @@
+{
+  "id": "cmrnob0mj004fygbcyj4jasx7",
+  "title": "SEO Optimization Engine",
+  "slug": "seo-optimization-engine",
+  "subtitle": null,
+  "summary": "Automated SEO analysis and optimization tools for web content.",
+  "shortDescription": "Automated SEO analysis and optimization tools for web content.",
+  "description": "A comprehensive SEO toolkit that analyzes pages for keyword optimization, meta tags, heading structure, image alt texts, internal linking, and performance. Generates actionable recommendations and tracks improvements over time.",
+  "problemStatement": null,
+  "solution": null,
+  "background": null,
+  "objectives": [],
+  "features": [],
+  "architecture": null,
+  "folderStructure": null,
+  "technologyStack": [
+    {
+      "name": "Next.js"
+    },
+    {
+      "name": "TypeScript"
+    },
+    {
+      "name": "Prisma"
+    },
+    {
+      "name": "PostgreSQL"
+    }
+  ],
+  "technologies": [
+    "Next.js",
+    "TypeScript",
+    "Prisma",
+    "PostgreSQL"
+  ],
+  "hardware": [],
+  "software": [],
+  "tools": [],
+  "difficulty": "intermediate",
+  "status": "PUBLISHED",
+  "category": {
+    "name": "Software Engineering",
+    "slug": "software-engineering"
+  },
+  "subCategory": null,
+  "client": null,
+  "course": null,
+  "semester": null,
+  "year": 2024,
+  "thumbnail": null,
+  "banner": null,
+  "screenshots": [],
+  "gallery": [],
+  "videos": [],
+  "demoLink": null,
+  "githubLink": "https://github.com",
+  "linkedinLink": null,
+  "documentation": null,
+  "caseStudy": null,
+  "futureImprovements": null,
+  "testing": null,
+  "deployment": null,
+  "performance": null,
+  "seoDescription": null,
+  "metrics": [],
+  "skillsLearned": [
+    "Next.js",
+    "TypeScript",
+    "Prisma",
+    "PostgreSQL"
+  ],
+  "lessonsLearned": null,
+  "tags": [
+    {
+      "name": "typescript",
+      "slug": "typescript"
+    },
+    {
+      "name": "nextjs",
+      "slug": "nextjs"
+    }
+  ],
+  "searchKeywords": [],
+  "featured": false,
+  "pinned": false,
+  "visibility": "PUBLIC",
+  "icon": null,
+  "color": null,
+  "timeline": [],
+  "seo": null,
+  "publishedAt": "2026-07-16T15:38:00.036Z",
+  "createdAt": "2026-07-16T15:38:00.043Z",
+  "updatedAt": "2026-07-16T15:38:00.043Z"
+}

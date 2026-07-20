@@ -1,0 +1,103 @@
+{
+  "id": "cmrnoarhx003iygbc74qupu33",
+  "title": "Arduino H-Bridge Motor Control",
+  "slug": "arduino-h-bridge-motor-control",
+  "subtitle": null,
+  "summary": "H-Bridge circuit with Arduino for bidirectional DC motor control.",
+  "shortDescription": "H-Bridge circuit with Arduino for bidirectional DC motor control.",
+  "description": "Designed and built an H-Bridge motor driver circuit controlled by Arduino. Features bidirectional motor control, PWM speed regulation, direction toggling, and emergency stop. Used for robotics projects and demonstrating fundamental motor control concepts.",
+  "problemStatement": null,
+  "solution": null,
+  "background": null,
+  "objectives": [],
+  "features": [],
+  "architecture": null,
+  "folderStructure": null,
+  "technologyStack": [
+    {
+      "name": "Arduino"
+    },
+    {
+      "name": "C++"
+    },
+    {
+      "name": "H-Bridge"
+    },
+    {
+      "name": "DC Motors"
+    },
+    {
+      "name": "PWM"
+    }
+  ],
+  "technologies": [
+    "Arduino",
+    "C++",
+    "H-Bridge",
+    "DC Motors",
+    "PWM"
+  ],
+  "hardware": [],
+  "software": [],
+  "tools": [],
+  "difficulty": "intermediate",
+  "status": "PUBLISHED",
+  "category": {
+    "name": "IoT & Embedded Systems",
+    "slug": "iot-embedded-systems"
+  },
+  "subCategory": null,
+  "client": null,
+  "course": null,
+  "semester": null,
+  "year": 2023,
+  "thumbnail": null,
+  "banner": null,
+  "screenshots": [],
+  "gallery": [],
+  "videos": [],
+  "demoLink": null,
+  "githubLink": "https://github.com",
+  "linkedinLink": null,
+  "documentation": null,
+  "caseStudy": null,
+  "futureImprovements": null,
+  "testing": null,
+  "deployment": null,
+  "performance": null,
+  "seoDescription": null,
+  "metrics": [],
+  "skillsLearned": [
+    "Arduino",
+    "C++",
+    "H-Bridge",
+    "DC Motors",
+    "PWM"
+  ],
+  "lessonsLearned": null,
+  "tags": [
+    {
+      "name": "embedded",
+      "slug": "embedded"
+    },
+    {
+      "name": "arduino",
+      "slug": "arduino"
+    },
+    {
+      "name": "electronics",
+      "slug": "electronics"
+    }
+  ],
+  "searchKeywords": [],
+  "featured": true,
+  "pinned": false,
+  "visibility": "PUBLIC",
+  "icon": null,
+  "color": null,
+  "timeline": [],
+  "seo": null,
+  "publishedAt": "2026-07-16T15:37:48.210Z",
+  "createdAt": "2026-07-16T15:37:48.213Z",
+  "updatedAt": "2026-07-16T15:37:48.213Z"
+}

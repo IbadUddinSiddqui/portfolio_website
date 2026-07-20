@@ -1,0 +1,103 @@
+{
+  "id": "cmrnoat16003mygbc7j9yw6fc",
+  "title": "RGB LED Automation",
+  "slug": "rgb-led-automation",
+  "subtitle": null,
+  "summary": "Programmatic RGB LED control with patterns and animations.",
+  "shortDescription": "Programmatic RGB LED control with patterns and animations.",
+  "description": "A project for controlling RGB LEDs with programmable patterns, color sequences, and animations. Features button-controlled modes, potentiometer brightness adjustment, and pre-programmed light shows. Later expanded with Bluetooth control via smartphone app.",
+  "problemStatement": null,
+  "solution": null,
+  "background": null,
+  "objectives": [],
+  "features": [],
+  "architecture": null,
+  "folderStructure": null,
+  "technologyStack": [
+    {
+      "name": "Arduino"
+    },
+    {
+      "name": "RGB LED"
+    },
+    {
+      "name": "C++"
+    },
+    {
+      "name": "Bluetooth"
+    },
+    {
+      "name": "PWM"
+    }
+  ],
+  "technologies": [
+    "Arduino",
+    "RGB LED",
+    "C++",
+    "Bluetooth",
+    "PWM"
+  ],
+  "hardware": [],
+  "software": [],
+  "tools": [],
+  "difficulty": "beginner",
+  "status": "PUBLISHED",
+  "category": {
+    "name": "IoT & Embedded Systems",
+    "slug": "iot-embedded-systems"
+  },
+  "subCategory": null,
+  "client": null,
+  "course": null,
+  "semester": null,
+  "year": 2023,
+  "thumbnail": null,
+  "banner": null,
+  "screenshots": [],
+  "gallery": [],
+  "videos": [],
+  "demoLink": null,
+  "githubLink": "https://github.com",
+  "linkedinLink": null,
+  "documentation": null,
+  "caseStudy": null,
+  "futureImprovements": null,
+  "testing": null,
+  "deployment": null,
+  "performance": null,
+  "seoDescription": null,
+  "metrics": [],
+  "skillsLearned": [
+    "Arduino",
+    "RGB LED",
+    "C++",
+    "Bluetooth",
+    "PWM"
+  ],
+  "lessonsLearned": null,
+  "tags": [
+    {
+      "name": "embedded",
+      "slug": "embedded"
+    },
+    {
+      "name": "arduino",
+      "slug": "arduino"
+    },
+    {
+      "name": "electronics",
+      "slug": "electronics"
+    }
+  ],
+  "searchKeywords": [],
+  "featured": false,
+  "pinned": false,
+  "visibility": "PUBLIC",
+  "icon": null,
+  "color": null,
+  "timeline": [],
+  "seo": null,
+  "publishedAt": "2026-07-16T15:37:50.201Z",
+  "createdAt": "2026-07-16T15:37:50.202Z",
+  "updatedAt": "2026-07-16T15:37:50.202Z"
+}

@@ -1,0 +1,32 @@
+{
+  "id": "cmrnpgiwc003jesbcg094aw72",
+  "title": "Digital Logic: Flip-Flops and Counters",
+  "slug": "digital-logic-flip-flops-and-counters",
+  "summary": "SR, JK, D, T flip-flops and synchronous counter design",
+  "description": null,
+  "category": "electronics",
+  "course": "Digital Logic Design",
+  "semester": "3rd",
+  "year": 2023,
+  "objectives": [
+    "Understand digital logic: flip-flops and counters",
+    "Perform analysis and measurements",
+    "Document results and conclusions"
+  ],
+  "equipment": [],
+  "procedure": null,
+  "observations": null,
+  "results": null,
+  "conclusion": null,
+  "technologies": [],
+  "githubLink": null,
+  "reportLink": null,
+  "schematicLink": null,
+  "images": [],
+  "difficulty": "intermediate",
+  "status": "PUBLISHED",
+  "featured": false,
+  "order": 0,
+  "createdAt": "2026-07-16T16:10:16.620Z",
+  "updatedAt": "2026-07-16T16:10:16.620Z"
+}

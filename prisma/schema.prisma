@@ -1,0 +1,665 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+}
+
+// ─── User & Auth ─────────────────────────────────────
+
+model User {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  name      String?
+  image     String?
+  role      String   @default("USER") // "USER" | "ADMIN"
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+// ─── Owner / Profile ─────────────────────────────────
+
+model Owner {
+  id          String   @id @default(cuid())
+  name        String
+  title       String
+  tagline     String?
+  bio         String?
+  avatar      String?
+  resume      String?
+  email       String?
+  phone       String?
+  location    String?
+  university  String?
+  department  String?
+  batch       String?
+  website     String?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+// ─── Education ───────────────────────────────────────
+
+model Education {
+  id          String   @id @default(cuid())
+  institution String
+  degree      String
+  field       String?
+  startYear   Int
+  endYear     Int?
+  current     Boolean  @default(false)
+  gpa         String?
+  description String?
+  logo        String?
+  order       Int      @default(0)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+// ─── Experience ──────────────────────────────────────
+
+model Experience {
+  id          String     @id @default(cuid())
+  company     String
+  role        String
+  description String?
+  startDate   DateTime
+  endDate     DateTime?
+  current     Boolean    @default(false)
+  location    String?
+  type        String?    // "full-time" | "part-time" | "internship" | "freelance" | "contract"
+  logo        String?
+  order       Int        @default(0)
+  highlights  String     @default("[]") // JSON array of strings
+  technologies String    @default("[]") // JSON array of strings
+  createdAt   DateTime   @default(now())
+  updatedAt   DateTime   @updatedAt
+}
+
+// ─── Skill Categories ────────────────────────────────
+
+model SkillCategory {
+  id        String   @id @default(cuid())
+  name      String
+  slug      String   @unique
+  icon      String?
+  color     String?
+  order     Int      @default(0)
+  skills    Skill[]
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([slug])
+}
+
+model Skill {
+  id         String         @id @default(cuid())
+  name       String
+  slug       String         @unique
+  icon       String?
+  color      String?
+  level      Int?           // 1-100 proficiency
+  categoryId String?
+  category   SkillCategory? @relation(fields: [categoryId], references: [id], onDelete: SetNull)
+  order      Int            @default(0)
+  createdAt  DateTime       @default(now())
+  updatedAt  DateTime       @updatedAt
+
+  @@index([slug])
+  @@index([categoryId])
+}
+
+// ─── Technology Registry ─────────────────────────────
+
+model Technology {
+  id        String   @id @default(cuid())
+  name      String
+  slug      String   @unique
+  icon      String?
+  color     String?
+  category  String?  // "language" | "framework" | "tool" | "platform" | "database" | "hardware"
+  url       String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([slug])
+  @@index([category])
+}
+
+// ─── Project (Extended) ─────────────────────────────
+
+model Project {
+  id                  String          @id @default(cuid())
+  title               String
+  slug                String          @unique
+  subtitle            String?
+  summary             String?
+  shortDescription    String?
+  description         String
+  problemStatement    String?
+  solution            String?
+  background          String?
+  objectives          String          @default("[]") // JSON array of strings
+  features            String          @default("[]") // JSON array of strings
+  architecture        String?
+  folderStructure     String?
+  
+  // Tech stack - can use free-form text or link to Technology registry
+  technologies        String          @default("[]") // JSON array of strings (legacy)
+  technologyStack     String          @default("[]") // JSON array of {name, category, version?}
+  hardware            String          @default("[]") // JSON array of strings
+  software            String          @default("[]") // JSON array of strings
+  tools               String          @default("[]") // JSON array of strings
+  
+  // Classification
+  difficulty          String?         // "beginner" | "intermediate" | "advanced" | "expert"
+  status              String          @default("DRAFT") // "DRAFT" | "PUBLISHED" | "ARCHIVED"
+  categoryId          String?
+  category            Category?       @relation(fields: [categoryId], references: [id], onDelete: SetNull)
+  subCategory         String?
+  
+  // Context
+  clientId            String?
+  client              Client?         @relation(fields: [clientId], references: [id], onDelete: SetNull)
+  course              String?
+  semester            String?
+  year                Int?
+  timeline            TimelineEntry[]
+  
+  // Media
+  thumbnail           String?
+  banner              String?
+  screenshots         String          @default("[]") // JSON array of {url, alt?, caption?}
+  gallery             ProjectImage[]
+  videos              String          @default("[]") // JSON array of {url, title?, type?}
+  
+  // Links
+  demoLink            String?
+  githubLink          String?
+  linkedinLink        String?
+  documentation       String?
+  caseStudy           String?
+  
+  // Features & Meta
+  futureImprovements  String?
+  testing             String?
+  deployment          String?
+  performance         String?
+  seoDescription      String?
+  metrics             String          @default("[]") // JSON array of {label, value}
+  
+  // Learning
+  skillsLearned       String          @default("[]") // JSON array of strings
+  lessonsLearned      String?
+  
+  // Relations
+  relatedProjects     String          @default("[]") // JSON array of project IDs
+  tags                ProjectTag[]
+  searchKeywords      String          @default("[]") // JSON array of strings
+  
+  // Display
+  featured            Boolean         @default(false)
+  pinned              Boolean         @default(false)
+  visibility          String          @default("PUBLIC") // "PUBLIC" | "PRIVATE" | "UNLISTED"
+  icon                String?
+  color               String?
+  
+  // GitHub sync
+  githubRepo          GitHubRepo?
+  githubData          String?
+  
+  // SEO
+  seo                 SEO?
+  
+  // Timestamps
+  createdAt           DateTime        @default(now())
+  updatedAt           DateTime        @updatedAt
+  publishedAt         DateTime?
+  version             String?
+
+  @@index([status, featured])
+  @@index([slug])
+  @@index([categoryId])
+  @@index([clientId])
+  @@index([difficulty])
+  @@index([year])
+}
+
+model ProjectImage {
+  id        String   @id @default(cuid())
+  url       String
+  alt       String?
+  caption   String?
+  width     Int?
+  height    Int?
+  order     Int      @default(0)
+  projectId String
+  project   Project  @relation(fields: [projectId], references: [id], onDelete: Cascade)
+
+  @@index([projectId])
+}
+
+model TimelineEntry {
+  id          String   @id @default(cuid())
+  date        DateTime
+  title       String
+  description String?
+  order       Int      @default(0)
+  projectId   String
+  project     Project  @relation(fields: [projectId], references: [id], onDelete: Cascade)
+
+  @@index([projectId])
+}
+
+// ─── Clients ─────────────────────────────────────────
+
+model Client {
+  id          String    @id @default(cuid())
+  name        String
+  slug        String    @unique
+  logo        String?
+  website     String?
+  industry    String?
+  description String?
+  color       String?
+  projects    Project[]
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+
+  @@index([slug])
+}
+
+// ─── Engineering Labs ────────────────────────────────
+
+model Lab {
+  id            String   @id @default(cuid())
+  title         String
+  slug          String   @unique
+  summary       String?
+  description   String?
+  category      String?  // "electronics" | "programming" | "drawing" | "matlab" | "labview" | "multisim" | "orcad"
+  course         String?
+  semester      String?
+  year          Int?
+  objectives    String   @default("[]") // JSON array
+  equipment     String   @default("[]") // JSON array
+  procedure     String?
+  observations  String?
+  results       String?
+  conclusion    String?
+  technologies  String   @default("[]") // JSON array
+  githubLink    String?
+  reportLink    String?
+  schematicLink String?
+  images        String   @default("[]") // JSON array of {url, alt?}
+  difficulty    String?
+  status        String   @default("DRAFT") // "DRAFT" | "PUBLISHED" | "ARCHIVED"
+  featured      Boolean  @default(false)
+  order         Int      @default(0)
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  @@index([slug])
+  @@index([category, status])
+}
+
+// ─── Workflows / Automation ──────────────────────────
+
+model Workflow {
+  id               String   @id @default(cuid())
+  title            String
+  slug             String   @unique
+  summary          String?
+  description      String?
+  trigger          String?
+  purpose          String?
+  services         String   @default("[]") // JSON array of strings
+  flowDiagram      String?  // URL or Mermaid code
+  nodes            String   @default("[]") // JSON array of {name, type, config?}
+  inputs           String   @default("[]") // JSON array
+  outputs          String   @default("[]") // JSON array
+  futureImprovements String?
+  difficulty       String?  // "beginner" | "intermediate" | "advanced" | "expert"
+  tools            String   @default("[]") // JSON array
+  technologies     String   @default("[]") // JSON array
+  category         String?  // "github" | "portfolio" | "linkedin" | "leads" | "pdf" | "crm" | "email" | "resume"
+  status           String   @default("DRAFT") // "DRAFT" | "PUBLISHED" | "ARCHIVED"
+  featured         Boolean  @default(false)
+  order            Int      @default(0)
+  createdAt        DateTime @default(now())
+  updatedAt        DateTime @updatedAt
+
+  @@index([slug])
+  @@index([category, status])
+}
+
+// ─── Certifications ─────────────────────────────────
+
+model Certification {
+  id            String   @id @default(cuid())
+  title         String
+  issuer        String
+  slug          String   @unique
+  description   String?
+  issueDate     DateTime?
+  expiryDate    DateTime?
+  credentialId  String?
+  credentialUrl String?
+  image         String?
+  skills        String   @default("[]") // JSON array
+  category      String?
+  featured      Boolean  @default(false)
+  order         Int      @default(0)
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  @@index([slug])
+  @@index([issuer])
+}
+
+// ─── Achievements ────────────────────────────────────
+
+model Achievement {
+  id          String   @id @default(cuid())
+  title       String
+  description String?
+  slug        String   @unique
+  date        DateTime?
+  category    String?  // "award" | "publication" | "honor" | "milestone" | "recognition"
+  icon        String?
+  issuer      String?
+  link        String?
+  image       String?
+  featured    Boolean  @default(false)
+  order       Int      @default(0)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@index([slug])
+  @@index([category])
+}
+
+// ─── Current Learning ────────────────────────────────
+
+model CurrentLearning {
+  id             String   @id @default(cuid())
+  technology     String
+  slug           String   @unique
+  description    String?
+  progress       Int?     // 0-100
+  resources      String   @default("[]") // JSON array of {title, url, type?}
+  notes          String?
+  relatedProjects String  @default("[]") // JSON array of project slugs
+  startDate      DateTime?
+  status         String   @default("LEARNING") // "PLANNING" | "LEARNING" | "PRACTICING" | "MASTERED"
+  order          Int      @default(0)
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+
+  @@index([slug])
+  @@index([status])
+}
+
+// ─── Categories (for Projects) ───────────────────────
+
+model Category {
+  id       String    @id @default(cuid())
+  name     String
+  slug     String    @unique
+  description String?
+  icon     String?
+  color    String?
+  parentId String?
+  parent   Category? @relation("CategoryHierarchy", fields: [parentId], references: [id], onDelete: SetNull)
+  children Category[] @relation("CategoryHierarchy")
+  projects Project[]
+
+  @@index([slug])
+  @@index([parentId])
+}
+
+// ─── Tags ────────────────────────────────────────────
+
+model Tag {
+  id       String       @id @default(cuid())
+  name     String
+  slug     String       @unique
+  color    String?
+  projects ProjectTag[]
+
+  @@index([slug])
+}
+
+model ProjectTag {
+  projectId String
+  tagId     String
+  project   Project @relation(fields: [projectId], references: [id], onDelete: Cascade)
+  tag       Tag     @relation(fields: [tagId], references: [id], onDelete: Cascade)
+
+  @@id([projectId, tagId])
+}
+
+// ─── Blog ────────────────────────────────────────────
+
+model BlogPost {
+  id          String   @id @default(cuid())
+  title       String
+  slug        String   @unique
+  content     String
+  excerpt     String?
+  coverImage  String?
+  category    String?
+  tags        String   @default("[]") // JSON array
+  readingTime Int?
+  published   Boolean  @default(false)
+  featured    Boolean  @default(false)
+  seo         SEO?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  publishedAt DateTime?
+
+  @@index([slug, published])
+  @@index([category])
+}
+
+// ─── Gallery ─────────────────────────────────────────
+
+model GalleryItem {
+  id          String   @id @default(cuid())
+  title       String?
+  description String?
+  url         String
+  type        String   @default("image") // "image" | "video" | "document"
+  width       Int?
+  height      Int?
+  alt         String?
+  category    String?  // "project" | "lab" | "achievement" | "personal"
+  tags        String   @default("[]")
+  featured    Boolean  @default(false)
+  order       Int      @default(0)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+// ─── Media / Uploads ─────────────────────────────────
+
+model Media {
+  id        String   @id @default(cuid())
+  filename  String
+  url       String
+  type      String   // "image" | "video" | "document" | "audio" | "other"
+  mimeType  String?
+  size      Int?
+  width     Int?
+  height    Int?
+  alt       String?
+  caption   String?
+  folder    String?  // For organization
+  tags      String   @default("[]")
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([type])
+  @@index([folder])
+}
+
+// ─── Homepage Sections ───────────────────────────────
+
+model HomepageSection {
+  id        String   @id @default(cuid())
+  key       String   @unique
+  title     String?
+  subtitle  String?
+  content   String?  // JSON config for section
+  visible   Boolean  @default(true)
+  order     Int      @default(0)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([key])
+}
+
+// ─── Navigation ──────────────────────────────────────
+
+model NavigationItem {
+  id        String   @id @default(cuid())
+  label     String
+  href      String
+  icon      String?
+  order     Int      @default(0)
+  parentId  String?
+  parent    NavigationItem? @relation("NavHierarchy", fields: [parentId], references: [id], onDelete: SetNull)
+  children  NavigationItem[] @relation("NavHierarchy")
+  visible   Boolean  @default(true)
+  type      String   @default("main") // "main" | "footer" | "social"
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([type, visible])
+}
+
+// ─── Social Links ────────────────────────────────────
+
+model SocialLink {
+  id        String   @id @default(cuid())
+  platform  String   @unique
+  label     String
+  url       String
+  icon      String?
+  order     Int      @default(0)
+  visible   Boolean  @default(true)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+// ─── Messages (Contact Form) ─────────────────────────
+
+model Message {
+  id        String   @id @default(cuid())
+  name      String
+  email     String
+  subject   String?
+  message   String
+  read      Boolean  @default(false)
+  createdAt DateTime @default(now())
+
+  @@index([read, createdAt])
+}
+
+// ─── Site Settings ───────────────────────────────────
+
+model Setting {
+  id    String @id @default(cuid())
+  key   String @unique
+  value String
+  type  String @default("text") // "text" | "textarea" | "image" | "color" | "number" | "boolean"
+  group String @default("general") // "general" | "seo" | "social" | "appearance" | "analytics"
+}
+
+// ─── Theme ───────────────────────────────────────────
+
+model Theme {
+  id        String   @id @default(cuid())
+  name      String   @unique
+  isActive  Boolean  @default(false)
+  config    String   // JSON theme config
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+// ─── SEO ─────────────────────────────────────────────
+
+model SEO {
+  id          String    @id @default(cuid())
+  title       String?
+  description String?
+  ogImage     String?
+  ogType      String?   @default("website")
+  twitterCard String?   @default("summary_large_image")
+  canonical   String?
+  keywords    String?   // Comma-separated keywords
+  projectId   String?   @unique
+  project     Project?  @relation(fields: [projectId], references: [id], onDelete: Cascade)
+  blogPostId  String?   @unique
+  blogPost    BlogPost? @relation(fields: [blogPostId], references: [id], onDelete: Cascade)
+
+  @@index([projectId])
+  @@index([blogPostId])
+}
+
+// ─── GitHub Sync ─────────────────────────────────────
+
+model GitHubRepo {
+  id           String   @id
+  name         String
+  fullName     String   @unique
+  description  String?
+  url          String
+  homepage     String?
+  language     String?
+  topics       String   @default("[]")
+  stars        Int      @default(0)
+  forks        Int      @default(0)
+  license      String?
+  readme       String?
+  imported     Boolean  @default(false)
+  projectId    String?  @unique
+  project      Project? @relation(fields: [projectId], references: [id], onDelete: SetNull)
+  lastSyncedAt DateTime?
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  @@index([imported])
+}
+
+// ─── Notifications ───────────────────────────────────
+
+model Notification {
+  id        String   @id @default(cuid())
+  type      String
+  title     String
+  message   String?
+  link      String?
+  read      Boolean  @default(false)
+  createdAt DateTime @default(now())
+
+  @@index([read, createdAt])
+}
+
+// ─── Analytics Events ────────────────────────────────
+
+model AnalyticsEvent {
+  id        String   @id @default(cuid())
+  event     String
+  page      String?
+  referrer  String?
+  device    String?
+  browser   String?
+  country   String?
+  metadata  String?  // JSON extra data
+  timestamp DateTime @default(now())
+
+  @@index([event, timestamp])
+  @@index([page, timestamp])
+}

@@ -1,0 +1,33 @@
+{
+  "id": "cmrno9ltw000j9wbcl0nfmnsy",
+  "name": "Languages",
+  "slug": "languages",
+  "icon": "Terminal",
+  "color": "#f59e0b",
+  "skills": [
+    {
+      "id": "cmrno9oxc00119wbc781r58c7",
+      "name": "C++",
+      "slug": "c",
+      "icon": null,
+      "color": null,
+      "level": 70
+    },
+    {
+      "id": "cmrno9p1z00129wbc90bcmb4w",
+      "name": "MATLAB",
+      "slug": "matlab",
+      "icon": null,
+      "color": null,
+      "level": 75
+    },
+    {
+      "id": "cmrno9p5300139wbc85tb9fr5",
+      "name": "LabVIEW",
+      "slug": "labview",
+      "icon": null,
+      "color": null,
+      "level": 65
+    }
+  ]
+}

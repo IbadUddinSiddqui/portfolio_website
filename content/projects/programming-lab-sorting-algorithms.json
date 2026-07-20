@@ -1,0 +1,85 @@
+{
+  "id": "cmrnoaz6r0049ygbckcibm8r0",
+  "title": "Programming Lab: Sorting Algorithms",
+  "slug": "programming-lab-sorting-algorithms",
+  "subtitle": null,
+  "summary": "Comparative analysis of sorting algorithm implementations.",
+  "shortDescription": "Comparative analysis of sorting algorithm implementations.",
+  "description": "Implemented and compared sorting algorithms: bubble sort, selection sort, insertion sort, merge sort, quick sort, and heap sort. Analyzed time complexity, space complexity, and performance characteristics with various input sizes.",
+  "problemStatement": null,
+  "solution": null,
+  "background": null,
+  "objectives": [],
+  "features": [],
+  "architecture": null,
+  "folderStructure": null,
+  "technologyStack": [
+    {
+      "name": "C++"
+    },
+    {
+      "name": "Algorithms"
+    },
+    {
+      "name": "Data Structures"
+    }
+  ],
+  "technologies": [
+    "C++",
+    "Algorithms",
+    "Data Structures"
+  ],
+  "hardware": [],
+  "software": [],
+  "tools": [],
+  "difficulty": "intermediate",
+  "status": "PUBLISHED",
+  "category": {
+    "name": "Software Engineering",
+    "slug": "software-engineering"
+  },
+  "subCategory": null,
+  "client": null,
+  "course": "Computer Programming",
+  "semester": "2nd",
+  "year": 2023,
+  "thumbnail": null,
+  "banner": null,
+  "screenshots": [],
+  "gallery": [],
+  "videos": [],
+  "demoLink": null,
+  "githubLink": "https://github.com",
+  "linkedinLink": null,
+  "documentation": null,
+  "caseStudy": null,
+  "futureImprovements": null,
+  "testing": null,
+  "deployment": null,
+  "performance": null,
+  "seoDescription": null,
+  "metrics": [],
+  "skillsLearned": [
+    "C++",
+    "Algorithms",
+    "Data Structures"
+  ],
+  "lessonsLearned": null,
+  "tags": [
+    {
+      "name": "embedded",
+      "slug": "embedded"
+    }
+  ],
+  "searchKeywords": [],
+  "featured": false,
+  "pinned": false,
+  "visibility": "PUBLIC",
+  "icon": null,
+  "color": null,
+  "timeline": [],
+  "seo": null,
+  "publishedAt": "2026-07-16T15:37:58.177Z",
+  "createdAt": "2026-07-16T15:37:58.179Z",
+  "updatedAt": "2026-07-16T15:37:58.179Z"
+}

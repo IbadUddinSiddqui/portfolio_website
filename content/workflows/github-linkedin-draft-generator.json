@@ -1,0 +1,36 @@
+{
+  "id": "cmrnpgg4g002vesbcm6pnfmgo",
+  "title": "GitHub → LinkedIn Draft Generator",
+  "slug": "github-linkedin-draft-generator",
+  "summary": "Auto-generate LinkedIn posts from repo activity",
+  "description": "When a GitHub repo reaches milestones (stars, releases), this workflow drafts a LinkedIn post with description, tech highlights, and links. Includes hashtag generation and scheduling.",
+  "trigger": "GitHub webhook (star milestone, release published)",
+  "purpose": "Maintain consistent LinkedIn presence with automated content generation.",
+  "services": [
+    "GitHub API",
+    "LinkedIn API",
+    "OpenAI API"
+  ],
+  "flowDiagram": null,
+  "nodes": [],
+  "inputs": [],
+  "outputs": [],
+  "futureImprovements": null,
+  "difficulty": "advanced",
+  "tools": [
+    "n8n",
+    "OpenAI",
+    "LinkedIn"
+  ],
+  "technologies": [
+    "n8n",
+    "Python",
+    "LinkedIn API"
+  ],
+  "category": "linkedin",
+  "status": "PUBLISHED",
+  "featured": false,
+  "order": 0,
+  "createdAt": "2026-07-16T16:10:13.024Z",
+  "updatedAt": "2026-07-16T16:10:13.024Z"
+}

@@ -1,0 +1,116 @@
+{
+  "id": "cmrnoatdi003nygbcd7ftv7zp",
+  "title": "IoT Dashboard",
+  "slug": "iot-dashboard",
+  "subtitle": null,
+  "summary": "Web-based dashboard for monitoring IoT sensor data in real-time.",
+  "shortDescription": "Web-based dashboard for monitoring IoT sensor data in real-time.",
+  "description": "A real-time IoT dashboard that collects, stores, and visualizes sensor data from multiple ESP32/Arduino nodes. Features live graphs, historical data analysis, alert configuration, and device management. Built with WebSockets for real-time updates.",
+  "problemStatement": null,
+  "solution": null,
+  "background": null,
+  "objectives": [],
+  "features": [],
+  "architecture": null,
+  "folderStructure": null,
+  "technologyStack": [
+    {
+      "name": "ESP32"
+    },
+    {
+      "name": "React"
+    },
+    {
+      "name": "Node.js"
+    },
+    {
+      "name": "WebSocket"
+    },
+    {
+      "name": "MongoDB"
+    },
+    {
+      "name": "MQTT"
+    }
+  ],
+  "technologies": [
+    "ESP32",
+    "React",
+    "Node.js",
+    "WebSocket",
+    "MongoDB",
+    "MQTT"
+  ],
+  "hardware": [],
+  "software": [],
+  "tools": [],
+  "difficulty": "advanced",
+  "status": "PUBLISHED",
+  "category": {
+    "name": "IoT & Embedded Systems",
+    "slug": "iot-embedded-systems"
+  },
+  "subCategory": null,
+  "client": null,
+  "course": null,
+  "semester": null,
+  "year": 2024,
+  "thumbnail": null,
+  "banner": null,
+  "screenshots": [],
+  "gallery": [],
+  "videos": [],
+  "demoLink": null,
+  "githubLink": "https://github.com",
+  "linkedinLink": null,
+  "documentation": null,
+  "caseStudy": null,
+  "futureImprovements": null,
+  "testing": null,
+  "deployment": null,
+  "performance": null,
+  "seoDescription": null,
+  "metrics": [],
+  "skillsLearned": [
+    "ESP32",
+    "React",
+    "Node.js",
+    "WebSocket",
+    "MongoDB",
+    "MQTT"
+  ],
+  "lessonsLearned": null,
+  "tags": [
+    {
+      "name": "react",
+      "slug": "react"
+    },
+    {
+      "name": "iot",
+      "slug": "iot"
+    },
+    {
+      "name": "embedded",
+      "slug": "embedded"
+    },
+    {
+      "name": "esp32",
+      "slug": "esp32"
+    },
+    {
+      "name": "api",
+      "slug": "api"
+    }
+  ],
+  "searchKeywords": [],
+  "featured": false,
+  "pinned": false,
+  "visibility": "PUBLIC",
+  "icon": null,
+  "color": null,
+  "timeline": [],
+  "seo": null,
+  "publishedAt": "2026-07-16T15:37:50.645Z",
+  "createdAt": "2026-07-16T15:37:50.648Z",
+  "updatedAt": "2026-07-16T15:37:50.648Z"
+}

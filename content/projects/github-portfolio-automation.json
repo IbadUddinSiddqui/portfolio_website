@@ -1,0 +1,98 @@
+{
+  "id": "cmrnoajl60035ygbcb7ifbm1w",
+  "title": "GitHub Portfolio Automation",
+  "slug": "github-portfolio-automation",
+  "subtitle": null,
+  "summary": "Automated sync between GitHub repositories and portfolio.",
+  "shortDescription": "Automated sync between GitHub repositories and portfolio.",
+  "description": "An automation workflow that syncs GitHub repositories to the portfolio platform automatically. Monitors specified repositories, updates project metadata, pulls README content, syncs stars and activity metrics, and auto-publishes new projects based on GitHub topics and languages.",
+  "problemStatement": null,
+  "solution": null,
+  "background": null,
+  "objectives": [],
+  "features": [],
+  "architecture": null,
+  "folderStructure": null,
+  "technologyStack": [
+    {
+      "name": "n8n"
+    },
+    {
+      "name": "GitHub API"
+    },
+    {
+      "name": "TypeScript"
+    },
+    {
+      "name": "Next.js"
+    }
+  ],
+  "technologies": [
+    "n8n",
+    "GitHub API",
+    "TypeScript",
+    "Next.js"
+  ],
+  "hardware": [],
+  "software": [],
+  "tools": [],
+  "difficulty": "intermediate",
+  "status": "PUBLISHED",
+  "category": {
+    "name": "Automation",
+    "slug": "automation"
+  },
+  "subCategory": null,
+  "client": null,
+  "course": null,
+  "semester": null,
+  "year": 2024,
+  "thumbnail": null,
+  "banner": null,
+  "screenshots": [],
+  "gallery": [],
+  "videos": [],
+  "demoLink": null,
+  "githubLink": "https://github.com",
+  "linkedinLink": null,
+  "documentation": null,
+  "caseStudy": null,
+  "futureImprovements": null,
+  "testing": null,
+  "deployment": null,
+  "performance": null,
+  "seoDescription": null,
+  "metrics": [],
+  "skillsLearned": [
+    "n8n",
+    "GitHub API",
+    "TypeScript",
+    "Next.js"
+  ],
+  "lessonsLearned": null,
+  "tags": [
+    {
+      "name": "automation",
+      "slug": "automation"
+    },
+    {
+      "name": "n8n",
+      "slug": "n8n"
+    },
+    {
+      "name": "api",
+      "slug": "api"
+    }
+  ],
+  "searchKeywords": [],
+  "featured": false,
+  "pinned": false,
+  "visibility": "PUBLIC",
+  "icon": null,
+  "color": null,
+  "timeline": [],
+  "seo": null,
+  "publishedAt": "2026-07-16T15:37:37.961Z",
+  "createdAt": "2026-07-16T15:37:37.962Z",
+  "updatedAt": "2026-07-16T15:37:37.962Z"
+}

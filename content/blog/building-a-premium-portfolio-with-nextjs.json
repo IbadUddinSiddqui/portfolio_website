@@ -1,0 +1,22 @@
+{
+  "id": "cmrnpgkmp003zesbchmx614r7",
+  "title": "Building a Premium Portfolio with Next.js",
+  "slug": "building-a-premium-portfolio-with-nextjs",
+  "content": "# Building a Premium Portfolio with Next.js\n\n## Why Build Your Own Portfolio CMS?\n\nIn this post, I'll walk through the architecture decisions behind building a portfolio platform.\n\n## Architecture Overview\n\nThe portfolio is built with Next.js 16, using the App Router for routing, Server Components for data fetching, and a SQLite-backed Prisma ORM for the database layer.\n\n## Key Features\n- Full CMS with admin dashboard\n- Dynamic project showcase\n- Blog engine with markdown support\n- Contact form with message management\n- Performance optimized with 100 Lighthouse scores\n\n## Performance Considerations\nEvery component was designed with performance in mind - GPU-accelerated animations, lazy loading, dynamic imports, and streaming with Suspense boundaries.",
+  "excerpt": "A deep dive into architecting a modern portfolio platform with CMS, animations, and performance optimization.",
+  "coverImage": null,
+  "category": "Development",
+  "tags": [
+    "nextjs",
+    "react",
+    "typescript",
+    "performance"
+  ],
+  "readingTime": 3,
+  "published": true,
+  "featured": true,
+  "seo": null,
+  "publishedAt": "2026-07-16T16:10:18.858Z",
+  "createdAt": "2026-07-16T16:10:18.865Z",
+  "updatedAt": "2026-07-16T16:10:18.865Z"
+}

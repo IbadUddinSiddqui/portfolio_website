@@ -1,0 +1,21 @@
+{
+  "id": "cmrnpgktz0041esbcbpx0dn5d",
+  "title": "CSS Animations: Performance Best Practices",
+  "slug": "css-animations-performance-best-practices",
+  "content": "# CSS Animations: Performance Best Practices\n\n## The Golden Rule\n\nAlways animate **transform** and **opacity** properties only. These are GPU-accelerated and won't trigger layout recalculations.\n\n## What to Avoid\n- Animating `width`, `height`, `top`, `left` — triggers layout\n- Animating `box-shadow` — triggers paint\n- Animating `filter` on large elements — expensive\n\n## Techniques\n- Use `will-change` sparingly\n- Respect `prefers-reduced-motion`\n- Use `content-visibility` for offscreen content\n- Leverage CSS `contain` property",
+  "excerpt": "Learn how to create smooth, performant CSS animations that run at 60fps.",
+  "coverImage": null,
+  "category": "Design",
+  "tags": [
+    "css",
+    "performance",
+    "animation"
+  ],
+  "readingTime": 3,
+  "published": true,
+  "featured": true,
+  "seo": null,
+  "publishedAt": "2026-07-16T16:10:19.124Z",
+  "createdAt": "2026-07-16T16:10:19.127Z",
+  "updatedAt": "2026-07-16T16:10:19.127Z"
+}

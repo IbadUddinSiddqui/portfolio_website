@@ -1,0 +1,93 @@
+{
+  "id": "cmrnoajxf0036ygbcqtbrd7ds",
+  "title": "LinkedIn Portfolio Automation",
+  "slug": "linkedin-portfolio-automation",
+  "subtitle": null,
+  "summary": "Auto-generate LinkedIn posts from portfolio projects.",
+  "shortDescription": "Auto-generate LinkedIn posts from portfolio projects.",
+  "description": "An automation workflow that generates LinkedIn posts when new projects are published, including formatted descriptions, technology highlights, and links back to the full case study. Supports post scheduling, hashtag generation, and engagement tracking.",
+  "problemStatement": null,
+  "solution": null,
+  "background": null,
+  "objectives": [],
+  "features": [],
+  "architecture": null,
+  "folderStructure": null,
+  "technologyStack": [
+    {
+      "name": "n8n"
+    },
+    {
+      "name": "LinkedIn API"
+    },
+    {
+      "name": "TypeScript"
+    }
+  ],
+  "technologies": [
+    "n8n",
+    "LinkedIn API",
+    "TypeScript"
+  ],
+  "hardware": [],
+  "software": [],
+  "tools": [],
+  "difficulty": "intermediate",
+  "status": "PUBLISHED",
+  "category": {
+    "name": "Automation",
+    "slug": "automation"
+  },
+  "subCategory": null,
+  "client": null,
+  "course": null,
+  "semester": null,
+  "year": 2024,
+  "thumbnail": null,
+  "banner": null,
+  "screenshots": [],
+  "gallery": [],
+  "videos": [],
+  "demoLink": null,
+  "githubLink": "https://github.com",
+  "linkedinLink": null,
+  "documentation": null,
+  "caseStudy": null,
+  "futureImprovements": null,
+  "testing": null,
+  "deployment": null,
+  "performance": null,
+  "seoDescription": null,
+  "metrics": [],
+  "skillsLearned": [
+    "n8n",
+    "LinkedIn API",
+    "TypeScript"
+  ],
+  "lessonsLearned": null,
+  "tags": [
+    {
+      "name": "automation",
+      "slug": "automation"
+    },
+    {
+      "name": "n8n",
+      "slug": "n8n"
+    },
+    {
+      "name": "api",
+      "slug": "api"
+    }
+  ],
+  "searchKeywords": [],
+  "featured": false,
+  "pinned": false,
+  "visibility": "PUBLIC",
+  "icon": null,
+  "color": null,
+  "timeline": [],
+  "seo": null,
+  "publishedAt": "2026-07-16T15:37:38.402Z",
+  "createdAt": "2026-07-16T15:37:38.403Z",
+  "updatedAt": "2026-07-16T15:37:38.403Z"
+}

@@ -1,0 +1,103 @@
+{
+  "id": "cmrnob0wd004gygbcgicauka0",
+  "title": "Open Source Contributions",
+  "slug": "open-source-contributions",
+  "subtitle": null,
+  "summary": "Contributions to various open-source projects and libraries.",
+  "shortDescription": "Contributions to various open-source projects and libraries.",
+  "description": "Active contributions to open-source projects including bug fixes, feature implementations, documentation improvements, and code reviews. Notable contributions to Next.js documentation, Prisma examples, and various React component libraries.",
+  "problemStatement": null,
+  "solution": null,
+  "background": null,
+  "objectives": [],
+  "features": [],
+  "architecture": null,
+  "folderStructure": null,
+  "technologyStack": [
+    {
+      "name": "TypeScript"
+    },
+    {
+      "name": "React"
+    },
+    {
+      "name": "Next.js"
+    },
+    {
+      "name": "Git"
+    },
+    {
+      "name": "GitHub"
+    }
+  ],
+  "technologies": [
+    "TypeScript",
+    "React",
+    "Next.js",
+    "Git",
+    "GitHub"
+  ],
+  "hardware": [],
+  "software": [],
+  "tools": [],
+  "difficulty": "intermediate",
+  "status": "PUBLISHED",
+  "category": {
+    "name": "Open Source",
+    "slug": "open-source"
+  },
+  "subCategory": null,
+  "client": null,
+  "course": null,
+  "semester": null,
+  "year": 2024,
+  "thumbnail": null,
+  "banner": null,
+  "screenshots": [],
+  "gallery": [],
+  "videos": [],
+  "demoLink": null,
+  "githubLink": "https://github.com",
+  "linkedinLink": null,
+  "documentation": null,
+  "caseStudy": null,
+  "futureImprovements": null,
+  "testing": null,
+  "deployment": null,
+  "performance": null,
+  "seoDescription": null,
+  "metrics": [],
+  "skillsLearned": [
+    "TypeScript",
+    "React",
+    "Next.js",
+    "Git",
+    "GitHub"
+  ],
+  "lessonsLearned": null,
+  "tags": [
+    {
+      "name": "react",
+      "slug": "react"
+    },
+    {
+      "name": "nextjs",
+      "slug": "nextjs"
+    },
+    {
+      "name": "open-source",
+      "slug": "open-source"
+    }
+  ],
+  "searchKeywords": [],
+  "featured": true,
+  "pinned": false,
+  "visibility": "PUBLIC",
+  "icon": null,
+  "color": null,
+  "timeline": [],
+  "seo": null,
+  "publishedAt": "2026-07-16T15:38:00.396Z",
+  "createdAt": "2026-07-16T15:38:00.397Z",
+  "updatedAt": "2026-07-16T15:38:00.397Z"
+}

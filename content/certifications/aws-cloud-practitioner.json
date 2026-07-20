@@ -1,0 +1,23 @@
+{
+  "id": "cmrnpgjdd003nesbcmmq2bp1a",
+  "title": "AWS Cloud Practitioner",
+  "issuer": "Amazon Web Services",
+  "slug": "aws-cloud-practitioner",
+  "description": null,
+  "issueDate": "2024-01-01T00:00:00.000Z",
+  "expiryDate": null,
+  "credentialId": null,
+  "credentialUrl": null,
+  "image": null,
+  "skills": [
+    "AWS",
+    "Cloud",
+    "Security",
+    "Architecture"
+  ],
+  "category": "Cloud Computing",
+  "featured": true,
+  "order": 0,
+  "createdAt": "2026-07-16T16:10:17.233Z",
+  "updatedAt": "2026-07-16T16:10:17.233Z"
+}

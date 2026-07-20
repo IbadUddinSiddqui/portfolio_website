@@ -1,0 +1,33 @@
+{
+  "id": "cmrnpggqc0030esbc5yq5l9k8",
+  "title": "Email Notification Workflow",
+  "slug": "email-notification-workflow",
+  "summary": "Multi-channel notification system",
+  "description": "Sends email alerts for portfolio events: new contact form submissions, project publications, blog posts, and system updates. Uses templates, personalization, and digest mode.",
+  "trigger": "Webhook from portfolio CMS",
+  "purpose": "Keep admin notified of important site events in real-time.",
+  "services": [
+    "Gmail API",
+    "SendGrid"
+  ],
+  "flowDiagram": null,
+  "nodes": [],
+  "inputs": [],
+  "outputs": [],
+  "futureImprovements": null,
+  "difficulty": "beginner",
+  "tools": [
+    "n8n",
+    "SendGrid"
+  ],
+  "technologies": [
+    "n8n",
+    "Email API"
+  ],
+  "category": "email",
+  "status": "PUBLISHED",
+  "featured": false,
+  "order": 0,
+  "createdAt": "2026-07-16T16:10:13.812Z",
+  "updatedAt": "2026-07-16T16:10:13.812Z"
+}

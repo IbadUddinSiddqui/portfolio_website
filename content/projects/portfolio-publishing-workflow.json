@@ -1,0 +1,94 @@
+{
+  "id": "cmrnoaq0u003eygbcq45ampsv",
+  "title": "Portfolio Publishing Workflow",
+  "slug": "portfolio-publishing-workflow",
+  "subtitle": null,
+  "summary": "Automated publishing pipeline for portfolio content.",
+  "shortDescription": "Automated publishing pipeline for portfolio content.",
+  "description": "An automation pipeline that handles the complete publishing workflow: content review → SEO optimization → social media announcement → performance monitoring. Integrates with the portfolio CMS to automate routine publishing tasks and ensure consistency.",
+  "problemStatement": null,
+  "solution": null,
+  "background": null,
+  "objectives": [],
+  "features": [],
+  "architecture": null,
+  "folderStructure": null,
+  "technologyStack": [
+    {
+      "name": "n8n"
+    },
+    {
+      "name": "GitHub Actions"
+    },
+    {
+      "name": "Next.js"
+    },
+    {
+      "name": "LinkedIn API"
+    }
+  ],
+  "technologies": [
+    "n8n",
+    "GitHub Actions",
+    "Next.js",
+    "LinkedIn API"
+  ],
+  "hardware": [],
+  "software": [],
+  "tools": [],
+  "difficulty": "intermediate",
+  "status": "PUBLISHED",
+  "category": {
+    "name": "Automation",
+    "slug": "automation"
+  },
+  "subCategory": null,
+  "client": null,
+  "course": null,
+  "semester": null,
+  "year": 2024,
+  "thumbnail": null,
+  "banner": null,
+  "screenshots": [],
+  "gallery": [],
+  "videos": [],
+  "demoLink": null,
+  "githubLink": "https://github.com",
+  "linkedinLink": null,
+  "documentation": null,
+  "caseStudy": null,
+  "futureImprovements": null,
+  "testing": null,
+  "deployment": null,
+  "performance": null,
+  "seoDescription": null,
+  "metrics": [],
+  "skillsLearned": [
+    "n8n",
+    "GitHub Actions",
+    "Next.js",
+    "LinkedIn API"
+  ],
+  "lessonsLearned": null,
+  "tags": [
+    {
+      "name": "automation",
+      "slug": "automation"
+    },
+    {
+      "name": "n8n",
+      "slug": "n8n"
+    }
+  ],
+  "searchKeywords": [],
+  "featured": false,
+  "pinned": false,
+  "visibility": "PUBLIC",
+  "icon": null,
+  "color": null,
+  "timeline": [],
+  "seo": null,
+  "publishedAt": "2026-07-16T15:37:46.301Z",
+  "createdAt": "2026-07-16T15:37:46.302Z",
+  "updatedAt": "2026-07-16T15:37:46.302Z"
+}

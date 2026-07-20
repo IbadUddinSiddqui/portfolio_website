@@ -1,0 +1,112 @@
+{
+  "id": "cmrnoaicc0033ygbcmz25vqmk",
+  "title": "PDF Declaration Data Extraction System",
+  "slug": "pdf-declaration-data-extraction-system",
+  "subtitle": null,
+  "summary": "Automated PDF data extraction using OCR and NLP.",
+  "shortDescription": "Automated PDF data extraction using OCR and NLP.",
+  "description": "An automated system that extracts structured data from PDF declaration forms using OCR technology and NLP. Processes scanned documents, identifies key fields, validates extracted data, and exports to structured formats. Reduces manual data entry time by 90%.",
+  "problemStatement": null,
+  "solution": null,
+  "background": null,
+  "objectives": [],
+  "features": [],
+  "architecture": null,
+  "folderStructure": null,
+  "technologyStack": [
+    {
+      "name": "Python"
+    },
+    {
+      "name": "Tesseract OCR"
+    },
+    {
+      "name": "OpenCV"
+    },
+    {
+      "name": "LangChain"
+    },
+    {
+      "name": "FastAPI"
+    },
+    {
+      "name": "PostgreSQL"
+    }
+  ],
+  "technologies": [
+    "Python",
+    "Tesseract OCR",
+    "OpenCV",
+    "LangChain",
+    "FastAPI",
+    "PostgreSQL"
+  ],
+  "hardware": [],
+  "software": [],
+  "tools": [],
+  "difficulty": "advanced",
+  "status": "PUBLISHED",
+  "category": {
+    "name": "Artificial Intelligence",
+    "slug": "artificial-intelligence"
+  },
+  "subCategory": null,
+  "client": null,
+  "course": null,
+  "semester": null,
+  "year": 2024,
+  "thumbnail": null,
+  "banner": null,
+  "screenshots": [],
+  "gallery": [],
+  "videos": [],
+  "demoLink": null,
+  "githubLink": "https://github.com",
+  "linkedinLink": null,
+  "documentation": null,
+  "caseStudy": null,
+  "futureImprovements": null,
+  "testing": null,
+  "deployment": null,
+  "performance": null,
+  "seoDescription": null,
+  "metrics": [],
+  "skillsLearned": [
+    "Python",
+    "Tesseract OCR",
+    "OpenCV",
+    "LangChain",
+    "FastAPI",
+    "PostgreSQL"
+  ],
+  "lessonsLearned": null,
+  "tags": [
+    {
+      "name": "python",
+      "slug": "python"
+    },
+    {
+      "name": "ai",
+      "slug": "ai"
+    },
+    {
+      "name": "machine-learning",
+      "slug": "machine-learning"
+    },
+    {
+      "name": "automation",
+      "slug": "automation"
+    }
+  ],
+  "searchKeywords": [],
+  "featured": true,
+  "pinned": false,
+  "visibility": "PUBLIC",
+  "icon": null,
+  "color": null,
+  "timeline": [],
+  "seo": null,
+  "publishedAt": "2026-07-16T15:37:36.348Z",
+  "createdAt": "2026-07-16T15:37:36.348Z",
+  "updatedAt": "2026-07-16T15:37:36.348Z"
+}

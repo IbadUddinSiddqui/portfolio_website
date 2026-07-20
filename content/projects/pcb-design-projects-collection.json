@@ -1,0 +1,99 @@
+{
+  "id": "cmrnoau4p003pygbcnvgde5nn",
+  "title": "PCB Design Projects Collection",
+  "slug": "pcb-design-projects-collection",
+  "subtitle": null,
+  "summary": "Collection of PCB designs from simple to complex circuits.",
+  "shortDescription": "Collection of PCB designs from simple to complex circuits.",
+  "description": "A collection of PCB designs covering various projects: power supply, amplifier, Arduino shield, sensor breakouts, and custom IoT boards. Each design includes schematic, layout files, BOM, and assembly instructions. Designed using KiCad and OrCAD.",
+  "problemStatement": null,
+  "solution": null,
+  "background": null,
+  "objectives": [],
+  "features": [],
+  "architecture": null,
+  "folderStructure": null,
+  "technologyStack": [
+    {
+      "name": "KiCad"
+    },
+    {
+      "name": "OrCAD"
+    },
+    {
+      "name": "PCB"
+    },
+    {
+      "name": "Schematic"
+    },
+    {
+      "name": "Layout"
+    }
+  ],
+  "technologies": [
+    "KiCad",
+    "OrCAD",
+    "PCB",
+    "Schematic",
+    "Layout"
+  ],
+  "hardware": [],
+  "software": [],
+  "tools": [],
+  "difficulty": "advanced",
+  "status": "PUBLISHED",
+  "category": {
+    "name": "PCB Design",
+    "slug": "pcb-design"
+  },
+  "subCategory": null,
+  "client": null,
+  "course": null,
+  "semester": null,
+  "year": 2024,
+  "thumbnail": null,
+  "banner": null,
+  "screenshots": [],
+  "gallery": [],
+  "videos": [],
+  "demoLink": null,
+  "githubLink": "https://github.com",
+  "linkedinLink": null,
+  "documentation": null,
+  "caseStudy": null,
+  "futureImprovements": null,
+  "testing": null,
+  "deployment": null,
+  "performance": null,
+  "seoDescription": null,
+  "metrics": [],
+  "skillsLearned": [
+    "KiCad",
+    "OrCAD",
+    "PCB",
+    "Schematic",
+    "Layout"
+  ],
+  "lessonsLearned": null,
+  "tags": [
+    {
+      "name": "electronics",
+      "slug": "electronics"
+    },
+    {
+      "name": "pcb",
+      "slug": "pcb"
+    }
+  ],
+  "searchKeywords": [],
+  "featured": true,
+  "pinned": false,
+  "visibility": "PUBLIC",
+  "icon": null,
+  "color": null,
+  "timeline": [],
+  "seo": null,
+  "publishedAt": "2026-07-16T15:37:51.624Z",
+  "createdAt": "2026-07-16T15:37:51.625Z",
+  "updatedAt": "2026-07-16T15:37:51.625Z"
+}

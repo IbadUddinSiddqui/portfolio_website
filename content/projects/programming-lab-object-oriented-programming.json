@@ -1,0 +1,80 @@
+{
+  "id": "cmrnoazg5004aygbcqilranl5",
+  "title": "Programming Lab: Object-Oriented Programming",
+  "slug": "programming-lab-object-oriented-programming",
+  "subtitle": null,
+  "summary": "OOP concepts demonstrated through practical C++ programs.",
+  "shortDescription": "OOP concepts demonstrated through practical C++ programs.",
+  "description": "Practical implementation of object-oriented programming concepts including classes, inheritance, polymorphism, encapsulation, abstraction, operator overloading, and file I/O. Built a library management system as final project.",
+  "problemStatement": null,
+  "solution": null,
+  "background": null,
+  "objectives": [],
+  "features": [],
+  "architecture": null,
+  "folderStructure": null,
+  "technologyStack": [
+    {
+      "name": "C++"
+    },
+    {
+      "name": "OOP"
+    }
+  ],
+  "technologies": [
+    "C++",
+    "OOP"
+  ],
+  "hardware": [],
+  "software": [],
+  "tools": [],
+  "difficulty": "intermediate",
+  "status": "PUBLISHED",
+  "category": {
+    "name": "Software Engineering",
+    "slug": "software-engineering"
+  },
+  "subCategory": null,
+  "client": null,
+  "course": "Computer Programming",
+  "semester": "3rd",
+  "year": 2023,
+  "thumbnail": null,
+  "banner": null,
+  "screenshots": [],
+  "gallery": [],
+  "videos": [],
+  "demoLink": null,
+  "githubLink": "https://github.com",
+  "linkedinLink": null,
+  "documentation": null,
+  "caseStudy": null,
+  "futureImprovements": null,
+  "testing": null,
+  "deployment": null,
+  "performance": null,
+  "seoDescription": null,
+  "metrics": [],
+  "skillsLearned": [
+    "C++",
+    "OOP"
+  ],
+  "lessonsLearned": null,
+  "tags": [
+    {
+      "name": "embedded",
+      "slug": "embedded"
+    }
+  ],
+  "searchKeywords": [],
+  "featured": false,
+  "pinned": false,
+  "visibility": "PUBLIC",
+  "icon": null,
+  "color": null,
+  "timeline": [],
+  "seo": null,
+  "publishedAt": "2026-07-16T15:37:58.516Z",
+  "createdAt": "2026-07-16T15:37:58.517Z",
+  "updatedAt": "2026-07-16T15:37:58.517Z"
+}

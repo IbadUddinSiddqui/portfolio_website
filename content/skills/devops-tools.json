@@ -1,0 +1,41 @@
+{
+  "id": "cmrno9m0h000k9wbcege1a0p5",
+  "name": "DevOps & Tools",
+  "slug": "devops-tools",
+  "icon": "Container",
+  "color": "#8b5cf6",
+  "skills": [
+    {
+      "id": "cmrno9q0i001b9wbc6613ft8o",
+      "name": "Git",
+      "slug": "git",
+      "icon": null,
+      "color": null,
+      "level": 85
+    },
+    {
+      "id": "cmrno9q85001c9wbcy6r0vnek",
+      "name": "Docker",
+      "slug": "docker",
+      "icon": null,
+      "color": null,
+      "level": 60
+    },
+    {
+      "id": "cmrno9qda001d9wbcjtbp3uib",
+      "name": "Linux",
+      "slug": "linux",
+      "icon": null,
+      "color": null,
+      "level": 70
+    },
+    {
+      "id": "cmrno9qiw001e9wbcnxwbu4ll",
+      "name": "n8n",
+      "slug": "n8n",
+      "icon": null,
+      "color": null,
+      "level": 75
+    }
+  ]
+}

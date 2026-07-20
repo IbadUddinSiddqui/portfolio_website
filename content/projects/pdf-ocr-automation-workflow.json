@@ -1,0 +1,98 @@
+{
+  "id": "cmrnoaogd003bygbc6ry0wkhx",
+  "title": "PDF OCR Automation Workflow",
+  "slug": "pdf-ocr-automation-workflow",
+  "subtitle": null,
+  "summary": "n8n workflow for automated OCR processing of PDF documents.",
+  "shortDescription": "n8n workflow for automated OCR processing of PDF documents.",
+  "description": "An n8n automation workflow that watches a folder for new PDF documents, processes them through OCR, extracts structured data using AI, validates the results, and saves to a database. Includes error handling, retry logic, and notification on completion.",
+  "problemStatement": null,
+  "solution": null,
+  "background": null,
+  "objectives": [],
+  "features": [],
+  "architecture": null,
+  "folderStructure": null,
+  "technologyStack": [
+    {
+      "name": "n8n"
+    },
+    {
+      "name": "Tesseract OCR"
+    },
+    {
+      "name": "OpenAI API"
+    },
+    {
+      "name": "PostgreSQL"
+    }
+  ],
+  "technologies": [
+    "n8n",
+    "Tesseract OCR",
+    "OpenAI API",
+    "PostgreSQL"
+  ],
+  "hardware": [],
+  "software": [],
+  "tools": [],
+  "difficulty": "advanced",
+  "status": "PUBLISHED",
+  "category": {
+    "name": "Automation",
+    "slug": "automation"
+  },
+  "subCategory": null,
+  "client": null,
+  "course": null,
+  "semester": null,
+  "year": 2024,
+  "thumbnail": null,
+  "banner": null,
+  "screenshots": [],
+  "gallery": [],
+  "videos": [],
+  "demoLink": null,
+  "githubLink": "https://github.com",
+  "linkedinLink": null,
+  "documentation": null,
+  "caseStudy": null,
+  "futureImprovements": null,
+  "testing": null,
+  "deployment": null,
+  "performance": null,
+  "seoDescription": null,
+  "metrics": [],
+  "skillsLearned": [
+    "n8n",
+    "Tesseract OCR",
+    "OpenAI API",
+    "PostgreSQL"
+  ],
+  "lessonsLearned": null,
+  "tags": [
+    {
+      "name": "ai",
+      "slug": "ai"
+    },
+    {
+      "name": "automation",
+      "slug": "automation"
+    },
+    {
+      "name": "n8n",
+      "slug": "n8n"
+    }
+  ],
+  "searchKeywords": [],
+  "featured": true,
+  "pinned": false,
+  "visibility": "PUBLIC",
+  "icon": null,
+  "color": null,
+  "timeline": [],
+  "seo": null,
+  "publishedAt": "2026-07-16T15:37:44.251Z",
+  "createdAt": "2026-07-16T15:37:44.269Z",
+  "updatedAt": "2026-07-16T15:37:44.269Z"
+}
