@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { motion } from "motion/react";
 import { ChevronDown } from "lucide-react";
 import { useReducedMotion } from "@/hooks/use-reduced-motion";
@@ -62,12 +63,18 @@ export function HeroSection() {
             className="flex flex-col sm:flex-row gap-4 sm:gap-6 mt-12"
             {...item(3)}
           >
-            <button className="px-8 py-3 border border-white/10 rounded-full hover:bg-white/5 transition-all backdrop-blur-md cursor-pointer hover:border-white/20 hover:scale-105 active:scale-95 shadow-[0_0_20px_rgba(255,170,50,0.03)] text-sm uppercase tracking-wider">
+            <Link
+              href="/projects"
+              className="px-8 py-3 border border-white/10 rounded-full hover:bg-white/5 transition-all backdrop-blur-md cursor-pointer hover:border-white/20 hover:scale-105 active:scale-95 shadow-[0_0_20px_rgba(255,170,50,0.03)] text-sm uppercase tracking-wider inline-block"
+            >
               View Portfolio
-            </button>
-            <button className="px-8 py-3 border border-transparent bg-white/5 rounded-full hover:bg-white/10 transition-all backdrop-blur-md cursor-pointer hover:scale-105 active:scale-95 text-sm uppercase tracking-wider">
+            </Link>
+            <Link
+              href="/contact"
+              className="px-8 py-3 border border-transparent bg-white/5 rounded-full hover:bg-white/10 transition-all backdrop-blur-md cursor-pointer hover:scale-105 active:scale-95 text-sm uppercase tracking-wider inline-block"
+            >
               Contact Me
-            </button>
+            </Link>
           </motion.div>
         </div>
       </main>
