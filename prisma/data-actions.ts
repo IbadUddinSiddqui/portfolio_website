@@ -163,10 +163,7 @@ export async function getProjectBySlug(slug: string, includeDrafts = false) {
 
   const project = await db.project.findFirst({
     where,
-    include: {
-      ...projectInclude,
-      relatedProjects: true,
-    },
+    include: projectInclude,
   });
   if (!project) return null;
   return formatProjectDetail(project);
