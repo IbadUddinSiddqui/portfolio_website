@@ -36,14 +36,34 @@ export const metadata: Metadata = {
   },
   description: siteDescription,
   metadataBase: new URL(siteUrl),
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/favicon-192x192.png", sizes: "192x192", type: "image/png" },
+      { url: "/favicon-512x512.png", sizes: "512x512", type: "image/png" },
+    ],
+    apple: "/apple-touch-icon.png",
+  },
+  manifest: "/manifest.json",
   openGraph: {
     type: "website",
     locale: "en_US",
     siteName,
     url: siteUrl,
+    images: [
+      {
+        url: "/images/logo.png",
+        width: 1254,
+        height: 1254,
+        alt: siteName,
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
+    images: ["/images/logo.png"],
   },
   robots: {
     index: true,

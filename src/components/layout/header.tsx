@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -13,7 +14,7 @@ import { MobileNav } from "@/components/layout/mobile-nav";
  * Premium navigation personalized for Ibad Uddin:
  * - Dark theme matching the hero section (#060709)
  * - Golden/amber accents inspired by the Edison bulb
- * - 'IU' monogram logo with warm gold gradient
+ * - Profile photo logo with warm gold circular frame
  * - Social links (GitHub, LinkedIn)
  * - Transparent → glassmorphism on scroll
  * - Animated warm gradient border on scroll
@@ -59,26 +60,25 @@ export function Header() {
           scrolled ? "h-14" : "h-16"
         )}
       >
-        {/* Logo — personalized 'IU' monogram with golden gradient */}
+        {/* Logo — profile photo with warm gold circular frame */}
         <Link
           href="/"
           className="flex items-center gap-2.5 group"
           aria-label={`${siteConfig.name} — home`}
         >
           <motion.div
-            className="relative w-9 h-9 rounded-xl overflow-hidden"
-            whileHover={{ scale: 1.08, rotate: -4 }}
+            className="relative w-9 h-9 rounded-full overflow-hidden ring-2 ring-[#d4af37]/50 group-hover:ring-[#d4af37]/80 transition-all duration-300"
+            whileHover={{ scale: 1.08 }}
             transition={{ type: "spring", stiffness: 500, damping: 15 }}
           >
-            {/* Warm golden gradient background */}
-            <div className="absolute inset-0 bg-gradient-to-br from-[#d4af37] via-[#e8c84a] to-[#b8942e] opacity-90" />
-            {/* Inner sheen */}
-            <div className="absolute inset-0 bg-gradient-to-br from-white/40 to-transparent" />
-            {/* Glow ring */}
-            <div className="absolute inset-0 rounded-xl ring-1 ring-[#d4af37]/30" />
-            <span className="relative z-10 flex items-center justify-center w-full h-full text-[#1a1508] text-xs font-extrabold tracking-tight">
-              IU
-            </span>
+            <Image
+              src="/images/logo.png"
+              alt={siteConfig.name}
+              fill
+              sizes="36px"
+              className="object-cover"
+              priority
+            />
           </motion.div>
           <span className="text-sm font-semibold tracking-tight hidden sm:inline text-white/70 group-hover:text-white/90 transition-colors duration-200">
             Ibad Uddin

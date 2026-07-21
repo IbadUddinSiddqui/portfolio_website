@@ -4,8 +4,8 @@ const nextConfig: NextConfig = {
   // Enable React strict mode for development
   reactStrictMode: true,
 
-  // Use static generation where possible
-  output: process.env.NODE_ENV === "production" ? "standalone" : undefined,
+  // Use static generation where possible (disabled — was causing CSS/assets not to load in production)
+  // output: process.env.NODE_ENV === "production" ? "standalone" : undefined,
 
   // Image optimization
   images: {
@@ -40,9 +40,11 @@ const nextConfig: NextConfig = {
     ],
   },
 
-  // Compiler options
+  // Compiler options — keep errors and warnings for debugging production issues
   compiler: {
-    removeConsole: process.env.NODE_ENV === "production",
+    removeConsole: {
+      exclude: ["error", "warn"],
+    },
   },
 
   // Headers for security and performance
