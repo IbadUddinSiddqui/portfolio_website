@@ -1,0 +1,201 @@
+---
+title: "Waveform Visualization in LabVIEW"
+slug: "labview-waveform-visualization"
+type: "labs"
+category: "Electronic Engineering Drawing"
+subcategory: "LabVIEW"
+course: "Electronic Engineering Drawing & Engineering Software (EEDW)"
+department: "Electronic Engineering"
+semester: "1st"
+year: "2023"
+laboratorySession: "28"
+taxonomyLevel: "C5 (Evaluating) / C6 (Creating)"
+clo: "CLO-28: Create comprehensive waveform visualization applications using LabVIEW graph controls."
+domain: "Virtual Instrumentation — Data Visualization"
+difficulty: "advanced"
+status: "completed"
+featured: false
+tags:
+  - LabVIEW
+  - Waveform
+  - Visualization
+  - Graphs
+  - Data Display
+  - Signal Analysis
+technologies:
+  - LabVIEW
+software:
+  - LabVIEW 2023 or later
+hardware: []
+tools:
+  - Waveform Graph
+  - Waveform Chart
+  - XY Graph
+  - Graph Properties
+  - Cursor Legend
+skills:
+  - Waveform Graph Usage
+  - Waveform Chart Configuration
+  - XY Graph Creation
+  - Multi-Plot Display
+  - Graph Customization
+  - Cursor and Legend Management
+seoTitle: "Waveform Visualization in LabVIEW — EEDW Lab 28"
+seoDescription: "Master waveform visualization in LabVIEW including waveform graphs, charts, XY graphs, multi-plot displays, and cursor-based data analysis."
+---
+
+# Waveform Visualization in LabVIEW
+
+## Overview
+
+Data visualization is a critical component of virtual instrumentation. LabVIEW provides powerful graph and chart controls for displaying and analyzing waveform data in real-time and post-acquisition modes. This laboratory session covers all major graph types, customization, and advanced visualization techniques for engineering applications.
+
+## Objective
+
+To understand the difference between Waveform Graphs (static) and Waveform Charts (real-time), create multi-plot displays with different waveform types, use XY Graphs for parametric data visualization, customize graph appearance including axes, grids, and colors, use cursor legends for interactive data analysis, and create a comprehensive signal visualization dashboard.
+
+## Domain
+
+Virtual Instrumentation — Engineering Data Visualization.
+
+## CLO and Taxonomy Level
+
+- **CLO-28**: Create comprehensive waveform visualization applications using LabVIEW graph controls.
+- **Taxonomy Level**: C5 (Evaluating) — Evaluate graph types for different data visualization needs. C6 (Creating) — Create a comprehensive signal analysis dashboard.
+
+## Tools and Software
+
+- **Software**: LabVIEW 2023 or later
+
+## Required Skills
+
+- All previous LabVIEW labs (21-27)
+- Understanding of signal types and characteristics
+
+## Theory and Engineering Concepts
+
+- **Waveform Graph**: Displays a complete data array at once. Used for post-acquisition data review. Data is passed as an array or waveform data type.
+- **Waveform Chart**: Displays data points one at a time, maintaining a scrolling history buffer. Used for real-time data monitoring. Has three update modes: strip chart, scope chart, and sweep chart.
+- **XY Graph**: Displays data where X values are not uniformly spaced. Used for Lissajous patterns, hysteresis curves, and parametric plots.
+- **Waveform Data Type**: A special LabVIEW cluster containing start time (t0), time interval (dt), and Y data array (Y[]).
+
+## Project / Task
+
+Create a comprehensive signal visualization dashboard with: (a) a real-time multi-channel waveform chart showing three generated signals, (b) an XY graph displaying a Lissajous pattern, and (c) a waveform graph with cursor-based measurement for frequency and amplitude analysis.
+
+## Procedure / Implementation
+
+### Step 1: Waveform Graph Basics
+
+1. Place a Waveform Graph (Controls → Graph → Waveform Graph)
+2. Create a For Loop generating a 500-point sine wave
+3. Wire the output array directly to the Waveform Graph
+4. Run and observe the complete waveform display
+
+### Step 2: Waveform Chart — Real-Time Display
+
+1. Place a Waveform Chart (Controls → Graph → Waveform Chart)
+2. Place a While Loop with 50ms timing
+3. Inside the loop:
+   - Generate a simulated signal: `sin(time) + 0.5*random()`
+   - Wire the single data point to the chart
+4. The chart scrolls to show the last N data points
+5. Experiment with chart update modes:
+   - Right-click the chart → Advanced → Update Mode
+   - Try Strip Chart, Scope Chart, and Sweep Chart
+
+### Step 3: Multi-Plot Display
+
+1. Create three signals inside a While Loop:
+   - Signal 1: 2 Hz sine wave
+   - Signal 2: 5 Hz sine wave
+   - Signal 3: 2 Hz sine + noise
+2. Bundle the three signals into a single waveform display:
+   - Use Build Array to create a 2D array (each row is a plot)
+   - Or use Create Waveform function for each signal
+3. Customize plot colors:
+   - Right-click the graph → Plots → Color
+   - Assign different colors to each signal
+
+### Step 4: XY Graph — Lissajous Pattern
+
+1. Place an XY Graph (Controls → Graph → XY Graph)
+2. Inside a For Loop (N = 1000):
+   - Generate X data: `sin(2*pi*3*t)`
+   - Generate Y data: `sin(2*pi*2*t + phase_shift)`
+3. Bundle X and Y arrays into the XY Graph input
+4. Create a phase shift control and observe pattern changes
+
+### Step 5: Cursor-Based Measurement
+
+1. Add a Cursor Legend to the Waveform Graph:
+   - Right-click graph → Visible Items → Cursor Legend
+2. Add two cursors:
+   - Right-click Cursor Legend → Create Cursor → Free
+3. Use cursors to measure:
+   - Peak-to-peak amplitude (Y difference)
+   - Period (X difference between peaks)
+   - Calculate frequency: f = 1/T
+
+### Step 6: Graph Customization
+
+1. Right-click the graph → Properties:
+   - **Appearance**: Title, labels, colors
+   - **Scales**: X and Y axis ranges, grid style, scale type (linear/log)
+   - **Plots**: Line style, width, color, point style
+   - **Cursors**: Cursor colors and snap modes
+
+## What Was Done
+
+Created a comprehensive signal visualization dashboard with three visualization modes: a real-time multi-channel waveform chart displaying three signals (2Hz sine, 5Hz sine, and noisy sine) scrolling at 20 Hz update rate, an XY graph showing Lissajous patterns with adjustable phase shift, and a waveform graph with cursor-based measurement enabling peak-to-peak amplitude and frequency measurement. All graphs were customized with appropriate colors, scales, and grid settings.
+
+## What Was Learnt
+
+- Waveform Graph vs. Waveform Chart: static data display vs. real-time scrolling
+- Multi-plot display techniques for comparing multiple signals
+- XY Graph configuration for parametric and Lissajous patterns
+- Cursor-based measurement for interactive data analysis
+- Graph customization for professional appearance
+- Waveform data type for signals with timing information
+
+## Industry Applications
+
+- Oscilloscope-style signal monitoring in test systems
+- Multi-channel sensor data visualization
+- Vibration analysis displays
+- Lissajous pattern generation for phase measurement
+- Real-time process monitoring dashboards
+
+## Skills Developed
+
+- Waveform Graph and Chart configuration
+- Multi-plot signal display
+- XY Graph for parametric visualization
+- Cursor-based measurement techniques
+- Graph customization and styling
+
+## Related Topics
+
+- [Array Functionality and Calculus](/content/labs/labview-array-functionality-calculus)
+- [For Loops and Arrays](/content/labs/labview-for-loops-arrays)
+- [MATLAB Two-Dimensional Data Plotting](/content/labs/matlab-two-dimensional-data-plotting)
+
+## Media
+
+### Images
+
+<!-- Upload multi-channel waveform chart from admin panel -->
+<!-- Upload Lissajous XY graph from admin panel -->
+<!-- Upload cursor-based measurement display from admin panel -->
+
+### Videos
+
+<!-- Upload waveform visualization tutorial from admin panel -->
+
+### Documents
+
+<!-- Upload LabVIEW graph customization guide from admin panel -->
+
+### Files
+
+<!-- Upload Signal_Dashboard.vi from admin panel -->

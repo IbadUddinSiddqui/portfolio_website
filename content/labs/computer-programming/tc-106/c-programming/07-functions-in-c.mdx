@@ -1,0 +1,220 @@
+---
+title: "Functions in C — Modular Programming"
+slug: "tc106-functions-in-c"
+type: "labs"
+category: "Computer Programming"
+subcategory: "C Programming"
+course: "TC-106 Computer Programming Lab"
+department: "Computer Science / Engineering"
+semester: "1st"
+year: "2023"
+laboratorySession: "07"
+domain: "Software"
+taxonomyLevel: "P3"
+difficulty: "intermediate"
+status: "completed"
+featured: false
+tags:
+  - C Programming
+  - Functions
+  - Modular Programming
+  - Recursion
+  - Function Prototypes
+technologies:
+  - C Language
+  - Turbo C++ IDE
+software:
+  - Turbo C++ IDE 3.0
+hardware: []
+tools:
+  - Turbo C++ IDE
+skills:
+  - Function Declaration
+  - Function Definition
+  - Function Calling
+  - Recursion
+  - Parameter Passing
+programmingLanguages:
+  - C
+seoTitle: "Functions in C — Modular Programming — TC-106 Lab 07"
+seoDescription: "Learn functions in C including function declaration, definition, parameter passing, return values, and recursion for modular programming."
+---
+
+# Functions in C — Modular Programming
+
+## Overview
+
+Functions are the building blocks of modular programming in C. They allow code to be organized into reusable, self-contained units that perform specific tasks. This laboratory session covers all aspects of functions including declaration, definition, parameter passing, return values, and recursion.
+
+## Objective
+
+To explore functions in C, including function declaration, definition, calling conventions, parameter passing mechanisms, and recursive functions.
+
+## Domain
+
+Software — Modular Programming and Code Organization.
+
+## Taxonomy Level
+
+P3 — Supervised Practice (Practical application of functions under guidance).
+
+## Tools and Technologies
+
+- **Software**: Turbo C++ IDE 3.0
+- **Language**: C
+
+## Required Skills
+
+- Variables and data types (Lab 03)
+- Control flow statements (Labs 05-06)
+
+## Concepts Covered
+
+- **Function Declaration (Prototype)**: Tells the compiler about a function's name, return type, and parameters before its definition
+- **Function Definition**: The actual body of the function containing the code to execute
+- **Function Call**: Invoking a function to execute its code
+- **Parameters**: Input values passed to a function (formal vs. actual parameters)
+- **Return Values**: The value a function sends back to the caller
+- **Call by Value**: A copy of the argument is passed; changes don't affect the original
+- **Recursion**: A function that calls itself
+
+## Project / Task
+
+Create modular programs using functions: implement a swapping function, a recursive factorial calculator, and a modular program with multiple functions.
+
+## Implementation
+
+### Step 1: Basic Function
+
+1. Create a program with a user-defined function:
+   ```c
+   #include <stdio.h>
+   #include <conio.h>
+
+   // Function declaration (prototype)
+   int add(int a, int b);
+
+   void main() {
+       int x = 10, y = 20, result;
+       clrscr();
+
+       // Function call
+       result = add(x, y);
+       printf("Sum = %d", result);
+
+       getch();
+   }
+
+   // Function definition
+   int add(int a, int b) {
+       return a + b;
+   }
+   ```
+
+### Step 2: Swapping Function
+
+1. Implement a function to swap two numbers:
+   ```c
+   #include <stdio.h>
+   #include <conio.h>
+
+   void swap(int *a, int *b);  // Using pointers for call by reference
+
+   void main() {
+       int x = 10, y = 20;
+       clrscr();
+
+       printf("Before swap: x = %d, y = %d\n", x, y);
+       swap(&x, &y);
+       printf("After swap: x = %d, y = %d\n", x, y);
+
+       getch();
+   }
+
+   void swap(int *a, int *b) {
+       int temp = *a;
+       *a = *b;
+       *b = temp;
+   }
+   ```
+
+### Step 3: Recursive Function — Factorial
+
+1. Implement factorial using recursion:
+   ```c
+   #include <stdio.h>
+   #include <conio.h>
+
+   int factorial(int n);
+
+   void main() {
+       int num;
+       clrscr();
+
+       printf("Enter a number: ");
+       scanf("%d", &num);
+       printf("Factorial of %d = %d", num, factorial(num));
+
+       getch();
+   }
+
+   int factorial(int n) {
+       if (n <= 1)
+           return 1;
+       else
+           return n * factorial(n - 1);
+   }
+   ```
+
+## What Was Done
+
+Created and called various function types: functions with arguments and return values, functions using pointers for call-by-reference, and recursive functions. Implemented swapping variables using pointer parameters and calculated factorial using recursion.
+
+## What Was Learnt
+
+- Understanding of modular programming and code organization
+- Function prototypes and their role in the compilation process
+- The difference between call by value and call by reference (using pointers)
+- The concept of recursion and the importance of a base case
+- Function parameter passing and return value handling
+
+## Engineering Applications
+
+- Code reuse in large software projects
+- Library function development for specialized computations
+- Algorithm implementation with recursive solutions (tree traversal, sorting)
+- Embedded system function organization
+- API design for modular software systems
+
+## Skills Developed
+
+- Function declaration, definition, and calling
+- Parameter passing mechanisms
+- Recursive function design
+- Pointer-based function arguments
+- Program modularization
+
+## Related Topics
+
+- [Looping Constructs in C](/content/labs/tc106-looping-constructs-in-c)
+- [Array Concepts in C](/content/labs/tc106-array-concepts-in-c)
+- [Pointers in C](/content/labs/tc106-pointers-in-c)
+
+## Media
+
+### Images
+
+<!-- Upload function flow diagram from admin panel -->
+<!-- Upload recursion visualization from admin panel -->
+
+### Videos
+
+<!-- Upload functions and recursion demonstration from admin panel -->
+
+### Code Files
+
+<!-- Upload function programs source code from admin panel -->
+
+### Documents
+
+<!-- Upload lab report from admin panel -->

@@ -1,0 +1,241 @@
+---
+title: "Decision Making in C — Conditional Statements"
+slug: "tc106-decision-making-in-c"
+type: "labs"
+category: "Computer Programming"
+subcategory: "C Programming"
+course: "TC-106 Computer Programming Lab"
+department: "Computer Science / Engineering"
+semester: "1st"
+year: "2023"
+laboratorySession: "05"
+domain: "Software"
+taxonomyLevel: "P3"
+difficulty: "beginner"
+status: "completed"
+featured: false
+tags:
+  - C Programming
+  - Decision Making
+  - Conditional Statements
+  - if-else
+  - switch-case
+  - Ternary Operator
+technologies:
+  - C Language
+  - Turbo C++ IDE
+software:
+  - Turbo C++ IDE 3.0
+hardware: []
+tools:
+  - Turbo C++ IDE
+skills:
+  - Conditional Logic Implementation
+  - Branching Structures
+  - if-else Design
+  - switch-case Usage
+programmingLanguages:
+  - C
+seoTitle: "Decision Making in C — Conditional Statements — TC-106 Lab 05"
+seoDescription: "Learn decision making in C using if, if-else, switch-case, and ternary operator for conditional program flow control."
+---
+
+# Decision Making in C — Conditional Statements
+
+## Overview
+
+Decision-making structures allow programs to execute different code paths based on specific conditions. C provides several conditional constructs that enable programs to respond intelligently to different inputs and situations. This laboratory session covers all major decision-making tools in C.
+
+## Objective
+
+To apply decision making in C programs using if, if-else, nested if-else, if-else if ladder, switch-case, and the ternary conditional operator.
+
+## Domain
+
+Software — Programming Logic and Control Flow.
+
+## Taxonomy Level
+
+P3 — Supervised Practice (Practical application of conditional structures under guidance).
+
+## Tools and Technologies
+
+- **Software**: Turbo C++ IDE 3.0
+- **Language**: C
+
+## Required Skills
+
+- Understanding of relational and logical operators (Lab 04)
+- Basic programming logic
+
+## Concepts Covered
+
+- **if Statement**: Executes a block if a condition is true
+- **if-else Statement**: Executes one block if true, another if false
+- **Nested if-else**: if-else statements inside other if-else blocks
+- **if-else if Ladder**: Multiple conditions checked in sequence
+- **switch-case**: Multi-way branching based on an integer/char expression
+- **Ternary Operator (?:)**: Shorthand for simple if-else (condition ? value_if_true : value_if_false)
+
+## Project / Task
+
+Write two programs: (1) Check whether a number is even or odd, and (2) Display a grade based on percentage input using if-else if ladder.
+
+## Implementation
+
+### Step 1: Even/Odd Checker
+
+1. Create a new file and write:
+   ```c
+   #include <stdio.h>
+   #include <conio.h>
+
+   void main() {
+       int num;
+       clrscr();
+
+       printf("Enter a number: ");
+       scanf("%d", &num);
+
+       if (num % 2 == 0) {
+           printf("%d is EVEN", num);
+       } else {
+           printf("%d is ODD", num);
+       }
+
+       getch();
+   }
+   ```
+
+### Step 2: Grade Calculator
+
+1. Create a grade calculator using if-else if ladder:
+   ```c
+   #include <stdio.h>
+   #include <conio.h>
+
+   void main() {
+       int percentage;
+       char grade;
+       clrscr();
+
+       printf("Enter your percentage: ");
+       scanf("%d", &percentage);
+
+       if (percentage >= 90) {
+           grade = 'A';
+       } else if (percentage >= 80) {
+           grade = 'B';
+       } else if (percentage >= 70) {
+           grade = 'C';
+       } else if (percentage >= 60) {
+           grade = 'D';
+       } else {
+           grade = 'F';
+       }
+
+       printf("Percentage: %d%%\n", percentage);
+       printf("Grade: %c\n", grade);
+
+       getch();
+   }
+   ```
+
+### Step 3: Switch-Case Example
+
+1. Create a menu-driven program:
+   ```c
+   #include <stdio.h>
+   #include <conio.h>
+
+   void main() {
+       int choice;
+       clrscr();
+
+       printf("Menu:\n");
+       printf("1. Add\n");
+       printf("2. Subtract\n");
+       printf("3. Multiply\n");
+       printf("Enter your choice: ");
+       scanf("%d", &choice);
+
+       switch(choice) {
+           case 1:
+               printf("Addition selected");
+               break;
+           case 2:
+               printf("Subtraction selected");
+               break;
+           case 3:
+               printf("Multiplication selected");
+               break;
+           default:
+               printf("Invalid choice");
+       }
+
+       getch();
+   }
+   ```
+
+### Step 4: Ternary Operator
+
+1. Use the ternary operator for simple condition:
+   ```c
+   int num;
+   printf("Enter a number: ");
+   scanf("%d", &num);
+   (num % 2 == 0) ? printf("Even") : printf("Odd");
+   ```
+
+## What Was Done
+
+Implemented if, if-else, if-else if ladder, switch-case, and ternary operator structures to control program flow. Tested each construct with various inputs to verify correct branching behavior.
+
+## What Was Learnt
+
+- Mastery of conditional branching based on logical and relational test results
+- When to use switch-case vs. if-else if ladder (switch is cleaner for discrete values)
+- The importance of break statements in switch-case to prevent fall-through
+- The ternary operator as a concise alternative for simple if-else
+- Nested conditional structures for complex decision logic
+
+## Engineering Applications
+
+- User input validation in software applications
+- Menu-driven interfaces for engineering tools
+- Control system decision logic
+- Error handling and exception cases
+- State machines in embedded systems
+
+## Skills Developed
+
+- if-else conditional structure implementation
+- switch-case multi-way branching
+- Ternary operator usage for concise conditions
+- Nested conditional logic design
+- Program flow control and debugging
+
+## Related Topics
+
+- [Arithmetic and Logical Operators](/content/labs/tc106-arithmetic-and-logical-operators)
+- [Looping Constructs in C](/content/labs/tc106-looping-constructs-in-c)
+- [Functions in C](/content/labs/tc106-functions-in-c)
+
+## Media
+
+### Images
+
+<!-- Upload flowchart of decision making from admin panel -->
+<!-- Upload program output screenshots from admin panel -->
+
+### Videos
+
+<!-- Upload conditional statements demonstration from admin panel -->
+
+### Code Files
+
+<!-- Upload conditional programs source code from admin panel -->
+
+### Documents
+
+<!-- Upload lab report from admin panel -->

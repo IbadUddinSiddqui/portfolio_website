@@ -11,10 +11,9 @@ import { MobileNav } from "@/components/layout/mobile-nav";
 /**
  * Header
  *
- * Premium navigation personalized for Ibad Uddin:
- * - Dark theme matching the hero section (#060709)
- * - Golden/amber accents inspired by the Edison bulb
- * - Profile photo logo with warm gold circular frame
+ * Premium navigation personalized for Ibad Uddin:       * - Dark theme matching the hero section
+       * - Electric cyan accents inspired by AI/engineering
+       * - Profile photo logo with cyan circular frame
  * - Social links (GitHub, LinkedIn)
  * - Transparent → glassmorphism on scroll
  * - Animated warm gradient border on scroll
@@ -38,7 +37,7 @@ export function Header() {
       className={cn(
         "fixed top-0 right-0 left-0 z-[50] transition-all duration-500 ease-out",
         scrolled
-          ? "bg-[#060709]/80 backdrop-blur-2xl shadow-[0_1px_0_0_rgba(255,170,50,0.08)]"
+          ? "bg-background/80 backdrop-blur-2xl shadow-glow-line"
           : "bg-transparent"
       )}
     >
@@ -50,7 +49,7 @@ export function Header() {
         )}
         style={{
           background:
-            "linear-gradient(to right, transparent, rgba(212,175,55,0.6), rgba(255,170,50,0.4), transparent)",
+            "linear-gradient(to right, transparent, rgba(56,189,248,0.4), rgba(37,99,235,0.2), transparent)",
         }}
       />
 
@@ -67,7 +66,7 @@ export function Header() {
           aria-label={`${siteConfig.name} — home`}
         >
           <motion.div
-            className="relative w-9 h-9 rounded-full overflow-hidden ring-2 ring-[#d4af37]/50 group-hover:ring-[#d4af37]/80 transition-all duration-300"
+            className="relative w-9 h-9 rounded-full overflow-hidden ring-2 ring-primary/50 group-hover:ring-primary/80 transition-all duration-300"
             whileHover={{ scale: 1.08 }}
             transition={{ type: "spring", stiffness: 500, damping: 15 }}
           >
@@ -80,7 +79,7 @@ export function Header() {
               priority
             />
           </motion.div>
-          <span className="text-sm font-semibold tracking-tight hidden sm:inline text-white/70 group-hover:text-white/90 transition-colors duration-200">
+          <span className="text-sm font-semibold tracking-tight hidden sm:inline text-muted-foreground group-hover:text-foreground transition-colors duration-200">
             Ibad Uddin
           </span>
         </Link>
@@ -104,26 +103,26 @@ export function Header() {
                 className={cn(
                   "relative px-4 py-2 rounded-lg text-sm font-medium transition-colors duration-200",
                   isActive
-                    ? "text-[#d4af37]"
-                    : "text-white/50 hover:text-white/80"
+                    ? "text-primary"
+                    : "text-muted-foreground hover:text-foreground"
                 )}
               >
                 {/* Hover / active background pill */}
                 {(isActive || isHovered) && (
                   <motion.span
                     layoutId="nav-bg"
-                    className="absolute inset-0 rounded-lg bg-white/[0.06]"
+                    className="absolute inset-0 rounded-lg bg-white/5"
                     transition={{ type: "spring", stiffness: 400, damping: 30 }}
                   />
                 )}
 
                 <span className="relative z-10">{label}</span>
 
-                {/* Active golden dot */}
+                {/* Active indicator dot */}
                 {isActive && (
                   <motion.span
                     layoutId="nav-dot"
-                    className="absolute bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 rounded-full bg-[#d4af37]"
+                    className="absolute bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 rounded-full bg-primary"
                     transition={{ type: "spring", stiffness: 400, damping: 30 }}
                   />
                 )}
@@ -142,9 +141,9 @@ export function Header() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label={label}
-              className="flex items-center justify-center w-9 h-9 rounded-lg text-white/40 hover:text-[#d4af37] hover:bg-white/[0.06] transition-all duration-200"
+              className="flex items-center justify-center w-9 h-9 rounded-lg text-muted-foreground hover:text-primary hover:bg-white/5 transition-all duration-200"
             >
-              <Icon className="h-[18px] w-[18px]" />
+              <Icon className="h-4 w-4" />
             </a>
           ))}
 

@@ -1,0 +1,237 @@
+---
+title: "Array Concepts in C"
+slug: "tc106-array-concepts-in-c"
+type: "labs"
+category: "Computer Programming"
+subcategory: "C Programming"
+course: "TC-106 Computer Programming Lab"
+department: "Computer Science / Engineering"
+semester: "1st"
+year: "2023"
+laboratorySession: "08"
+domain: "Software"
+taxonomyLevel: "P3"
+difficulty: "intermediate"
+status: "completed"
+featured: false
+tags:
+  - C Programming
+  - Arrays
+  - Array Indexing
+  - Data Structures
+  - Collections
+technologies:
+  - C Language
+  - Turbo C++ IDE
+software:
+  - Turbo C++ IDE 3.0
+hardware: []
+tools:
+  - Turbo C++ IDE
+skills:
+  - Array Declaration
+  - Array Initialization
+  - Index-Based Access
+  - Array Manipulation
+  - Collection Processing
+programmingLanguages:
+  - C
+seoTitle: "Array Concepts in C — TC-106 Lab 08"
+seoDescription: "Learn array concepts in C including declaration, initialization, indexing, and manipulation for storing and processing collections of data."
+---
+
+# Array Concepts in C
+
+## Overview
+
+Arrays are fundamental data structures that allow storing and manipulating collections of variables of the same type in contiguous memory locations. This laboratory session covers array declaration, initialization, accessing elements using indices, and performing common array operations.
+
+## Objective
+
+To apply the array concept in C for storing and manipulating collections of data elements.
+
+## Domain
+
+Software — Data Structures and Algorithms.
+
+## Taxonomy Level
+
+P3 — Supervised Practice (Practical application of arrays under guidance).
+
+## Tools and Technologies
+
+- **Software**: Turbo C++ IDE 3.0
+- **Language**: C
+
+## Required Skills
+
+- Loop constructs (Lab 06)
+- Variable declaration and data types (Lab 03)
+
+## Concepts Covered
+
+- **Array Declaration**: `type arrayName[size];` — Allocates contiguous memory
+- **Array Initialization**: Assigning values at declaration time or using loops
+- **Array Indexing**: Accessing elements using zero-based index: `arr[0]` is the first element
+- **Array Traversal**: Using loops to access each element sequentially
+- **Memory Layout**: Arrays are stored in contiguous memory blocks
+- **Array Size**: The number of elements is fixed at declaration time
+
+## Project / Task
+
+Write programs for number conversion (decimal to binary) and duplicate removal in a list using arrays.
+
+## Implementation
+
+### Step 1: Array Declaration and Input
+
+1. Create a program that accepts 5 numbers and displays them:
+   ```c
+   #include <stdio.h>
+   #include <conio.h>
+
+   void main() {
+       int arr[5], i;
+       clrscr();
+
+       printf("Enter 5 numbers:\n");
+       for(i = 0; i < 5; i++) {
+           printf("Enter number %d: ", i + 1);
+           scanf("%d", &arr[i]);
+       }
+
+       printf("\nYou entered:\n");
+       for(i = 0; i < 5; i++) {
+           printf("arr[%d] = %d\n", i, arr[i]);
+       }
+
+       getch();
+   }
+   ```
+
+### Step 2: Decimal to Binary Conversion
+
+1. Use an array to store binary digits:
+   ```c
+   #include <stdio.h>
+   #include <conio.h>
+
+   void main() {
+       int decimal, binary[32], i = 0, j;
+       clrscr();
+
+       printf("Enter a decimal number: ");
+       scanf("%d", &decimal);
+
+       // Convert to binary
+       while(decimal > 0) {
+           binary[i] = decimal % 2;
+           decimal = decimal / 2;
+           i++;
+       }
+
+       printf("Binary: ");
+       for(j = i - 1; j >= 0; j--) {
+           printf("%d", binary[j]);
+       }
+
+       getch();
+   }
+   ```
+
+### Step 3: Duplicate Removal
+
+1. Remove duplicates from an array:
+   ```c
+   #include <stdio.h>
+   #include <conio.h>
+
+   void main() {
+       int arr[10], unique[10], i, j, k, n, count;
+       clrscr();
+
+       printf("Enter number of elements (max 10): ");
+       scanf("%d", &n);
+
+       printf("Enter %d elements:\n", n);
+       for(i = 0; i < n; i++) {
+           scanf("%d", &arr[i]);
+       }
+
+       // Remove duplicates
+       k = 0;
+       for(i = 0; i < n; i++) {
+           count = 0;
+           for(j = 0; j < k; j++) {
+               if(arr[i] == unique[j]) {
+                   count = 1;
+                   break;
+               }
+           }
+           if(count == 0) {
+               unique[k] = arr[i];
+               k++;
+           }
+       }
+
+       printf("\nArray after removing duplicates:\n");
+       for(i = 0; i < k; i++) {
+           printf("%d ", unique[i]);
+       }
+
+       getch();
+   }
+   ```
+
+## What Was Done
+
+Defined and initialized arrays of various sizes, accessed elements via index, and performed array manipulations including decimal-to-binary conversion (storing remainders in an array) and duplicate removal using a second array for unique elements.
+
+## What Was Learnt
+
+- Handling collections of variables contiguously in memory
+- Array indexing from 0 to size-1
+- Using loops to traverse and manipulate array elements
+- Two-dimensional thinking with nested arrays (e.g., storing binary digits)
+- The fixed-size nature of arrays and the need to track element count
+
+## Engineering Applications
+
+- Sensor data collection and storage in embedded systems
+- Signal processing sample buffers
+- Lookup tables for efficient computation
+- Sorting and searching algorithms
+- Matrix operations in scientific computing
+
+## Skills Developed
+
+- Array declaration and initialization
+- Index-based element access and modification
+- Array traversal with loops
+- Data transformation using arrays
+- Deduplication algorithm implementation
+
+## Related Topics
+
+- [Looping Constructs in C](/content/labs/tc106-looping-constructs-in-c)
+- [Pointers in C](/content/labs/tc106-pointers-in-c)
+- [Object Oriented Programming in C++](/content/labs/tc106-object-oriented-programming-cpp)
+
+## Media
+
+### Images
+
+<!-- Upload array memory diagram from admin panel -->
+<!-- Upload program output screenshots from admin panel -->
+
+### Videos
+
+<!-- Upload array manipulation demonstration from admin panel -->
+
+### Code Files
+
+<!-- Upload array programs source code from admin panel -->
+
+### Documents
+
+<!-- Upload lab report from admin panel -->

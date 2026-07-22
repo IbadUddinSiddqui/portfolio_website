@@ -1,0 +1,181 @@
+---
+title: "Bridge Rectifier and Capacitive Filtering"
+slug: "bel-bridge-rectifier-filtering"
+type: "labs"
+category: "basic-electronics"
+subcategory: "Rectifiers"
+course: "Basic Electronics Laboratory"
+department: "Electrical / Electronics Engineering"
+semester: "1st"
+year: "2023"
+laboratorySession: "04"
+domain: "Circuit Analysis"
+taxonomyLevel: "P3"
+clo: "CLO-3"
+difficulty: "intermediate"
+status: "completed"
+featured: false
+tags:
+  - Basic Electronics
+  - Bridge Rectifier
+  - Capacitive Filtering
+  - Ripple Reduction
+  - Smooth DC
+technologies:
+  - Analog Electronics
+  - Power Electronics
+software:
+  - Multisim (optional)
+hardware:
+  - PN Junction Diodes (1N4007 × 4)
+  - Electrolytic Capacitor (100µF, 470µF)
+  - Resistor (1kΩ)
+  - Step-down Transformer (12V)
+  - Oscilloscope
+  - DMM
+components:
+  - 1N4007 Diodes (4)
+  - 100µF Electrolytic Capacitor
+  - 470µF Electrolytic Capacitor
+  - 1kΩ Load Resistor
+tools:
+  - Breadboard
+  - Jumper Wires
+skills:
+  - Bridge Rectifier Construction
+  - Capacitor Filter Analysis
+  - Ripple Voltage Measurement
+  - Rectifier Comparison
+circuits:
+  - Bridge Rectifier with Capacitive Filter
+seoTitle: "Bridge Rectifier and Capacitive Filtering — BEL Lab 04"
+seoDescription: "Construct a bridge rectifier circuit with capacitive filtering to convert AC to smooth DC with reduced ripple voltage."
+---
+
+# Bridge Rectifier and Capacitive Filtering
+
+## Overview
+
+The bridge rectifier is the most widely used rectifier configuration, providing full-wave rectification without requiring a center-tapped transformer. Adding a capacitor filter dramatically improves the output quality by reducing ripple voltage. This laboratory session covers bridge rectifier operation both with and without capacitive filtering.
+
+## Objective
+
+To practice bridge rectifier circuits both with and without capacitive filtering.
+
+## Domain
+
+Circuit Analysis — Full-Wave Rectification and Filtering.
+
+## CLO and Taxonomy Level
+
+- **CLO-3**: Analyze and construct bridge rectifier circuits with capacitive filtering.
+- **Taxonomy Level**: P3 — Supervised Practice (Practical application of bridge rectifier under guidance).
+
+## Components and Equipment
+
+- **Semiconductors**: 1N4007 diodes (4)
+- **Passive Components**: 1kΩ load resistor, 100µF electrolytic capacitor, 470µF electrolytic capacitor
+- **Equipment**: Step-down transformer (12V), Oscilloscope, DMM
+
+## Required Skills
+
+- Diode operation and orientation identification
+- Full-wave rectification concepts
+
+## Theory and Engineering Concepts
+
+- **Bridge Rectifier**: Four diodes arranged in a bridge configuration. During the positive half-cycle, diodes D1 and D3 conduct; during the negative half-cycle, diodes D2 and D4 conduct. Current through the load flows in the same direction during both cycles.
+- **Capacitive Filtering**: A capacitor placed across the load charges to the peak voltage during the conduction period and discharges through the load during the non-conduction period, reducing the ripple.
+- **Ripple Voltage Formula**: Vr = Iload / (f × C), where f is the ripple frequency (2 × input frequency for full-wave).
+- **Advantages over Center-Tapped**: No center-tapped transformer needed, lower PIV requirement per diode.
+
+## Circuit Configuration
+
+The bridge rectifier consists of:
+- Four diodes arranged in a bridge (D1, D2, D3, D4)
+- AC input across the bridge AC terminals
+- Load connected across the bridge DC output terminals
+- Optional filter capacitor in parallel with the load
+
+## Procedure / Implementation
+
+### Step 1: Bridge Rectifier Without Filter
+
+1. Construct the bridge configuration on the breadboard
+2. Connect AC input to the bridge AC terminals
+3. Connect the load resistor across the DC output terminals
+4. Observe and sketch the output waveform
+
+### Step 2: Bridge Rectifier With Capacitive Filter
+
+1. Add a 100µF electrolytic capacitor across the load (observe polarity)
+2. Observe the output waveform — note the reduced ripple
+3. Replace with 470µF capacitor and observe the further ripple reduction
+4. Measure DC output voltage for both capacitor values
+
+### Step 3: Measurements
+
+1. Measure the ripple voltage (peak-to-peak) for each capacitor value
+2. Measure the DC output voltage for each configuration
+3. Calculate the ripple factor: RF = Vr(pp) / Vdc
+
+## What Was Done
+
+Assembled a bridge rectifier circuit using four 1N4007 diodes and tested output waveforms both with and without a shunt capacitor filter. Observed the effect of different capacitor values (100µF and 470µF) on ripple reduction.
+
+## Results and Observations
+
+| Configuration | DC Output (V) | Ripple Voltage (Vpp) | Ripple Factor |
+|---------------|---------------|---------------------|---------------|
+| No Filter | ≈5.1 V | High | ≈1.21 |
+| 100µF Filter | ≈6.2 V | ≈0.8 V | ≈0.13 |
+| 470µF Filter | ≈6.5 V | ≈0.2 V | ≈0.03 |
+
+*Place oscilloscope screenshots for each configuration here.*
+
+## What Was Learnt
+
+- The capacitor filter acts as a reservoir, significantly reducing the ripple voltage
+- Larger capacitor values provide better filtering (lower ripple) but increase cost and size
+- The bridge rectifier provides full-wave rectification without a center-tapped transformer
+- The no-filter output has high ripple; adding a filter produces a smoother DC output
+
+## Engineering Applications
+
+- DC power supply design
+- Audio equipment power stages requiring low ripple
+- Battery charger circuits
+- Industrial control power supplies
+
+## Skills Developed
+
+- Bridge rectifier construction and testing
+- Capacitor filter analysis and selection
+- Ripple measurement technique
+- Rectifier performance comparison
+
+## Related Topics
+
+- [Half-Wave Rectifier](/content/labs/bel-half-wave-rectifier)
+- [Center-Tapped Full-Wave Rectifier](/content/labs/bel-center-tapped-full-wave-rectifier)
+- [Zener Diode Voltage Regulator](/content/labs/bel-zener-diode-voltage-regulator)
+
+## Media
+
+### Images
+
+<!-- Upload bridge rectifier circuit diagram from admin panel -->
+<!-- Upload filtered vs unfiltered waveform comparison from admin panel -->
+<!-- Upload breadboard circuit photo from admin panel -->
+
+### Videos
+
+<!-- Upload bridge rectifier demonstration from admin panel -->
+
+### Documents
+
+<!-- Upload lab report from admin panel -->
+
+### Simulation Files
+
+<!-- Upload Multisim bridge rectifier simulation from admin panel -->

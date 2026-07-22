@@ -1,0 +1,223 @@
+---
+title: "Arithmetic Operations and Engineering Formulas in MATLAB"
+slug: "matlab-arithmetic-operations-formulas"
+type: "labs"
+category: "Electronic Engineering Drawing"
+subcategory: "MATLAB"
+course: "Electronic Engineering Drawing & Engineering Software (EEDW)"
+department: "Electronic Engineering"
+semester: "1st"
+year: "2023"
+laboratorySession: "14"
+taxonomyLevel: "C2 (Understanding) / C3 (Applying)"
+clo: "CLO-14: Apply MATLAB arithmetic operations to solve engineering formulas and equations."
+domain: "Scientific Computing — Engineering Mathematics"
+difficulty: "beginner"
+status: "completed"
+featured: false
+tags:
+  - MATLAB
+  - Arithmetic
+  - Engineering Formulas
+  - Mathematical Operations
+  - Numerical Computation
+technologies:
+  - MATLAB
+software:
+  - MATLAB R2023a or later
+hardware: []
+tools:
+  - MATLAB IDE
+skills:
+  - Arithmetic Expressions
+  - Formula Implementation
+  - Mathematical Functions
+  - Engineering Calculations
+seoTitle: "Arithmetic Operations and Engineering Formulas in MATLAB — EEDW Lab 14"
+seoDescription: "Learn to implement engineering formulas in MATLAB using arithmetic operations, built-in functions, and mathematical expressions."
+---
+
+# Arithmetic Operations and Engineering Formulas in MATLAB
+
+## Overview
+
+MATLAB provides a comprehensive set of arithmetic operators and built-in mathematical functions for implementing engineering formulas and solving numerical problems. This laboratory session covers arithmetic operations, operator precedence, built-in mathematical functions, and practical engineering formula implementation.
+
+## Objective
+
+To use MATLAB arithmetic operators (+, -, *, /, ^) correctly following operator precedence rules, apply built-in mathematical functions including trigonometric, exponential, and logarithmic functions, implement engineering formulas as MATLAB expressions, and debug and verify numerical results.
+
+## Domain
+
+Scientific Computing — Numerical Methods and Engineering Mathematics.
+
+## CLO and Taxonomy Level
+
+- **CLO-14**: Apply MATLAB arithmetic operations to solve engineering formulas and equations.
+- **Taxonomy Level**: C2 (Understanding) — Understand operator precedence in MATLAB expressions. C3 (Applying) — Apply MATLAB operations to solve engineering formulas.
+
+## Tools and Software
+
+- **Software**: MATLAB R2023a or later
+
+## Required Skills
+
+- Basic MATLAB interface knowledge (Lab 13)
+- Understanding of high school mathematics and basic engineering formulas
+
+## Theory and Engineering Concepts
+
+MATLAB supports standard arithmetic operators with specific precedence:
+
+1. **Parentheses** `()` — Highest precedence
+2. **Power** `^` — Right to left
+3. **Multiplication** `*` and Division `/` — Left to right
+4. **Addition** `+` and Subtraction `-` — Lowest precedence
+
+Built-in mathematical functions include:
+- **Trigonometric**: `sin()`, `cos()`, `tan()`, `asin()`, `acos()`, `atan()` — all in radians
+- **Exponential/Log**: `exp()`, `log()` (natural log), `log10()` (base 10)
+- **Rounding**: `round()`, `ceil()`, `floor()`, `fix()`
+- **Others**: `sqrt()`, `abs()`, `mod()`, `rem()`
+
+## Project / Task
+
+Implement five engineering formulas in MATLAB: Ohm's law calculator, RC time constant, resonant frequency, power in a resistor, and voltage divider.
+
+## Procedure / Implementation
+
+### Step 1: Basic Arithmetic Operations
+
+1. Execute the following to understand operator behavior:
+   ```matlab
+   >> 5 + 3 * 2       % Result: 11 (multiplication first)
+   >> (5 + 3) * 2     % Result: 16 (parentheses first)
+   >> 2^3 + 1         % Result: 9 (power before addition)
+   >> 10 / 2 * 3      % Result: 15 (left to right)
+   ```
+
+### Step 2: Built-in Mathematical Functions
+
+1. Test trigonometric functions:
+   ```matlab
+   >> sin(pi/2)       % Result: 1
+   >> cos(0)          % Result: 1
+   >> tan(pi/4)       % Result: 1
+   >> asin(1)         % Result: 1.5708 (pi/2 radians = 90 degrees)
+   ```
+2. Convert degrees to radians:
+   ```matlab
+   >> degrees = 45;
+   >> radians = degrees * pi / 180;
+   >> sin(radians)    % Result: 0.7071
+   ```
+
+### Step 3: Engineering Formula — Ohm's Law
+
+1. Implement Ohm's law: V = I × R
+   ```matlab
+   % Given current and resistance, find voltage
+   current = 0.5;      % Amperes
+   resistance = 100;   % Ohms
+   voltage = current * resistance;
+   disp(['Voltage: ', num2str(voltage), ' V']);
+   ```
+2. Solve for current: I = V / R
+   ```matlab
+   voltage = 12;       % Volts
+   resistance = 470;   % Ohms
+   current = voltage / resistance;
+   disp(['Current: ', num2str(current*1000), ' mA']);
+   ```
+
+### Step 4: Engineering Formula — RC Time Constant
+
+1. Implement τ = R × C
+   ```matlab
+   % RC time constant calculation
+   R = 10e3;           % 10 kOhms
+   C = 100e-6;         % 100 microFarads
+   tau = R * C;
+   disp(['Time constant (tau): ', num2str(tau), ' seconds']);
+   ```
+
+### Step 5: Engineering Formula — Resonant Frequency
+
+1. Implement f = 1 / (2π√(LC))
+   ```matlab
+   % LC resonant frequency
+   L = 10e-3;          % 10 mH
+   C = 100e-9;         % 100 nF
+   f = 1 / (2 * pi * sqrt(L * C));
+   disp(['Resonant frequency: ', num2str(f), ' Hz']);
+   ```
+
+### Step 6: Combined Formula — Power and Voltage Divider
+
+1. Power in a resistor: P = V²/R
+   ```matlab
+   V = 5;              % Volts
+   R = 100;            % Ohms
+   P = V^2 / R;
+   disp(['Power: ', num2str(P*1000), ' mW']);
+   ```
+2. Voltage divider: Vout = Vin × R2 / (R1 + R2)
+   ```matlab
+   Vin = 12;           % Input voltage
+   R1 = 1000;          % 1 kOhm
+   R2 = 2000;          % 2 kOhm
+   Vout = Vin * R2 / (R1 + R2);
+   disp(['Output voltage: ', num2str(Vout), ' V']);
+   ```
+
+## What Was Done
+
+Successfully implemented five engineering formulas in MATLAB: Ohm's law calculator for voltage and current, RC time constant calculation (τ = 10 seconds for 10kΩ and 100µF), LC resonant frequency (f = 5.03 kHz), power dissipation in resistors (P = 250 mW), and voltage divider (Vout = 8V for 12V input with 1kΩ/2kΩ divider). All results were verified by manual calculation.
+
+## What Was Learnt
+
+- MATLAB operator precedence and expression evaluation
+- Built-in mathematical function usage
+- Engineering formula implementation as MATLAB expressions
+- Debugging and verifying numerical results
+- Best practices for formula organization in scripts
+
+## Industry Applications
+
+- Circuit analysis and design
+- Control system calculations
+- Signal processing algorithm development
+- Power system analysis
+- Mechanical and civil engineering calculations
+
+## Skills Developed
+
+- Arithmetic expression implementation
+- Mathematical function application
+- Engineering formula translation to code
+- Numerical verification techniques
+
+## Related Topics
+
+- [MATLAB Interface Introduction](/content/labs/matlab-interface-introduction)
+- [Matrix Operations](/content/labs/matlab-matrix-operations)
+- [Two-Dimensional Data Plotting](/content/labs/matlab-two-dimensional-data-plotting)
+
+## Media
+
+### Images
+
+<!-- Upload MATLAB script screenshots from admin panel -->
+<!-- Upload workspace with calculated values from admin panel -->
+
+### Videos
+
+<!-- Upload formula implementation tutorial from admin panel -->
+
+### Documents
+
+<!-- Upload formula reference sheet from admin panel -->
+
+### Files
+
+<!-- Upload formulas script (.m) from admin panel -->

@@ -1,0 +1,186 @@
+---
+title: "Loops and Timing in LabVIEW"
+slug: "labview-loops-and-timing"
+type: "labs"
+category: "Electronic Engineering Drawing"
+subcategory: "LabVIEW"
+course: "Electronic Engineering Drawing & Engineering Software (EEDW)"
+department: "Electronic Engineering"
+semester: "1st"
+year: "2023"
+laboratorySession: "24"
+taxonomyLevel: "C3 (Applying) / C4 (Analyzing)"
+clo: "CLO-24: Implement While Loops and For Loops with timing control in LabVIEW."
+domain: "Virtual Instrumentation — Loop Structures"
+difficulty: "intermediate"
+status: "completed"
+featured: false
+tags:
+  - LabVIEW
+  - Loops
+  - While Loop
+  - For Loop
+  - Timing
+  - Shift Registers
+technologies:
+  - LabVIEW
+software:
+  - LabVIEW 2023 or later
+hardware: []
+tools:
+  - While Loop
+  - For Loop
+  - Shift Register
+  - Timing Functions
+  - Tick Count
+skills:
+  - While Loop Implementation
+  - For Loop Implementation
+  - Shift Register Usage
+  - Timing Control
+  - Loop Termination Logic
+seoTitle: "Loops and Timing in LabVIEW — EEDW Lab 24"
+seoDescription: "Learn to implement While Loops, For Loops, shift registers, and timing control in LabVIEW for iterative and timed operations."
+---
+
+# Loops and Timing in LabVIEW
+
+## Overview
+
+Loops are essential programming structures for repetitive operations, data acquisition, and real-time monitoring. LabVIEW provides While Loops (indeterminate iterations) and For Loops (determinate iterations) with powerful features including shift registers for data retention between iterations. This laboratory session covers loop implementation, timing control, and shift register usage.
+
+## Objective
+
+To implement While Loops with appropriate termination conditions, use For Loops for fixed-iteration operations, use shift registers to pass data between loop iterations, control loop timing using Wait and Tick Count functions, and create a real-time data acquisition simulation with loop-based timing.
+
+## Domain
+
+Virtual Instrumentation — Program Flow Control.
+
+## CLO and Taxonomy Level
+
+- **CLO-24**: Implement While Loops and For Loops with timing control in LabVIEW.
+- **Taxonomy Level**: C3 (Applying) — Apply loop structures to repetitive programming tasks. C4 (Analyzing) — Analyze loop timing and termination behavior.
+
+## Tools and Software
+
+- **Software**: LabVIEW 2023 or later
+
+## Required Skills
+
+- Basic LabVIEW programming (Labs 21-23)
+
+## Theory and Engineering Concepts
+
+- **While Loop**: Executes repeatedly until a condition is met. The conditional terminal at the bottom-right determines when to stop (Stop if True or Continue if True).
+- **For Loop**: Executes a predetermined number of times. The count terminal (N) specifies iterations, and the iteration terminal (i) provides the current count (0-indexed).
+- **Shift Register**: A mechanism on loop borders that passes data from one iteration to the next, enabling accumulation, averaging, and state retention.
+- **Timing Functions**: `Wait (ms)` provides simple timing, `Wait Until Next ms Multiple` provides precise loop timing, and `Tick Count` measures elapsed time.
+
+## Project / Task
+
+Create a VI that: (a) generates a sine wave using a For Loop with iteration-based calculation, (b) implements a running average filter using shift registers, and (c) creates a real-time signal monitor using a While Loop with timing control.
+
+## Procedure / Implementation
+
+### Step 1: While Loop Basics
+
+1. Place a While Loop (Functions → Programming → Structures → While Loop)
+2. Add a Numeric Control inside the loop for iteration counting
+3. Add a Stop button outside the loop wired to the conditional terminal
+4. Inside the loop, add a Wait (ms) function (set to 100ms)
+
+### Step 2: For Loop Basics
+
+1. Place a For Loop (Functions → Programming → Structures → For Loop)
+2. Set N = 10 (right-click on N terminal → Create Constant)
+3. Inside the loop, place an Increment function:
+   - Wire the iteration terminal (i) through an Increment to get 1-indexed count
+4. Outside the loop, wire the output tunnel to a Numeric Indicator
+
+### Step 3: Generate Sine Wave with For Loop
+
+1. Create a For Loop with N = 100
+2. Inside the loop:
+   - Divide the iteration index (i) by 10 to get theta: `theta = i / 10`
+   - Apply Sine function (Functions → Mathematics → Elementary → Sine)
+   - Multiply by amplitude (e.g., 5)
+3. Auto-index the output array to create a 100-element waveform
+
+### Step 4: Running Average Filter with Shift Register
+
+1. Place a While Loop
+2. Right-click the left border → Add Shift Register
+3. Initialize the shift register (outside the loop):
+   - Wire a 5-element array of zeros
+4. Inside the loop:
+   - Get new data point (simulate with Random Number function)
+   - Use Build Array to add the new value and shift old values
+   - Calculate the mean of the array
+   - Display both raw and filtered values
+
+### Step 5: Real-Time Signal Monitor
+
+1. Place a While Loop
+2. Configure timing:
+   - Wait (ms): 50ms (20 Hz update rate)
+   - Tick Count: measure elapsed time
+3. Inside the loop:
+   - Generate a simulated signal: `sin(time) + noise`
+   - Display on a Waveform Graph
+   - Check for stop condition (user button or elapsed time limit)
+
+## What Was Done
+
+Created a For Loop VI generating a 100-point sine wave with auto-indexed array output. Implemented a running average filter using shift registers that maintains a 5-sample buffer and calculates the mean at each iteration. Built a real-time signal monitor using a While Loop running at 20 Hz (50ms timing), displaying a simulated noisy sine wave on a waveform graph, with both elapsed time display and user-controlled stop.
+
+## What Was Learnt
+
+- While Loop operation and termination condition configuration
+- For Loop operation with iteration counting and auto-indexing
+- Shift register data retention for inter-iteration state
+- Timing control for predictable loop execution rates
+- Real-time data simulation and display
+
+## Industry Applications
+
+- Data acquisition at specific sampling rates
+- Real-time monitoring and control systems
+- Digital signal processing (filtering, averaging)
+- Automated test sequences
+- Process control loops
+
+## Skills Developed
+
+- While Loop implementation with termination logic
+- For Loop with auto-indexing arrays
+- Shift register configuration and usage
+- Timing control for deterministic execution
+- Real-time data generation and display
+
+## Related Topics
+
+- [Conditional Execution and Dialogs](/content/labs/labview-conditional-execution-dialogs)
+- [For Loops and Arrays](/content/labs/labview-for-loops-arrays)
+- [Array Functionality and Calculus](/content/labs/labview-array-functionality-calculus)
+
+## Media
+
+### Images
+
+<!-- Upload For Loop sine wave generation from admin panel -->
+<!-- Upload shift register running average from admin panel -->
+<!-- Upload waveform graph display from admin panel -->
+
+### Videos
+
+<!-- Upload loops and timing tutorial from admin panel -->
+
+### Documents
+
+<!-- Upload LabVIEW loop reference from admin panel -->
+
+### Files
+
+<!-- Upload Loop_Timer.vi from admin panel -->
+<!-- Upload Running_Average.vi from admin panel -->

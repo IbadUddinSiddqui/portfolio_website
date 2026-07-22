@@ -1,0 +1,234 @@
+---
+title: "Component Footprint Creation in OrCAD PCB Editor"
+slug: "orcad-component-footprint-creation"
+type: "labs"
+category: "Electronic Engineering Drawing"
+subcategory: "OrCAD PCB Design"
+course: "Electronic Engineering Drawing & Engineering Software (EEDW)"
+department: "Electronic Engineering"
+semester: "1st"
+year: "2023"
+laboratorySession: "04"
+taxonomyLevel: "C4 (Analyzing) / C5 (Evaluating)"
+clo: "CLO-4: Design and create custom component footprints in OrCAD PCB Editor."
+domain: "Electronic Design Automation (EDA) — Footprint Design"
+difficulty: "advanced"
+status: "completed"
+featured: false
+tags:
+  - OrCAD
+  - PCB Editor
+  - Footprint
+  - Land Pattern
+  - IPC Standards
+  - Component Packaging
+technologies:
+  - OrCAD PCB Editor
+  - IPC-7351 Standards
+software:
+  - OrCAD PCB Editor 17.4
+  - IPC-7351 Land Pattern Calculator
+hardware: []
+tools:
+  - PCB Footprint Editor
+  - Padstack Designer
+  - IPC Land Pattern Generator
+  - Symbol Editor
+skills:
+  - Footprint Design
+  - Padstack Creation
+  - IPC Standards Application
+  - Land Pattern Design
+  - Component Measurement
+seoTitle: "Component Footprint Creation in OrCAD — EEDW Lab 04"
+seoDescription: "Learn to create custom component footprints in OrCAD PCB Editor following IPC-7351 standards, including padstack design and land pattern generation."
+---
+
+# Component Footprint Creation in OrCAD PCB Editor
+
+## Overview
+
+Component footprints (also called land patterns) are the physical copper patterns on a PCB that correspond to component pins. Creating accurate footprints is critical for manufacturability, solderability, and reliability. This laboratory session covers the complete process of designing custom footprints in OrCAD PCB Editor following IPC-7351 industry standards.
+
+## Objective
+
+To understand IPC-7351 footprint standards, create padstacks for through-hole and surface-mount components, design a custom component footprint from manufacturer datasheet specifications, assign the footprint to a schematic component, and verify footprint correctness.
+
+## Domain
+
+Electronic Design Automation (EDA) — Component Library Development and Footprint Design.
+
+## CLO and Taxonomy Level
+
+- **CLO-4**: Design and create custom component footprints in OrCAD PCB Editor.
+- **Taxonomy Level**: C4 (Analyzing) — Analyze component datasheets to determine footprint dimensions. C5 (Evaluating) — Evaluate footprint design against IPC standards.
+
+## Tools and Software
+
+- **Software**: OrCAD PCB Editor 17.4, OrCAD Capture CIS 17.4
+- **Standards**: IPC-7351B Land Pattern Standard
+- **Resources**: Component manufacturer datasheets
+
+## Required Skills
+
+- Understanding of component packages (SMD, through-hole, BGA, QFP)
+- Ability to read mechanical drawings from datasheets
+- Basic knowledge of PCB manufacturing tolerances
+
+## Theory and Engineering Concepts
+
+- **Footprint**: The complete set of copper pads, silkscreen outline, and assembly information for a component on a PCB.
+- **Padstack**: The definition of a single pad through all layers of the PCB, including top, inner, and bottom layer pad sizes, and the drilled hole size for through-hole components.
+- **IPC-7351**: Industry standard for land pattern (footprint) design, providing formulas for calculating pad dimensions based on component terminal dimensions.
+- **Land Pattern Calculator**: IPC formulas:
+  - `Zmax = Lmax + 2 × JT + √(2 × CL)` (maximum pad width)
+  - `Gmin = Smax - 2 × JH - √(2 × CL)` (minimum pad gap)
+  - Where Lmax = maximum terminal length, JT = toe fillet, CL = fabrication tolerance
+
+## Project / Task
+
+Create three custom footprints: a through-hole resistor footprint (AXIAL-0.4), a surface-mount 0805 resistor footprint, and a DIP-8 IC footprint. Assign these footprints to schematic components and verify correct mapping.
+
+## Procedure / Implementation
+
+### Step 1: Launch PCB Footprint Editor
+
+1. Open **OrCAD PCB Editor** and select **File → New → Symbol**
+2. In the New Symbol dialog:
+   - Type: **Package Symbol** (for footprints)
+   - Name: `RES_AXIAL_0.4` (for the through-hole resistor)
+   - Drawing units: **Mils**
+3. The Footprint Editor window opens with the design grid
+
+### Step 2: Create Through-Hole Resistor Footprint (AXIAL-0.4)
+
+1. Measure from datasheet:
+   - Body length: 6.4mm (252 mils)
+   - Body diameter: 2.5mm (98 mils)
+   - Lead diameter: 0.6mm (24 mils)
+   - Lead spacing: 10.2mm (400 mils)
+2. Create padstack:
+   - Select **Setup → Padstacks → Define**
+   - Create new padstack named `PAD_CIRCLE_62MIL`
+   - Through-hole pad dimensions:
+     - Drill hole: **32 mils** (0.8mm)
+     - Top pad diameter: **62 mils** (1.57mm)
+     - Inner pad diameter: **62 mils**
+     - Bottom pad diameter: **62 mils**
+3. Place pads:
+   - Select **Layout → Pins**
+   - Padstack: `PAD_CIRCLE_62MIL`
+   - Place pin 1 at (0, 0) and pin 2 at (400, 0)
+4. Add silkscreen outline:
+   - Select **Add → Line** on the **Package Geometry – Silkscreen** layer
+   - Draw the resistor body outline between the two pads
+   - Add pin 1 indicator dot
+
+### Step 3: Create SMD 0805 Resistor Footprint
+
+1. IPC-7351 calculation for 0805 (2012 metric):
+   - Terminal length (L): 0.45mm
+   - Terminal width (W): 0.50mm
+   - Body length: 2.0mm
+   - Body width: 1.25mm
+   - Pad length (Z): 1.0mm (calculated)
+   - Pad width (G): 1.0mm (calculated)
+   - Pad spacing: 0.8mm center-to-center
+2. Create padstack:
+   - **Surface Mount** type pad
+   - Top pad: **40 mils × 40 mils** (1.0mm × 1.0mm)
+   - No drill hole
+3. Place the two SMD pads with appropriate spacing
+4. Add silkscreen outline on the **Silkscreen Top** layer
+5. Add component reference designator text
+
+### Step 4: Create DIP-8 IC Footprint
+
+1. DIP-8 package dimensions:
+   - Body width: 6.4mm (252 mils)
+   - Body length: 9.4mm (370 mils)
+   - Pin pitch: 2.54mm (100 mils)
+   - Pin width: 0.45mm (18 mils)
+   - Row spacing: 7.62mm (300 mils)
+2. Create padstack for IC pins:
+   - Drill hole: **28 mils**
+   - Pad diameter: **55 mils** (1.4mm)
+3. Place 8 pins in two rows:
+   - Row 1 (pins 1-4): at Y = 0, X = 0, 100, 200, 300
+   - Row 2 (pins 5-8): at Y = 300, X = 300, 200, 100, 0
+   - Note: Pin numbering is counter-clockwise starting from pin 1
+4. Add pin 1 indicator (dot or chamfer)
+5. Add silkscreen outline and reference designator
+
+### Step 5: Assign Footprints in Capture
+
+1. Open the schematic in OrCAD Capture
+2. Right-click on a component → **Edit Properties**
+3. In the **Footprint** field, enter the footprint name:
+   - For resistor: `RES_AXIAL_0.4`
+   - For SMD component: `RES_0805`
+   - For IC: `DIP8`
+4. Verify the footprint path in **Setup → User Preferences → Library Paths**
+
+### Step 6: Verify Footprint Mapping
+
+1. Generate netlist from Capture
+2. Open PCB Editor and import the netlist
+3. Verify components load with their assigned footprints
+4. Check that pad dimensions match the datasheet specifications
+5. Run **Place → Quickplace** to see all components with correct footprints
+
+## What Was Done
+
+Created three custom component footprints in OrCAD PCB Editor: an AXIAL-0.4 through-hole resistor footprint with 62-mil pads and 32-mil drill holes, an 0805 SMD resistor footprint following IPC-7351 standards, and a DIP-8 IC footprint with 100-mil pin pitch. All footprints were assigned to schematic components and verified through netlist import and placement in PCB Editor.
+
+## What Was Learnt
+
+- IPC-7351 land pattern design methodology for reliable solder joints
+- Padstack design for different component types (through-hole vs. SMD)
+- The importance of accurate footprint dimensions from manufacturer datasheets
+- The relationship between footprint quality and manufacturing yield
+- Proper silkscreen design for assembly guidance
+
+## Industry Applications
+
+- Custom component footprint creation for non-standard parts
+- IC package development and prototyping
+- High-reliability military and aerospace PCB design
+- Medical device electronics requiring precise footprints
+- Consumer electronics with fine-pitch components
+
+## Skills Developed
+
+- IPC-7351 land pattern calculation
+- Padstack creation and management
+- Footprint-to-schematic component mapping
+- Datasheet mechanical drawing interpretation
+- Footprint library management
+
+## Related Topics
+
+- [Introduction to OrCAD Capture](/content/labs/orcad-introduction-to-orcad-capture)
+- [Creating Layout Board in OrCAD](/content/labs/orcad-creating-layout-board)
+- [Post Processing and Manufacturing Files](/content/labs/orcad-post-processing-manufacturing-files)
+
+## Media
+
+### Images
+
+<!-- Upload footprint editor screenshot from admin panel -->
+<!-- Upload completed footprint images from admin panel -->
+<!-- Upload datasheet dimension markings from admin panel -->
+
+### Videos
+
+<!-- Upload footprint creation tutorial from admin panel -->
+
+### Documents
+
+<!-- Upload IPC-7351 reference guide from admin panel -->
+
+### Files
+
+<!-- Upload footprint library file (.dra) from admin panel -->
+<!-- Upload padstack definition file from admin panel -->

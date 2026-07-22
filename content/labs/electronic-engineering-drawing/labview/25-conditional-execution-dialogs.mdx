@@ -1,0 +1,193 @@
+---
+title: "Conditional Execution and Dialog Controls in LabVIEW"
+slug: "labview-conditional-execution-dialogs"
+type: "labs"
+category: "Electronic Engineering Drawing"
+subcategory: "LabVIEW"
+course: "Electronic Engineering Drawing & Engineering Software (EEDW)"
+department: "Electronic Engineering"
+semester: "1st"
+year: "2023"
+laboratorySession: "25"
+taxonomyLevel: "C4 (Analyzing) / C5 (Evaluating)"
+clo: "CLO-25: Implement conditional execution structures and dialog controls in LabVIEW for interactive programs."
+domain: "Virtual Instrumentation — Program Decision Logic"
+difficulty: "intermediate"
+status: "completed"
+featured: false
+tags:
+  - LabVIEW
+  - Case Structure
+  - Dialog Controls
+  - Conditional Execution
+  - User Interaction
+  - Error Handling
+technologies:
+  - LabVIEW
+software:
+  - LabVIEW 2023 or later
+hardware: []
+tools:
+  - Case Structure
+  - Dialog Functions
+  - Event Structure
+skills:
+  - Case Structure Implementation
+  - Dialog Box Creation
+  - Error Handling
+  - Event-Driven Programming
+  - User Interaction Design
+seoTitle: "Conditional Execution and Dialog Controls in LabVIEW — EEDW Lab 25"
+seoDescription: "Learn conditional execution using Case Structures and interactive dialog controls in LabVIEW for user-driven program flow."
+---
+
+# Conditional Execution and Dialog Controls in LabVIEW
+
+## Overview
+
+Conditional execution allows LabVIEW programs to make decisions and respond differently based on input conditions, user interactions, or error states. This laboratory session covers Case Structures for conditional execution, dialog controls for user interaction, basic error handling, and event-driven programming patterns.
+
+## Objective
+
+To implement Case Structures with Boolean, numeric, and string selectors, create user interaction dialog boxes (One Button, Two Button, Three Button), implement error handling using the Error Cluster, and build a user-interactive measurement selection VI.
+
+## Domain
+
+Virtual Instrumentation — Interactive Program Design.
+
+## CLO and Taxonomy Level
+
+- **CLO-25**: Implement conditional execution structures and dialog controls in LabVIEW for interactive programs.
+- **Taxonomy Level**: C4 (Analyzing) — Analyze program flow to determine appropriate conditional structures. C5 (Evaluating) — Evaluate error conditions and implement appropriate responses.
+
+## Tools and Software
+
+- **Software**: LabVIEW 2023 or later
+
+## Required Skills
+
+- LabVIEW basics (Labs 21-24)
+
+## Theory and Engineering Concepts
+
+- **Case Structure**: A multi-branch conditional structure that executes one subdiagram based on the input selector value. Supports Boolean, numeric, string, and enumerated selectors.
+- **Dialog Functions**: Pre-built VIs for user interaction including One Button Dialog (information), Two Button Dialog (confirm/cancel), and Three Button Dialog (yes/no/cancel).
+- **Error Cluster**: A cluster containing status (Boolean), code (I32), and source (String) that standardizes error handling across VIs.
+- **Event Structure**: Waits for user interface events (button clicks, value changes) and executes the corresponding event case.
+
+## Project / Task
+
+Create an interactive measurement system VI that allows users to select from voltage, current, or resistance measurement modes, with appropriate dialog prompts and error handling for invalid selections.
+
+## Procedure / Implementation
+
+### Step 1: Boolean Case Structure
+
+1. Place a Case Structure (Functions → Programming → Structures → Case Structure)
+2. Wire a Boolean control to the selector terminal
+3. In the True case: calculate and display "ON"
+4. In the False case: calculate and display "OFF"
+5. Test by toggling the Boolean control
+
+### Step 2: Numeric Case Structure (Selector)
+
+1. Create a numeric control (0-3) for mode selection
+2. Place a Case Structure with the numeric control wired to selector
+3. Create four cases: 0, 1, 2, 3
+4. Each case calculates a different function:
+   - Case 0: Voltage measurement simulation
+   - Case 1: Current measurement simulation
+   - Case 2: Resistance measurement simulation
+   - Case 3: Power calculation
+5. Add a Default case for invalid inputs
+
+### Step 3: Dialog Controls
+
+1. One Button Dialog (information):
+   ```labview
+   Functions → Programming → Dialog & User Interface → One Button Dialog
+   ```
+2. Two Button Dialog (confirm):
+   ```labview
+   Functions → Programming → Dialog & User Interface → Two Button Dialog
+   ```
+3. Three Button Dialog:
+   ```labview
+   Functions → Programming → Dialog & User Interface → Three Button Dialog
+   ```
+
+### Step 4: Error Handling
+
+1. Create a SubVI that generates an error:
+   - Bundle error cluster with code = 1001 and source = "User VI"
+2. Wire error through a Case Structure
+3. In the Error case: Show error dialog and default values
+4. In the No Error case: Perform normal calculation
+
+### Step 5: Interactive Measurement VI
+
+1. Front Panel:
+   - Ring control for measurement type (Voltage, Current, Resistance, Power)
+   - Numeric control for value input
+   - Numeric indicators for results
+   - Stop button
+2. Block Diagram:
+   - While Loop with Event Structure
+   - Case Structure for measurement type selection
+   - Two Button Dialog for confirmation before measurement
+   - One Button Dialog to display results
+   - Error handling for out-of-range values
+
+## What Was Done
+
+Created an interactive measurement system VI with four measurement modes selected via a ring control. Boolean and numeric Case Structures control the program flow. Two Button Dialogs confirm user actions before measurement execution. Error handling catches and displays out-of-range input errors. The Event Structure responds to button presses and value changes for responsive user interaction.
+
+## What Was Learnt
+
+- Case Structure implementation with different selector types
+- Dialog functions for user interaction and feedback
+- Error cluster handling and propagation
+- Event-driven programming for responsive UIs
+- Combining conditional structures for complex decision logic
+
+## Industry Applications
+
+- Interactive test executive applications
+- Measurement system mode selection
+- Safety confirmation dialogs in industrial systems
+- Error reporting and logging systems
+- Multi-instrument control panels
+
+## Skills Developed
+
+- Case Structure configuration
+- Dialog box implementation
+- Error handling design
+- Event-driven programming
+- Interactive UI development
+
+## Related Topics
+
+- [Equations and Logic Implementation](/content/labs/labview-equations-logic-implementation)
+- [Loops and Timing](/content/labs/labview-loops-and-timing)
+- [Creating SubVIs](/content/labs/labview-creating-subvis)
+
+## Media
+
+### Images
+
+<!-- Upload Case Structure diagram from admin panel -->
+<!-- Upload dialog box screenshot from admin panel -->
+<!-- Upload interactive VI front panel from admin panel -->
+
+### Videos
+
+<!-- Upload conditional execution tutorial from admin panel -->
+
+### Documents
+
+<!-- Upload LabVIEW error handling reference from admin panel -->
+
+### Files
+
+<!-- Upload Measurement_System.vi from admin panel -->

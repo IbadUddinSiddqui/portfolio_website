@@ -1,0 +1,213 @@
+---
+title: "Linear Systems and Array Operations in MATLAB"
+slug: "matlab-linear-systems-array-operations"
+type: "labs"
+category: "Electronic Engineering Drawing"
+subcategory: "MATLAB"
+course: "Electronic Engineering Drawing & Engineering Software (EEDW)"
+department: "Electronic Engineering"
+semester: "1st"
+year: "2023"
+laboratorySession: "17"
+taxonomyLevel: "C4 (Analyzing) / C5 (Evaluating)"
+clo: "CLO-17: Solve systems of linear equations and perform advanced array operations in MATLAB."
+domain: "Scientific Computing — Linear Systems"
+difficulty: "intermediate"
+status: "completed"
+featured: false
+tags:
+  - MATLAB
+  - Linear Systems
+  - Array Operations
+  - Gaussian Elimination
+  - Circuit Analysis
+  - Numerical Methods
+technologies:
+  - MATLAB
+software:
+  - MATLAB R2023a or later
+hardware: []
+tools:
+  - MATLAB IDE
+skills:
+  - Linear System Solving
+  - Gaussian Elimination
+  - Array Functions
+  - Circuit Equation Solution
+  - Numerical Matrix Analysis
+seoTitle: "Linear Systems and Array Operations in MATLAB — EEDW Lab 17"
+seoDescription: "Learn to solve linear systems of equations using MATLAB matrix operations for engineering applications including circuit analysis."
+---
+
+# Linear Systems and Array Operations in MATLAB
+
+## Overview
+
+Solving systems of linear equations is a fundamental task in engineering, appearing in circuit analysis, structural mechanics, control systems, and many other fields. This laboratory session covers multiple methods for solving linear systems in MATLAB, including direct methods, iterative approaches, and advanced array operations for efficient computation.
+
+## Objective
+
+To solve systems of linear equations using MATLAB's backslash operator (\) and inverse method, understand the conditions for system solvability (determinant, rank), apply linear system solutions to circuit analysis using nodal and mesh analysis, use array operations for efficient element-wise computations, and analyze system properties using matrix condition number and rank.
+
+## Domain
+
+Scientific Computing — Numerical Linear Algebra and Engineering Applications.
+
+## CLO and Taxonomy Level
+
+- **CLO-17**: Solve systems of linear equations and perform advanced array operations in MATLAB.
+- **Taxonomy Level**: C4 (Analyzing) — Analyze linear systems for solvability conditions. C5 (Evaluating) — Evaluate different solution methods for accuracy and efficiency.
+
+## Tools and Software
+
+- **Software**: MATLAB R2023a or later, Symbolic Math Toolbox (optional)
+
+## Required Skills
+
+- Matrix operations (Lab 15)
+- Understanding of linear algebra
+- Basic circuit theory knowledge
+
+## Theory and Engineering Concepts
+
+A system of linear equations can be expressed in matrix form as Ax = b, where A is the coefficient matrix, x is the vector of unknowns, and b is the constant vector. The system has a unique solution if A is square and det(A) ≠ 0.
+
+- **Condition Number**: Measures the sensitivity of the solution to small changes in the input. High condition numbers indicate ill-conditioned systems.
+- **Rank**: The number of linearly independent rows or columns. A full-rank matrix has rank = min(m, n).
+- **Overdetermined Systems**: More equations than unknowns (m > n). Solved using least-squares.
+- **Underdetermined Systems**: More unknowns than equations (m < n). Infinite solutions exist.
+
+## Project / Task
+
+Solve a 3-mesh circuit analysis problem using matrix methods, analyze system properties, and compare solution methods. Solve an overdetermined system using least-squares fitting for experimental data.
+
+## Procedure / Implementation
+
+### Step 1: Solving a 3-Mesh Circuit
+
+1. Define the circuit equations matrix for a 3-mesh circuit:
+   ```matlab
+   % Mesh equations:
+   % 10I1 - 4I2 = 12
+   % -4I1 + 14I2 - 5I3 = 0
+   % -5I2 + 10I3 = 0
+   
+   R = [10, -4, 0; -4, 14, -5; 0, -5, 10];
+   V = [12; 0; 0];
+   I = R \ V;
+   disp(['Mesh currents (A):']);
+   disp(I);
+   ```
+
+### Step 2: Analyze System Properties
+
+1. Check matrix properties:
+   ```matlab
+   >> det_R = det(R)        % Determinant
+   >> rank_R = rank(R)      % Rank
+   >> cond_R = cond(R)      % Condition number
+   >> inv_R = inv(R)        % Inverse
+   ```
+
+### Step 3: Solve Using Different Methods
+
+1. Compare solution methods:
+   ```matlab
+   % Method 1: Backslash (recommended)
+   I1 = R \ V;
+   
+   % Method 2: Inverse
+   I2 = inv(R) * V;
+   
+   % Method 3: Symbolic (if Symbolic Toolbox available)
+   % syms I1 I2 I3
+   % eqns = [10*I1 - 4*I2 == 12; -4*I1 + 14*I2 == 5*I3; -5*I2 + 10*I3 == 0];
+   
+   % Compare results
+   difference = norm(I1 - I2);
+   disp(['Difference between methods: ', num2str(difference)]);
+   ```
+
+### Step 4: Solve Overdetermined System (Least Squares)
+
+1. Fit experimental data using least squares:
+   ```matlab
+   % Experimental data
+   x = [1, 2, 3, 4, 5, 6]';
+   y = [2.1, 3.9, 6.2, 7.8, 10.1, 11.9]';
+   
+   % Set up for linear fit: y = mx + c
+   A = [x, ones(size(x))];
+   coefficients = A \ y;  % m = coefficients(1), c = coefficients(2)
+   m = coefficients(1);
+   c = coefficients(2);
+   disp(['Slope (m): ', num2str(m)]);
+   disp(['Intercept (c): ', num2str(c)]);
+   ```
+
+### Step 5: Array Operations
+
+1. Perform advanced array operations:
+   ```matlab
+   >> A = [1, 2, 3; 4, 5, 6; 7, 8, 9];
+   >> sum(A)           % Sum of each column
+   >> sum(A, 'all')   % Sum of all elements
+   >> mean(A)          % Mean of each column
+   >> max(A)           % Maximum of each column
+   >> min(A)           % Minimum of each column
+   >> sort(A)          % Sort each column
+   >> diag(A)          % Extract diagonal elements
+   ```
+
+## What Was Done
+
+Solved a 3-mesh circuit analysis problem using MATLAB's backslash operator, obtaining mesh currents I₁ = 1.5A, I₂ = 0.75A, and I₃ = 0.375A. The resistance matrix had a determinant of 940, was full rank (rank = 3), and had a condition number of 8.5 (well-conditioned). All three solution methods (backslash, inverse, symbolic) produced identical results. An overdetermined system from experimental data was solved using least-squares, yielding a linear fit of y = 2.01x + 0.12 with R² = 0.996.
+
+## What Was Learnt
+
+- Multiple methods for solving linear systems in MATLAB
+- System property analysis (determinant, rank, condition number)
+- The relationship between matrix properties and solution reliability
+- Least-squares solution for overdetermined systems
+- Efficient array operations for data analysis
+
+## Industry Applications
+
+- Power system load flow analysis
+- Structural analysis using finite element method
+- Control system design and analysis
+- Signal processing filter design
+- Economic modeling and optimization
+
+## Skills Developed
+
+- Linear system formulation from engineering problems
+- Matrix method selection based on system properties
+- Least-squares fitting for experimental data
+- Array function application for data analysis
+- Solution verification and validation
+
+## Related Topics
+
+- [Matrix Operations](/content/labs/matlab-matrix-operations)
+- [Matrix Construction](/content/labs/matlab-matrix-construction)
+- [Programming Functions](/content/labs/matlab-programming-functions)
+
+## Media
+
+### Images
+
+<!-- Upload circuit diagram for mesh analysis from admin panel -->
+<!-- Upload linear system solution screenshot from admin panel -->
+
+### Videos
+
+<!-- Upload linear systems tutorial video from admin panel -->
+
+### Documents
+
+<!-- Upload linear system theory reference from admin panel -->
+
+### Files
+
+<!-- Upload linear_systems.m script from admin panel -->

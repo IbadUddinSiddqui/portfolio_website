@@ -38,7 +38,7 @@ export default async function AdminBlogPage() {
       </div>
 
       {posts.length === 0 ? (
-        <div className="rounded-xl border border-dashed border-border p-12 text-center">
+        <div className="rounded-xl border border-dashed border-card-border p-12 text-center">
           <p className="text-muted-foreground text-sm mb-4">
             No blog posts yet.
           </p>
@@ -47,10 +47,10 @@ export default async function AdminBlogPage() {
           </Button>
         </div>
       ) : (
-        <div className="rounded-xl border border-border overflow-hidden">
+        <div className="rounded-xl border border-card-border overflow-hidden">
           <table className="w-full">
             <thead>
-              <tr className="border-b border-border bg-muted/50">
+              <tr className="border-b border-border bg-surface-secondary/50">
                 <th className="text-left text-xs font-medium text-muted-foreground px-4 py-3">
                   Title
                 </th>
@@ -72,8 +72,8 @@ export default async function AdminBlogPage() {
               {posts.map((post, index) => (
                 <tr
                   key={post.id}
-                  className={`border-b border-border last:border-0 hover:bg-muted/30 transition-colors ${
-                    index % 2 === 0 ? "bg-background" : "bg-muted/10"
+                  className={`border-b border-border last:border-0 hover:bg-surface-secondary/30 transition-colors ${
+                    index % 2 === 0 ? "bg-surface" : "bg-surface/5"
                   }`}
                 >
                   <td className="px-4 py-3">

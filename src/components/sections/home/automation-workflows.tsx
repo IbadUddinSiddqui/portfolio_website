@@ -74,7 +74,7 @@ export async function AutomationWorkflows() {
                     <div className={cn("w-9 h-9 rounded-xl flex items-center justify-center bg-gradient-to-br border", config.color)}>
                       <Icon className="h-4 w-4" />
                     </div>
-                    <Badge variant="outline" className="text-[10px] uppercase tracking-wider">
+                    <Badge variant="outline" className="text-xxs uppercase tracking-wider">
                       {config.label}
                     </Badge>
                   </div>
@@ -94,10 +94,10 @@ export async function AutomationWorkflows() {
                   {/* Footer */}
                   <div className="flex items-center justify-between pt-3 border-t border-border/30 mt-auto">
                     {wf.difficulty && (
-                      <span className="text-[10px] text-muted-foreground capitalize">{wf.difficulty}</span>
+                      <span className="text-xxs text-muted-foreground capitalize">{wf.difficulty}</span>
                     )}
                     {wf.services && (
-                      <span className="text-[10px] text-muted-foreground truncate ml-2">
+                      <span className="text-xxs text-muted-foreground truncate ml-2">
                         {parseJsonArray(wf.services).length} services
                       </span>
                     )}

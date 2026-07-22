@@ -1,0 +1,180 @@
+---
+title: "Diode Clampers (DC Level Shifters)"
+slug: "bel-diode-clampers"
+type: "labs"
+category: "basic-electronics"
+subcategory: "Diode Circuits"
+course: "Basic Electronics Laboratory"
+department: "Electrical / Electronics Engineering"
+semester: "1st"
+year: "2023"
+laboratorySession: "06"
+domain: "Waveform Shaping"
+taxonomyLevel: "P3"
+clo: "CLO-3"
+difficulty: "intermediate"
+status: "completed"
+featured: false
+tags:
+  - Basic Electronics
+  - Diode
+  - Clamper
+  - DC Level Shifting
+  - Waveform Shaping
+technologies:
+  - Analog Electronics
+  - Waveform Shaping
+software:
+  - Multisim (optional)
+hardware:
+  - PN Junction Diode (1N4007)
+  - Electrolytic Capacitor (10µF)
+  - Resistor (10kΩ, 100kΩ)
+  - DC Power Supply
+  - Function Generator
+  - Oscilloscope
+components:
+  - 1N4007 Diode
+  - 10µF Capacitor
+  - 10kΩ Resistor
+  - 100kΩ Resistor
+tools:
+  - Breadboard
+  - Jumper Wires
+skills:
+  - Clamper Circuit Design
+  - DC Level Shifting
+  - Waveform Observation
+circuits:
+  - Positive Clamper
+  - Negative Clamper
+seoTitle: "Diode Clampers (DC Level Shifters) — BEL Lab 06"
+seoDescription: "Implement and test diode clamper circuits for DC level shifting of AC signals without altering the waveform shape."
+---
+
+# Diode Clampers (DC Level Shifters)
+
+## Overview
+
+Diode clamper circuits shift the entire AC waveform to a different DC level without changing its shape or amplitude. Unlike limiters (clippers) that remove portions of the waveform, clampers simply add or subtract a DC offset. This laboratory session covers both positive and negative clamper configurations.
+
+## Objective
+
+To practice diode clamper circuits for DC level shifting of AC signals.
+
+## Domain
+
+Waveform Shaping — Signal Conditioning and DC Restoration.
+
+## CLO and Taxonomy Level
+
+- **CLO-3**: Implement and analyze diode clamper circuits for DC level shifting.
+- **Taxonomy Level**: P3 — Supervised Practice (Practical application of clamper circuits under guidance).
+
+## Components and Equipment
+
+- **Semiconductors**: 1N4007 diode
+- **Passive Components**: 10µF electrolytic capacitor, 10kΩ resistor, 100kΩ resistor
+- **Equipment**: Function generator, DC power supply, Oscilloscope
+
+## Required Skills
+
+- RC circuit charging/discharging behavior
+- Diode forward bias characteristics
+
+## Theory and Engineering Concepts
+
+- **Positive Clamper**: Shifts the entire waveform so that the negative peak is clamped to 0V (or a reference voltage), making the entire waveform positive.
+- **Negative Clamper**: Shifts the entire waveform so that the positive peak is clamped to 0V, making the entire waveform negative.
+- **Biased Clamper**: Uses an additional DC voltage source to clamp the signal at a specific DC level other than 0V.
+- **Time Constant**: The RC time constant (τ = RC) must be much larger than the signal period (T) for proper clamping operation. A large time constant ensures the capacitor holds its charge between cycles.
+- **Clamper vs. Clipper**: Clampers shift the entire waveform; clippers remove portions of the waveform.
+
+## Circuit Configuration
+
+The basic clamper consists of:
+- Capacitor in series with the signal path
+- Diode and resistor connected from the signal path to ground/reference
+- Optional DC bias for level adjustment
+
+## Procedure / Implementation
+
+### Step 1: Positive Clamper
+
+1. Connect the capacitor in series with the signal input
+2. Connect the diode cathode to the capacitor output and anode to ground
+3. Connect the resistor from the capacitor output to ground
+4. Apply a 5Vpp, 1kHz sine wave input
+5. Observe the output — the negative peaks should be at approximately 0V
+
+### Step 2: Negative Clamper
+
+1. Reverse the diode direction (anode to signal path, cathode to ground)
+2. Observe the output — the positive peaks should be at approximately 0V
+
+### Step 3: Biased Clamper
+
+1. Add a DC bias voltage in series with the diode
+2. Observe the clamping level shift according to the bias voltage
+
+## What Was Done
+
+Tested clamping circuits using a capacitor, diode, and resistor to shift signal levels. Implemented positive clamper, negative clamper, and biased clamper configurations.
+
+## Results and Observations
+
+| Configuration | Input (5Vpp, 1kHz) | Output |
+|--------------|--------------------|--------|
+| Positive Clamper | Sine wave centered at 0V | Sine wave with negative peaks at 0V |
+| Negative Clamper | Sine wave centered at 0V | Sine wave with positive peaks at 0V |
+| Biased (+2V) | Sine wave centered at 0V | Negative peaks at +2V |
+
+*Place waveform screenshots showing the DC level shift here.*
+
+## What Was Learnt
+
+- Clampers shift the entire waveform to a different DC level without altering the shape
+- The RC time constant must be much larger than the signal period for proper clamping
+- Clamping is essential for DC restoration in video and communication signals
+- Biased clampers allow precise control of the DC reference level
+
+## Engineering Applications
+
+- DC restoration in video signals (re-establishing black level)
+- Baseline restoration in biomedical signal processing
+- Level shifting in communication interfaces
+- Analog-to-digital converter input conditioning
+- CRT display driver circuits
+
+## Skills Developed
+
+- Positive and negative clamper circuit construction
+- DC level shifting observation
+- Time constant consideration in clamper design
+- Biased clamper adjustment
+
+## Related Topics
+
+- [Diode Limiters](/content/labs/bel-diode-limiters)
+- [Half-Wave Rectifier](/content/labs/bel-half-wave-rectifier)
+- [Integrator and Differentiator Circuits](/content/labs/bel-integrator-and-differentiator-circuits)
+
+## Media
+
+### Images
+
+<!-- Upload positive clamper circuit diagram from admin panel -->
+<!-- Upload clamped waveform screenshots from admin panel -->
+<!-- Upload breadboard circuit photo from admin panel -->
+
+### Videos
+
+<!-- Upload clamper circuit demonstration from admin panel -->
+
+### Documents
+
+<!-- Upload lab report from admin panel -->
+
+### Simulation Files
+
+<!-- Upload Multisim clamper simulation from admin panel -->

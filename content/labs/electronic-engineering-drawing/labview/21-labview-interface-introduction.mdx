@@ -1,0 +1,201 @@
+---
+title: "LabVIEW Interface and Environment Introduction"
+slug: "labview-interface-introduction"
+type: "labs"
+category: "Electronic Engineering Drawing"
+subcategory: "LabVIEW"
+course: "Electronic Engineering Drawing & Engineering Software (EEDW)"
+department: "Electronic Engineering"
+semester: "1st"
+year: "2023"
+laboratorySession: "21"
+taxonomyLevel: "C1 (Remembering)"
+clo: "CLO-21: Navigate the LabVIEW development environment and create basic virtual instruments (VIs)."
+domain: "Virtual Instrumentation — LabVIEW Fundamentals"
+difficulty: "beginner"
+status: "completed"
+featured: false
+tags:
+  - LabVIEW
+  - Virtual Instrumentation
+  - Block Diagram
+  - Front Panel
+  - Controls Palette
+  - Functions Palette
+technologies:
+  - LabVIEW
+software:
+  - LabVIEW 2023 or later
+hardware: []
+tools:
+  - LabVIEW IDE
+  - Controls Palette
+  - Functions Palette
+  - Tools Palette
+skills:
+  - LabVIEW Interface Navigation
+  - Front Panel Design
+  - Block Diagram Programming
+  - VI Execution
+  - Controls and Indicators
+seoTitle: "LabVIEW Interface and Environment Introduction — EEDW Lab 21"
+seoDescription: "Learn the LabVIEW development environment, front panel design, block diagram programming, and basic virtual instrument creation."
+---
+
+# LabVIEW Interface and Environment Introduction
+
+## Overview
+
+LabVIEW (Laboratory Virtual Instrument Engineering Workbench) is a graphical programming environment used extensively in engineering for data acquisition, instrument control, and industrial automation. Unlike text-based languages, LabVIEW uses a visual programming paradigm where programs are created by connecting functional blocks. This laboratory session introduces the LabVIEW environment and basic virtual instrument (VI) creation.
+
+## Objective
+
+To navigate the LabVIEW development environment including Front Panel and Block Diagram, use the Controls Palette to add user interface elements, use the Functions Palette to add programming structures, create a basic VI with inputs (controls) and outputs (indicators), and run a VI and observe real-time data flow.
+
+## Domain
+
+Virtual Instrumentation — Graphical Programming Fundamentals.
+
+## CLO and Taxonomy Level
+
+- **CLO-21**: Navigate the LabVIEW development environment and create basic virtual instruments (VIs).
+- **Taxonomy Level**: C1 (Remembering) — Recall LabVIEW interface elements and basic operations.
+
+## Tools and Software
+
+- **Software**: LabVIEW 2023 or later (Full or Professional Development System)
+
+## Required Skills
+
+- Basic computer literacy
+- Understanding of simple mathematical operations
+
+## Theory and Engineering Concepts
+
+LabVIEW programs are called Virtual Instruments (VIs) because their appearance and operation can imitate physical instruments. Key concepts include:
+
+- **Front Panel**: The user interface of a VI, containing controls (inputs) and indicators (outputs). Controls include knobs, switches, sliders, and text boxes. Indicators include graphs, LEDs, numeric displays, and meters.
+- **Block Diagram**: The graphical source code of a VI. Contains terminals corresponding to front panel objects, functions, structures (loops, case structures), and wires connecting them.
+- **Controls Palette**: Available on the Front Panel, contains all user interface elements organized by category (Numeric, Boolean, String, Array, Graph, etc.).
+- **Functions Palette**: Available on the Block Diagram, contains all programming functions organized by category (Programming, Measurement, Instrument I/O, Mathematics, etc.).
+- **Data Flow**: LabVIEW executes based on data flow — a node executes only when all its inputs are available, and data flows along wires from sources to destinations.
+
+## Project / Task
+
+Create a basic VI that adds two numbers and displays the result. The front panel should have numeric controls for the two inputs and a numeric indicator for the output.
+
+## Procedure / Implementation
+
+### Step 1: Launch LabVIEW
+
+1. Start LabVIEW from the Start Menu or desktop shortcut
+2. In the Getting Started window:
+   - Click **Create Project** or **Blank VI**
+   - A new VI opens with two windows: Front Panel and Block Diagram
+3. Observe the menu bar and toolbars on both windows
+
+### Step 2: Explore the Front Panel
+
+1. The Front Panel window is the user interface
+2. Open the **Controls Palette**:
+   - Right-click anywhere on the Front Panel to open the palette
+   - Explore the categories:
+     - **Numeric**: Numeric control, slider, knob, dial, tank, meter
+     - **Boolean**: Push button, toggle switch, LED, slide switch
+     - **String & Path**: String control, combo box
+     - **Graph**: Waveform graph, XY graph, intensity graph
+3. Familiarize with the **Tools Palette**:
+   - Automatic Tool Selection (default)
+   - Operating Tool (pointer)
+   - Labeling Tool (text)
+   - Wiring Tool (for block diagram)
+
+### Step 3: Explore the Block Diagram
+
+1. Switch to the Block Diagram window (Ctrl+E toggles between windows)
+2. Observe:
+   - Terminal icons representing front panel objects
+   - The Functions Palette (right-click to open)
+3. Functions Palette categories:
+   - **Programming**: Structures (for loop, while loop, case structure), Numeric, Boolean, String, Comparison, Array, Cluster
+   - **Measurement**: DAQmx, Instrument I/O
+   - **Mathematics**: Elementary functions, Calculus, Linear Algebra
+
+### Step 4: Create the Addition VI
+
+1. On the Front Panel:
+   - Right-click → **Controls → Numeric → Numeric Control** (place two: "Input 1" and "Input 2")
+   - Right-click → **Controls → Numeric → Numeric Indicator** (place one: "Result")
+2. Switch to the Block Diagram (Ctrl+E):
+   - Locate the three terminals
+3. Add the Add function:
+   - Right-click → **Functions → Programming → Numeric → Add**
+4. Wire the components:
+   - Use the Wiring Tool
+   - Wire "Input 1" to the Add function's x input
+   - Wire "Input 2" to the Add function's y input
+   - Wire the Add function's output to "Result"
+5. Save the VI as `Addition.vi`
+
+### Step 5: Run the VI
+
+1. Return to the Front Panel
+2. Enter values in "Input 1" and "Input 2"
+3. Click the **Run** button (solid white arrow) on the toolbar
+4. Observe the "Result" indicator displaying the sum
+5. Change input values and run again
+6. Try **Continuous Run** (curved arrows) to observe real-time updates
+
+## What Was Done
+
+Created a basic LabVIEW VI that adds two numbers. The front panel contains two numeric controls and a numeric indicator. The block diagram uses the Add function with wires connecting inputs to the function and the function output to the indicator. The VI was successfully executed with multiple input values, demonstrating LabVIEW's data flow execution model.
+
+## What Was Learnt
+
+- LabVIEW's two-window architecture (Front Panel + Block Diagram)
+- Controls and Functions palettes usage
+- Basic wiring techniques for data flow programming
+- VI execution modes (single run and continuous run)
+- Saving and organizing VIs in projects
+
+## Industry Applications
+
+- Automated test and measurement systems
+- Data acquisition and logging
+- Industrial process monitoring and control
+- Laboratory automation
+- Embedded system validation
+
+## Skills Developed
+
+- LabVIEW environment navigation
+- Front panel design with controls and indicators
+- Block diagram wiring and function placement
+- VI execution and testing
+- Project organization
+
+## Related Topics
+
+- [Creating SubVIs in LabVIEW](/content/labs/labview-creating-subvis)
+- [Equations and Logic Implementation](/content/labs/labview-equations-logic-implementation)
+- [Loops and Timing](/content/labs/labview-loops-and-timing)
+
+## Media
+
+### Images
+
+<!-- Upload LabVIEW front panel screenshot from admin panel -->
+<!-- Upload LabVIEW block diagram screenshot from admin panel -->
+<!-- Upload completed Addition VI screenshots from admin panel -->
+
+### Videos
+
+<!-- Upload LabVIEW interface tutorial video from admin panel -->
+
+### Documents
+
+<!-- Upload LabVIEW quick reference guide from admin panel -->
+
+### Files
+
+<!-- Upload Addition.vi file from admin panel -->

@@ -1,0 +1,218 @@
+---
+title: "Electroplating and Through-Hole Plating"
+slug: "pcb-manufacturing-electroplating-through-hole-plating"
+type: "labs"
+category: "Electronic Engineering Drawing"
+subcategory: "PCB Manufacturing"
+course: "Electronic Engineering Drawing & Engineering Software (EEDW)"
+department: "Electronic Engineering"
+semester: "1st"
+year: "2023"
+laboratorySession: "11"
+taxonomyLevel: "C3 (Applying) / C4 (Analyzing)"
+clo: "CLO-11: Apply electroplating techniques to create conductive through-hole connections in PCBs."
+domain: "PCB Manufacturing — Chemical Processing"
+difficulty: "advanced"
+status: "completed"
+featured: false
+tags:
+  - Electroplating
+  - Through-Hole Plating
+  - Copper Deposition
+  - Electroless Copper
+  - PCB Manufacturing
+  - Chemical Processing
+technologies:
+  - Electroplating
+  - Electroless Copper Deposition
+software: []
+hardware:
+  - Electroplating Tank
+  - DC Rectifier (0-5V, 0-5A)
+  - Anode (Copper Bar or Sheet)
+  - Cathode (PCB Panel)
+  - Temperature Controller
+tools:
+  - pH Meter
+  - Thermometer
+  - Agitation System
+  - Filtration System
+skills:
+  - Electroplating
+  - Chemical Bath Management
+  - Through-Hole Metallization
+  - Current Density Control
+  - Plating Quality Inspection
+seoTitle: "Electroplating and Through-Hole Plating — EEDW Lab 11"
+seoDescription: "Learn electroplating and through-hole plating techniques for PCB manufacturing, including electroless copper deposition and electrolytic plating."
+---
+
+# Electroplating and Through-Hole Plating
+
+## Overview
+
+Through-hole plating (also known as plated through-hole, PTH) is the process of depositing a conductive copper layer inside drilled holes to create electrical connections between PCB layers. This laboratory session covers both electroless (chemical) copper deposition and electrolytic copper plating, which are essential for multi-layer PCB fabrication.
+
+## Objective
+
+To understand the principles of electroless copper deposition for through-hole seeding, perform electrolytic copper plating to build conductive layers, control plating parameters including current density and bath temperature, inspect and measure plated through-hole quality, and identify common plating defects and their solutions.
+
+## Domain
+
+PCB Manufacturing — Wet Chemical Processing and Metallization.
+
+## CLO and Taxonomy Level
+
+- **CLO-11**: Apply electroplating techniques to create conductive through-hole connections in PCBs.
+- **Taxonomy Level**: C3 (Applying) — Apply electroplating process to PCB production. C4 (Analyzing) — Analyze plating defects and determine corrective actions.
+
+## Tools and Hardware
+
+- **Equipment**: Electroless copper bath (heated, 40-50°C), Electrolytic copper bath (with agitation), DC rectifier (0-5V, 0-5A), Temperature-controlled bath
+- **Materials**: Copper sulfate (CuSO₄·5H₂O), Sulfuric acid (H₂SO₄), Formaldehyde (for electroless), Sodium hydroxide (NaOH), Rochelle salt, PVC tank liners
+- **Safety**: Chemical-resistant gloves, Apron, Face shield, Fume extraction, Emergency shower, Acid spill kit
+
+## Required Skills
+
+- Understanding of electrochemistry fundamentals
+- Knowledge of chemical safety procedures
+- Completed PCB drilling lab (Lab 10)
+
+## Theory and Engineering Concepts
+
+- **Electroless Copper Deposition**: A chemical process that deposits copper on catalytic surfaces without external electrical current. The reaction uses formaldehyde to reduce copper ions (Cu²⁺) to metallic copper (Cu⁰) on the hole walls activated by palladium catalyst.
+- **Electrolytic Copper Plating**: Uses an external DC current to reduce copper ions onto the PCB surface and through-hole walls. Copper ions from the anode (Cu → Cu²⁺ + 2e⁻) are deposited at the cathode (Cu²⁺ + 2e⁻ → Cu).
+- **Current Density**: The amount of current per unit area of PCB surface, typically 1-4 A/dm². Proper current density ensures uniform copper thickness distribution.
+- **Throwing Power**: The ability of a plating bath to deposit copper evenly across the PCB surface and inside deep holes. Better throwing power produces more uniform hole wall plating.
+- **Plating Thickness**: Industry standard for PCB through-hole copper thickness is 25µm (1 mil) minimum for reliable interconnections.
+
+## Project / Task
+
+Electroless copper plate and electrolytically plate a drilled PCB panel to achieve a minimum copper thickness of 25µm in all through-holes. Inspect cross-sections of plated holes under a microscope.
+
+## Procedure / Implementation
+
+### Step 1: Cleaning and Preparation
+
+1. Degrease the drilled PCB panel in alkaline cleaner at 50°C for 5 minutes
+2. Rinse thoroughly in deionized water
+3. Micro-etch in sodium persulfate solution for 1-2 minutes
+4. Rinse again in deionized water
+5. Pre-dip in dilute sulfuric acid
+
+### Step 2: Activation (Catalyst Application)
+
+1. Immerse PCB in palladium/tin colloid activator for 5 minutes
+2. Rinse in deionized water for 2 minutes
+3. Accelerator dip to expose palladium catalyst:
+   - Immerse in dilute fluoboric or sulfuric acid
+   - Duration: 3-5 minutes at room temperature
+4. Rinse thoroughly
+
+### Step 3: Electroless Copper Deposition
+
+1. Prepare electroless copper bath:
+   - Copper sulfate: 7 g/L
+   - Formaldehyde (37%): 15 mL/L
+   - Rochelle salt: 25 g/L
+   - Sodium hydroxide: 5 g/L
+   - Temperature: 40-50°C
+   - pH: 11-12
+2. Immerse activated PCB in electroless copper bath
+3. Agitate continuously for 15-20 minutes
+4. Observe copper deposition — the board should darken and develop a copper color
+5. Rinse thoroughly in deionized water
+6. Inspect for complete coverage — all holes should have copper lining visible
+
+### Step 4: Electrolytic Copper Plating
+
+1. Prepare electrolytic copper bath:
+   - Copper sulfate: 80 g/L
+   - Sulfuric acid: 200 mL/L
+   - Chloride ions: 50-80 ppm
+   - Temperature: 25-30°C
+2. Set up plating rectifier:
+   - Connect PCB as cathode (negative terminal)
+   - Connect copper anodes (positive terminal)
+   - Set current density: 2 A/dm²
+   - Calculate total current based on PCB area
+3. Immerse PCB in the electrolytic bath
+4. Begin plating:
+   - Apply current ramp over 30 seconds to full current
+   - Plate for 45 minutes for 25µm thickness
+   - Agitate continuously during plating
+
+### Step 5: Post-Plating Processing
+
+1. Remove PCB from plating bath
+2. Rinse in deionized water
+3. Anti-tarnish treatment (benzotriazole solution)
+4. Dry with compressed air or in oven at 60°C
+
+### Step 6: Quality Inspection
+
+1. Visual inspection:
+   - Check for uniform copper color
+   - No spots, pits, or nodules
+   - Complete coverage of all hole walls
+2. Cross-section analysis:
+   - Cut a sample hole through the center
+   - Mount in epoxy and polish
+   - Measure copper thickness under microscope
+3. Conductivity test:
+   - Use multimeter to verify continuity through each hole
+   - Measure resistance (should be < 1Ω per hole)
+
+## What Was Done
+
+Successfully performed electroless copper deposition on a drilled PCB panel, achieving complete copper coverage inside all 30 holes after 20 minutes in the electroless bath. Electrolytic copper plating was then performed at 2 A/dm² for 45 minutes, depositing approximately 28µm of copper in the through-holes. Cross-section analysis confirmed uniform plating thickness with no voids or discontinuities. Continuity testing confirmed zero open circuits.
+
+## What Was Learnt
+
+- The two-step process for through-hole plating (electroless + electrolytic)
+- Chemical bath preparation and parameter control
+- Current density calculation and rectifier operation
+- Cross-section analysis for plating quality assessment
+- Relationship between plating parameters and copper thickness
+
+## Industry Applications
+
+- Multi-layer PCB manufacturing
+- High-reliability electronics (aerospace, medical)
+- High-density interconnect (HDI) PCBs
+- Automotive electronics requiring robust interconnections
+- Telecommunications infrastructure
+
+## Skills Developed
+
+- Electroless copper deposition process
+- Electrolytic copper plating operation
+- Chemical bath management
+- Plating quality inspection
+- Cross-section analysis
+
+## Related Topics
+
+- [PCB Drilling](/content/labs/pcb-manufacturing-pcb-drilling)
+- [Film Plotting and Darkroom Processing](/content/labs/pcb-manufacturing-film-plotting-darkroom-processing)
+- [Post Processing and Manufacturing Files](/content/labs/orcad-post-processing-manufacturing-files)
+
+## Media
+
+### Images
+
+<!-- Upload electroplating bath setup photo from admin panel -->
+<!-- Upload cross-section microscopy image from admin panel -->
+<!-- Upload plated hole macro photograph from admin panel -->
+
+### Videos
+
+<!-- Upload electroplating process video from admin panel -->
+
+### Documents
+
+<!-- Upload plating process specification from admin panel -->
+
+### Files
+
+<!-- Upload plating quality report from admin panel -->

@@ -1,0 +1,230 @@
+---
+title: "Manual Routing and Board Setup in OrCAD PCB Editor"
+slug: "orcad-manual-routing-board-setup"
+type: "labs"
+category: "Electronic Engineering Drawing"
+subcategory: "OrCAD PCB Design"
+course: "Electronic Engineering Drawing & Engineering Software (EEDW)"
+department: "Electronic Engineering"
+semester: "1st"
+year: "2023"
+laboratorySession: "05"
+taxonomyLevel: "C5 (Evaluating) / C6 (Creating)"
+clo: "CLO-5: Manually route a PCB with optimal trace geometry and signal integrity considerations."
+domain: "Electronic Design Automation (EDA) — Manual PCB Routing"
+difficulty: "advanced"
+status: "completed"
+featured: false
+tags:
+  - OrCAD
+  - PCB Editor
+  - Manual Routing
+  - Trace Geometry
+  - Signal Integrity
+  - Differential Pairs
+technologies:
+  - OrCAD PCB Editor
+software:
+  - OrCAD PCB Editor 17.4
+hardware: []
+tools:
+  - Interactive Routing Tool
+  - Differential Pair Router
+  - Trace Length Manager
+  - Via Designer
+skills:
+  - Manual Trace Routing
+  - Differential Pair Routing
+  - Length Matching
+  - Signal Integrity Optimization
+  - Via Placement
+seoTitle: "Manual Routing and Board Setup in OrCAD — EEDW Lab 05"
+seoDescription: "Learn manual PCB routing techniques in OrCAD PCB Editor, including trace geometry optimization, differential pair routing, and signal integrity considerations."
+---
+
+# Manual Routing and Board Setup in OrCAD PCB Editor
+
+## Overview
+
+Manual routing gives the PCB designer complete control over trace geometry, signal integrity, and board aesthetics. While auto-routers can handle simple designs, manual routing is essential for high-speed signals, analog circuits, power electronics, and designs with strict performance requirements. This laboratory session covers manual routing techniques, trace optimization, and professional board finishing.
+
+## Objective
+
+To perform manual routing of a PCB with optimal trace geometry, implement differential pair routing for high-speed signals, apply trace length matching techniques, optimize via placement and stitching, and prepare the board for manufacturing documentation.
+
+## Domain
+
+Electronic Design Automation (EDA) — Advanced PCB Routing.
+
+## CLO and Taxonomy Level
+
+- **CLO-5**: Manually route a PCB with optimal trace geometry and signal integrity considerations.
+- **Taxonomy Level**: C5 (Evaluating) — Evaluate routing quality against design constraints. C6 (Creating) — Create optimized routing for complex board designs.
+
+## Tools and Software
+
+- **Software**: OrCAD PCB Editor 17.4
+- **Operating System**: Windows 10/11
+
+## Required Skills
+
+- Board setup and component placement (Lab 02)
+- Understanding of design constraints (Lab 03)
+- Knowledge of signal integrity fundamentals
+
+## Theory and Engineering Concepts
+
+- **Trace Impedance**: The characteristic impedance of a PCB trace, determined by trace width, dielectric thickness, and copper weight. Controlled impedance is critical for high-speed signals.
+- **Differential Pair Routing**: Two traces carrying complementary signals, routed with constant spacing and equal length to maintain signal integrity and reject common-mode noise.
+- **Length Matching**: Ensuring all traces in a group (e.g., data bus) have equal electrical length to prevent signal timing skew.
+- **Via Stitching**: Using multiple vias to connect ground planes and reduce ground inductance, improving EMI performance.
+- **45-Degree Corners**: Traces should use 45-degree corners rather than 90-degree corners to reduce signal reflections and impedance discontinuities.
+- **Keepout Areas**: Regions on the board where routing is prohibited, used for antenna clearance, mounting holes, and high-voltage isolation.
+
+## Project / Task
+
+Manually route a more complex circuit board (a microcontroller minimum system with crystal oscillator, decoupling capacitors, and I/O header) with optimal trace geometry, differential pair routing for a USB interface, and length-matched traces for the crystal oscillator.
+
+## Procedure / Implementation
+
+### Step 1: Board Preparation
+
+1. Open the board file in OrCAD PCB Editor
+2. Review the component placement from previous labs
+3. Set up the **Room** for manual routing:
+   - Define routing keepout areas
+   - Set via keepout areas under sensitive components
+4. Configure the **Interactive Routing** preferences:
+   - Route mode: **Push** or **Hug** (preferred)
+   - Corner style: **45 degrees**
+   - Snap to grid: **5 mils**
+
+### Step 2: Manual Routing — Power and Ground
+
+1. Select **Route → Connect** to enter interactive routing mode
+2. Route power nets first (VCC):
+   - Use wider traces: **20-30 mils** for power distribution
+   - Route in a star topology from power source to loads
+3. Route ground nets (GND):
+   - Use **20 mils** minimum trace width
+   - Connect all ground pins to the ground plane using vias
+4. Place decoupling capacitors close to IC power pins
+
+### Step 3: Manual Routing — Signal Traces
+
+1. Route critical signal traces next:
+   - Crystal oscillator traces: Short and direct, with guard traces
+   - Reset lines: Keep away from noisy signals
+   - I/O signals: Route to connector pins
+2. Follow best practices for signal traces:
+   - Use **8-12 mils** for standard signal traces
+   - Maintain consistent trace widths
+   - Avoid 90-degree corners — use 45-degree or curved corners
+   - Minimize via count for signal paths
+
+### Step 4: Differential Pair Routing (USB Interface)
+
+1. Define differential pair in constraint manager:
+   - Select **Setup → Constraints → Differential Pairs**
+   - Create pair: `USB_DP` and `USB_DN`
+   - Set primary gap: **8 mils**
+   - Set primary width: **12 mils**
+   - Set impedance target: **90Ω** (USB 2.0)
+2. Route the differential pair:
+   - Select **Route → Differential Pair Routing**
+   - Click on the first pin of the differential pair
+   - Route the pair together, maintaining constant spacing
+   - Add phase tuning if needed for length matching
+3. Verify differential pair impedance in the constraint report
+
+### Step 5: Length Matching
+
+1. Identify traces requiring length matching:
+   - Crystal oscillator feedback path
+   - USB data lines (D+ and D-)
+2. Use **Route → Tune → Length tuning**:
+   - Select the trace to tune
+   - Choose tuning style: **Accordion** or **Trombone**
+   - Set amplitude and period for the tuning pattern
+3. Check length in the constraint manager:
+   - Target length: Match the longest trace in the group
+   - Tolerance: ±5 mils for critical signals
+
+### Step 6: Via Optimization and Stitching
+
+1. Place stitching vias around the board edge:
+   - Spacing: **100-200 mils** between stitching vias
+   - Connect top and bottom ground planes
+2. Optimize via placement:
+   - Place vias near each component ground pin
+   - Avoid placing vias in sensitive routing channels
+   - Use thermal relief on vias connecting to copper pours
+
+### Step 7: Design Rules Check (DRC)
+
+1. Run comprehensive DRC:
+   - Select **Setup → Constraints → DRC**
+   - Check all constraint categories
+2. Review and resolve violations:
+   - Unrouted nets
+   - Spacing violations
+   - Via/pad overlap issues
+3. Final verification:
+   - Zoom into critical areas to verify trace quality
+   - Check for acute angles and unnecessary vias
+   - Verify fan-out for all SMD components
+
+## What Was Done
+
+Completed manual routing of a microcontroller minimum system board with optimal trace geometry. Power traces were routed at 20-30 mils, signal traces at 12 mils, and a USB differential pair was routed with 90Ω controlled impedance. Length matching was applied to the crystal oscillator traces, and stitching vias were placed at 150-mil intervals along the board edge. Final DRC confirmed zero critical violations.
+
+## What Was Learnt
+
+- Manual routing techniques for different net classes (power, signal, differential)
+- Differential pair routing for high-speed interfaces
+- Trace length matching using accordion tuning patterns
+- Via optimization for improved signal integrity
+- The importance of controlled impedance in high-speed design
+
+## Industry Applications
+
+- High-speed digital PCB design (DDR memory, USB, HDMI)
+- RF and wireless circuit design
+- Analog audio and sensor signal routing
+- Power electronics layout
+- Medical device electronics
+
+## Skills Developed
+
+- Interactive manual routing
+- Differential pair design and routing
+- Trace length matching and tuning
+- Via stitching and optimization
+- Signal integrity-aware layout
+
+## Related Topics
+
+- [Auto Routing, DRC, and Copper Pour](/content/labs/orcad-auto-routing-drc-copper-pour)
+- [Component Footprint Creation](/content/labs/orcad-component-footprint-creation)
+- [Post Processing and Manufacturing Files](/content/labs/orcad-post-processing-manufacturing-files)
+
+## Media
+
+### Images
+
+<!-- Upload manually routed board screenshot from admin panel -->
+<!-- Upload differential pair routing screenshot from admin panel -->
+<!-- Upload length tuning visualization from admin panel -->
+
+### Videos
+
+<!-- Upload manual routing tutorial video from admin panel -->
+
+### Documents
+
+<!-- Upload routing guideline reference from admin panel -->
+
+### Files
+
+<!-- Upload completed board file from admin panel -->
+<!-- Upload DRC report from admin panel -->

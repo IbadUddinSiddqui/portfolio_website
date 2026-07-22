@@ -48,14 +48,14 @@ export function TechStackMarquee() {
             role="listitem"
             className={cn(
               "flex-shrink-0 flex items-center gap-2 px-3.5 py-2 rounded-xl",
-              "bg-muted/40 border border-border/40",
+              "bg-surface-secondary/40 border border-border/40",
               "text-xs text-muted-foreground font-medium",
               "backdrop-blur-sm",
               "transition-colors duration-200",
-              "hover:border-primary/30 hover:text-foreground hover:bg-muted/70"
+              "hover:border-primary/30 hover:text-foreground hover:bg-surface-secondary/70"
             )}
           >
-            <span className="text-[10px] opacity-60" aria-hidden="true">
+            <span className="text-xxs opacity-60" aria-hidden="true">
               {tech.icon}
             </span>
             {tech.name}

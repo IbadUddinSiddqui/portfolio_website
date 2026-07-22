@@ -74,7 +74,7 @@ export async function SkillsShowcase() {
                       {cat.skills.map((skill) => (
                         <span
                           key={skill.id}
-                          className="inline-flex items-center px-3 py-1.5 rounded-lg text-xs font-medium bg-primary/5 text-foreground/80 border border-border/30 hover:border-primary/30 hover:bg-primary/10 transition-all duration-200"
+                          className="inline-flex items-center px-3 py-1.5 rounded-lg text-xs font-medium bg-accent-engineering/5 text-foreground/80 border border-border/30 hover:border-accent-engineering/30 hover:bg-accent-engineering/10 transition-all duration-200"
                         >
                           {skill.name}
                         </span>

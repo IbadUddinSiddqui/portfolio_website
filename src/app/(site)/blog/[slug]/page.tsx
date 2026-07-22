@@ -91,7 +91,7 @@ export default async function BlogPostPage({
                     <Link key={t} href={`/blog?tag=${encodeURIComponent(t.toLowerCase())}`}>
                       <Badge
                         variant="outline"
-                        className="cursor-pointer hover:bg-muted transition-colors"
+                        className="cursor-pointer hover:bg-surface-secondary transition-colors"
                       >
                         {t}
                       </Badge>

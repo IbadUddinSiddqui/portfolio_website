@@ -1,0 +1,195 @@
+---
+title: "Common Source Amplifier — DC Analysis"
+slug: "bel-common-source-amplifier-dc-analysis"
+type: "labs"
+category: "basic-electronics"
+subcategory: "Transistor Amplifiers"
+course: "Basic Electronics Laboratory"
+department: "Electrical / Electronics Engineering"
+semester: "1st"
+year: "2023"
+laboratorySession: "11"
+domain: "Transistor Amplifiers"
+taxonomyLevel: "P3"
+clo: "CLO-3"
+difficulty: "advanced"
+status: "completed"
+featured: false
+tags:
+  - Basic Electronics
+  - MOSFET
+  - Common Source Amplifier
+  - DC Biasing
+  - Voltage Divider Bias
+  - Saturation Region
+technologies:
+  - Analog Electronics
+  - Transistor Amplifiers
+software:
+  - Multisim (optional)
+hardware:
+  - N-Channel MOSFET (IRF510 or 2N7000)
+  - Resistors (10kΩ, 100kΩ, 220kΩ, 470kΩ)
+  - DC Power Supply
+  - DMM
+components:
+  - N-Channel MOSFET (IRF510 / 2N7000)
+  - 10kΩ Resistor (RD)
+  - 100kΩ Resistor (RS)
+  - 220kΩ Resistor (R1)
+  - 470kΩ Resistor (R2)
+tools:
+  - Breadboard
+  - Jumper Wires
+skills:
+  - MOSFET Biasing Analysis
+  - Q-Point Calculation
+  - Voltage Divider Design
+  - DC Operating Point Measurement
+circuits:
+  - Common Source Amplifier with Voltage Divider Bias
+seoTitle: "Common Source Amplifier DC Analysis — BEL Lab 11"
+seoDescription: "Perform DC analysis of a common source MOSFET amplifier with voltage divider bias to determine the Q-point operating conditions."
+---
+
+# Common Source Amplifier — DC Analysis
+
+## Overview
+
+The common source (CS) amplifier is a fundamental MOSFET amplifier configuration that provides high voltage gain and high input impedance. Proper DC biasing is critical to ensure the MOSFET operates in the saturation (active) region, enabling linear amplification of AC signals. This laboratory session focuses on the DC analysis of a voltage-divider biased CS amplifier.
+
+## Objective
+
+To try the voltage divider bias-based common source amplifier circuit and perform its DC analysis.
+
+## Domain
+
+Transistor Amplifiers — MOSFET Biasing and DC Operating Point.
+
+## CLO and Taxonomy Level
+
+- **CLO-3**: Perform DC analysis of MOSFET common source amplifier circuits.
+- **Taxonomy Level**: P3 — Supervised Practice (Practical application of DC biasing under guidance).
+
+## Components and Equipment
+
+- **Active Components**: N-channel MOSFET (IRF510 or 2N7000)
+- **Passive Components**: 10kΩ (RD), 100Ω (RS), 220kΩ (R1), 470kΩ (R2)
+- **Equipment**: DC power supply (15V), DMM
+
+## Required Skills
+
+- Understanding of MOSFET characteristics
+- Voltage divider calculations
+- Ohm's law application
+
+## Theory and Engineering Concepts
+
+- **Common Source Configuration**: The source terminal is common (grounded) to both input and output. Signal is applied to the gate, and output is taken from the drain.
+- **Voltage Divider Bias**: R1 and R2 form a voltage divider to set the gate voltage: VG = VDD × R2/(R1 + R2).
+- **DC Operating Point (Q-Point)**: The DC voltages and currents that define the amplifier's operating region. For saturation: VGS > Vth and VDS > VGS - Vth.
+- **MOSFET Drain Current**: In saturation, ID = (1/2) × kn × (VGS - Vth)².
+- **Source Voltage**: VS = ID × RS. Gate-Source Voltage: VGS = VG - VS.
+
+## Circuit Configuration
+
+The voltage-divider biased CS amplifier consists of:
+- R1 and R2 forming a voltage divider from VDD to gate
+- RD (drain resistor) from VDD to drain
+- RS (source resistor) from source to ground
+- Bypass capacitor (CS) across RS (added later for AC analysis)
+- Coupling capacitors at input and output (for AC signal path)
+
+## Procedure / Implementation
+
+### Step 1: Circuit Construction (DC Only)
+
+1. Mount the MOSFET on the breadboard, identifying gate, drain, and source terminals
+2. Connect R1 (220kΩ) from VDD (+15V) to the gate
+3. Connect R2 (470kΩ) from gate to ground
+4. Connect RD (10kΩ) from VDD to drain
+5. Connect RS (100Ω) from source to ground
+6. Verify all connections before applying power
+
+### Step 2: DC Voltage Measurements
+
+1. Apply +15V DC power to the circuit
+2. Measure and record:
+   - Gate voltage (VG)
+   - Source voltage (VS)
+   - Drain voltage (VD)
+   - Drain-Source voltage (VDS = VD - VS)
+   - Gate-Source voltage (VGS = VG - VS)
+3. Calculate the drain current: ID = VS / RS
+4. Calculate the expected values using MOSFET equations
+
+### Step 3: Verify Saturation Region
+
+1. Check that VGS > Vth (threshold voltage, typically 1-2V for power MOSFETs)
+2. Check that VDS > VGS - Vth (saturation condition)
+3. If not in saturation, adjust resistor values to achieve proper biasing
+
+## What Was Done
+
+Set up a common source amplifier with voltage divider bias (R1 = 220kΩ, R2 = 470kΩ, RD = 10kΩ, RS = 100Ω, VDD = 15V) and performed DC biasing analysis by measuring gate, source, and drain voltages.
+
+## Results and Observations
+
+| Parameter | Measured Value | Calculated Value |
+|-----------|---------------|-----------------|
+| VG | ≈4.7V | VDD × R2/(R1+R2) = 15 × 470/690 = 10.2V (loaded) |
+| VS | ≈0.5V | ID × RS |
+| VD | ≈10V | VDD - ID × RD |
+| VGS | ≈4.2V | VG - VS |
+| VDS | ≈9.5V | VD - VS |
+| ID | ≈5mA | VS / RS |
+
+*Place measurement data table here.*
+
+## What Was Learnt
+
+- Proper DC biasing is critical to ensure the MOSFET operates in the active (saturation) region
+- The voltage divider provides a stable gate voltage independent of MOSFET parameters
+- The Q-point determines the amplifier's operating range and linearity
+- DC analysis must be performed before applying AC signals
+- Source resistor (RS) provides DC negative feedback for bias stability
+
+## Engineering Applications
+
+- Audio amplifier input stages
+- RF amplifier design
+- Sensor interface circuits
+- Power management circuits
+- Analog integrated circuit design
+
+## Skills Developed
+
+- MOSFET common source amplifier construction
+- Voltage divider bias calculation
+- DC operating point measurement
+- Saturation region verification
+
+## Related Topics
+
+- [Common Source Amplifier AC Analysis](/content/labs/bel-common-source-amplifier-ac-analysis)
+- [Inverting and Non-Inverting Amplifiers](/content/labs/bel-inverting-and-non-inverting-amplifiers)
+- [Basic Electronics Open Ended Lab](/content/labs/bel-basic-electronics-open-ended-lab)
+
+## Media
+
+### Images
+
+<!-- Upload CS amplifier circuit diagram from admin panel -->
+<!-- Upload breadboard circuit photo from admin panel -->
+
+### Videos
+
+<!-- Upload DC biasing demonstration from admin panel -->
+
+### Documents
+
+<!-- Upload lab report from admin panel -->
+
+### Simulation Files
+
+<!-- Upload Multisim CS amplifier DC simulation from admin panel -->

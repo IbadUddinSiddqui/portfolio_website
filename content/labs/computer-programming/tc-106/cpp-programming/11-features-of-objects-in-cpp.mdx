@@ -1,0 +1,249 @@
+---
+title: "Features of Objects in C++ — Advanced OOP"
+slug: "tc106-features-of-objects-in-cpp"
+type: "labs"
+category: "Computer Programming"
+subcategory: "C++ Programming"
+course: "TC-106 Computer Programming Lab"
+department: "Computer Science / Engineering"
+semester: "1st"
+year: "2023"
+laboratorySession: "11"
+domain: "Software"
+taxonomyLevel: "P3"
+difficulty: "intermediate"
+status: "completed"
+featured: false
+tags:
+  - C++
+  - Object Oriented Programming
+  - Access Specifiers
+  - Class Members
+  - Methods
+  - Attributes
+technologies:
+  - C++ Language
+  - Turbo C++ IDE
+software:
+  - Turbo C++ IDE 3.0
+hardware: []
+tools:
+  - Turbo C++ IDE
+skills:
+  - Access Specifier Usage
+  - Class Member Management
+  - Method Implementation
+  - Object Instantiation
+  - Data Hiding
+programmingLanguages:
+  - C++
+seoTitle: "Features of Objects in C++ — Advanced OOP — TC-106 Lab 11"
+seoDescription: "Learn advanced features of objects in C++ including access specifiers, class members, methods, and data hiding for robust OOP design."
+---
+
+# Features of Objects in C++ — Advanced OOP
+
+## Overview
+
+C++ provides sophisticated features for working with objects including access control, member functions, constructors, and destructors. Understanding these features is essential for writing robust, maintainable object-oriented programs. This laboratory session explores the advanced features of objects in C++.
+
+## Objective
+
+To investigate different features of objects in C++, including access specifiers, public and private members, and class member functions.
+
+## Domain
+
+Software — Advanced Object-Oriented Programming.
+
+## Taxonomy Level
+
+P3 — Supervised Practice (Practical application of advanced OOP features under guidance).
+
+## Tools and Technologies
+
+- **Software**: Turbo C++ IDE 3.0
+- **Language**: C++
+
+## Required Skills
+
+- Basic OOP concepts (Lab 10)
+- Understanding of classes and objects
+
+## Concepts Covered
+
+- **Private Members**: Data and functions accessible only within the class (data hiding)
+- **Public Members**: Data and functions accessible from outside the class
+- **Access Specifiers**: public, private, protected — control visibility of class members
+- **Member Functions**: Functions defined inside a class that operate on class data
+- **Constructor**: A special member function called automatically when an object is created
+- **Destructor**: A special member function called automatically when an object is destroyed
+- **Data Hiding**: Encapsulating data as private and providing controlled access through public methods
+
+## Project / Task
+
+Create a quadratic equation solver using OOP. The program should use a class with private data members for coefficients and public methods for calculations.
+
+## Implementation
+
+### Step 1: Class with Private Members
+
+1. Create a class demonstrating data hiding:
+   ```cpp
+   #include <iostream.h>
+   #include <conio.h>
+   #include <math.h>
+
+   class Quadratic {
+   private:
+       float a, b, c;          // Coefficients (private - data hiding)
+       float discriminant;
+
+       void calculateDiscriminant() {
+           discriminant = b * b - 4 * a * c;
+       }
+
+   public:
+       void setCoefficients(float x, float y, float z) {
+           a = x;
+           b = y;
+           c = z;
+           calculateDiscriminant();
+       }
+
+       void findRoots() {
+           float root1, root2;
+           if(discriminant >= 0) {
+               root1 = (-b + sqrt(discriminant)) / (2 * a);
+               root2 = (-b - sqrt(discriminant)) / (2 * a);
+               cout << "Roots are real and distinct:\n";
+               cout << "Root 1 = " << root1 << endl;
+               cout << "Root 2 = " << root2 << endl;
+           } else if(discriminant == 0) {
+               root1 = -b / (2 * a);
+               cout << "Roots are real and equal:\n";
+               cout << "Root = " << root1 << endl;
+           } else {
+               cout << "Roots are imaginary" << endl;
+           }
+       }
+   };
+
+   void main() {
+       Quadratic eq;
+       float a, b, c;
+       clrscr();
+
+       cout << "Quadratic Equation Solver" << endl;
+       cout << "Enter coefficients a, b, c: ";
+       cin >> a >> b >> c;
+
+       eq.setCoefficients(a, b, c);
+       eq.findRoots();
+
+       getch();
+   }
+   ```
+
+### Step 2: Constructor Example
+
+1. Add a constructor to the class:
+   ```cpp
+   class Student {
+   private:
+       int rollNo;
+       char name[30];
+       float marks;
+
+   public:
+       // Constructor
+       Student() {
+           rollNo = 0;
+           marks = 0.0;
+           cout << "Object created!" << endl;
+       }
+
+       void setData(int r, char n[], float m) {
+           rollNo = r;
+           strcpy(name, n);
+           marks = m;
+       }
+
+       void display() {
+           cout << "Roll No: " << rollNo << endl;
+           cout << "Name: " << name << endl;
+           cout << "Marks: " << marks << endl;
+       }
+   };
+   ```
+
+### Step 3: Multiple Objects Demonstration
+
+1. Create multiple objects to show independence:
+   ```cpp
+   void main() {
+       Student s1, s2;
+
+       s1.setData(101, "Ali", 85.5);
+       s2.setData(102, "Sara", 92.0);
+
+       cout << "Student 1:\n";
+       s1.display();
+       cout << "\nStudent 2:\n";
+       s2.display();
+
+       getch();
+   }
+   ```
+
+## What Was Done
+
+Created classes with public and private members, implemented controlled access to data through public methods (setCoefficients, findRoots), added constructors for automatic initialization, and instantiated multiple independent objects from the same class blueprint.
+
+## What Was Learnt
+
+- Practical application of access specifiers (public/private) for data hiding
+- The "blueprint" nature of classes — creating multiple independent objects
+- Constructor and destructor automatic invocation
+- Member functions operating on private data
+- Encapsulation as a core OOP principle
+
+## Engineering Applications
+
+- Simulation modeling with complex objects
+- Data abstraction in large-scale systems
+- API design with controlled access
+- Real-world entity modeling in software
+- Secure data handling through encapsulation
+
+## Skills Developed
+
+- Access specifier implementation (public/private)
+- Private member function design
+- Constructor creation and usage
+- Multiple object management
+- Class-based problem solving
+
+## Related Topics
+
+- [Object Oriented Programming in C++](/content/labs/tc106-object-oriented-programming-cpp)
+- [Pointers in C](/content/labs/tc106-pointers-in-c)
+- [Arduino Open Ended Lab](/content/labs/tc106-arduino-open-ended-lab)
+
+## Media
+
+### Images
+
+<!-- Upload access specifier diagram from admin panel -->
+<!-- Upload object state visualization from admin panel -->
+
+### Videos
+
+<!-- Upload advanced OOP features demonstration from admin panel -->
+
+### Code Files
+
+<!-- Upload OOP advanced programs source code from admin panel -->
+
+### Documents
+
+<!-- Upload lab report from admin panel -->

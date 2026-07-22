@@ -1,0 +1,195 @@
+---
+title: "Basic Building Blocks of C — Data Types and I/O"
+slug: "tc106-basic-building-blocks-of-c"
+type: "labs"
+category: "Computer Programming"
+subcategory: "C Programming"
+course: "TC-106 Computer Programming Lab"
+department: "Computer Science / Engineering"
+semester: "1st"
+year: "2023"
+laboratorySession: "03"
+domain: "Software"
+taxonomyLevel: "P3"
+difficulty: "beginner"
+status: "completed"
+featured: false
+tags:
+  - C Programming
+  - Data Types
+  - Variables
+  - printf
+  - scanf
+  - Format Specifiers
+technologies:
+  - C Language
+  - Turbo C++ IDE
+software:
+  - Turbo C++ IDE 3.0
+hardware: []
+tools:
+  - Turbo C++ IDE
+skills:
+  - Variable Declaration
+  - Data Type Usage
+  - Input/Output Functions
+  - Format Specifiers
+programmingLanguages:
+  - C
+seoTitle: "Basic Building Blocks of C — Data Types and I/O — TC-106 Lab 03"
+seoDescription: "Learn C programming fundamentals including data types, variables, printf and scanf functions, format specifiers, and escape sequences."
+---
+
+# Basic Building Blocks of C — Data Types and I/O
+
+## Overview
+
+C is a strongly-typed programming language where every variable must be declared with a specific data type before use. This laboratory session covers the fundamental building blocks of C programming: data types, variables, constants, and input/output functions. These elements form the foundation for all C programs.
+
+## Objective
+
+To study basic building blocks of the C language such as data types and input-output functions. To declare variables of appropriate types and use printf/scanf for console I/O.
+
+## Domain
+
+Software — Programming Language Fundamentals.
+
+## Taxonomy Level
+
+P3 — Supervised Practice (Practical application of C language syntax under guidance).
+
+## Tools and Technologies
+
+- **Software**: Turbo C++ IDE 3.0
+- **Language**: C
+
+## Required Skills
+
+- Basic IDE usage (Lab 02)
+- Understanding of data representation (numbers, text)
+
+## Concepts Covered
+
+- **Keywords**: Reserved words in C (int, float, char, void, return, etc.)
+- **Data Types**: int (integers), float (decimal numbers), char (single characters), double (higher precision)
+- **Variables**: Named memory locations that store values of specific types
+- **Format Specifiers**: %d (int), %f (float), %c (char), %s (string), %lf (double)
+- **Escape Sequences**: \n (new line), \t (tab), \b (backspace)
+- **printf()**: Output function for displaying text and variable values
+- **scanf()**: Input function for reading user input
+- **Constants**: Fixed values that cannot change during program execution
+
+## Project / Task
+
+Write a program to calculate the area of a circle. The program should take the radius as user input and display the calculated area.
+
+## Implementation
+
+### Step 1: Program Design
+
+1. Plan the program logic:
+   - Declare variables for radius (float) and area (float)
+   - Prompt the user to enter the radius
+   - Read the radius using scanf
+   - Calculate area = π × r²
+   - Display the result
+
+### Step 2: Write the Program
+
+1. Create a new file in Turbo C IDE
+2. Type the following program:
+   ```c
+   #include <stdio.h>
+   #include <conio.h>
+   #define PI 3.14159
+
+   void main() {
+       float radius, area;
+       clrscr();
+
+       printf("Enter the radius of the circle: ");
+       scanf("%f", &radius);
+
+       area = PI * radius * radius;
+
+       printf("\nRadius = %.2f units", radius);
+       printf("\nArea = %.2f square units", area);
+
+       getch();
+   }
+   ```
+
+### Step 3: Understanding the Code
+
+1. `#define PI 3.14159` — Defines a constant PI with value 3.14159
+2. `float radius, area;` — Declares two floating-point variables
+3. `scanf("%f", &radius);` — Reads a float value from the user and stores it in the variable `radius`. The `&` operator gives the memory address of the variable
+4. `area = PI * radius * radius;` — Calculates the area using the formula
+5. `printf("\nRadius = %.2f units", radius);` — Prints the radius with 2 decimal places
+
+### Step 4: Compile and Execute
+
+1. Save the file as `AREA.C`
+2. Compile (Alt+F9) and fix any errors
+3. Link (F9) and run (Ctrl+F9)
+4. Enter a value when prompted (e.g., 5)
+5. Verify the output: Area = 78.54 square units
+
+### Step 5: Experiment with Data Types
+
+1. Modify the program to use `int` instead of `float` for radius
+2. Observe what happens when entering decimal values
+3. Experiment with different format specifiers: %d, %c, %s
+
+## What Was Done
+
+Utilized printf for output, scanf for input, declared variables with specific data types (float, int), applied format specifiers (%f, %.2f, %d), and used escape sequences (\n, \t) to format output. Successfully calculated and displayed the area of a circle from user input.
+
+## What Was Learnt
+
+- Mastery of basic C elements including keywords, data types, and variable declaration
+- Proper use of format specifiers in printf and scanf functions
+- The difference between int and float data types and their handling
+- The use of #define for constants and the & (address-of) operator in scanf
+- Formatting output with escape sequences and precision specifiers (%.2f)
+
+## Engineering Applications
+
+- Scientific calculations requiring precise data types
+- User input handling in engineering software
+- Data validation and type checking in safety-critical systems
+- Real-time monitoring systems with formatted output
+- Embedded system programming with limited data type support
+
+## Skills Developed
+
+- Variable declaration and data type selection
+- Input/Output function implementation
+- Format specifier usage
+- Constant definition with #define
+- Basic arithmetic expression evaluation
+
+## Related Topics
+
+- [Introduction to Turbo C IDE](/content/labs/tc106-introduction-to-turbo-c-ide)
+- [Arithmetic and Logical Operators](/content/labs/tc106-arithmetic-and-logical-operators)
+- [Decision Making in C](/content/labs/tc106-decision-making-in-c)
+
+## Media
+
+### Images
+
+<!-- Upload data type memory size diagram from admin panel -->
+<!-- Upload program output screenshot from admin panel -->
+
+### Videos
+
+<!-- Upload data types demonstration video from admin panel -->
+
+### Code Files
+
+<!-- Upload AREA.C source file from admin panel -->
+
+### Documents
+
+<!-- Upload lab report from admin panel -->

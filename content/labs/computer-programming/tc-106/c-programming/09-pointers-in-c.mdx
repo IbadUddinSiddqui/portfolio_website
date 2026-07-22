@@ -1,0 +1,253 @@
+---
+title: "Pointers in C — Memory Management"
+slug: "tc106-pointers-in-c"
+type: "labs"
+category: "Computer Programming"
+subcategory: "C Programming"
+course: "TC-106 Computer Programming Lab"
+department: "Computer Science / Engineering"
+semester: "1st"
+year: "2023"
+laboratorySession: "09"
+domain: "Software"
+taxonomyLevel: "P3"
+difficulty: "advanced"
+status: "completed"
+featured: false
+tags:
+  - C Programming
+  - Pointers
+  - Memory Management
+  - Dynamic Memory
+  - Indirection
+  - Address Arithmetic
+technologies:
+  - C Language
+  - Turbo C++ IDE
+software:
+  - Turbo C++ IDE 3.0
+hardware: []
+tools:
+  - Turbo C++ IDE
+skills:
+  - Memory Address Manipulation
+  - Dereferencing
+  - Pointer Arithmetic
+  - Dynamic Memory Allocation
+  - String Processing via Pointers
+programmingLanguages:
+  - C
+seoTitle: "Pointers in C — Memory Management — TC-106 Lab 09"
+seoDescription: "Learn pointers in C including declaration, dereferencing, pointer arithmetic, dynamic memory allocation, and array-pointer relationship."
+---
+
+# Pointers in C — Memory Management
+
+## Overview
+
+Pointers are one of the most powerful features of C, providing direct access to memory addresses. They enable dynamic memory allocation, efficient array and string manipulation, and call-by-reference function parameters. This laboratory session covers pointer concepts from basic declaration to dynamic memory management.
+
+## Objective
+
+To apply the concept of pointers in C for memory management, dynamic allocation, and efficient string processing.
+
+## Domain
+
+Software — Memory Management and Low-Level Programming.
+
+## Taxonomy Level
+
+P3 — Supervised Practice (Practical application of pointers under guidance).
+
+## Tools and Technologies
+
+- **Software**: Turbo C++ IDE 3.0
+- **Language**: C
+
+## Required Skills
+
+- Arrays and indexing (Lab 08)
+- Functions (Lab 07)
+- Understanding of computer memory concepts
+
+## Concepts Covered
+
+- **Pointer Declaration**: `int *ptr;` — declares a pointer to an integer
+- **Address-of Operator (&)**: Returns the memory address of a variable
+- **Dereference Operator (*)**: Accesses the value at a memory address
+- **Pointer Arithmetic**: Adding/subtracting moves to adjacent memory locations
+- **Pointer and Arrays**: Array name is a constant pointer to the first element
+- **Dynamic Memory Allocation**: malloc(), calloc(), free() for runtime memory
+- **NULL Pointer**: A pointer that points to nothing (safety check)
+
+## Project / Task
+
+Implement programs for dynamic memory allocation and string processing using pointers.
+
+## Implementation
+
+### Step 1: Basic Pointer Operations
+
+1. Create a program demonstrating pointer basics:
+   ```c
+   #include <stdio.h>
+   #include <conio.h>
+
+   void main() {
+       int var = 25;
+       int *ptr;
+       clrscr();
+
+       ptr = &var;  // ptr now holds the address of var
+
+       printf("Value of var = %d\n", var);
+       printf("Address of var = %p\n", &var);
+       printf("Value of ptr (address) = %p\n", ptr);
+       printf("Value at address pointed by ptr = %d\n", *ptr);
+
+       getch();
+   }
+   ```
+
+### Step 2: Pointers and Arrays
+
+1. Demonstrate array-pointer relationship:
+   ```c
+   #include <stdio.h>
+   #include <conio.h>
+
+   void main() {
+       int arr[] = {10, 20, 30, 40, 50};
+       int *ptr = arr;  // Points to first element
+       int i;
+       clrscr();
+
+       printf("Using array indexing:\n");
+       for(i = 0; i < 5; i++) {
+           printf("arr[%d] = %d\n", i, arr[i]);
+       }
+
+       printf("\nUsing pointer arithmetic:\n");
+       for(i = 0; i < 5; i++) {
+           printf("*(ptr + %d) = %d\n", i, *(ptr + i));
+       }
+
+       getch();
+   }
+   ```
+
+### Step 3: Dynamic Memory Allocation
+
+1. Use malloc to allocate memory at runtime:
+   ```c
+   #include <stdio.h>
+   #include <conio.h>
+   #include <stdlib.h>
+
+   void main() {
+       int *arr;
+       int n, i;
+       clrscr();
+
+       printf("Enter number of elements: ");
+       scanf("%d", &n);
+
+       // Allocate memory dynamically
+       arr = (int*)malloc(n * sizeof(int));
+
+       if(arr == NULL) {
+           printf("Memory allocation failed!");
+           getch();
+           return;
+       }
+
+       printf("Enter %d elements:\n", n);
+       for(i = 0; i < n; i++) {
+           scanf("%d", &arr[i]);
+       }
+
+       printf("You entered:\n");
+       for(i = 0; i < n; i++) {
+           printf("%d ", arr[i]);
+       }
+
+       free(arr);  // Free allocated memory
+       getch();
+   }
+   ```
+
+### Step 4: String Processing with Pointers
+
+1. Process a string using pointers:
+   ```c
+   #include <stdio.h>
+   #include <conio.h>
+
+   void main() {
+       char str[] = "Hello World";
+       char *ptr = str;
+       clrscr();
+
+       printf("String: ");
+       while(*ptr != '\0') {
+           printf("%c", *ptr);
+           ptr++;
+       }
+
+       getch();
+   }
+   ```
+
+## What Was Done
+
+Declared and initialized pointers, practiced indirection (*) to access values at memory addresses, explored the relationship between arrays and pointers, used pointer arithmetic to traverse arrays, and implemented dynamic memory allocation using malloc and free.
+
+## What Was Learnt
+
+- Understanding of memory addresses and how variables are stored
+- Dereferencing pointers to access and modify values
+- The equivalence between array indexing and pointer arithmetic (arr[i] == *(arr + i))
+- Dynamic memory allocation for flexible arrays
+- The importance of freeing allocated memory to prevent memory leaks
+- NULL pointer checking for safe memory access
+
+## Engineering Applications
+
+- Dynamic data structures (linked lists, trees, graphs)
+- Operating system memory management
+- Embedded system register access
+- Performance-critical applications
+- Database index management
+
+## Skills Developed
+
+- Pointer declaration and initialization
+- Dereferencing and address-of operations
+- Pointer arithmetic for array traversal
+- Dynamic memory allocation with malloc/calloc/free
+- Safe pointer usage with NULL checking
+
+## Related Topics
+
+- [Array Concepts in C](/content/labs/tc106-array-concepts-in-c)
+- [Functions in C](/content/labs/tc106-functions-in-c)
+- [Object Oriented Programming in C++](/content/labs/tc106-object-oriented-programming-cpp)
+
+## Media
+
+### Images
+
+<!-- Upload pointer memory diagram from admin panel -->
+<!-- Upload output screenshots from admin panel -->
+
+### Videos
+
+<!-- Upload pointer concepts demonstration from admin panel -->
+
+### Code Files
+
+<!-- Upload pointer programs source code from admin panel -->
+
+### Documents
+
+<!-- Upload lab report from admin panel -->

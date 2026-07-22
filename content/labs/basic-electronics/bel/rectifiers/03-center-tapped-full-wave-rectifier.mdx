@@ -1,0 +1,183 @@
+---
+title: "Center-Tapped Full-Wave Rectifier"
+slug: "bel-center-tapped-full-wave-rectifier"
+type: "labs"
+category: "basic-electronics"
+subcategory: "Rectifiers"
+course: "Basic Electronics Laboratory"
+department: "Electrical / Electronics Engineering"
+semester: "1st"
+year: "2023"
+laboratorySession: "03"
+domain: "Circuit Analysis"
+taxonomyLevel: "P3"
+clo: "CLO-3"
+difficulty: "intermediate"
+status: "completed"
+featured: false
+tags:
+  - Basic Electronics
+  - Full-Wave Rectifier
+  - Center-Tapped Transformer
+  - Rectification
+  - AC to DC Conversion
+technologies:
+  - Analog Electronics
+  - Power Electronics
+software:
+  - Multisim (optional)
+hardware:
+  - PN Junction Diodes (1N4007 × 2)
+  - Center-Tapped Transformer (12-0-12V)
+  - Resistor (1kΩ)
+  - Oscilloscope
+  - DMM
+components:
+  - 1N4007 Diodes (2)
+  - 1kΩ Load Resistor
+  - Center-Tapped Transformer
+tools:
+  - Breadboard
+  - Jumper Wires
+skills:
+  - Full-Wave Rectifier Construction
+  - Waveform Analysis
+  - Average DC Calculation
+  - Center-Tapped Transformer Usage
+circuits:
+  - Center-Tapped Full-Wave Rectifier
+seoTitle: "Center-Tapped Full-Wave Rectifier — BEL Lab 03"
+seoDescription: "Construct and analyze a center-tapped full-wave rectifier circuit using two diodes and a center-tapped transformer for improved DC output."
+---
+
+# Center-Tapped Full-Wave Rectifier
+
+## Overview
+
+The center-tapped full-wave rectifier improves upon the half-wave design by utilizing both halves of the AC cycle. Using two diodes and a center-tapped transformer, this configuration provides a higher average DC output voltage and lower ripple frequency compared to the half-wave rectifier.
+
+## Objective
+
+To practice the center-tapped full-wave rectifier configuration using a center-tapped transformer and two diodes.
+
+## Domain
+
+Circuit Analysis — Full-Wave Rectification.
+
+## CLO and Taxonomy Level
+
+- **CLO-3**: Analyze and construct full-wave rectifier circuits for improved AC-to-DC conversion.
+- **Taxonomy Level**: P3 — Supervised Practice (Practical application of full-wave rectifier under guidance).
+
+## Components and Equipment
+
+- **Semiconductors**: 1N4007 diodes (2)
+- **Passive Components**: 1kΩ load resistor
+- **Equipment**: Center-tapped transformer (12-0-12V), Oscilloscope, DMM
+- **Tools**: Breadboard, Jumper wires, Wire strippers
+
+## Required Skills
+
+- Half-wave rectifier operation (Lab 02)
+- Understanding of transformer center-tap configuration
+
+## Theory and Engineering Concepts
+
+- **Full-Wave Operation**: Two diodes conduct on alternate half-cycles, allowing current through the load during both positive and negative input cycles.
+- **Center-Tapped Transformer**: Provides two equal voltage signals 180° out of phase relative to the center tap (ground reference).
+- **Average DC Output**: Vdc = 2Vm/π ≈ 0.636 × Vm (double that of half-wave rectifier).
+- **Ripple Frequency**: 2 × input frequency (e.g., 100Hz for 50Hz input).
+- **Peak Inverse Voltage**: Each diode must withstand PIV = 2Vm.
+
+## Circuit Configuration
+
+The center-tapped full-wave rectifier consists of:
+- Center-tapped transformer with secondary windings
+- Diode D1 connected from top secondary to load
+- Diode D2 connected from bottom secondary to load
+- Load resistor connected between diodes' cathodes and ground (center tap)
+
+Signal flow: Positive half-cycle → D1 conducts; Negative half-cycle → D2 conducts
+
+## Procedure / Implementation
+
+### Step 1: Circuit Construction
+
+1. Identify the center-tapped transformer terminals (top winding, center tap, bottom winding)
+2. Mount both diodes on the breadboard with correct orientation
+3. Connect:
+   - Diode D1 anode to the top transformer secondary
+   - Diode D2 anode to the bottom transformer secondary
+   - Both diode cathodes connected together to one end of the load resistor
+   - Load resistor's other end to the transformer center tap (ground)
+4. Verify all connections before applying power
+
+### Step 2: Testing and Measurement
+
+1. Connect the oscilloscope Channel 1 to the load output
+2. Set the oscilloscope to DC coupling for DC level observation
+3. Apply AC power to the transformer primary
+4. Observe the output waveform — should show both positive half-cycles
+5. Measure the DC output voltage using the DMM
+
+## What Was Done
+
+Built a full-wave rectifier using a center-tapped transformer and two 1N4007 diodes. The output waveform showed both positive half-cycles of the AC input, producing a pulsating DC output with double the ripple frequency of the half-wave rectifier.
+
+## Results and Observations
+
+| Parameter | Half-Wave | Center-Tapped Full-Wave |
+|-----------|-----------|------------------------|
+| Average DC Output (Vdc) | 0.318 × Vm | 0.636 × Vm |
+| Ripple Frequency | fin | 2 × fin |
+| Diodes Required | 1 | 2 |
+| Transformer Required | Simple | Center-Tapped |
+
+*Place waveform screenshots and measurements here.*
+
+## What Was Learnt
+
+- By utilizing both halves of the AC cycle, the average DC output voltage is higher compared to a half-wave rectifier
+- The center-tapped full-wave rectifier requires a center-tapped transformer, adding cost and size
+- The ripple frequency doubles to 100Hz, making filtering easier
+- Each diode experiences a PIV of 2Vm
+
+## Engineering Applications
+
+- Medium-power DC power supplies
+- Audio amplifier power stages
+- Industrial control system power supplies
+- Battery charging systems requiring higher efficiency
+
+## Skills Developed
+
+- Full-wave rectifier circuit construction
+- Center-tapped transformer utilization
+- Ripple frequency observation and measurement
+- DC output comparison between half-wave and full-wave
+
+## Related Topics
+
+- [Half-Wave Rectifier](/content/labs/bel-half-wave-rectifier)
+- [Bridge Rectifier and Filtering](/content/labs/bel-bridge-rectifier-filtering)
+- [Zener Diode Voltage Regulator](/content/labs/bel-zener-diode-voltage-regulator)
+
+## Media
+
+### Images
+
+<!-- Upload center-tapped rectifier circuit diagram from admin panel -->
+<!-- Upload output waveform screenshot from admin panel -->
+<!-- Upload breadboard circuit photo from admin panel -->
+
+### Videos
+
+<!-- Upload full-wave rectifier demonstration from admin panel -->
+
+### Documents
+
+<!-- Upload lab report from admin panel -->
+
+### Simulation Files
+
+<!-- Upload Multisim simulation from admin panel -->

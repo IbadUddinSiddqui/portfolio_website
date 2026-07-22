@@ -62,7 +62,7 @@ export function ProjectGrid({ projects, categories = [] }: ProjectGridProps) {
               "relative px-4 py-1.5 rounded-full text-sm font-medium transition-all duration-200",
               activeCategory === null
                 ? "text-primary-foreground"
-                : "text-muted-foreground hover:text-foreground bg-muted/60 hover:bg-muted"
+                : "text-muted-foreground hover:text-foreground bg-surface-secondary/60 hover:bg-surface-secondary"
             )}
           >
             {activeCategory === null && (
@@ -84,7 +84,7 @@ export function ProjectGrid({ projects, categories = [] }: ProjectGridProps) {
                 "relative px-4 py-1.5 rounded-full text-sm font-medium transition-all duration-200",
                 activeCategory === cat.slug
                   ? "text-primary-foreground"
-                  : "text-muted-foreground hover:text-foreground bg-muted/60 hover:bg-muted"
+                  : "text-muted-foreground hover:text-foreground bg-surface-secondary/60 hover:bg-surface-secondary"
               )}
             >
               {activeCategory === cat.slug && (
@@ -111,7 +111,7 @@ export function ProjectGrid({ projects, categories = [] }: ProjectGridProps) {
               aria-label="Search projects"
               className={cn(
                 "w-full pl-9 pr-9 py-2 rounded-xl text-sm",
-                "bg-muted/50 border border-border/60",
+                "bg-surface-secondary/50 border border-border/60",
                 "text-foreground placeholder:text-muted-foreground/50",
                 "focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary/30",
                 "transition-all duration-200"
@@ -188,7 +188,7 @@ export function ProjectGrid({ projects, categories = [] }: ProjectGridProps) {
           animate={{ opacity: 1, y: 0 }}
           className="flex flex-col items-center justify-center py-24 text-center"
         >
-          <div className="w-12 h-12 rounded-2xl bg-muted/60 flex items-center justify-center mb-4">
+          <div className="w-12 h-12 rounded-2xl bg-surface-secondary/60 flex items-center justify-center mb-4">
             <Search className="h-5 w-5 text-muted-foreground/40" />
           </div>
           <p className="text-muted-foreground text-sm font-medium mb-1">

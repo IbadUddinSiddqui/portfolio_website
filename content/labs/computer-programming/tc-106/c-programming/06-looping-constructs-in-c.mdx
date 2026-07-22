@@ -1,0 +1,233 @@
+---
+title: "Looping Constructs in C"
+slug: "tc106-looping-constructs-in-c"
+type: "labs"
+category: "Computer Programming"
+subcategory: "C Programming"
+course: "TC-106 Computer Programming Lab"
+department: "Computer Science / Engineering"
+semester: "1st"
+year: "2023"
+laboratorySession: "06"
+domain: "Software"
+taxonomyLevel: "P3"
+difficulty: "intermediate"
+status: "completed"
+featured: false
+tags:
+  - C Programming
+  - Loops
+  - for Loop
+  - while Loop
+  - do-while Loop
+  - Iteration
+technologies:
+  - C Language
+  - Turbo C++ IDE
+software:
+  - Turbo C++ IDE 3.0
+hardware: []
+tools:
+  - Turbo C++ IDE
+skills:
+  - Loop Control
+  - Iterative Structure Implementation
+  - Nested Loops
+  - Loop Condition Design
+programmingLanguages:
+  - C
+seoTitle: "Looping Constructs in C — TC-106 Lab 06"
+seoDescription: "Learn for, while, and do-while loops in C with practical examples including sequences, multiplication tables, and pattern generation."
+---
+
+# Looping Constructs in C
+
+## Overview
+
+Loops are fundamental programming constructs that allow a block of code to be executed repeatedly based on a condition. C provides three types of loops: for, while, and do-while. This laboratory session covers all three loop types and teaches students when to use each one effectively.
+
+## Objective
+
+To apply looping constructs in C: for, while, and do-while loops for iterative program execution.
+
+## Domain
+
+Software — Programming Logic and Control Flow.
+
+## Taxonomy Level
+
+P3 — Supervised Practice (Practical application of loops under guidance).
+
+## Tools and Technologies
+
+- **Software**: Turbo C++ IDE 3.0
+- **Language**: C
+
+## Required Skills
+
+- Conditional statements (Lab 05)
+- Variable manipulation
+
+## Concepts Covered
+
+- **for Loop**: Used when the number of iterations is known in advance. Syntax: for(initialization; condition; increment/decrement)
+- **while Loop**: Used when the number of iterations is not known. Syntax: while(condition) { body }
+- **do-while Loop**: Similar to while but guarantees at least one execution. Syntax: do { body } while(condition);
+- **Nested Loops**: Loops inside loops, useful for 2D patterns and matrix operations
+- **Break and Continue**: break exits the loop entirely; continue skips to the next iteration
+
+## Project / Task
+
+Generate mathematical sequences, display a multiplication table, and print complex patterns using nested loops.
+
+## Implementation
+
+### Step 1: For Loop — Multiplication Table
+
+1. Create a program to display a multiplication table:
+   ```c
+   #include <stdio.h>
+   #include <conio.h>
+
+   void main() {
+       int num, i;
+       clrscr();
+
+       printf("Enter a number: ");
+       scanf("%d", &num);
+
+       for(i = 1; i <= 10; i++) {
+           printf("%d x %d = %d\n", num, i, num * i);
+       }
+
+       getch();
+   }
+   ```
+
+### Step 2: While Loop — Number Sequence
+
+1. Generate a sequence using while:
+   ```c
+   #include <stdio.h>
+   #include <conio.h>
+
+   void main() {
+       int i = 1, n;
+       clrscr();
+
+       printf("Enter limit: ");
+       scanf("%d", &n);
+
+       while(i <= n) {
+           printf("%d ", i);
+           i++;
+       }
+
+       getch();
+   }
+   ```
+
+### Step 3: Do-While Loop — Menu System
+
+1. Create a menu that displays at least once:
+   ```c
+   #include <stdio.h>
+   #include <conio.h>
+
+   void main() {
+       int choice;
+       clrscr();
+
+       do {
+           printf("\n1. Option 1");
+           printf("\n2. Option 2");
+           printf("\n3. Exit");
+           printf("\nEnter choice: ");
+           scanf("%d", &choice);
+
+           switch(choice) {
+               case 1: printf("Option 1 selected\n"); break;
+               case 2: printf("Option 2 selected\n"); break;
+               case 3: printf("Exiting...\n"); break;
+               default: printf("Invalid\n");
+           }
+       } while(choice != 3);
+
+       getch();
+   }
+   ```
+
+### Step 4: Nested Loops — Pattern Printing
+
+1. Create a star pattern:
+   ```c
+   #include <stdio.h>
+   #include <conio.h>
+
+   void main() {
+       int i, j;
+       clrscr();
+
+       for(i = 1; i <= 5; i++) {
+           for(j = 1; j <= i; j++) {
+               printf("* ");
+           }
+           printf("\n");
+       }
+
+       getch();
+   }
+   ```
+
+## What Was Done
+
+Used for, while, and do-while loops to execute code blocks repeatedly. Created a multiplication table using for loop, a number sequence using while, a menu system using do-while, and a star pattern using nested loops.
+
+## What Was Learnt
+
+- Understanding when to use specific loop types based on iteration knowledge
+- For loop: use when the number of iterations is known in advance
+- While loop: use when the iterations depend on a condition
+- Do-while loop: use when the body must execute at least once
+- Nested loops for multi-dimensional iterations
+
+## Engineering Applications
+
+- Data processing in arrays and matrices
+- Sensor data collection in embedded systems
+- Iterative algorithms (searching, sorting)
+- Real-time monitoring loops
+- Pattern generation for manufacturing automation
+
+## Skills Developed
+
+- Loop structure selection based on requirements
+- Loop condition design and termination control
+- Nested loop implementation
+- Pattern and sequence generation
+- Menu-driven program development
+
+## Related Topics
+
+- [Decision Making in C](/content/labs/tc106-decision-making-in-c)
+- [Functions in C](/content/labs/tc106-functions-in-c)
+- [Array Concepts in C](/content/labs/tc106-array-concepts-in-c)
+
+## Media
+
+### Images
+
+<!-- Upload loop flowchart diagrams from admin panel -->
+<!-- Upload pattern output screenshots from admin panel -->
+
+### Videos
+
+<!-- Upload loop constructs demonstration from admin panel -->
+
+### Code Files
+
+<!-- Upload loop programs source code from admin panel -->
+
+### Documents
+
+<!-- Upload lab report from admin panel -->

@@ -63,8 +63,8 @@ function TestimonialCard({
     <div
       className={cn(
         "w-[340px] shrink-0 flex flex-col rounded-2xl p-6",
-        "bg-card/60 border border-border/50 backdrop-blur-sm",
-        "hover:border-primary/25 hover:bg-card/80",
+        "bg-card-background/60 border border-border/50 backdrop-blur-sm",
+        "hover:border-primary/25 hover:bg-card-background/80",
         "transition-all duration-300",
         className
       )}
@@ -88,7 +88,7 @@ function TestimonialCard({
       <div className="flex items-center gap-3 mt-5 pt-4 border-t border-border/40">
         <div
           className={cn(
-            "w-8 h-8 rounded-full bg-gradient-to-br flex items-center justify-center text-[10px] font-bold text-white shrink-0",
+            "w-8 h-8 rounded-full bg-gradient-to-br flex items-center justify-center text-xxs font-bold text-white shrink-0",
             t.color
           )}
           aria-hidden="true"

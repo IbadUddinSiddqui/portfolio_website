@@ -1,0 +1,114 @@
+---
+title: "React Server Components — Deep Dive"
+slug: "react-server-components-deep-dive"
+type: "learning"
+category: "Frontend Engineering"
+subcategory: "React"
+tags:
+  - React
+  - Server Components
+  - Next.js
+  - Performance
+technologies:
+  - React 19
+  - Next.js 16
+  - TypeScript
+skills:
+  - React Architecture
+  - Performance Optimization
+  - Server-Side Rendering
+status: "published"
+featured: false
+createdAt: "2025-01-20"
+updatedAt: "2025-02-10"
+---
+
+# React Server Components — Deep Dive
+
+## Overview
+
+React Server Components (RSC) represent a paradigm shift in how we build React applications. They allow components to run exclusively on the server, reducing bundle size and improving performance by sending only the interactive client components to the browser.
+
+## Key Concepts
+
+### Server vs Client Components
+
+```tsx
+// Server Component (default in Next.js App Router)
+// Can: access databases, read files, use server-only APIs
+// Cannot: use hooks, event handlers, browser APIs
+async function BlogPost({ slug }: { slug: string }) {
+  const post = await db.post.findUnique({ where: { slug } });
+  return <article>{post.content}</article>;
+}
+
+// Client Component
+// Can: use hooks, state, effects, browser APIs
+// Cannot: access databases, read files
+"use client";
+function LikeButton({ postId }: { postId: string }) {
+  const [liked, setLiked] = useState(false);
+  return <button onClick={() => setLiked(!liked)}>❤️</button>;
+}
+```
+
+### Streaming and Suspense
+
+Server Components support streaming, allowing you to send HTML progressively:
+
+```tsx
+function Page() {
+  return (
+    <div>
+      <h1>Dashboard</h1>
+      <Suspense fallback={<Skeleton />}>
+        <SlowDataComponent />
+      </Suspense>
+    </div>
+  );
+}
+```
+
+### Data Fetching Patterns
+
+Server Components can fetch data directly without API layers:
+
+```tsx
+async function UserProfile({ userId }: { userId: string }) {
+  const user = await db.user.findUnique({ where: { id: userId } });
+  const posts = await db.post.findMany({ where: { authorId: userId } });
+  
+  return (
+    <div>
+      <h2>{user.name}</h2>
+      {posts.map(post => <PostCard key={post.id} post={post} />)}
+    </div>
+  );
+}
+```
+
+## Architecture Decisions
+
+### When to use Server vs Client
+
+| Aspect | Server Component | Client Component |
+|--------|-----------------|------------------|
+| Data fetching | Direct database/API access | Through API routes |
+| Interactivity | None | useState, useEffect, events |
+| Bundle size | Zero JS added | Full component JS sent |
+| SEO | Full HTML rendered | Requires SSR |
+| Performance | Fastest (no hydration) | Hydration overhead |
+
+## Best Practices
+
+1. **Push components down** — Make as many components server-rendered as possible
+2. **Use `"use client"` sparingly** — Only when you need interactivity
+3. **Compose server + client** — Wrap client components inside server components
+4. **Leverage streaming** — Use Suspense boundaries for slow data
+5. **Cache strategically** — Use React.cache() for deduplication
+
+## Related Content
+
+- [Next.js App Router Architecture](/learning/nextjs-app-router)
+- [Performance Optimization](/learning/web-performance)
+- [Building with Next.js 16](/projects/portfolio-cms)

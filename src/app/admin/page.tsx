@@ -38,7 +38,7 @@ export default async function AdminDashboardPage() {
         </div>
 
         {/* Quick Actions */}
-        <div className="rounded-xl border border-border bg-card p-6">
+        <div className="rounded-xl border border-card-border bg-card-background p-6">
           <h2 className="text-sm font-semibold mb-4">Quick Actions</h2>
           <div className="flex flex-wrap gap-3">
             <a
@@ -49,7 +49,7 @@ export default async function AdminDashboardPage() {
             </a>
             <a
               href="/admin/messages"
-              className="px-4 py-2 rounded-lg bg-muted text-foreground text-sm font-medium hover:bg-muted/80 transition-colors"
+              className="px-4 py-2 rounded-lg bg-surface-secondary text-foreground text-sm font-medium hover:bg-surface-secondary/80 transition-colors"
             >
               {stats.messages.unread > 0
                 ? `View Messages (${stats.messages.unread} new)`
@@ -57,7 +57,7 @@ export default async function AdminDashboardPage() {
             </a>
             <a
               href="/"
-              className="px-4 py-2 rounded-lg bg-muted text-foreground text-sm font-medium hover:bg-muted/80 transition-colors"
+              className="px-4 py-2 rounded-lg bg-surface-secondary text-foreground text-sm font-medium hover:bg-surface-secondary/80 transition-colors"
             >
               View Site
             </a>
@@ -80,9 +80,9 @@ function StatCard({
   highlight?: boolean;
 }) {
   return (
-    <div className={`rounded-xl border p-5 ${highlight ? "border-primary/30 bg-primary/5" : "border-border bg-card"}`}>
+    <div className={`rounded-xl border p-5 ${highlight ? "border-accent-engineering/30 bg-accent-engineering/5" : "border-card-border bg-card-background"}`}>
       <p className="text-sm text-muted-foreground mb-1">{label}</p>
-      <p className={`text-3xl font-bold ${highlight ? "text-primary" : ""}`}>
+      <p className={`text-3xl font-bold ${highlight ? "text-accent-engineering" : ""}`}>
         {value}
       </p>
       <p className="text-xs text-muted-foreground mt-1">{sub}</p>

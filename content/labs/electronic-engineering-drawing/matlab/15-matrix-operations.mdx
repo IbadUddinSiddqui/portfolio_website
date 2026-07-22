@@ -1,0 +1,211 @@
+---
+title: "Matrix Operations in MATLAB"
+slug: "matlab-matrix-operations"
+type: "labs"
+category: "Electronic Engineering Drawing"
+subcategory: "MATLAB"
+course: "Electronic Engineering Drawing & Engineering Software (EEDW)"
+department: "Electronic Engineering"
+semester: "1st"
+year: "2023"
+laboratorySession: "15"
+taxonomyLevel: "C3 (Applying) / C4 (Analyzing)"
+clo: "CLO-15: Perform matrix operations including addition, multiplication, transposition, and inversion in MATLAB."
+domain: "Scientific Computing — Linear Algebra"
+difficulty: "intermediate"
+status: "completed"
+featured: false
+tags:
+  - MATLAB
+  - Matrix Operations
+  - Linear Algebra
+  - Matrix Multiplication
+  - Transpose
+  - Matrix Inversion
+technologies:
+  - MATLAB
+software:
+  - MATLAB R2023a or later
+hardware: []
+tools:
+  - MATLAB IDE
+skills:
+  - Matrix Addition
+  - Matrix Multiplication
+  - Matrix Transposition
+  - Matrix Inversion
+  - Determinant Calculation
+  - Linear Algebra Operations
+seoTitle: "Matrix Operations in MATLAB — EEDW Lab 15"
+seoDescription: "Learn matrix operations in MATLAB including addition, multiplication, transposition, inversion, and determinant calculation for linear algebra applications."
+---
+
+# Matrix Operations in MATLAB
+
+## Overview
+
+Matrix operations form the foundation of MATLAB's computational capabilities. MATLAB's name is derived from MATrix LABoratory, reflecting its core strength in matrix computation. This laboratory session covers fundamental matrix operations including creation, indexing, arithmetic, transposition, inversion, and solving systems of linear equations.
+
+## Objective
+
+To create matrices using different methods (explicit entry, functions, concatenation), perform matrix addition, subtraction, multiplication, and element-wise operations, compute matrix transpose, determinant, and inverse, solve systems of linear equations using matrix methods, and understand the difference between matrix and element-wise operations.
+
+## Domain
+
+Scientific Computing — Linear Algebra and Numerical Methods.
+
+## CLO and Taxonomy Level
+
+- **CLO-15**: Perform matrix operations including addition, multiplication, transposition, and inversion in MATLAB.
+- **Taxonomy Level**: C3 (Applying) — Apply matrix operations to solve problems. C4 (Analyzing) — Analyze matrix properties to determine appropriate operations.
+
+## Tools and Software
+
+- **Software**: MATLAB R2023a or later
+
+## Required Skills
+
+- Basic MATLAB operations (Labs 13-14)
+- Understanding of linear algebra concepts from mathematics
+
+## Theory and Engineering Concepts
+
+- **Matrix Dimensions**: Specified as rows × columns. A 3×4 matrix has 3 rows and 4 columns.
+- **Matrix Multiplication**: A(m×n) × B(n×p) = C(m×p). The inner dimensions must match.
+- **Element-wise Operations**: Use the dot operator (.*, ./, .^) to perform operations on corresponding elements.
+- **Matrix Transpose**: Swaps rows and columns. Denoted by A' in MATLAB.
+- **Matrix Inverse**: A⁻¹ such that A × A⁻¹ = I (identity matrix). Only square matrices have inverses.
+- **Determinant**: A scalar value that indicates whether a matrix is invertible (det ≠ 0).
+
+## Project / Task
+
+Create various matrices using different methods, perform matrix arithmetic operations, compute matrix properties (determinant, inverse), and solve a system of linear equations representing a circuit analysis problem.
+
+## Procedure / Implementation
+
+### Step 1: Matrix Creation
+
+1. Create matrices using direct entry:
+   ```matlab
+   >> A = [1, 2, 3; 4, 5, 6; 7, 8, 9]
+   >> B = [10, 11, 12; 13, 14, 15; 16, 17, 18]
+   ```
+2. Create matrices using built-in functions:
+   ```matlab
+   >> zeros(3, 4)      % 3x4 matrix of zeros
+   >> ones(3, 3)       % 3x3 matrix of ones
+   >> eye(4)           % 4x4 identity matrix
+   >> rand(3, 2)       % 3x2 matrix of random numbers
+   ```
+
+### Step 2: Matrix Arithmetic
+
+1. Matrix addition and subtraction:
+   ```matlab
+   >> C = A + B
+   >> D = A - B
+   ```
+2. Scalar operations:
+   ```matlab
+   >> E = A * 2        % Multiply every element by 2
+   >> F = A + 10       % Add 10 to every element
+   ```
+
+### Step 3: Matrix Multiplication
+
+1. Matrix multiplication:
+   ```matlab
+   >> A = [1, 2; 3, 4]
+   >> B = [5, 6; 7, 8]
+   >> C = A * B        % Standard matrix multiplication
+   ```
+2. Element-wise multiplication:
+   ```matlab
+   >> D = A .* B       % Element-by-element multiplication
+   ```
+
+### Step 4: Matrix Transpose and Inverse
+
+1. Transpose:
+   ```matlab
+   >> A = [1, 2, 3; 4, 5, 6]
+   >> A_transpose = A'  % Results in 3x2 matrix
+   ```
+2. Determinant and inverse:
+   ```matlab
+   >> M = [4, 7; 2, 6]
+   >> det_M = det(M)    % Determinant: 10
+   >> M_inv = inv(M)    % Inverse: [0.6, -0.7; -0.2, 0.4]
+   >> verify = M * M_inv  % Should be identity matrix
+   ```
+
+### Step 5: Solving Linear Systems
+
+1. Solve the circuit equations using matrix methods:
+   ```matlab
+   % System of equations:
+   % 2x + y = 5
+   % x - 3y = -8
+   
+   A = [2, 1; 1, -3]
+   b = [5; -8]
+   x = A \ b          % Solution using left division
+   % x = [1; 3] meaning x = 1, y = 3
+   ```
+2. Alternative method using inverse:
+   ```matlab
+   x = inv(A) * b
+   ```
+
+## What Was Done
+
+Created matrices using direct entry and built-in functions (zeros, ones, eye, rand). Performed matrix addition, subtraction, scalar operations, standard matrix multiplication, and element-wise multiplication. Computed matrix transpose, determinant, and inverse. Solved a system of two linear equations representing a circuit analysis problem using both left division and inverse methods, obtaining the correct solution (x = 1, y = 3).
+
+## What Was Learnt
+
+- Multiple methods for matrix creation in MATLAB
+- The critical difference between matrix operations (*) and element-wise operations (.*)
+- Matrix multiplication dimension compatibility rules
+- The relationship between determinant and matrix invertibility
+- Solving linear systems using left division (\) and matrix inversion
+
+## Industry Applications
+
+- Circuit analysis using mesh and nodal analysis
+- Structural engineering finite element analysis
+- Control system state-space representation
+- Signal processing multi-channel data
+- Machine learning algorithms (linear regression, neural networks)
+
+## Skills Developed
+
+- Matrix creation and manipulation
+- Matrix arithmetic operations
+- Linear system solving
+- Understanding of matrix properties
+- Application of linear algebra to engineering problems
+
+## Related Topics
+
+- [Arithmetic Operations and Formulas](/content/labs/matlab-arithmetic-operations-formulas)
+- [Matrix Construction](/content/labs/matlab-matrix-construction)
+- [Linear Systems and Array Operations](/content/labs/matlab-linear-systems-array-operations)
+
+## Media
+
+### Images
+
+<!-- Upload matrix operation screenshots from admin panel -->
+<!-- Upload linear system solution from admin panel -->
+
+### Videos
+
+<!-- Upload matrix operation tutorial video from admin panel -->
+
+### Documents
+
+<!-- Upload linear algebra reference from admin panel -->
+
+### Files
+
+<!-- Upload matrix_operations.m script from admin panel -->

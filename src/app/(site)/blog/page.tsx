@@ -60,8 +60,8 @@ export default async function BlogPage({ searchParams }: PageProps) {
               className={cn(
                 "relative px-4 py-1.5 rounded-full text-sm font-medium transition-all duration-200",
                 !tag
-                  ? "bg-primary text-primary-foreground shadow-[0_0_12px_rgb(99_102_241_/_0.3)]"
-                  : "bg-muted/60 text-muted-foreground hover:text-foreground hover:bg-muted"
+                  ? "bg-primary text-primary-foreground shadow-primary-glow"
+                  : "bg-surface-secondary/60 text-muted-foreground hover:text-foreground hover:bg-surface-secondary"
               )}
             >
               All
@@ -75,8 +75,8 @@ export default async function BlogPage({ searchParams }: PageProps) {
                   className={cn(
                     "px-4 py-1.5 rounded-full text-sm font-medium transition-all duration-200",
                     isActive
-                      ? "bg-primary text-primary-foreground shadow-[0_0_12px_rgb(99_102_241_/_0.3)]"
-                      : "bg-muted/60 text-muted-foreground hover:text-foreground hover:bg-muted"
+                      ? "bg-primary text-primary-foreground shadow-primary-glow"
+                      : "bg-surface-secondary/60 text-muted-foreground hover:text-foreground hover:bg-surface-secondary"
                   )}
                 >
                   {t}
@@ -91,7 +91,7 @@ export default async function BlogPage({ searchParams }: PageProps) {
       {posts.length === 0 ? (
         <FadeIn delay={0.2}>
           <div className="flex flex-col items-center justify-center py-24 text-center">
-            <div className="w-12 h-12 rounded-2xl bg-muted/60 flex items-center justify-center mb-4 text-xl">
+            <div className="w-12 h-12 rounded-2xl bg-surface-secondary/60 flex items-center justify-center mb-4 text-xl">
               ✦
             </div>
             <p className="text-muted-foreground font-medium mb-1">
@@ -114,10 +114,10 @@ export default async function BlogPage({ searchParams }: PageProps) {
               <StaggerItem key={post.id}>
                 <Link
                   href={`/blog/${post.slug}`}
-                  className="group block h-full rounded-2xl border border-border/50 bg-card overflow-hidden hover:border-primary/30 hover:shadow-[0_8px_40px_rgb(99_102_241_/_0.08)] transition-all duration-300"
+                  className="group block h-full rounded-2xl border border-card-border/50 bg-card-background overflow-hidden hover:border-primary/30 hover:shadow-card-primary-soft transition-all duration-300"
                 >
                   {/* Cover */}
-                  <div className="aspect-[16/9] overflow-hidden bg-muted/40">
+                  <div className="aspect-[16/9] overflow-hidden bg-surface-secondary/40">
                     {post.coverImage ? (
                       <img
                         src={post.coverImage}
@@ -145,7 +145,7 @@ export default async function BlogPage({ searchParams }: PageProps) {
                         {post.tags.slice(0, 3).map((t) => (
                           <span
                             key={t}
-                            className="text-[10px] px-2 py-0.5 rounded-md bg-primary/8 text-primary border border-primary/15 font-medium uppercase tracking-wider"
+                            className="text-xxs px-2 py-0.5 rounded-md bg-primary/8 text-primary border border-primary/15 font-medium uppercase tracking-wider"
                           >
                             {t}
                           </span>
@@ -215,8 +215,8 @@ export default async function BlogPage({ searchParams }: PageProps) {
                   className={cn(
                     "w-9 h-9 rounded-lg flex items-center justify-center text-sm font-medium transition-all duration-200",
                     page === currentPage
-                      ? "bg-primary text-primary-foreground shadow-[0_0_12px_rgb(99_102_241_/_0.25)]"
-                      : "text-muted-foreground hover:text-foreground hover:bg-muted/60"
+                      ? "bg-primary text-primary-foreground shadow-primary-glow-strong"
+                      : "text-muted-foreground hover:text-foreground hover:bg-surface-secondary/60"
                   )}
                   aria-current={page === currentPage ? "page" : undefined}
                   aria-label={`Page ${page}`}
@@ -268,7 +268,7 @@ function PaginationButton({
   return (
     <Link
       href={href}
-      className="px-4 py-2 rounded-xl text-sm text-muted-foreground hover:text-foreground hover:bg-muted/60 transition-colors duration-150"
+      className="px-4 py-2 rounded-xl text-sm text-muted-foreground hover:text-foreground hover:bg-surface-secondary/60 transition-colors duration-150"
     >
       {children}
     </Link>

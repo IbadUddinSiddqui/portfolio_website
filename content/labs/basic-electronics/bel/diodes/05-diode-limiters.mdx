@@ -1,0 +1,179 @@
+---
+title: "Diode Limiters (Clipper Circuits)"
+slug: "bel-diode-limiters"
+type: "labs"
+category: "basic-electronics"
+subcategory: "Diode Circuits"
+course: "Basic Electronics Laboratory"
+department: "Electrical / Electronics Engineering"
+semester: "1st"
+year: "2023"
+laboratorySession: "05"
+domain: "Waveform Shaping"
+taxonomyLevel: "P3"
+clo: "CLO-3"
+difficulty: "intermediate"
+status: "completed"
+featured: false
+tags:
+  - Basic Electronics
+  - Diode
+  - Limiter
+  - Clipper
+  - Waveform Shaping
+  - Overvoltage Protection
+technologies:
+  - Analog Electronics
+  - Waveform Shaping
+software:
+  - Multisim (optional)
+hardware:
+  - PN Junction Diodes (1N4007 × 2)
+  - Resistors (1kΩ, 10kΩ)
+  - DC Power Supply
+  - Function Generator
+  - Oscilloscope
+  - DMM
+components:
+  - 1N4007 Diodes (2)
+  - 1kΩ Resistor
+  - 10kΩ Resistor
+tools:
+  - Breadboard
+  - Jumper Wires
+skills:
+  - Limiter Circuit Design
+  - Waveform Clipping
+  - Series and Shunt Configurations
+circuits:
+  - Series Diode Limiter
+  - Shunt Diode Limiter
+seoTitle: "Diode Limiters (Clipper Circuits) — BEL Lab 05"
+seoDescription: "Implement and test diode limiter (clipper) circuits for waveform shaping and overvoltage protection in series and shunt configurations."
+---
+
+# Diode Limiters (Clipper Circuits)
+
+## Overview
+
+Diode limiter circuits, also known as clippers, are used to remove or clip portions of an input signal above or below a specified voltage level. They are essential for waveform shaping, signal conditioning, and overvoltage protection. This laboratory session covers both series and shunt diode limiter configurations.
+
+## Objective
+
+To practice the implementation and testing of diode limiter (clipper) circuits in series and shunt configurations.
+
+## Domain
+
+Waveform Shaping — Signal Conditioning and Protection Circuits.
+
+## CLO and Taxonomy Level
+
+- **CLO-3**: Implement and analyze diode limiter circuits for waveform shaping.
+- **Taxonomy Level**: P3 — Supervised Practice (Practical application of limiter circuits under guidance).
+
+## Components and Equipment
+
+- **Semiconductors**: 1N4007 diodes (2)
+- **Passive Components**: 1kΩ resistor, 10kΩ resistor
+- **Equipment**: Function generator, DC power supply, Oscilloscope, DMM
+
+## Required Skills
+
+- Diode forward/reverse bias behavior
+- Understanding of signal waveforms
+
+## Theory and Engineering Concepts
+
+- **Series Limiter**: The diode is in series with the load. The diode conducts only when the input voltage exceeds the diode's forward voltage (≈0.7V for silicon), clipping the negative portion of the input signal.
+- **Shunt Limiter**: The diode is connected in parallel (shunt) with the load, with a bias voltage. When the input exceeds the bias voltage + 0.7V, the diode conducts and clips the signal.
+- **Biased Limiter**: By adding a DC bias voltage, the clipping level can be adjusted to any desired voltage.
+- **Applications**: Overvoltage protection, amplitude limiting, waveform shaping, noise removal.
+
+## Circuit Configuration
+
+Two configurations are tested:
+- **Series Positive Clipper**: Diode in series with signal path, clips negative half-cycles
+- **Shunt Positive Clipper**: Diode in shunt with load, clips above bias voltage
+
+## Procedure / Implementation
+
+### Step 1: Series Limiter
+
+1. Connect the diode in series between the function generator and load resistor
+2. Set the function generator to output a 5Vpp sine wave at 1kHz
+3. Observe the output across the load using the oscilloscope
+4. Note which portion of the waveform is clipped
+
+### Step 2: Shunt Limiter
+
+1. Connect the diode in parallel with the load resistor
+2. Add a DC bias voltage source in series with the diode
+3. Observe the clipping action above the bias voltage + 0.7V
+4. Vary the bias voltage and observe changes in clipping level
+
+### Step 3: Symmetrical Clipping
+
+1. Use two back-to-back diodes (Zener or regular diodes) to clip both positive and negative peaks
+2. Observe the symmetrical waveform limiting
+
+## What Was Done
+
+Implemented series and shunt diode limiter circuits to clip specific parts of an input signal waveform. Tested with sine wave input at various bias voltages and observed the clipping action.
+
+## Results and Observations
+
+*Place waveform screenshots showing clipped output here.*
+
+| Configuration | Input | Output | Clipping Level |
+|--------------|-------|--------|----------------|
+| Series (no bias) | 5Vpp sine | Positive half only | 0V (negative clipped) |
+| Shunt (2V bias) | 5Vpp sine | Clipped above ≈2.7V | Vbias + 0.7V |
+| Symmetrical | 5Vpp sine | Both peaks clipped | ±Vz |
+
+## What Was Learnt
+
+- Limiters are effective for protecting circuits from over-voltage or for shaping waveforms
+- Series limiters remove entire half-cycles; shunt limiters clip above adjustable thresholds
+- Biased limiters allow precise control of the clipping voltage
+- Back-to-back Zener diodes provide symmetrical bipolar clipping
+
+## Engineering Applications
+
+- Overvoltage protection in sensitive electronic circuits
+- Amplitude limiting in communication receivers
+- Signal conditioning for data acquisition systems
+- Audio distortion and effect circuits
+- Square wave generation from sine waves
+
+## Skills Developed
+
+- Series and shunt limiter circuit construction
+- Biased clipping level adjustment
+- Waveform clipping observation and measurement
+- Clipping threshold calculation
+
+## Related Topics
+
+- [Diode Clampers](/content/labs/bel-diode-clampers)
+- [Zener Diode Voltage Regulator](/content/labs/bel-zener-diode-voltage-regulator)
+- [Inverting and Non-Inverting Amplifiers](/content/labs/bel-inverting-and-non-inverting-amplifiers)
+
+## Media
+
+### Images
+
+<!-- Upload series limiter circuit diagram from admin panel -->
+<!-- Upload clipped waveform screenshots from admin panel -->
+<!-- Upload breadboard circuit photo from admin panel -->
+
+### Videos
+
+<!-- Upload limiter circuit demonstration from admin panel -->
+
+### Documents
+
+<!-- Upload lab report from admin panel -->
+
+### Simulation Files
+
+<!-- Upload Multisim limiter simulation from admin panel -->

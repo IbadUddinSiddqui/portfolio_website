@@ -1,0 +1,225 @@
+---
+title: "Introduction to Turbo C IDE — Programming Environment"
+slug: "tc106-introduction-to-turbo-c-ide"
+type: "labs"
+category: "Computer Programming"
+subcategory: "C Programming"
+course: "TC-106 Computer Programming Lab"
+department: "Computer Science / Engineering"
+semester: "1st"
+year: "2023"
+laboratorySession: "02"
+domain: "Software"
+taxonomyLevel: "P3"
+difficulty: "beginner"
+status: "completed"
+featured: false
+tags:
+  - Turbo C
+  - IDE
+  - C Programming
+  - Compiler
+  - Development Environment
+technologies:
+  - Turbo C++ IDE
+  - C Language
+software:
+  - Turbo C++ IDE 3.0
+  - DOSBox (for modern systems)
+hardware:
+  - Computer (Laptop/Desktop)
+tools:
+  - Turbo C++ IDE
+  - Text Editor
+skills:
+  - IDE Navigation
+  - Source Code Editing
+  - Compilation
+  - Linking
+  - Program Execution
+programmingLanguages:
+  - C
+seoTitle: "Introduction to Turbo C IDE — TC-106 Lab 02"
+seoDescription: "Learn the Turbo C++ IDE environment, C program development cycle, and create your first Hello World program in C."
+---
+
+# Introduction to Turbo C IDE — Programming Environment
+
+## Overview
+
+The Turbo C++ IDE (Integrated Development Environment) is a classic development environment for C and C++ programming. This laboratory session introduces the Turbo C IDE interface, the C program development cycle, and guides students through creating, compiling, and executing their first C program.
+
+## Objective
+
+Introduction of Turbo C IDE and Programming Environment. To understand the complete C development workflow from source code editing to program execution.
+
+## Domain
+
+Software — Programming Environment and Development Tools.
+
+## Taxonomy Level
+
+P3 — Supervised Practice (Practical application of IDE tools under guidance).
+
+## Tools and Technologies
+
+- **Software**: Turbo C++ IDE 3.0 (or DOSBox emulator on modern systems)
+- **Hardware**: Computer (laptop/desktop)
+- **Tools**: IDE menus, Editor window, Compiler, Linker
+
+## Required Skills
+
+- Software menu identification
+- Syntax navigation
+- File management (creating, saving, opening files)
+- Basic typing skills
+
+## Concepts Covered
+
+- **IDE Overview**: The Turbo C IDE consists of the menu bar, editor window, message window, and status bar
+- **C Development Cycle**: The four-stage process of editing, compiling, linking, and executing
+- **Source Code**: The human-readable C program written in the editor
+- **Object File (.obj)**: The compiled output of the source code, containing machine code with unresolved references
+- **Executable File (.exe)**: The final linked program that can be executed by the operating system
+- **Compiler vs. Linker**: The compiler translates source code to object code; the linker resolves external references and creates the executable
+
+## Project / Task
+
+Implement, compile, link, and execute a "Hello World" program in C using the Turbo C++ IDE.
+
+## Implementation
+
+### Step 1: Launch Turbo C++ IDE
+
+1. If using DOSBox, mount the Turbo C directory:
+   ```
+   mount c: C:\TC
+   c:
+   cd TC\BIN
+   tc.exe
+   ```
+2. If using native Turbo C, navigate to the BIN directory and run `TC.EXE`
+3. The IDE opens with the menu bar at the top and editor window in the center
+
+### Step 2: Create a New File
+
+1. Press **Alt+F** to open the File menu
+2. Select **New** (or press **Ctrl+N**) to open a new edit window
+3. The cursor appears in the editor window ready for code input
+
+### Step 3: Write the Hello World Program
+
+1. Type the following C source code:
+   ```c
+   #include <stdio.h>
+   #include <conio.h>
+
+   void main() {
+       clrscr();
+       printf("Hello World!");
+       printf("\nWelcome to C Programming");
+       getch();
+   }
+   ```
+2. Explanation of each line:
+   - `#include <stdio.h>` — Includes standard input/output functions
+   - `#include <conio.h>` — Includes console input/output functions
+   - `void main()` — The main function, entry point of every C program
+   - `clrscr()` — Clears the console screen
+   - `printf()` — Prints text to the console
+   - `getch()` — Waits for a key press before closing
+
+### Step 4: Save the File
+
+1. Press **F2** or select **File → Save**
+2. Enter the filename: `HELLO.C`
+3. Choose an appropriate directory (e.g., `C:\TC\BIN\`)
+4. Verify the file extension is `.C` (indicating a C source file)
+
+### Step 5: Compile the Program
+
+1. Press **Alt+F9** or select **Compile → Compile to OBJ**
+2. The compiler checks the source code for syntax errors
+3. The Message window displays compilation progress:
+   - **Success**: "Compilation successful" — an object file `HELLO.OBJ` is created
+   - **Errors**: Error messages with line numbers for debugging
+
+### Step 6: Link the Program
+
+1. Press **F9** or select **Compile → Link EXE file**
+2. The linker resolves library references and creates the executable `HELLO.EXE`
+3. Verify no errors appear in the message window
+
+### Step 7: Execute the Program
+
+1. Press **Ctrl+F9** or select **Run → Run** to execute the program
+2. The program runs in a separate console window
+3. Output displays:
+   ```
+   Hello World!
+   Welcome to C Programming
+   ```
+4. Press any key to return to the IDE
+
+### Step 8: Debugging (If Errors Occur)
+
+1. If compilation fails, check:
+   - Missing semicolons at the end of statements
+   - Misspelled keywords (e.g., `printf` not `printf`)
+   - Missing closing braces or parentheses
+   - Correct capitalisation (C is case-sensitive)
+2. Correct the errors and recompile
+
+## What Was Done
+
+Invoked the IDE, created a new edit window, typed the Hello World source code, compiled it to an object file (HELLO.OBJ), linked it to generate an executable file (HELLO.EXE), and executed the program to display "Hello World!" and "Welcome to C Programming" on the console.
+
+## What Was Learnt
+
+- Understanding of the C development cycle: edit → compile → link → execute
+- Navigation and usage of the Turbo C++ IDE environment
+- The difference between source code (.C), object code (.OBJ), and executable (.EXE) files
+- Common compilation errors and debugging techniques
+- The role of preprocessor directives (#include), the main() function, and library functions
+
+## Engineering Applications
+
+- Software development using integrated development environments
+- Understanding the compilation pipeline in modern C/C++ compilers (GCC, Clang)
+- Debugging and testing software applications
+- Embedded systems programming with C
+- Automated build systems and Makefiles
+
+## Skills Developed
+
+- Turbo C++ IDE navigation and usage
+- Source code editing and file management
+- Compilation and linking processes
+- Program execution and testing
+- Basic error identification and debugging
+
+## Related Topics
+
+- [Computer System Fundamentals](/content/labs/tc106-computer-system-fundamentals)
+- [Basic Building Blocks of C](/content/labs/tc106-basic-building-blocks-of-c)
+- [Arithmetic and Logical Operators](/content/labs/tc106-arithmetic-and-logical-operators)
+
+## Media
+
+### Images
+
+<!-- Upload Turbo C++ IDE screenshot from admin panel -->
+<!-- Upload Hello World program output from admin panel -->
+<!-- Upload compilation success message from admin panel -->
+
+### Videos
+
+<!-- Upload IDE tutorial demonstration from admin panel -->
+
+### Code Files
+
+<!-- Upload HELLO.C source file from admin panel -->
+
+### Documents
+
+<!-- Upload lab report from admin panel -->

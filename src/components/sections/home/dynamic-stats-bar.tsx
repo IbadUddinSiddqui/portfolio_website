@@ -25,7 +25,7 @@ export async function DynamicStatsBar() {
 
   return (
     <FadeIn direction="up" delay={0.1}>
-      <section className="border-y border-border/40 bg-muted/20 backdrop-blur-sm" aria-label="Statistics">
+      <section className="border-y border-border/40 bg-surface-secondary/20 backdrop-blur-sm" aria-label="Statistics">
         <div className="container">
           <div className="grid grid-cols-2 md:grid-cols-4 divide-x divide-border/40">
             {items.map(({ value, label }) => (

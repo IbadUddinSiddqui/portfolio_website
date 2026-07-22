@@ -1,0 +1,192 @@
+---
+title: "Half-Wave Rectifier"
+slug: "bel-half-wave-rectifier"
+type: "labs"
+category: "basic-electronics"
+subcategory: "Rectifiers"
+course: "Basic Electronics Laboratory"
+department: "Electrical / Electronics Engineering"
+semester: "1st"
+year: "2023"
+laboratorySession: "02"
+domain: "Circuit Analysis"
+taxonomyLevel: "P3"
+clo: "CLO-3"
+difficulty: "beginner"
+status: "completed"
+featured: false
+tags:
+  - Basic Electronics
+  - Rectifier
+  - Half-Wave Rectifier
+  - Diode
+  - AC to DC Conversion
+  - Pulsating DC
+technologies:
+  - Analog Electronics
+  - Power Electronics
+software:
+  - Multisim (optional for simulation)
+hardware:
+  - PN Junction Diode (1N4007)
+  - Resistor (1kΩ, 10kΩ)
+  - Step-down Transformer (12-0-12V)
+  - Oscilloscope
+  - DMM
+  - Function Generator
+components:
+  - 1N4007 Diode
+  - 1kΩ Resistor
+  - 10kΩ Resistor
+tools:
+  - Breadboard
+  - Jumper Wires
+  - Oscilloscope Probes
+skills:
+  - Rectifier Circuit Construction
+  - Waveform Analysis
+  - Ripple Measurement
+  - DC Voltage Measurement
+circuits:
+  - Half-Wave Rectifier
+seoTitle: "Half-Wave Rectifier — BEL Lab 02"
+seoDescription: "Construct and analyze a half-wave rectifier circuit using a PN junction diode to convert AC to pulsating DC."
+---
+
+# Half-Wave Rectifier
+
+## Overview
+
+The half-wave rectifier is the simplest form of rectifier circuit, converting alternating current (AC) to pulsating direct current (DC) using a single diode. While simple and economical, it has low efficiency due to utilizing only one half of the AC cycle. This laboratory session covers the construction, operation, and analysis of the half-wave rectifier.
+
+## Objective
+
+To practice the operation and analysis of a half-wave rectifier circuit using a PN-junction diode and resistive load.
+
+## Domain
+
+Circuit Analysis — Rectification and AC-to-DC Conversion.
+
+## CLO and Taxonomy Level
+
+- **CLO-3**: Analyze and construct rectifier circuits for AC-to-DC conversion.
+- **Taxonomy Level**: P3 — Supervised Practice (Practical application of rectifier circuits under guidance).
+
+## Components and Equipment
+
+- **Semiconductors**: 1N4007 PN-junction diode (or equivalent)
+- **Passive Components**: 1kΩ resistor (load), 10kΩ resistor
+- **Equipment**: Step-down transformer (12-0-12V) or function generator, Oscilloscope, DMM
+- **Tools**: Breadboard, Jumper wires
+
+## Required Skills
+
+- Understanding of AC and DC voltage concepts
+- Diode forward bias and reverse bias behavior
+- Oscilloscope operation (Lab 01)
+
+## Theory and Engineering Concepts
+
+- **Rectification**: The process of converting AC to DC. A diode conducts only during the positive half-cycle of the AC input (forward bias) and blocks during the negative half-cycle (reverse bias).
+- **Half-Wave Operation**: Only one half of the AC waveform appears across the load, resulting in a pulsating DC output.
+- **Peak Inverse Voltage (PIV)**: The maximum reverse voltage the diode must withstand. For a half-wave rectifier, PIV = Vm (peak voltage of the input).
+- **Ripple Factor**: A measure of the AC component remaining in the rectified output. For an unfiltered half-wave rectifier, ripple factor ≈ 1.21 (121%).
+- **Average DC Output**: Vdc = Vm/π ≈ 0.318 × Vm, where Vm is the peak voltage.
+
+## Circuit Configuration
+
+The half-wave rectifier consists of:
+- AC input source (transformer secondary or function generator)
+- Single diode connected in series with the load
+- Load resistor connected between the diode cathode and ground
+
+Signal flow: AC Input → Diode (conducts during positive half-cycle) → Pulsating DC across load
+
+## Procedure / Implementation
+
+### Step 1: Circuit Construction
+
+1. Mount the diode on the breadboard, noting the cathode marking (band)
+2. Connect the diode anode to the AC source positive terminal
+3. Connect the diode cathode to one end of the 1kΩ load resistor
+4. Connect the other end of the load resistor to ground
+5. Connect the AC source ground to the same ground point
+
+### Step 2: Testing and Measurement
+
+1. Set the function generator to output a 10Vpp sine wave at 50Hz
+2. Connect the oscilloscope Channel 1 to measure the input AC signal
+3. Connect oscilloscope Channel 2 to measure the output across the load resistor
+4. Apply power to the circuit
+5. Observe and sketch both input and output waveforms
+
+### Step 3: Measurements
+
+1. Measure the peak voltage (Vp) of the output waveform
+2. Measure the DC voltage using the DMM in DC mode
+3. Measure the AC ripple voltage using the DMM in AC mode
+4. Record all measurements in a table
+
+## What Was Done
+
+Constructed a half-wave rectifier circuit using a 1N4007 PN-junction diode and a 1kΩ resistive load. The circuit was tested with a 10Vpp, 50Hz sine wave input. The output waveform showed only the positive half-cycles, resulting in pulsating DC.
+
+## Results and Observations
+
+| Parameter | Measured Value | Theoretical Value |
+|-----------|---------------|-------------------|
+| Peak Input Voltage | 10 Vpp | — |
+| Peak Output Voltage | ≈4.5 V | Vm ≈ 4.5V |
+| DC Output Voltage (DMM) | ≈1.43 V | Vdc = Vm/π = 1.43V |
+| Ripple Frequency | 50 Hz | Same as input |
+
+*Place recordings and waveform sketches here.*
+
+## What Was Learnt
+
+- The half-wave rectifier circuit clips the negative half-cycle of the AC input, resulting in a pulsating DC output with a high ripple factor
+- The average DC output voltage is approximately 31.8% of the peak voltage
+- The ripple frequency equals the input frequency (50Hz)
+- The circuit has low efficiency since it utilizes only one half of the AC cycle
+
+## Engineering Applications
+
+- Low-power DC power supplies
+- Battery charging circuits
+- Signal demodulation in communication receivers
+- Peak detector circuits
+- Low-cost rectification applications
+
+## Skills Developed
+
+- Half-wave rectifier circuit construction
+- Diode forward/reverse bias observation
+- Input/output waveform comparison
+- DC and ripple voltage measurement
+- Rectifier efficiency analysis
+
+## Related Topics
+
+- [Center-Tapped Full-Wave Rectifier](/content/labs/bel-center-tapped-full-wave-rectifier)
+- [Bridge Rectifier and Filtering](/content/labs/bel-bridge-rectifier-filtering)
+- [Zener Diode Voltage Regulator](/content/labs/bel-zener-diode-voltage-regulator)
+
+## Media
+
+### Images
+
+<!-- Upload half-wave rectifier circuit diagram from admin panel -->
+<!-- Upload input/output waveform screenshot from admin panel -->
+<!-- Upload breadboard circuit photo from admin panel -->
+
+### Videos
+
+<!-- Upload rectifier operation demonstration from admin panel -->
+
+### Documents
+
+<!-- Upload lab report from admin panel -->
+
+### Simulation Files
+
+<!-- Upload Multisim simulation file from admin panel -->

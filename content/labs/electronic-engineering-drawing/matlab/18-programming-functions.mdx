@@ -1,0 +1,254 @@
+---
+title: "Programming and Functions in MATLAB"
+slug: "matlab-programming-functions"
+type: "labs"
+category: "Electronic Engineering Drawing"
+subcategory: "MATLAB"
+course: "Electronic Engineering Drawing & Engineering Software (EEDW)"
+department: "Electronic Engineering"
+semester: "1st"
+year: "2023"
+laboratorySession: "18"
+taxonomyLevel: "C4 (Analyzing) / C6 (Creating)"
+clo: "CLO-18: Write MATLAB programs using control flow, functions, and structured programming techniques."
+domain: "Scientific Computing — Programming Fundamentals"
+difficulty: "intermediate"
+status: "completed"
+featured: false
+tags:
+  - MATLAB
+  - Programming
+  - Functions
+  - Control Flow
+  - Conditional Statements
+  - Loops
+technologies:
+  - MATLAB
+software:
+  - MATLAB R2023a or later
+hardware: []
+tools:
+  - MATLAB Editor
+  - Debugger
+skills:
+  - MATLAB Programming
+  - Function Definition
+  - Conditional Statements
+  - Loop Constructs
+  - Debugging
+  - Structured Programming
+seoTitle: "Programming and Functions in MATLAB — EEDW Lab 18"
+seoDescription: "Learn MATLAB programming fundamentals including function definitions, conditional statements, loops, and structured programming techniques for engineering applications."
+---
+
+# Programming and Functions in MATLAB
+
+## Overview
+
+MATLAB supports a full-featured programming language with control flow statements, function definitions, and structured programming capabilities. This laboratory session covers writing MATLAB programs with conditional statements, loops, and user-defined functions for engineering problem solving.
+
+## Objective
+
+To write MATLAB scripts with conditional statements (if-elseif-else, switch-case), implement loops (for, while) for iterative computations, create user-defined functions with input and output arguments, understand variable scope (local vs. global), and debug MATLAB programs using the debugger tool.
+
+## Domain
+
+Scientific Computing — Software Development Fundamentals.
+
+## CLO and Taxonomy Level
+
+- **CLO-18**: Write MATLAB programs using control flow, functions, and structured programming techniques.
+- **Taxonomy Level**: C4 (Analyzing) — Analyze problems to determine appropriate control flow. C6 (Creating) — Create structured programs with reusable functions.
+
+## Tools and Software
+
+- **Software**: MATLAB R2023a or later
+- **Tools**: MATLAB Editor and Debugger
+
+## Required Skills
+
+- MATLAB basics (Labs 13-17)
+- Understanding of programming logic concepts
+
+## Theory and Engineering Concepts
+
+MATLAB functions can be either local (defined within a script) or separate function files. Key concepts include:
+
+- **Function Definition**: Functions are defined with `function [outputs] = functionName(inputs)`
+- **Variable Scope**: Variables inside functions are local by default. Global variables can be declared with the `global` keyword.
+- **Vectorization**: MATLAB is optimized for vector/matrix operations. Loops should be avoided when vectorized operations can achieve the same result.
+- **Debugging**: MATLAB provides a graphical debugger with breakpoints, step-through execution, and variable inspection.
+
+## Project / Task
+
+Create a structured MATLAB program with user-defined functions to analyze an electrical circuit. The program should calculate voltage, current, and power for multiple resistor values using both loop-based and vectorized approaches, and include error checking for invalid inputs.
+
+## Procedure / Implementation
+
+### Step 1: Conditional Statements (if-elseif-else)
+
+1. Create a script with conditional logic:
+   ```matlab
+   % Resistor color code decoder
+   resistance = 470;  % Ohms
+   
+   if resistance < 10
+       category = 'Very Low';
+   elseif resistance < 1000
+       category = 'Low';
+   elseif resistance < 100000
+       category = 'Medium';
+   elseif resistance < 1000000
+       category = 'High';
+   else
+       category = 'Very High';
+   end
+   disp(['Resistance category: ', category]);
+   ```
+
+### Step 2: Switch-Case Statements
+
+1. Implement component identification:
+   ```matlab
+   component = 'R';  % R, C, L, D for resistor, capacitor, inductor, diode
+   
+   switch component
+       case 'R'
+           disp('Resistor - measures resistance in Ohms');
+       case 'C'
+           disp('Capacitor - measures capacitance in Farads');
+       case 'L'
+           disp('Inductor - measures inductance in Henrys');
+       case 'D'
+           disp('Diode - allows current flow in one direction');
+       otherwise
+           disp('Unknown component type');
+   end
+   ```
+
+### Step 3: For Loops
+
+1. Calculate power for multiple resistors:
+   ```matlab
+   V = 12;  % Voltage
+   R_values = [100, 220, 470, 1000, 2200];  % Resistor values
+   
+   for i = 1:length(R_values)
+       R = R_values(i);
+       I = V / R;
+       P = V^2 / R;
+       fprintf('R = %d Ohms: I = %.3f A, P = %.3f W\n', R, I, P);
+   end
+   ```
+
+### Step 4: While Loops
+
+1. Implement convergence loop:
+   ```matlab
+   tolerance = 1e-6;
+   x = 1;
+   error = 1;
+   iterations = 0;
+   
+   while error > tolerance
+       x_new = x - (x^2 - 2) / (2*x);  % Newton's method for sqrt(2)
+       error = abs(x_new - x);
+       x = x_new;
+       iterations = iterations + 1;
+   end
+   
+   disp(['sqrt(2) = ', num2str(x), ' (', num2str(iterations), ' iterations)']);
+   ```
+
+### Step 5: User-Defined Functions
+
+1. Create a function file `circuit_analysis.m`:
+   ```matlab
+   function [voltage, current, power] = circuit_analysis(Vin, R1, R2)
+   % CIRCUIT_ANALYSIS - Analyzes a voltage divider circuit
+   %   [V, I, P] = circuit_analysis(Vin, R1, R2) returns:
+   %   V - Output voltage across R2
+   %   I - Current through the circuit
+   %   P - Power dissipated in R1
+   
+       % Check for valid inputs
+       if R1 <= 0 || R2 <= 0
+           error('Resistor values must be positive');
+       end
+       
+       % Calculate voltage divider output
+       voltage = Vin * R2 / (R1 + R2);
+       
+       % Calculate current
+       current = Vin / (R1 + R2);
+       
+       % Calculate power in R1
+       power = current^2 * R1;
+   end
+   ```
+2. Call the function:
+   ```matlab
+   >> [Vout, I, P_R1] = circuit_analysis(12, 1000, 2000);
+   ```
+
+### Step 6: Debugging
+
+1. Set breakpoints by clicking on the line number in the editor
+2. Run the script and observe:
+   - The debugger stops at breakpoints
+   - Hover over variables to see their values
+   - Use Continue (F5), Step Over (F10), Step Into (F11), Step Out (Shift+F11)
+
+## What Was Done
+
+Created a structured MATLAB program with conditional statements for resistor classification, a switch-case component identifier, for loops for batch calculations, a while loop implementing Newton's method for sqrt(2), and a user-defined function for voltage divider analysis with input validation error checking. The program was debugged using breakpoints and variable inspection.
+
+## What Was Learnt
+
+- Writing conditional statements for program flow control
+- Implementing loops for iterative and batch computations
+- Creating reusable functions with proper documentation (help text)
+- Understanding variable scope and function I/O
+- Using the MATLAB debugger for program troubleshooting
+- The performance advantage of vectorization over loops
+
+## Industry Applications
+
+- Automated test and measurement systems
+- Data analysis and processing pipelines
+- Control system implementation
+- Engineering simulation programs
+- Algorithm development and prototyping
+
+## Skills Developed
+
+- MATLAB program structure and organization
+- Function design and documentation
+- Control flow implementation
+- Debugging techniques
+- Code optimization awareness (vectorization)
+
+## Related Topics
+
+- [Linear Systems and Array Operations](/content/labs/matlab-linear-systems-array-operations)
+- [Two-Dimensional Data Plotting](/content/labs/matlab-two-dimensional-data-plotting)
+- [Advanced Plotting Techniques](/content/labs/matlab-advanced-plotting-techniques)
+
+## Media
+
+### Images
+
+<!-- Upload MATLAB editor with breakpoints from admin panel -->
+<!-- Upload function help text from admin panel -->
+
+### Videos
+
+<!-- Upload MATLAB debugging tutorial from admin panel -->
+
+### Documents
+
+<!-- Upload MATLAB programming reference from admin panel -->
+
+### Files
+
+<!-- Upload circuit_analysis.m function file from admin panel -->

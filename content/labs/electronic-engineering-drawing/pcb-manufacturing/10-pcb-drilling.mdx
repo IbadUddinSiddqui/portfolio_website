@@ -1,0 +1,210 @@
+---
+title: "PCB Drilling Techniques and Procedures"
+slug: "pcb-manufacturing-pcb-drilling"
+type: "labs"
+category: "Electronic Engineering Drawing"
+subcategory: "PCB Manufacturing"
+course: "Electronic Engineering Drawing & Engineering Software (EEDW)"
+department: "Electronic Engineering"
+semester: "1st"
+year: "2023"
+laboratorySession: "10"
+taxonomyLevel: "C3 (Applying)"
+clo: "CLO-10: Drill PCBs accurately using proper drill bits and drilling techniques for through-hole components."
+domain: "PCB Manufacturing — Mechanical Fabrication"
+difficulty: "intermediate"
+status: "completed"
+featured: false
+tags:
+  - PCB Drilling
+  - Drill Bits
+  - Through-Hole
+  - CNC Drilling
+  - Hole Preparation
+  - PCB Fabrication
+technologies:
+  - PCB Drilling
+  - CNC Drill Machine
+software: []
+hardware:
+  - PCB Drill Press or CNC Drill
+  - Carbide Drill Bits (0.6mm–3.2mm)
+  - PCB Vice or Fixture
+  - Vacuum Cleaner (for debris)
+  - Deburring Tool
+tools:
+  - Center Punch
+  - Drill Bit Gauge
+  - Magnification Lamp
+  - Caliper (Digital)
+  - Safety Glasses
+skills:
+  - PCB Drilling
+  - Drill Bit Selection
+  - Hole Positioning
+  - Deburring
+  - Manual and CNC Drilling
+seoTitle: "PCB Drilling Techniques and Procedures — EEDW Lab 10"
+seoDescription: "Learn professional PCB drilling techniques for through-hole components, including drill bit selection, hole positioning, and deburring procedures."
+---
+
+# PCB Drilling Techniques and Procedures
+
+## Overview
+
+Drilling is a critical step in PCB fabrication that creates holes for through-hole component leads and vias. Accurate drilling ensures proper component mounting and reliable solder joints. This laboratory session covers both manual drill press and CNC drilling techniques for PCB fabrication.
+
+## Objective
+
+To select appropriate drill bit sizes for different component types, set up and operate a PCB drill press, drill holes accurately according to a PCB layout, perform CNC drilling using Gerber drill files, and deburr and clean drilled holes for plating readiness.
+
+## Domain
+
+PCB Manufacturing — Mechanical Fabrication and Hole Preparation.
+
+## CLO and Taxonomy Level
+
+- **CLO-10**: Drill PCBs accurately using proper drill bits and drilling techniques for through-hole components.
+- **Taxonomy Level**: C3 (Applying) — Apply drilling techniques to fabricate through-holes in PCBs.
+
+## Tools and Hardware
+
+- **Equipment**: Drill press (variable speed, 0-10000 RPM), CNC drilling machine (optional), Vacuum deburring tool
+- **Materials**: Carbide drill bits (0.8mm, 1.0mm, 1.2mm, 3.2mm), Lubricant (for bit cooling), PCB panel (copper-clad)
+- **Safety**: Safety glasses, Dust mask, Hearing protection
+
+## Required Skills
+
+- Understanding of component lead diameters and hole size requirements
+- Basic measurement and marking skills
+- Safety awareness for rotating machinery
+
+## Theory and Engineering Concepts
+
+- **Hole Size Selection**: Component hole diameter should be 0.2-0.4mm larger than the component lead diameter to allow solder flow. Example: A 0.6mm resistor lead requires a 0.8-1.0mm drill bit.
+- **Drill Bit Types**: Carbide bits are preferred for PCB drilling due to their hardness and wear resistance. HSS (High-Speed Steel) bits can be used for small production runs.
+- **Spindle Speed**: Higher speeds (10000-20000 RPM) produce cleaner holes in fiberglass PCB material. Lower speeds cause fiberglass fraying and bit breakage.
+- **Feed Rate**: The rate at which the drill advances through the board. Too fast causes bit breakage; too slow causes heat buildup and resin smearing.
+- **Stack Drilling**: Multiple PCB panels can be stacked and drilled simultaneously for production efficiency.
+
+## Project / Task
+
+Drill a practice PCB panel with 30 holes of varying sizes (0.8mm, 1.0mm, 1.2mm) according to a drill plan. Achieve hole placement accuracy within ±0.1mm of target positions.
+
+## Procedure / Implementation
+
+### Step 1: Drill Bit Selection
+
+1. Determine required hole sizes from the component list:
+   - Resistors (0.6mm leads): 0.8mm drill bit
+   - DIP ICs (0.5mm pins): 0.8mm drill bit
+   - Capacitors (0.8mm leads): 1.0mm drill bit
+   - Mounting holes: 3.2mm drill bit
+2. Inspect drill bits for sharpness and straightness
+3. Select the appropriate drill bit and secure in the chuck
+4. Ensure the bit is centered and perpendicular
+
+### Step 2: Manual Drill Press Setup
+
+1. Secure the PCB panel in the vice or fixture
+2. Adjust drill press speed:
+   - For 0.8mm bits: 15000-20000 RPM
+   - For 1.0mm bits: 12000-15000 RPM
+   - For 3.2mm bits: 5000-8000 RPM
+3. Set drill depth stop to just penetrate the copper bottom layer
+4. Position the PCB so the first drill mark aligns with the bit
+
+### Step 3: Manual Drilling Process
+
+1. Lower the drill bit slowly onto the drill mark
+2. Apply steady, gentle pressure — do not force
+3. Drill at a consistent feed rate
+4. Lift the bit while it is still spinning to clear debris
+5. Move to the next hole location
+6. Vacuum debris regularly
+
+### Step 4: CNC Drilling (Optional)
+
+1. Generate NC Drill file from PCB design software (Lab 06)
+2. Load the PCB panel into the CNC machine
+3. Set coordinate origin at the PCB reference point
+4. Load the NC Drill file into the CNC controller
+5. Run a dry cycle to verify tool paths
+6. Start the drilling cycle
+7. Monitor for bit breakage during operation
+
+### Step 5: Deburring and Cleaning
+
+1. Inspect each hole for:
+   - Burrs on top and bottom of the board
+   - Resin smearing inside the hole
+   - Copper pad lifting around the hole
+2. Debur using a deburring tool or fine sandpaper (600 grit)
+3. Clean the board with compressed air
+4. For plated through-holes, clean with isopropyl alcohol
+
+### Step 6: Quality Inspection
+
+1. Measure hole diameters using a pin gauge or caliper
+2. Check hole positions against the drill plan
+3. Verify perpendicularity of holes
+4. Count total holes drilled vs. required
+5. Acceptable tolerances:
+   - Hole diameter: ±0.05mm
+   - Hole position: ±0.1mm
+   - Perpendicularity: < 5 degrees from vertical
+
+## What Was Done
+
+Drilled 30 holes of three different sizes (0.8mm, 1.0mm, 1.2mm) in a practice PCB panel using a variable-speed drill press. All holes were within ±0.05mm diameter tolerance and ±0.1mm position tolerance. Holes were deburred and cleaned. Two 3.2mm mounting holes were drilled at the corners for board mounting.
+
+## What Was Learnt
+
+- Proper drill bit selection based on component lead diameters
+- Drill press setup and speed selection for different bit sizes
+- Manual drilling technique for accurate hole placement
+- CNC drilling workflow using NC Drill files
+- Deburring and hole cleaning procedures
+
+## Industry Applications
+
+- Prototype PCB fabrication
+- Volume PCB manufacturing
+- Through-hole component assembly preparation
+- Multi-layer PCB via drilling
+- PCB repair and modification
+
+## Skills Developed
+
+- Drill bit selection and handling
+- Drill press operation
+- Hole positioning accuracy
+- Deburring techniques
+- Quality inspection of drilled holes
+
+## Related Topics
+
+- [Post Processing and Manufacturing Files](/content/labs/orcad-post-processing-manufacturing-files)
+- [Electroplating and Through-Hole Plating](/content/labs/pcb-manufacturing-electroplating-through-hole-plating)
+- [Soldering Techniques](/content/labs/pcb-manufacturing-soldering-techniques)
+
+## Media
+
+### Images
+
+<!-- Upload drill press setup photo from admin panel -->
+<!-- Upload drilled PCB macro photos from admin panel -->
+<!-- Upload hole quality comparison images from admin panel -->
+
+### Videos
+
+<!-- Upload drilling technique demonstration from admin panel -->
+
+### Documents
+
+<!-- Upload drill plan/blueprint from admin panel -->
+
+### Files
+
+<!-- Upload NC Drill file from admin panel -->
+<!-- Upload drill quality report from admin panel -->

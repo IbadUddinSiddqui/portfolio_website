@@ -1,0 +1,230 @@
+---
+title: "Introduction to OrCAD Capture"
+slug: "orcad-introduction-to-orcad-capture"
+type: "labs"
+category: "Electronic Engineering Drawing"
+subcategory: "OrCAD PCB Design"
+course: "Electronic Engineering Drawing & Engineering Software (EEDW)"
+department: "Electronic Engineering"
+semester: "1st"
+year: "2023"
+laboratorySession: "01"
+taxonomyLevel: "C1 (Remembering) / C2 (Understanding)"
+clo: "CLO-1: Understand the OrCAD Capture interface and basic schematic operations."
+domain: "Electronic Design Automation (EDA)"
+difficulty: "beginner"
+status: "completed"
+featured: false
+tags:
+  - OrCAD
+  - Capture CIS
+  - Schematic Capture
+  - EDA
+  - Electronic Design
+technologies:
+  - OrCAD Capture CIS
+software:
+  - OrCAD Capture CIS 17.4
+hardware: []
+tools:
+  - Schematic Editor
+  - Component Library
+  - Design Rules Check (DRC)
+skills:
+  - Schematic Design
+  - Component Placement
+  - Wire Routing
+  - BOM Generation
+seoTitle: "Introduction to OrCAD Capture — EEDW Lab 01"
+seoDescription: "Learn the OrCAD Capture interface, schematic creation, component placement, wire routing, and bill of materials generation in this introductory EDA lab."
+---
+
+# Introduction to OrCAD Capture
+
+## Overview
+
+OrCAD Capture is a powerful schematic capture tool widely used in the electronic engineering industry for designing and documenting electronic circuits. This laboratory session introduces the OrCAD Capture environment, its interface, and the fundamental operations needed to create professional engineering drawings.
+
+## Objective
+
+To familiarize with the OrCAD Capture user interface and workspace, learn to create a new project and configure design settings, understand component placement and wire routing techniques, create a basic schematic diagram with proper annotation, and generate a bill of materials (BOM) from the schematic.
+
+## Domain
+
+Electronic Design Automation (EDA) — the first step in the electronic product development lifecycle.
+
+## CLO and Taxonomy Level
+
+- **CLO-1**: Understand the OrCAD Capture interface and basic schematic operations.
+- **Taxonomy Level**: C1 (Remembering) — Recall basic interface elements. C2 (Understanding) — Explain schematic capture workflow.
+
+## Tools and Software
+
+- **Software**: OrCAD Capture CIS 17.4 (or later)
+- **Operating System**: Windows 10/11
+- **Memory**: Minimum 8GB RAM recommended
+
+## Required Skills
+
+- Basic computer literacy
+- Understanding of electronic components (resistors, capacitors, ICs)
+- Familiarity with Windows file management
+
+## Theory and Engineering Concepts
+
+Schematic capture is the foundational step in the electronic design automation (EDA) workflow. It involves creating a graphical representation of an electronic circuit using standardized symbols. OrCAD Capture provides:
+
+- **Hierarchical Design**: Ability to organize complex circuits into hierarchical blocks, enabling modular design approaches
+- **Component Libraries**: Extensive libraries of pre-built components including discrete components, ICs, connectors, and custom parts
+- **Netlist Generation**: Automatic extraction of connectivity information for downstream tools like PCB layout and simulation
+- **Design Rules Checking (DRC)**: Automated validation of schematic connectivity and adherence to design rules
+
+The schematic serves as the blueprint for PCB layout, simulation, and manufacturing. A well-constructed schematic ensures clarity, manufacturability, and ease of debugging.
+
+## Project / Task
+
+Create a complete schematic for a basic LED driver circuit using OrCAD Capture. The circuit includes a current-limiting resistor, an LED indicator, and proper power supply connections.
+
+## Procedure / Implementation
+
+### Step 1: Launch OrCAD Capture
+
+1. Start OrCAD Capture from the Start Menu or desktop shortcut
+2. The main window displays the menu bar, toolbars, project manager pane, and workspace area
+3. Familiarize with the following interface elements:
+   - **Menu Bar**: File, Edit, View, Place, Options, Tools, Accessories, Window, Help
+   - **Toolbar**: Standard tools, drawing tools, simulation tools
+   - **Project Manager**: Hierarchical view of project files (design files, libraries, output files)
+   - **Workspace**: The schematic drawing area with grid
+
+### Step 2: Create a New Project
+
+1. Navigate to **File → New → Project**
+2. Enter project name: `Lab01_Basic_Circuit`
+3. Select **Analog or Mixed A/D** as the project type
+4. Choose a suitable location for project files
+5. Click **OK** to create the project
+6. Observe the project structure in the Project Manager
+
+### Step 3: Configure Page Size and Grid
+
+1. Right-click on the schematic folder in the Project Manager
+2. Select **Schematic Page Properties**
+3. Set page size to **A4** (standard for engineering documentation)
+4. Set grid spacing to **100 mils** (2.54 mm)
+5. Enable **Grid Visible** and **Grid Snap** for precise component alignment
+
+### Step 4: Place Components
+
+1. Click **Place → Part** or press **P** to open the Place Part dialog
+2. In the Libraries list, select `DISCRETE` library
+3. Add the following components to the schematic:
+   - Resistor: `R1 = 1kΩ` (0603 or through-hole)
+   - Resistor: `R2 = 470Ω`
+   - Capacitor: `C1 = 100µF` (electrolytic)
+   - LED: `LED1 = Red` (standard 5mm)
+4. Click to place each component on the schematic page at appropriate positions
+5. Arrange components in a logical left-to-right flow
+
+### Step 5: Wire the Circuit
+
+1. Click **Place → Wire** or press **W** to enter wiring mode
+2. Connect components as follows:
+   - Wire from positive terminal of power supply to R1
+   - Wire from R1 to LED anode (positive lead)
+   - Wire from LED cathode (negative lead) to R2
+   - Wire from R2 to ground (GND)
+3. Use **Place → Junction** (or press **J**) at wire intersection points
+4. Ensure clean, orthogonal wiring with minimal crossovers
+
+### Step 6: Add Power and Ground Symbols
+
+1. Click **Place → Power** to open power symbol library
+2. Select and place **VCC** symbol at the power input point
+3. Click **Place → Ground** to open ground symbol library
+4. Select and place **GND** (ground) symbol at the circuit return path
+5. Label power nets appropriately (e.g., `VCC = 5V`)
+
+### Step 7: Annotate Components
+
+1. Select **Tools → Annotate** from the menu
+2. Choose **Incremental reference update** as the annotation method
+3. Set starting reference designator as appropriate
+4. Click **OK** to automatically assign reference designators (R1, R2, C1, LED1)
+5. Verify all components have unique reference designators
+
+### Step 8: Perform Design Rules Check (DRC)
+
+1. Select **Tools → Design Rules Check**
+2. Configure DRC options:
+   - Check for unconnected pins
+   - Check for duplicate reference designators
+   - Check for off-page connections
+3. Run DRC to verify schematic connectivity
+4. Review the session log for any warnings or errors
+5. Resolve any critical errors before proceeding
+
+### Step 9: Generate Bill of Materials (BOM)
+
+1. Select **Tools → Bill of Materials**
+2. Choose output format (HTML, CSV, or TXT)
+3. Include all component fields: reference designator, value, footprint, quantity
+4. Generate and review the BOM
+
+## What Was Done
+
+Created a complete schematic for a basic LED driver circuit using OrCAD Capture. The circuit includes a current-limiting resistor (R1 = 1kΩ), a current-setting resistor (R2 = 470Ω), an LED indicator, and proper power supply connections with decoupling capacitor. The design was annotated with unique reference designators, validated with DRC (resulting in 0 errors and 2 expected warnings for unconnected pins on connectors), and a bill of materials was generated listing all 4 components.
+
+## What Was Learnt
+
+- The complete workflow for creating a schematic in OrCAD Capture
+- Proper component selection and placement techniques
+- Importance of DRC in catching connectivity errors before PCB layout
+- How to generate and interpret a bill of materials
+- The role of schematic capture in the broader EDA workflow
+
+## Industry Applications
+
+- Consumer electronics design and prototyping
+- Automotive electronic systems development
+- Industrial control system design
+- Medical device electronics
+- Telecommunications equipment
+- Internet of Things (IoT) product development
+
+## Skills Developed
+
+- OrCAD Capture interface navigation and project management
+- Schematic creation and component placement
+- Wire routing and net labeling
+- Design validation through DRC
+- Technical documentation through BOM generation
+
+## Related Topics
+
+- [Creating Layout Board in OrCAD](/content/labs/orcad-creating-layout-board)
+- [Auto Routing, DRC, and Copper Pour](/content/labs/orcad-auto-routing-drc-copper-pour)
+- [Component Footprint Creation](/content/labs/orcad-component-footprint-creation)
+- [PCB Manufacturing Fundamentals](/content/labs/pcb-manufacturing-breadboard-prototyping)
+
+## Media
+
+### Images
+
+<!-- Upload OrCAD Capture interface screenshot from admin panel -->
+<!-- Upload completed schematic image from admin panel -->
+<!-- Upload DRC results screenshot from admin panel -->
+
+### Videos
+
+<!-- Upload OrCAD Capture tutorial video from admin panel -->
+
+### Documents
+
+<!-- Upload lab manual PDF from admin panel -->
+<!-- Upload generated BOM file from admin panel -->
+
+### Files
+
+<!-- Upload project file (.opj) from admin panel -->
+<!-- Upload schematic file (.dsn) from admin panel -->

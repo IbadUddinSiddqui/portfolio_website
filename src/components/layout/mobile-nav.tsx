@@ -76,7 +76,7 @@ export function MobileNav() {
                         "flex items-center gap-4 px-4 py-4 rounded-2xl text-lg font-medium transition-all duration-200",
                         isActive
                           ? "bg-primary/10 text-primary"
-                          : "text-foreground/70 hover:text-foreground hover:bg-muted/50"
+                          : "text-foreground/70 hover:text-foreground hover:bg-surface-secondary/50"
                       )}
                       aria-current={isActive ? "page" : undefined}
                     >

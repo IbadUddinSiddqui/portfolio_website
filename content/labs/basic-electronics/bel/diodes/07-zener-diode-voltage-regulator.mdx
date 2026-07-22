@@ -1,0 +1,188 @@
+---
+title: "Zener Diode Voltage Regulator"
+slug: "bel-zener-diode-voltage-regulator"
+type: "labs"
+category: "basic-electronics"
+subcategory: "Diode Circuits"
+course: "Basic Electronics Laboratory"
+department: "Electrical / Electronics Engineering"
+semester: "1st"
+year: "2023"
+laboratorySession: "07"
+domain: "Power Electronics"
+taxonomyLevel: "P3"
+clo: "CLO-3"
+difficulty: "intermediate"
+status: "completed"
+featured: false
+tags:
+  - Basic Electronics
+  - Zener Diode
+  - Voltage Regulator
+  - Reverse Breakdown
+  - Power Supply
+technologies:
+  - Analog Electronics
+  - Power Electronics
+software:
+  - Multisim (optional)
+hardware:
+  - Zener Diode (5.1V, 1N4733A)
+  - Resistors (220Ω, 1kΩ)
+  - DC Power Supply (Variable)
+  - DMM
+  - Oscilloscope
+components:
+  - 5.1V Zener Diode (1N4733A)
+  - 220Ω Series Resistor
+  - 1kΩ Load Resistor
+tools:
+  - Breadboard
+  - Jumper Wires
+skills:
+  - Voltage Regulator Design
+  - Zener Diode Characterization
+  - Load Regulation Measurement
+  - Line Regulation Measurement
+circuits:
+  - Zener Voltage Regulator
+seoTitle: "Zener Diode Voltage Regulator — BEL Lab 07"
+seoDescription: "Design and test a Zener diode voltage regulator circuit for maintaining constant output voltage despite input and load variations."
+---
+
+# Zener Diode Voltage Regulator
+
+## Overview
+
+Voltage regulation is essential in electronic systems to maintain a stable DC supply voltage despite variations in input voltage or load current. The Zener diode, operating in reverse breakdown mode, provides a simple and effective voltage regulation solution for low-power applications.
+
+## Objective
+
+To practice utilizing a Zener diode as a functional voltage regulator.
+
+## Domain
+
+Power Electronics — Voltage Regulation and Power Supply Design.
+
+## CLO and Taxonomy Level
+
+- **CLO-3**: Design and analyze Zener diode voltage regulator circuits.
+- **Taxonomy Level**: P3 — Supervised Practice (Practical application of voltage regulator under guidance).
+
+## Components and Equipment
+
+- **Semiconductors**: 5.1V Zener diode (1N4733A or equivalent)
+- **Passive Components**: 220Ω series resistor, 1kΩ load resistor
+- **Equipment**: Variable DC power supply, DMM, Oscilloscope
+
+## Required Skills
+
+- Diode forward and reverse bias behavior
+- Understanding of series and parallel circuits
+- Ohm's law and power calculations
+
+## Theory and Engineering Concepts
+
+- **Zener Breakdown**: When a Zener diode is reverse-biased beyond its Zener voltage (Vz), it conducts current while maintaining a nearly constant voltage across its terminals.
+- **Regulation Mechanism**: The series resistor drops the excess voltage (Vin - Vz). When Vin increases, the Zener current increases but Vz remains constant; when the load current changes, the Zener current adjusts to maintain constant output.
+- **Line Regulation**: The ability to maintain constant output voltage despite changes in input voltage. Measured in mV/V or percentage.
+- **Load Regulation**: The ability to maintain constant output voltage despite changes in load current.
+- **Series Resistor Selection**: Rs = (Vin(min) - Vz) / (Iz(min) + Iload(max))
+
+## Circuit Configuration
+
+The Zener regulator consists of:
+- Series resistor (Rs) from the unregulated input to the Zener cathode
+- Zener diode with cathode to Rs/anode to ground
+- Load resistor in parallel with the Zener diode
+- Output voltage taken across the Zener diode
+
+## Procedure / Implementation
+
+### Step 1: Circuit Construction
+
+1. Connect the series resistor (220Ω) to the positive output of the DC power supply
+2. Connect the Zener diode cathode (banded end) to the series resistor
+3. Connect the Zener diode anode to ground
+4. Connect the load resistor (1kΩ) in parallel with the Zener diode
+5. Verify the circuit: Input → Rs → Zener cathode, Zener anode → GND, Output across Zener
+
+### Step 2: Line Regulation Test
+
+1. Set the power supply to 8V
+2. Measure the output voltage across the Zener diode (should be ≈5.1V)
+3. Increase the input voltage in 1V steps from 8V to 15V
+4. Record the output voltage at each step
+5. Calculate line regulation: ΔVout / ΔVin (mV/V)
+
+### Step 3: Load Regulation Test
+
+1. Set the input voltage to a fixed value (e.g., 12V)
+2. Measure the output voltage with no load (Iload = 0)
+3. Connect different load resistors and measure the output voltage for each
+4. Record output voltage vs. load current
+
+## What Was Done
+
+Designed a circuit using a 5.1V Zener diode (1N4733A) in reverse breakdown mode to maintain a constant output voltage across a load. Tested line regulation (input variation) and load regulation (load variation).
+
+## Results and Observations
+
+| Test | Condition | Output Voltage |
+|------|-----------|----------------|
+| Line Regulation | Vin = 8V | 5.08V |
+| Line Regulation | Vin = 12V | 5.10V |
+| Line Regulation | Vin = 15V | 5.11V |
+| Load Regulation | Iload = 0mA | 5.12V |
+| Load Regulation | Iload = 10mA | 5.08V |
+
+*Place measurement data and plots here.*
+
+## What Was Learnt
+
+- Zener diodes are ideal for voltage regulation due to their ability to maintain a steady voltage despite input fluctuations or load variations
+- The series resistor is critical for limiting current through the Zener diode
+- Line regulation shows how well the regulator rejects input voltage changes
+- Load regulation shows how well the regulator maintains voltage with varying load current
+- Zener regulators are best suited for low-power applications due to power dissipation limits
+
+## Engineering Applications
+
+- Low-power voltage reference sources
+- Post-regulation after rectifier/filter stages
+- Overvoltage protection circuits
+- Reference voltage for analog-to-digital converters
+- Simple on-board voltage regulation for small circuits
+
+## Skills Developed
+
+- Zener voltage regulator design
+- Line and load regulation measurement
+- Series resistor calculation
+- Zener diode power dissipation analysis
+
+## Related Topics
+
+- [Bridge Rectifier and Filtering](/content/labs/bel-bridge-rectifier-filtering)
+- [Half-Wave Rectifier](/content/labs/bel-half-wave-rectifier)
+- [Diode Limiters](/content/labs/bel-diode-limiters)
+
+## Media
+
+### Images
+
+<!-- Upload Zener regulator circuit diagram from admin panel -->
+<!-- Upload input vs output voltage plot from admin panel -->
+<!-- Upload breadboard circuit photo from admin panel -->
+
+### Videos
+
+<!-- Upload voltage regulator demonstration from admin panel -->
+
+### Documents
+
+<!-- Upload lab report from admin panel -->
+
+### Simulation Files
+
+<!-- Upload Multisim Zener regulator simulation from admin panel -->

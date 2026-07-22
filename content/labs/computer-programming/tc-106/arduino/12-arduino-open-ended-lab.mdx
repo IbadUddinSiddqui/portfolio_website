@@ -1,0 +1,225 @@
+---
+title: "Arduino Open Ended Lab — Multiple LED Control"
+slug: "tc106-arduino-open-ended-lab"
+type: "labs"
+category: "Computer Programming"
+subcategory: "Arduino"
+course: "TC-106 Computer Programming Lab"
+department: "Computer Science / Engineering"
+semester: "1st"
+year: "2023"
+laboratorySession: "12"
+domain: "Hardware/Software"
+taxonomyLevel: "P3"
+difficulty: "intermediate"
+status: "completed"
+featured: false
+tags:
+  - Arduino
+  - Embedded Systems
+  - Digital I/O
+  - LED Control
+  - Hardware Programming
+  - Microcontroller
+technologies:
+  - Arduino
+  - Embedded C
+  - Digital Electronics
+software:
+  - Arduino IDE 2.x
+hardware:
+  - Arduino Uno Board
+  - LEDs (5 pieces, various colors)
+  - Resistors (220Ω)
+  - Breadboard
+  - Jumper Wires (Male-to-Male, Male-to-Female)
+  - USB Cable
+tools:
+  - Arduino IDE
+  - Breadboard
+  - Wiring Tools
+skills:
+  - Circuit Wiring
+  - Code Verification
+  - Hardware-Software Interfacing
+  - Digital I/O Programming
+  - Embedded Debugging
+programmingLanguages:
+  - Arduino C/C++
+seoTitle: "Arduino Open Ended Lab — Multiple LED Control — TC-106 Lab 12"
+seoDescription: "Learn embedded programming with Arduino Uno by controlling multiple LEDs using looping and decision-making structures in Arduino C/C++."
+---
+
+# Arduino Open Ended Lab — Multiple LED Control
+
+## Overview
+
+This open-ended laboratory session bridges software programming concepts (loops, conditions) with hardware control using the Arduino microcontroller platform. Students apply their C/C++ programming knowledge to control physical components, demonstrating the real-world application of programming concepts in embedded systems.
+
+## Objective
+
+To experiment with multiple LEDs using the Arduino Uno Board, applying looping structures and decision-making concepts from C programming to control hardware.
+
+## Domain
+
+Hardware/Software — Embedded Systems and Microcontroller Programming.
+
+## Taxonomy Level
+
+P3 — Supervised Practice (Practical application of embedded programming under guidance).
+
+## Tools and Technologies
+
+- **Microcontroller**: Arduino Uno Board (ATmega328P)
+- **Software**: Arduino IDE 2.x
+- **Hardware**: 5 LEDs (various colors), 5 × 220Ω resistors, Breadboard, Jumper wires
+- **Language**: Arduino C/C++
+
+## Required Skills
+
+- Loop concepts (for, while — Lab 06)
+- Decision making (Lab 05)
+- Basic circuit understanding
+- Careful component handling
+
+## Concepts Covered
+
+- **Digital I/O**: Using Arduino pins as digital outputs using pinMode() and digitalWrite()
+- **Pulse Width Modulation (PWM)**: Creating analog-like output on digital pins
+- **LED Circuit Design**: Current-limiting resistors to prevent LED damage
+- **Sequential Logic**: Controlling multiple outputs in sequence
+- **Timing**: Using delay() for temporal control
+- **Embedded Programming**: Writing software that interacts directly with hardware
+
+## Project / Task
+
+Create a circuit with 5 LEDs connected to an Arduino Uno. Write a program that blinks the LEDs in sequence from left to right (descending) and then right to left (ascending), creating a motion-chase effect.
+
+## Implementation
+
+### Step 1: Circuit Assembly
+
+1. Connect the components on the breadboard:
+   ```
+   Arduino Pin  →  Resistor (220Ω)  →  LED (Anode +)
+   LED (Cathode -)  →  GND
+   ```
+2. Specific connections:
+   - LED 1: Arduino Pin 2 → 220Ω → LED → GND
+   - LED 2: Arduino Pin 3 → 220Ω → LED → GND
+   - LED 3: Arduino Pin 4 → 220Ω → LED → GND
+   - LED 4: Arduino Pin 5 → 220Ω → LED → GND
+   - LED 5: Arduino Pin 6 → 220Ω → LED → GND
+3. Verify all connections are secure
+4. Connect Arduino to computer via USB cable
+
+### Step 2: Write the Arduino Program
+
+1. Open Arduino IDE and create a new sketch
+2. Write the following program:
+   ```cpp
+   // Arduino Multiple LED Control
+   // LEDs: Pin 2 through Pin 6
+
+   void setup() {
+       // Initialize LED pins as outputs
+       for(int i = 2; i <= 6; i++) {
+           pinMode(i, OUTPUT);
+       }
+   }
+
+   void loop() {
+       // Left to Right (Descending: 5→4→3→2→1 from pin 6→2)
+       for(int i = 6; i >= 2; i--) {
+           digitalWrite(i, HIGH);   // Turn LED ON
+           delay(200);              // Wait 200ms
+           digitalWrite(i, LOW);    // Turn LED OFF
+       }
+
+       // Right to Left (Ascending: 1→2→3→4→5 from pin 2→6)
+       for(int i = 2; i <= 6; i++) {
+           digitalWrite(i, HIGH);   // Turn LED ON
+           delay(200);              // Wait 200ms
+           digitalWrite(i, LOW);    // Turn LED OFF
+       }
+   }
+   ```
+
+### Step 3: Understand the Code
+
+- `setup()`: Runs once at startup. Initializes pins 2-6 as OUTPUT using a for loop
+- `loop()`: Runs repeatedly. Contains two for loops:
+  - First loop: i goes from 6 down to 2 (pins 6→5→4→3→2), lighting LEDs left to right
+  - Second loop: i goes from 2 up to 6 (pins 2→3→4→5→6), lighting LEDs right to left
+- `digitalWrite(pin, HIGH/LOW)`: Sets the pin voltage to 5V (HIGH) or 0V (LOW)
+- `delay(ms)`: Pauses program execution for the specified milliseconds
+
+### Step 4: Upload and Test
+
+1. Select the correct board: **Tools → Board → Arduino Uno**
+2. Select the correct port: **Tools → Port → COMx (Arduino Uno)**
+3. Click **Verify** (✓) to compile the code
+4. Click **Upload** (→) to program the Arduino
+5. Observe the LEDs blinking in sequence
+
+### Step 5: Experiment and Extend
+
+1. Modify the delay value and observe changes in speed
+2. Change the sequence pattern (e.g., all on, then all off)
+3. Add a button to toggle between different patterns
+4. Use analogWrite() for fading effects
+
+## What Was Done
+
+Connected 5 LEDs with current-limiting resistors to Arduino Uno digital pins 2-6, wrote and uploaded a C++ program via Arduino IDE, and implemented sequential LED control using for loops. The LEDs light up in a chase pattern: left-to-right then right-to-left, creating a continuous motion effect.
+
+## What Was Learnt
+
+- Practical integration of digital I/O pins, looping constructs, and timing logic in embedded hardware
+- The transition from software-only programming to hardware-software interfacing
+- Understanding of current-limiting resistors and LED circuit design
+- The Arduino development workflow: code → compile → upload → test
+- How C/C++ loop structures translate to physical output behavior
+
+## Engineering Applications
+
+- Embedded systems development for IoT devices
+- Robotics control systems (LED indicators, motor control)
+- Consumer electronics (status indicators, displays)
+- Automotive lighting systems
+- Industrial automation visual indicators
+
+## Skills Developed
+
+- Arduino IDE usage and configuration
+- Circuit wiring on breadboard
+- Digital I/O pin programming
+- Embedded C/C++ code development
+- Hardware debugging and testing
+- Sequential logic implementation
+
+## Related Topics
+
+- [Looping Constructs in C](/content/labs/tc106-looping-constructs-in-c)
+- [Decision Making in C](/content/labs/tc106-decision-making-in-c)
+- [Features of Objects in C++](/content/labs/tc106-features-of-objects-in-cpp)
+
+## Media
+
+### Images
+
+<!-- Upload Arduino circuit photo from admin panel -->
+<!-- Upload breadboard layout diagram from admin panel -->
+<!-- Upload LED sequence demonstration from admin panel -->
+
+### Videos
+
+<!-- Upload LED blinking demonstration video from admin panel -->
+
+### Code Files
+
+<!-- Upload Arduino sketch (.ino) from admin panel -->
+
+### Documents
+
+<!-- Upload lab report from admin panel -->

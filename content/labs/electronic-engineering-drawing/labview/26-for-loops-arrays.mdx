@@ -1,0 +1,177 @@
+---
+title: "For Loops and Array Operations in LabVIEW"
+slug: "labview-for-loops-arrays"
+type: "labs"
+category: "Electronic Engineering Drawing"
+subcategory: "LabVIEW"
+course: "Electronic Engineering Drawing & Engineering Software (EEDW)"
+department: "Electronic Engineering"
+semester: "1st"
+year: "2023"
+laboratorySession: "26"
+taxonomyLevel: "C3 (Applying) / C4 (Analyzing)"
+clo: "CLO-26: Use For Loops with arrays to process and analyze data in LabVIEW."
+domain: "Virtual Instrumentation — Array Processing"
+difficulty: "intermediate"
+status: "completed"
+featured: false
+tags:
+  - LabVIEW
+  - For Loop
+  - Arrays
+  - Auto-Indexing
+  - Data Processing
+  - Array Functions
+technologies:
+  - LabVIEW
+software:
+  - LabVIEW 2023 or later
+hardware: []
+tools:
+  - Array Functions
+  - For Loop Auto-Indexing
+  - Build Array
+  - Index Array
+skills:
+  - For Loop with Arrays
+  - Auto-Indexing
+  - Array Building
+  - Array Processing
+  - Data Aggregation
+seoTitle: "For Loops and Array Operations in LabVIEW — EEDW Lab 26"
+seoDescription: "Learn to use For Loops with arrays in LabVIEW including auto-indexing, array building, and data processing techniques."
+---
+
+# For Loops and Array Operations in LabVIEW
+
+## Overview
+
+Arrays are fundamental data structures in LabVIEW for storing and processing collections of data. When combined with For Loops, arrays enable powerful batch data processing capabilities. This laboratory session covers creating and manipulating arrays, using auto-indexing with For Loops, and building array processing applications.
+
+## Objective
+
+To create arrays using Build Array and Array functions, use For Loop auto-indexing to process array elements, implement array operations including search, sort, and subset extraction, build arrays from loop iterations using auto-indexing tunnels, and create a waveform data acquisition and analysis VI.
+
+## Domain
+
+Virtual Instrumentation — Data Structures and Array Processing.
+
+## CLO and Taxonomy Level
+
+- **CLO-26**: Use For Loops with arrays to process and analyze data in LabVIEW.
+- **Taxonomy Level**: C3 (Applying) — Apply For Loop auto-indexing for array processing. C4 (Analyzing) — Analyze array data using statistical array functions.
+
+## Tools and Software
+
+- **Software**: LabVIEW 2023 or later
+
+## Required Skills
+
+- LabVIEW For Loop and While Loop knowledge (Lab 24)
+
+## Theory and Engineering Concepts
+
+- **Auto-Indexing**: When a For Loop processes an array input, it automatically indexes through each element. An output tunnel with auto-indexing enabled builds an output array from each iteration.
+- **Array Functions**: LabVIEW provides comprehensive array manipulation functions including Initialize Array, Build Array, Array Size, Index Array, Replace Array Subset, Search 1D Array, Sort 1D Array, Array Max & Min.
+- **Waveform Data Type**: A special LabVIEW data type that includes timing information (t0, dt) and Y data array, used for acquired signals.
+
+## Project / Task
+
+Create a VI that: generates a simulated sensor data array using a For Loop, applies statistical analysis (mean, min, max, standard deviation), implements a threshold-based alarm system, and displays the processed data.
+
+## Procedure / Implementation
+
+### Step 1: Create an Array Using Build Array
+
+1. Place three Numeric Controls (value1, value2, value3)
+2. Place Build Array function (Functions → Programming → Array → Build Array)
+3. Wire the three values to Build Array
+4. Wire the output to an Array Indicator on the front panel
+
+### Step 2: For Loop Auto-Indexing — Array Input
+
+1. Create a numeric array control with 10 elements
+2. Place a For Loop with auto-indexing input tunnel (enabled by default)
+3. Inside the loop, multiply each element by 2
+4. The output tunnel auto-indexes to build the result array
+5. Display the result on an array indicator
+
+### Step 3: Generate Array Using For Loop Output Auto-Indexing
+
+1. Place a For Loop with N = 100
+2. Inside the loop:
+   - Divide i (iteration) by 10 to create theta
+   - Apply Sine function to create waveform
+   - Multiply by 5 for amplitude
+3. Enable auto-indexing on the output tunnel (right-click → Enable Indexing)
+4. Wire the output array to a Waveform Graph
+
+### Step 4: Array Statistical Analysis
+
+1. Create an array of random numbers using a For Loop (N = 50)
+2. Apply array functions:
+   - Array Max & Min: Find maximum and minimum values
+   - Mean: Calculate average (Functions → Mathematics → Probability & Statistics → Mean)
+   - Standard Deviation: Calculate std dev
+3. Display all statistics on the front panel
+
+### Step 5: Threshold Alarm System
+
+1. Generate an array of simulated temperature readings (20-100°C)
+2. Search 1D Array for values exceeding 80°C
+3. If threshold exceeded, trigger an alarm indicator
+4. Display the number of threshold violations
+
+## What Was Done
+
+Created a VI that generates a simulated 100-point sine wave using a For Loop with auto-indexing output. Applied statistical analysis (mean, min, max, standard deviation) to a 50-element random data array. Built a threshold-based alarm system that detects temperature readings exceeding 80°C and reports the count of violations. All array operations used auto-indexing tunnels and array functions for efficient processing.
+
+## What Was Learnt
+
+- Array creation using Build Array and For Loop output tunnels
+- Auto-indexing behavior for both input and output tunnels
+- Array statistical functions for data analysis
+- Threshold detection using Search 1D Array
+- The relationship between For Loop iteration count and array size
+
+## Industry Applications
+
+- Batch sensor data analysis
+- Quality control statistical process monitoring
+- Environmental monitoring systems
+- Laboratory data processing
+- Industrial automation data collection
+
+## Skills Developed
+
+- For Loop auto-indexing with arrays
+- Array function usage (search, sort, statistics)
+- Array-based data generation
+- Threshold detection algorithms
+- Array data processing pipelines
+
+## Related Topics
+
+- [Loops and Timing](/content/labs/labview-loops-and-timing)
+- [Array Functionality and Calculus](/content/labs/labview-array-functionality-calculus)
+- [Waveform Visualization](/content/labs/labview-waveform-visualization)
+
+## Media
+
+### Images
+
+<!-- Upload For Loop array processing from admin panel -->
+<!-- Upload array statistics display from admin panel -->
+<!-- Upload waveform graph output from admin panel -->
+
+### Videos
+
+<!-- Upload arrays and loops tutorial from admin panel -->
+
+### Documents
+
+<!-- Upload LabVIEW array functions reference from admin panel -->
+
+### Files
+
+<!-- Upload Array_Processing.vi from admin panel -->

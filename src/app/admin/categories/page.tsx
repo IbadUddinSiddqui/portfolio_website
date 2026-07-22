@@ -28,7 +28,7 @@ export default async function AdminCategoriesPage() {
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
         {/* Create form */}
-        <div className="rounded-xl border border-border bg-card p-6">
+        <div className="rounded-xl border border-card-border bg-card-background p-6">
           <h2 className="text-sm font-semibold mb-4">Create Category</h2>
           <form action={async (formData: FormData) => {
             "use server";
@@ -47,14 +47,14 @@ export default async function AdminCategoriesPage() {
         </div>
 
         {/* List */}
-        <div className="lg:col-span-2 rounded-xl border border-border bg-card p-6">
+        <div className="lg:col-span-2 rounded-xl border border-card-border bg-card-background p-6">
           <h2 className="text-sm font-semibold mb-4">All Categories ({categories.length})</h2>
           {categories.length === 0 ? (
             <p className="text-sm text-muted-foreground">No categories yet.</p>
           ) : (
             <div className="space-y-2">
               {categories.map(cat => (
-                <div key={cat.id} className="flex items-center justify-between px-4 py-3 rounded-lg bg-muted/30">
+                <div key={cat.id} className="flex items-center justify-between px-4 py-3 rounded-lg bg-surface-secondary/30">
                   <div className="flex items-center gap-3">
                     {cat.icon && <span className="text-lg">{cat.icon}</span>}
                     <div>

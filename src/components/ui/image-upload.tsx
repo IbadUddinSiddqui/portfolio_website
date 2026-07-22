@@ -107,7 +107,7 @@ export function ImageUpload({
       {label && <label className="text-sm font-medium">{label}</label>}
 
       {preview ? (
-        <div className="relative w-full aspect-video rounded-xl overflow-hidden border border-border/50 bg-muted/30 group">
+        <div className="relative w-full aspect-video rounded-xl overflow-hidden border border-card-border/50 bg-surface group">
           <Image
             src={preview}
             alt="Upload preview"
@@ -143,28 +143,28 @@ export function ImageUpload({
           className={cn(
             "relative w-full aspect-video rounded-xl border-2 border-dashed transition-all duration-200 cursor-pointer flex flex-col items-center justify-center gap-2",
             dragging
-              ? "border-primary bg-primary/5 scale-[1.02]"
-              : "border-border/50 hover:border-primary/40 hover:bg-muted/30 bg-muted/10"
+              ? "border-accent-engineering bg-accent-engineering/5 scale-[1.02]"
+              : "border-card-border/50 hover:border-accent-engineering/40 hover:bg-surface-secondary bg-surface/10"
           )}
         >
           {uploading ? (
             <>
-              <Loader2 className="h-8 w-8 text-primary animate-spin" />
+              <Loader2 className="h-8 w-8 text-accent-engineering animate-spin" />
               <p className="text-xs text-muted-foreground">Uploading...</p>
             </>
           ) : (
             <>
               <div className={cn(
                 "w-10 h-10 rounded-xl flex items-center justify-center transition-all duration-200",
-                dragging ? "bg-primary/20 scale-110" : "bg-muted/60"
+                dragging ? "bg-accent-engineering/20 scale-110" : "bg-surface/60"
               )}>
-                <Upload className={cn("h-5 w-5 transition-colors", dragging ? "text-primary" : "text-muted-foreground")} />
+                <Upload className={cn("h-5 w-5 transition-colors", dragging ? "text-accent-engineering" : "text-muted-foreground")} />
               </div>
               <div className="text-center">
                 <p className="text-xs font-medium text-muted-foreground">
                   Drop image here or click to browse
                 </p>
-                <p className="text-[10px] text-muted-foreground/60 mt-0.5">
+                <p className="text-xxs text-muted-foreground/60 mt-0.5">
                   PNG, JPG, WebP — max 5MB
                 </p>
               </div>

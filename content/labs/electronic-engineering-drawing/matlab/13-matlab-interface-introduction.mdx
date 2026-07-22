@@ -1,0 +1,204 @@
+---
+title: "MATLAB Interface and Environment Introduction"
+slug: "matlab-interface-introduction"
+type: "labs"
+category: "Electronic Engineering Drawing"
+subcategory: "MATLAB"
+course: "Electronic Engineering Drawing & Engineering Software (EEDW)"
+department: "Electronic Engineering"
+semester: "1st"
+year: "2023"
+laboratorySession: "13"
+taxonomyLevel: "C1 (Remembering)"
+clo: "CLO-13: Navigate the MATLAB development environment and execute basic commands."
+domain: "Scientific Computing — MATLAB Fundamentals"
+difficulty: "beginner"
+status: "completed"
+featured: false
+tags:
+  - MATLAB
+  - Workspace
+  - Command Window
+  - Variables
+  - Scientific Computing
+technologies:
+  - MATLAB
+software:
+  - MATLAB R2023a or later
+hardware: []
+tools:
+  - MATLAB IDE
+  - Workspace Browser
+  - Command History
+skills:
+  - MATLAB Interface Navigation
+  - Basic Command Execution
+  - Variable Management
+  - Script Creation
+seoTitle: "MATLAB Interface and Environment Introduction — EEDW Lab 13"
+seoDescription: "Learn the MATLAB development environment, basic commands, variables, and script creation for scientific computing."
+---
+
+# MATLAB Interface and Environment Introduction
+
+## Overview
+
+MATLAB (MATrix LABoratory) is a high-level programming environment widely used in engineering and scientific computing for numerical computation, data analysis, algorithm development, and visualization. This introductory laboratory session covers the MATLAB interface, basic operations, variable management, and script creation.
+
+## Objective
+
+To navigate the MATLAB desktop environment including Command Window, Workspace, and Current Folder panes, use MATLAB as a calculator with basic arithmetic operations, create and manage variables in the workspace, write and execute simple MATLAB scripts (.m files), and understand data types including doubles, integers, and character arrays.
+
+## Domain
+
+Scientific Computing — Numerical Computation Fundamentals.
+
+## CLO and Taxonomy Level
+
+- **CLO-13**: Navigate the MATLAB development environment and execute basic commands.
+- **Taxonomy Level**: C1 (Remembering) — Recall MATLAB interface elements and basic commands.
+
+## Tools and Software
+
+- **Software**: MATLAB R2023a or later
+- **Toolboxes**: No additional toolboxes required
+
+## Required Skills
+
+- Basic computer literacy
+- Fundamental mathematical knowledge
+
+## Theory and Engineering Concepts
+
+MATLAB uses a matrix-based approach to computation where all data is treated as arrays. The key interface elements include:
+
+- **Command Window**: The primary interactive environment where commands are typed and executed. The prompt `>>` indicates MATLAB is ready for input.
+- **Workspace**: Displays all currently defined variables, their values, data types, and sizes.
+- **Current Folder**: File browser showing the working directory.
+- **Command History**: Log of previously executed commands.
+- **Editor**: Used for writing, editing, and debugging MATLAB scripts (.m files).
+
+## Project / Task
+
+Explore the MATLAB environment, perform basic arithmetic operations, create and manipulate variables, and write a simple script.
+
+## Procedure / Implementation
+
+### Step 1: Launch MATLAB
+
+1. Start MATLAB from the Start Menu or desktop shortcut
+2. Observe the default layout:
+   - **Command Window** (center)
+   - **Workspace** (right side)
+   - **Current Folder** (left side)
+   - **Command History** (below Command Window or as a separate panel)
+
+### Step 2: Use MATLAB as a Calculator
+
+1. Type the following in the Command Window and observe the output:
+   ```matlab
+   >> 5 + 3
+   >> 10 - 4
+   >> 6 * 7
+   >> 15 / 3
+   >> 2^3
+   ```
+2. Observe that MATLAB uses `ans` as the default variable for unassigned results
+
+### Step 3: Create Variables
+
+1. Create scalar variables:
+   ```matlab
+   >> a = 10
+   >> b = 3.14
+   >> c = -5
+   ```
+2. Observe variables appear in the Workspace pane
+3. Create character variables:
+   ```matlab
+   >> name = 'Engineering'
+   >> message = 'Hello MATLAB'
+   ```
+
+### Step 4: Basic Variable Operations
+
+1. Perform arithmetic with variables:
+   ```matlab
+   >> sum = a + b
+   >> product = a * c
+   >> result = a / b
+   ```
+2. Clear variables:
+   ```matlab
+   >> clear a       % clears variable 'a'
+   >> clear all     % clears all variables
+   >> clc           % clears the Command Window
+   ```
+
+### Step 5: Create and Run a Script
+
+1. Click **New Script** or press **Ctrl+N**
+2. Type the following:
+   ```matlab
+   % My First MATLAB Script
+   % This script calculates the area of a circle
+   
+   radius = 5;
+   area = pi * radius^2;
+   disp(['Radius: ', num2str(radius)]);
+   disp(['Area: ', num2str(area)]);
+   ```
+3. Save as `circle_area.m`
+4. Run the script by clicking **Run** or pressing **F5**
+
+## What Was Done
+
+Successfully navigated the MATLAB environment, performed basic arithmetic operations, created and manipulated variables of different data types, and wrote a script to calculate the area of a circle.
+
+## What Was Learnt
+
+- MATLAB desktop interface layout and navigation
+- Command Window operation for interactive computation
+- Variable creation, management, and data types
+- Script creation and execution workflow
+- Basic MATLAB syntax and the `disp` function for output
+
+## Industry Applications
+
+- Engineering data analysis and visualization
+- Scientific research computing
+- Control system design and simulation
+- Signal and image processing
+- Academic teaching and research
+
+## Skills Developed
+
+- MATLAB interface navigation
+- Basic command execution
+- Variable and workspace management
+- Script writing and debugging
+
+## Related Topics
+
+- [Arithmetic Operations and Formulas](/content/labs/matlab-arithmetic-operations-formulas)
+- [Matrix Operations](/content/labs/matlab-matrix-operations)
+- [Two-Dimensional Data Plotting](/content/labs/matlab-two-dimensional-data-plotting)
+
+## Media
+
+### Images
+
+<!-- Upload MATLAB interface screenshot from admin panel -->
+<!-- Upload workspace with variables from admin panel -->
+
+### Videos
+
+<!-- Upload MATLAB interface tutorial video from admin panel -->
+
+### Documents
+
+<!-- Upload MATLAB quick reference guide from admin panel -->
+
+### Files
+
+<!-- Upload circle_area.m script from admin panel -->

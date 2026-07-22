@@ -1,0 +1,223 @@
+---
+title: "Film Plotting and Darkroom Processing"
+slug: "pcb-manufacturing-film-plotting-darkroom-processing"
+type: "labs"
+category: "Electronic Engineering Drawing"
+subcategory: "PCB Manufacturing"
+course: "Electronic Engineering Drawing & Engineering Software (EEDW)"
+department: "Electronic Engineering"
+semester: "1st"
+year: "2023"
+laboratorySession: "12"
+taxonomyLevel: "C3 (Applying)"
+clo: "CLO-12: Generate photo-tools and perform darkroom processing for PCB pattern transfer."
+domain: "PCB Manufacturing — Photolithography"
+difficulty: "intermediate"
+status: "completed"
+featured: false
+tags:
+  - Film Plotting
+  - Darkroom Processing
+  - Photolithography
+  - Photo-Resist
+  - UV Exposure
+  - PCB Pattern Transfer
+technologies:
+  - Photolithography
+  - UV Exposure
+  - Photo-Resist Processing
+software: []
+hardware:
+  - Film Plotter (Laser or Inkjet)
+  - UV Exposure Unit
+  - Developing Tray
+  - Drying Rack
+  - Darkroom (UV-safe lighting)
+tools:
+  - Transparency Film Sheets
+  - Photo-Resist Spray
+  - Developer Solution
+  - Etching Tank
+  - Timer
+skills:
+  - Film Plotting
+  - Photoresist Application
+  - UV Exposure
+  - Pattern Development
+  - Darkroom Techniques
+seoTitle: "Film Plotting and Darkroom Processing — EEDW Lab 12"
+seoDescription: "Learn film plotting and darkroom processing techniques for PCB pattern transfer, including photoresist application, UV exposure, and development."
+---
+
+# Film Plotting and Darkroom Processing
+
+## Overview
+
+Film plotting and darkroom processing are photolithographic techniques used to transfer PCB pattern designs onto copper-clad boards. This process creates the etch-resistant pattern that defines copper traces, pads, and other features on the PCB. This laboratory session covers generating photo-tools from digital designs, applying photoresist, UV exposure, and pattern development.
+
+## Objective
+
+To generate film positives from PCB layout files (Gerber data), prepare copper-clad boards with liquid or dry-film photoresist, perform UV exposure to transfer patterns, develop the exposed photoresist to reveal the circuit pattern, and inspect developed boards for pattern quality.
+
+## Domain
+
+PCB Manufacturing — Photolithography and Pattern Transfer.
+
+## CLO and Taxonomy Level
+
+- **CLO-12**: Generate photo-tools and perform darkroom processing for PCB pattern transfer.
+- **Taxonomy Level**: C3 (Applying) — Apply photolithographic techniques to transfer PCB patterns onto copper-clad boards.
+
+## Tools and Hardware
+
+- **Equipment**: Laser film plotter, UV exposure unit (365nm, 8-20 mW/cm²), Developing trays, Drying cabinet
+- **Materials**: Transparency film (0.1mm, matte), Liquid photoresist (positive or negative), Photoresist developer solution, Acetone for stripping
+- **Safety**: UV-protective eyewear, Chemical-resistant gloves, Darkroom ventilation
+
+## Required Skills
+
+- Completed PCB layout labs (01-06)
+- Understanding of Gerber file format
+- Careful handling of photosensitive materials
+
+## Theory and Engineering Concepts
+
+- **Photoresist**: A light-sensitive polymer that changes solubility when exposed to UV light. Positive photoresist becomes more soluble when exposed; negative photoresist becomes less soluble.
+- **Photo-tool**: A transparent film with the circuit pattern printed in opaque ink. The dark areas block UV light during exposure.
+- **UV Exposure**: The process of transferring the photo-tool pattern to the photoresist-coated board using ultraviolet light. Exposure time depends on UV intensity and photoresist sensitivity.
+- **Development**: The chemical process that removes either exposed (positive resist) or unexposed (negative resist) photoresist areas, revealing the copper beneath.
+- **Resolution**: The minimum feature size reliably reproducible. Contact printing (film in contact with board) achieves 0.1mm feature resolution.
+
+## Project / Task
+
+Generate film positives for the LED driver PCB design, coat a copper-clad board with photoresist, expose using the film positive, develop the pattern, and inspect resolution quality.
+
+## Procedure / Implementation
+
+### Step 1: Generate Film Positives
+
+1. Open Gerber files in a CAM viewer
+2. Set up film output:
+   - Select the bottom copper layer
+   - Set mirror (if required for bottom-side exposure)
+   - Print resolution: 2400 DPI minimum
+3. Print to transparency film:
+   - Load film with emulsion side determined by printer
+   - Print a test pattern first to verify density
+   - Print the final film positive
+4. Inspect film:
+   - Verify optical density (opaque areas)
+   - Check for pinholes or scratches
+   - Measure registration marks
+
+### Step 2: Clean Copper-Clad Board
+
+1. Cut copper-clad board to size (50mm × 40mm)
+2. Clean with scouring pad and detergent
+3. Rinse with water
+4. Degrease with acetone or isopropyl alcohol
+5. Handle edges only — avoid touching the copper surface
+
+### Step 3: Apply Photoresist
+
+1. For liquid photoresist:
+   - Spray or dip-coat the clean board
+   - Apply even coating
+   - Dry in dark cabinet at 70°C for 15 minutes
+2. For dry-film photoresist:
+   - Cut film slightly larger than board
+   - Remove protective liner
+   - Laminator at 110°C
+   - Apply with roller to remove air bubbles
+
+### Step 4: UV Exposure
+
+1. Place the film positive on the photoresist-coated board:
+   - Emulsion-to-emulsion contact for sharpest resolution
+   - Align registration marks
+2. Place in UV exposure unit:
+   - Glass plate on top for pressure
+   - Set exposure timer
+   - Typical exposure: 60-120 seconds at 10 mW/cm²
+3. Expose the board to UV light
+4. Remove and prepare for development
+
+### Step 5: Develop the Pattern
+
+1. Prepare developer solution:
+   - For positive resist: Sodium hydroxide (1-2%) or commercial developer
+   - For negative resist: Specific solvent-based developer
+2. Immerse exposed board in developer:
+   - Temperature: 25-30°C
+   - Development time: 30-60 seconds
+   - Gentle agitation
+3. Rinse in water immediately
+4. Inspect the developed pattern:
+   - Clear traces should be visible (positive resist)
+   - No residual photoresist in copper areas
+   - Clean, well-defined edges
+
+### Step 6: Inspection and Touch-Up
+
+1. Inspect under magnification:
+   - Check for complete development
+   - Look for pinholes in the photoresist
+   - Verify trace widths match design
+2. Touch up defects:
+   - Use fine brush and photoresist for missing areas
+   - Use fine scalpel for excess photoresist
+3. Post-bake at 120°C for 15 minutes to harden photoresist
+
+## What Was Done
+
+Generated film positives for the LED driver PCB at 2400 DPI resolution with proper optical density. Cleaned and photoresist-coated a copper-clad board, exposed using the film positive in a UV exposure unit for 90 seconds, and developed the pattern to reveal clean, well-defined traces with 0.3mm minimum feature resolution. The developed board was inspected and shows no pinholes or defects in the circuit pattern.
+
+## What Was Learnt
+
+- Film positive generation from Gerber data using high-resolution printing
+- Photoresist application techniques for even, defect-free coatings
+- UV exposure parameters for optimal pattern transfer
+- Development process and timing for clean pattern revelation
+- Inspection criteria for pattern quality assessment
+
+## Industry Applications
+
+- Prototype PCB fabrication in low-volume production
+- High-resolution PCB manufacturing
+- RF and microwave circuit fabrication requiring fine features
+- MEMS and microelectronics device fabrication
+- Art and decorative PCB creation
+
+## Skills Developed
+
+- Film plotting and Gerber-to-film conversion
+- Photoresist application (liquid and dry film)
+- UV exposure unit operation
+- Pattern development techniques
+- Photo-tool inspection and quality control
+
+## Related Topics
+
+- [Post Processing and Manufacturing Files](/content/labs/orcad-post-processing-manufacturing-files)
+- [Electroplating and Through-Hole Plating](/content/labs/pcb-manufacturing-electroplating-through-hole-plating)
+- [PCB Etching Process](/content/labs/pcb-manufacturing-pcb-etching)
+
+## Media
+
+### Images
+
+<!-- Upload film positive photo from admin panel -->
+<!-- Upload UV exposure unit setup from admin panel -->
+<!-- Upload developed board pattern from admin panel -->
+
+### Videos
+
+<!-- Upload film plotting and exposure video from admin panel -->
+
+### Documents
+
+<!-- Upload exposure parameter reference from admin panel -->
+
+### Files
+
+<!-- Upload Gerber film output files from admin panel -->

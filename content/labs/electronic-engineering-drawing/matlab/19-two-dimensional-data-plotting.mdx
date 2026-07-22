@@ -1,0 +1,227 @@
+---
+title: "Two-Dimensional Data Plotting in MATLAB"
+slug: "matlab-two-dimensional-data-plotting"
+type: "labs"
+category: "Electronic Engineering Drawing"
+subcategory: "MATLAB"
+course: "Electronic Engineering Drawing & Engineering Software (EEDW)"
+department: "Electronic Engineering"
+semester: "1st"
+year: "2023"
+laboratorySession: "19"
+taxonomyLevel: "C3 (Applying) / C4 (Analyzing)"
+clo: "CLO-19: Create professional 2D plots in MATLAB for engineering data visualization."
+domain: "Scientific Computing — Data Visualization"
+difficulty: "intermediate"
+status: "completed"
+featured: false
+tags:
+  - MATLAB
+  - Plotting
+  - Data Visualization
+  - Graphs
+  - Engineering Charts
+  - 2D Plots
+technologies:
+  - MATLAB
+software:
+  - MATLAB R2023a or later
+hardware: []
+tools:
+  - MATLAB Plotting Tools
+  - Property Editor
+skills:
+  - 2D Plotting
+  - Graph Formatting
+  - Multiple Plots
+  - Subplots
+  - Data Visualization
+  - Plot Export
+seoTitle: "Two-Dimensional Data Plotting in MATLAB — EEDW Lab 19"
+seoDescription: "Learn to create professional 2D plots in MATLAB including line plots, multiple datasets, subplots, and graph formatting for engineering data visualization."
+---
+
+# Two-Dimensional Data Plotting in MATLAB
+
+## Overview
+
+Data visualization is a critical skill for engineers to analyze, interpret, and communicate technical information. MATLAB provides comprehensive 2D plotting capabilities for creating professional graphs suitable for reports, publications, and presentations. This laboratory session covers the complete workflow from basic plotting to polished, publication-ready figures.
+
+## Objective
+
+To create basic 2D line plots using the `plot()` function, customize plot appearance with line styles, colors, and markers, add labels, titles, legends, and grid lines, create multiple plots in the same figure using `hold` and `subplot`, and export figures for use in documents and presentations.
+
+## Domain
+
+Scientific Computing — Engineering Data Visualization and Communication.
+
+## CLO and Taxonomy Level
+
+- **CLO-19**: Create professional 2D plots in MATLAB for engineering data visualization.
+- **Taxonomy Level**: C3 (Applying) — Apply plotting functions to visualize data. C4 (Analyzing) — Analyze graphical representations to extract insights.
+
+## Tools and Software
+
+- **Software**: MATLAB R2023a or later
+
+## Required Skills
+
+- MATLAB basics (Labs 13-18)
+
+## Theory and Engineering Concepts
+
+- **Figure**: The MATLAB window that displays plots. Multiple figures can be created with `figure()`.
+- **Handle Graphics**: MATLAB uses object-oriented graphics where each plot element (axes, lines, labels) is an object with properties that can be modified.
+- **Plot Resolution**: The number of data points determines the smoothness of curves. Use `linspace` with sufficient points (100-1000) for smooth plots.
+
+## Project / Task
+
+Create four engineering plots: a sine wave with customization, an RC circuit charging/discharging waveform, subplots showing (a) voltage and (b) current, and a multi-line plot comparing frequency responses.
+
+## Procedure / Implementation
+
+### Step 1: Basic Line Plot
+
+1. Create a simple sine wave plot:
+   ```matlab
+   x = linspace(0, 2*pi, 100);
+   y = sin(x);
+   plot(x, y);
+   ```
+
+### Step 2: Customized Plot
+
+1. Create a fully customized RC charging plot:
+   ```matlab
+   t = linspace(0, 5, 100);  % Time (5 time constants)
+   tau = 1;                   % Time constant
+   Vc = 5 * (1 - exp(-t/tau)); % Charging voltage
+   
+   plot(t, Vc, 'b-', 'LineWidth', 2);
+   xlabel('Time (seconds)');
+   ylabel('Voltage (V)');
+   title('RC Circuit Charging Response');
+   grid on;
+   legend('V_C (t) = V(1 - e^{-t/\tau})');
+   xlim([0, 5]);
+   ylim([0, 5.5]);
+   ```
+
+### Step 3: Multiple Data Sets on One Plot
+
+1. Plot charging and discharging on same axes:
+   ```matlab
+   t_charge = linspace(0, 5, 100);
+   t_discharge = linspace(0, 5, 100);
+   V_charge = 5 * (1 - exp(-t_charge));
+   V_discharge = 5 * exp(-t_discharge);
+   
+   plot(t_charge, V_charge, 'b-', 'LineWidth', 2);
+   hold on;
+   plot(t_discharge, V_discharge, 'r--', 'LineWidth', 2);
+   hold off;
+   
+   xlabel('Time (\times\tau)');
+   ylabel('Voltage (V)');
+   title('RC Circuit Response');
+   legend('Charging: V_C(t) = V(1 - e^{-t/\tau})', ...
+          'Discharging: V_C(t) = Ve^{-t/\tau}', ...
+          'Location', 'southeast');
+   grid on;
+   ```
+
+### Step 4: Subplots
+
+1. Create multiple plots in one figure:
+   ```matlab
+   t = linspace(0, 5, 100);
+   
+   subplot(2, 1, 1);
+   plot(t, 5 * (1 - exp(-t)), 'b-', 'LineWidth', 1.5);
+   ylabel('Voltage (V)');
+   title('(a) Capacitor Voltage');
+   grid on;
+   
+   subplot(2, 1, 2);
+   plot(t, (5/1000) * exp(-t), 'r-', 'LineWidth', 1.5);
+   xlabel('Time (\times\tau)');
+   ylabel('Current (A)');
+   title('(b) Capacitor Current');
+   grid on;
+   ```
+
+### Step 5: Figure Formatting and Export
+
+1. Create a publication-ready figure:
+   ```matlab
+   f = figure('Position', [100, 100, 800, 500]);
+   set(gca, 'FontSize', 12, 'FontName', 'Times New Roman');
+   set(gcf, 'Color', 'white');
+   ```
+
+### Step 6: Experiment with Plot Types
+
+1. Try different plot types:
+   ```matlab
+   >> x = 1:10;
+   >> y = rand(1, 10);
+   >> bar(x, y)         % Bar chart
+   >> stem(x, y)        % Stem plot
+   >> stairs(x, y)      % Stair plot
+   >> area(x, y)        % Area plot
+   ```
+
+## What Was Done
+
+Created four engineering plots demonstrating MATLAB's visualization capabilities: a basic sine wave, a fully customized RC charging curve with labels and grid, an overlayed charging/discharging comparison with legend, and a 2×1 subplot figure for voltage and current analysis. All figures were formatted with appropriate labels, legends, and axis limits for publication quality.
+
+## What Was Learnt
+
+- Basic to customized 2D plotting using the `plot()` function
+- Line style, color, and marker customization
+- Multiple dataset overlaying using `hold on/off`
+- Subplot creation for multi-panel figures
+- Figure formatting for professional reports
+- Figure export in various formats
+
+## Industry Applications
+
+- Engineering report and technical documentation
+- Research paper figures and data presentation
+- Sensor data visualization in monitoring systems
+- Signal analysis and waveform display
+- Simulation results visualization
+
+## Skills Developed
+
+- 2D plot creation and customization
+- Multi-dataset visualization
+- Subplot configuration
+- Figure formatting and styling
+- Plot export for documentation
+
+## Related Topics
+
+- [Advanced Plotting Techniques](/content/labs/matlab-advanced-plotting-techniques)
+- [Programming Functions](/content/labs/matlab-programming-functions)
+- [Waveform Visualization in LabVIEW](/content/labs/labview-waveform-visualization)
+
+## Media
+
+### Images
+
+<!-- Upload custom RC charging plot from admin panel -->
+<!-- Upload subplot figure from admin panel -->
+<!-- Upload multiple dataset comparison from admin panel -->
+
+### Videos
+
+<!-- Upload MATLAB plotting tutorial from admin panel -->
+
+### Documents
+
+<!-- Upload MATLAB plotting reference guide from admin panel -->
+
+### Files
+
+<!-- Upload plotting_examples.m script from admin panel -->

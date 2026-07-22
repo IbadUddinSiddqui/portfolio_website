@@ -45,7 +45,7 @@ export function PremiumBackground() {
     const update = () => {
       // Spotlight follows cursor
       if (spotlightRef.current) {
-        spotlightRef.current.style.background = `radial-gradient(700px circle at ${mouseX}px ${mouseY}px, rgb(99 102 241 / 0.04), transparent 45%)`;
+        spotlightRef.current.style.background = `radial-gradient(700px circle at ${mouseX}px ${mouseY}px, rgb(56 189 248 / 0.04), transparent 45%)`;
       }
 
       // Parallax orbs drift opposite cursor
@@ -89,7 +89,7 @@ export function PremiumBackground() {
         className="absolute inset-0 opacity-40 dark:opacity-30"
         style={{
           background:
-            "radial-gradient(ellipse at 50% 0%, rgba(99,102,241,0.04) 0%, transparent 60%)",
+            "radial-gradient(ellipse at 50% 0%, rgba(56,189,248,0.04) 0%, transparent 60%)",
         }}
       />
 
@@ -99,7 +99,7 @@ export function PremiumBackground() {
         className="absolute -top-[25%] -left-[15%] w-[70%] aspect-square rounded-full transition-transform duration-1000 ease-out"
         style={{
           background:
-            "radial-gradient(circle, rgba(99,102,241,0.12) 0%, transparent 70%)",
+            "radial-gradient(circle, rgba(56,189,248,0.10) 0%, transparent 70%)",
           filter: "blur(100px)",
           ...(!prefersReducedMotion && {
             animation: "aurora 14s ease-in-out infinite alternate",
@@ -113,7 +113,7 @@ export function PremiumBackground() {
         className="absolute -bottom-[20%] -right-[10%] w-[55%] aspect-square rounded-full transition-transform duration-1000 ease-out"
         style={{
           background:
-            "radial-gradient(circle, rgba(139,92,246,0.1) 0%, transparent 70%)",
+            "radial-gradient(circle, rgba(37,99,235,0.08) 0%, transparent 70%)",
           filter: "blur(100px)",
           ...(!prefersReducedMotion && {
             animation: "aurora 18s ease-in-out infinite alternate-reverse",
@@ -127,7 +127,7 @@ export function PremiumBackground() {
         className="absolute top-[15%] right-[5%] w-[30%] aspect-square rounded-full transition-transform duration-1000 ease-out"
         style={{
           background:
-            "radial-gradient(circle, rgba(34,211,238,0.06) 0%, transparent 70%)",
+            "radial-gradient(circle, rgba(139,92,246,0.06) 0%, transparent 70%)",
           filter: "blur(80px)",
           ...(!prefersReducedMotion && {
             animation: "aurora 22s ease-in-out infinite alternate",
@@ -142,10 +142,10 @@ export function PremiumBackground() {
         className="absolute inset-0 opacity-[0.015] transition-transform duration-1000 ease-out"
         style={{
           backgroundImage: [
-            "radial-gradient(circle at 20% 30%, rgba(99,102,241,0.5) 0%, transparent 50%)",
-            "radial-gradient(circle at 80% 70%, rgba(139,92,246,0.3) 0%, transparent 50%)",
-            "radial-gradient(circle at 40% 80%, rgba(34,211,238,0.2) 0%, transparent 50%)",
-            "radial-gradient(circle at 60% 20%, rgba(99,102,241,0.2) 0%, transparent 50%)",
+            "radial-gradient(circle at 20% 30%, rgba(56,189,248,0.4) 0%, transparent 50%)",
+            "radial-gradient(circle at 80% 70%, rgba(37,99,235,0.3) 0%, transparent 50%)",
+            "radial-gradient(circle at 40% 80%, rgba(139,92,246,0.2) 0%, transparent 50%)",
+            "radial-gradient(circle at 60% 20%, rgba(56,189,248,0.2) 0%, transparent 50%)",
           ].join(", "),
           ...(!prefersReducedMotion && {
             animation: "mesh 20s ease-in-out infinite alternate",

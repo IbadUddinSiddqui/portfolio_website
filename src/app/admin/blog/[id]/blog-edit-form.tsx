@@ -180,7 +180,7 @@ export function BlogEditForm({
             {formData.tags.map((tag) => (
               <span
                 key={tag}
-                className="inline-flex items-center gap-1 px-2.5 py-1 rounded-md bg-muted text-xs font-medium"
+                className="inline-flex items-center gap-1 px-2.5 py-1 rounded-md bg-surface-secondary text-xs font-medium"
               >
                 {tag}
                 <button

@@ -29,7 +29,7 @@ export default async function AdminSkillsPage() {
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
         {/* Add Category */}
-        <div className="rounded-xl border border-border bg-card p-6">
+        <div className="rounded-xl border border-card-border bg-card-background p-6">
           <h2 className="text-sm font-semibold mb-4">Add Skill Category</h2>
           <form action={async (fd: FormData) => {
             "use server";
@@ -48,7 +48,7 @@ export default async function AdminSkillsPage() {
         </div>
 
         {/* Add Skill */}
-        <div className="rounded-xl border border-border bg-card p-6">
+        <div className="rounded-xl border border-card-border bg-card-background p-6">
           <h2 className="text-sm font-semibold mb-4">Add Skill</h2>
           <form action={async (fd: FormData) => {
             "use server";
@@ -66,7 +66,7 @@ export default async function AdminSkillsPage() {
             </div>
             <div className="space-y-2">
               <Label htmlFor="skillCategory">Category</Label>
-              <select id="skillCategory" name="categoryId" defaultValue="" className="w-full h-10 px-3 rounded-lg border border-border bg-background text-sm">
+              <select id="skillCategory" name="categoryId" defaultValue="" className="w-full h-10 px-3 rounded-lg border border-input-border bg-input-background text-sm">
                 <option value="">None</option>
                 {skillCats.map(c => (
                   <option key={c.id} value={c.id}>{c.name}</option>
@@ -82,7 +82,7 @@ export default async function AdminSkillsPage() {
         </div>
 
         {/* Skill List */}
-        <div className="lg:col-span-3 rounded-xl border border-border bg-card p-6">
+        <div className="lg:col-span-3 rounded-xl border border-card-border bg-card-background p-6">
           <h2 className="text-sm font-semibold mb-4">Current Skills</h2>
           {skillCats.length === 0 ? (
             <p className="text-sm text-muted-foreground">No skill categories yet.</p>
@@ -97,14 +97,14 @@ export default async function AdminSkillsPage() {
                   </h3>
                   <div className="space-y-2">
                     {cat.skills.map(skill => (
-                      <div key={skill.id} className="flex items-center justify-between px-3 py-2 rounded-lg bg-muted/30">
+                      <div key={skill.id} className="flex items-center justify-between px-3 py-2 rounded-lg bg-surface-secondary/30">
                         <span className="text-sm">{skill.name}</span>
                         {skill.level && (
                           <div className="flex items-center gap-2">
-                            <div className="w-16 h-1.5 rounded-full bg-muted">
-                              <div className="h-full rounded-full bg-primary" style={{ width: `${skill.level}%` }} />
+                            <div className="w-16 h-1.5 rounded-full bg-surface-secondary">
+                              <div className="h-full rounded-full bg-accent-engineering" style={{ width: `${skill.level}%` }} />
                             </div>
-                            <span className="text-[10px] text-muted-foreground">{skill.level}%</span>
+                            <span className="text-xxs text-muted-foreground">{skill.level}%</span>
                           </div>
                         )}
                       </div>

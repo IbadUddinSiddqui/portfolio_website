@@ -88,8 +88,7 @@ export default function AdminMediaPage() {
       </div>
 
       {/* Upload area */}
-      {showUpload && (
-        <div className="mb-8 rounded-xl border border-border bg-card p-6">
+      {showUpload && (          <div className="mb-8 rounded-xl border border-card-border bg-card-background p-6">
           <h2 className="text-sm font-semibold mb-4">Upload New Image</h2>
           <div className="max-w-md">
             <ImageUpload
@@ -128,7 +127,7 @@ export default function AdminMediaPage() {
         </div>
       ) : filtered.length === 0 ? (
         <div className="rounded-xl border border-dashed border-border p-16 text-center">
-          <div className="w-12 h-12 rounded-2xl bg-muted/60 flex items-center justify-center mx-auto mb-4">
+          <div className="w-12 h-12 rounded-2xl bg-surface/60 flex items-center justify-center mx-auto mb-4">
             <Upload className="h-6 w-6 text-muted-foreground" />
           </div>
           <p className="text-muted-foreground text-sm mb-2">
@@ -145,7 +144,7 @@ export default function AdminMediaPage() {
           {filtered.map((item) => (
             <div
               key={item.id}
-              className="group relative rounded-xl overflow-hidden border border-border/50 bg-card aspect-square cursor-pointer"
+              className="group relative rounded-xl overflow-hidden border border-card-border/50 bg-card-background aspect-square cursor-pointer"
               onClick={() => setSelected(item)}
             >
               {item.type.startsWith("image/") ? (
@@ -157,7 +156,7 @@ export default function AdminMediaPage() {
                   sizes="(max-width: 768px) 50vw, 20vw"
                 />
               ) : (
-                <div className="w-full h-full flex items-center justify-center bg-muted/30">
+                <div className="w-full h-full flex items-center justify-center bg-surface/30">
                   <span className="text-2xl">📄</span>
                 </div>
               )}
@@ -197,7 +196,7 @@ export default function AdminMediaPage() {
               </DialogHeader>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div className="aspect-video rounded-xl overflow-hidden bg-muted/30 relative">
+                <div className="aspect-video rounded-xl overflow-hidden bg-surface/30 relative">
                   {selected.type?.startsWith("image/") ? (
                     <Image src={selected.url} alt={selected.alt || ""} fill className="object-contain" sizes="400px" />
                   ) : (
@@ -224,7 +223,7 @@ export default function AdminMediaPage() {
                   )}
                   <div>
                     <p className="text-xs text-muted-foreground mb-1">URL</p>
-                    <code className="text-xs bg-muted px-2 py-1 rounded block truncate">{selected.url}</code>
+                    <code className="text-xs bg-surface-secondary px-2 py-1 rounded block truncate">{selected.url}</code>
                   </div>
                   <div className="flex gap-2 pt-2">
                     <Button size="sm" variant="outline" onClick={() => handleCopyUrl(selected.url)}>

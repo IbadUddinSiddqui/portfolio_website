@@ -76,8 +76,8 @@ function useSparkleCanvas() {
       ctx.save();
       ctx.globalAlpha = a;
       ctx.shadowBlur  = s.r * 6;
-      ctx.shadowColor = `hsl(${s.hue},85%,70%)`;
-      ctx.fillStyle   = `hsl(${s.hue},85%,82%)`;
+      ctx.shadowColor = `hsl(199,${85 + Math.random() * 10}%,60%)`;
+      ctx.fillStyle   = `hsl(199,80%,75%)`;
       ctx.beginPath();
       ctx.arc(s.x, s.y, Math.max(0.2, s.r), 0, Math.PI * 2);
       ctx.fill();
@@ -102,7 +102,7 @@ function useSparkleCanvas() {
         vy: Math.sin(a) * spd - 0.6,
         r: 1.8 + Math.random() * 2.2,
         life: 0, maxLife: 40 + Math.random() * 20,
-        hue: 210 + Math.random() * 55,
+        hue: 199 + Math.random() * 30,
       });
     }
     if (!runRef.current) {
@@ -261,17 +261,17 @@ export function GlassBulb() {
           `rotate(${p.angle}rad)`;
       }
 
-      /* Glow intensity */
+      /* Glow intensity — per spec: center white, inner cyan, outer blue */
       glowT += dt;
       const pulse = 1 + Math.sin((glowT * Math.PI * 2) / 4) * 0.09;
       const gi    = Math.min(glowMul.current * pulse, 2.4);
       const s     = bulbSize;
       if (glowRef.current) {
         glowRef.current.style.boxShadow = [
-          `0 0 ${s * 0.10}px rgba(180,215,255,${0.20 * gi})`,
-          `0 0 ${s * 0.22}px rgba(180,215,255,${0.11 * gi})`,
-          `0 0 ${s * 0.46}px rgba(160,195,255,${0.06 * gi})`,
-          `0 0 ${s * 0.85}px rgba(130,175,255,${0.03 * gi})`,
+          `0 0 ${s * 0.08}px rgba(255,255,255,${0.35 * gi})`,
+          `0 0 ${s * 0.18}px rgba(125,211,252,${0.22 * gi})`,
+          `0 0 ${s * 0.36}px rgba(56,189,248,${0.14 * gi})`,
+          `0 0 ${s * 0.70}px rgba(56,189,248,${0.06 * gi})`,
         ].join(", ");
       }
 
@@ -375,8 +375,8 @@ export function GlassBulb() {
             width: "1.5px",
             height: BULB_ARM_LENGTH,
             transformOrigin: "50% 0%",
-            background: "linear-gradient(180deg, rgba(180,200,255,0.04) 0%, rgba(180,200,255,0.22) 25%, rgba(180,200,255,0.28) 50%, rgba(180,200,255,0.18) 75%, rgba(180,200,255,0.03) 100%)",
-            boxShadow: "0 0 6px rgba(180,200,255,0.06), 0 0 2px rgba(180,200,255,0.10)",
+            background: "linear-gradient(180deg, rgba(56,189,248,0.02) 0%, rgba(125,211,252,0.20) 25%, rgba(56,189,248,0.25) 50%, rgba(56,189,248,0.15) 75%, rgba(56,189,248,0.02) 100%)",
+            boxShadow: "0 0 6px rgba(56,189,248,0.06), 0 0 2px rgba(56,189,248,0.10)",
           }}
         />
 
@@ -430,13 +430,13 @@ function GlassSphere({ size, glowRef, children }: GlassSphereProps) {
         style={{
           background: [
             "radial-gradient(circle at 30% 22%, rgba(255,255,255,0.15) 0%, transparent 44%)",
-            "radial-gradient(circle at 70% 76%, rgba(160,190,255,0.07) 0%, transparent 44%)",
-            "radial-gradient(circle at 50% 50%, rgba(200,220,255,0.04) 0%, rgba(255,255,255,0.01) 38%, transparent 62%)",
+            "radial-gradient(circle at 70% 76%, rgba(125,211,252,0.06) 0%, transparent 44%)",
+            "radial-gradient(circle at 50% 50%, rgba(56,189,248,0.03) 0%, rgba(255,255,255,0.01) 38%, transparent 62%)",
           ].join(", "),
           backdropFilter:       "blur(22px) saturate(1.6) brightness(1.08)",
           WebkitBackdropFilter: "blur(22px) saturate(1.6) brightness(1.08)",
           border:    "1px solid rgba(255,255,255,0.11)",
-          boxShadow: "inset 0 0 40px rgba(255,255,255,0.03), inset 0 0 80px rgba(140,180,255,0.025)",
+          boxShadow: "inset 0 0 40px rgba(255,255,255,0.03), inset 0 0 80px rgba(56,189,248,0.025)",
         }}
       >
         {/* Main specular — top-left */}
@@ -462,11 +462,10 @@ function GlassSphere({ size, glowRef, children }: GlassSphereProps) {
           height: 2,
           background: "linear-gradient(90deg, transparent, rgba(255,255,255,0.20) 50%, transparent)",
           filter: "blur(0.5px)",
-        }} />
-        {/* Warm subsurface */}
+        }} />        {/* Cool subsurface glow */}
         <div className="absolute rounded-full" style={{
           inset: "20%",
-          background: "radial-gradient(circle at 50% 56%, rgba(255,235,195,0.045) 0%, transparent 60%)",
+          background: "radial-gradient(circle at 50% 56%, rgba(125,211,252,0.04) 0%, transparent 60%)",
           filter: "blur(12px)",
         }} />
         {/* Refraction streak */}
@@ -500,7 +499,7 @@ interface BulbTextProps { size: number }
 const BulbText = forwardRef<HTMLDivElement, BulbTextProps>(({ size }, ref) => {
   const reduced = useReducedMotion();
   const fs  = size * 0.108;
-  const glow = "0 0 18px rgba(255,255,255,0.30), 0 0 36px rgba(255,255,255,0.14), 0 0 72px rgba(180,210,255,0.08)";
+  const glow = "0 0 18px rgba(255,255,255,0.30), 0 0 36px rgba(125,211,252,0.16), 0 0 72px rgba(56,189,248,0.08)";
 
   return (
     <motion.div

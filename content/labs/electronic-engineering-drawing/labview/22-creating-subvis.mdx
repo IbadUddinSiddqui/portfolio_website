@@ -1,0 +1,198 @@
+---
+title: "Creating SubVIs in LabVIEW"
+slug: "labview-creating-subvis"
+type: "labs"
+category: "Electronic Engineering Drawing"
+subcategory: "LabVIEW"
+course: "Electronic Engineering Drawing & Engineering Software (EEDW)"
+department: "Electronic Engineering"
+semester: "1st"
+year: "2023"
+laboratorySession: "22"
+taxonomyLevel: "C3 (Applying) / C4 (Analyzing)"
+clo: "CLO-22: Create reusable SubVIs in LabVIEW for modular programming."
+domain: "Virtual Instrumentation — Modular Programming"
+difficulty: "intermediate"
+status: "completed"
+featured: false
+tags:
+  - LabVIEW
+  - SubVI
+  - Modular Programming
+  - Icon Editor
+  - Connector Pane
+technologies:
+  - LabVIEW
+software:
+  - LabVIEW 2023 or later
+hardware: []
+tools:
+  - Icon Editor
+  - Connector Pane
+  - VI Hierarchy
+skills:
+  - SubVI Creation
+  - Connector Pane Configuration
+  - Icon Design
+  - Modular Programming
+  - VI Documentation
+seoTitle: "Creating SubVIs in LabVIEW — EEDW Lab 22"
+seoDescription: "Learn to create reusable SubVIs in LabVIEW for modular graphical programming, including icon design, connector pane configuration, and VI hierarchy management."
+---
+
+# Creating SubVIs in LabVIEW
+
+## Overview
+
+SubVIs are the LabVIEW equivalent of functions in text-based programming languages. They allow modular program design where complex operations are broken down into smaller, reusable components. This laboratory session covers creating SubVIs, configuring connector panes, designing icons, and building hierarchical VI structures.
+
+## Objective
+
+To convert a section of block diagram code into a SubVI, configure the Connector Pane to define inputs and outputs, design a custom icon using the Icon Editor, use the SubVI in a top-level VI, and understand VI hierarchy and execution order.
+
+## Domain
+
+Virtual Instrumentation — Software Architecture and Modular Design.
+
+## CLO and Taxonomy Level
+
+- **CLO-22**: Create reusable SubVIs in LabVIEW for modular programming.
+- **Taxonomy Level**: C3 (Applying) — Apply SubVI creation to modularize programs. C4 (Analyzing) — Analyze VI hierarchy for proper modular decomposition.
+
+## Tools and Software
+
+- **Software**: LabVIEW 2023 or later
+
+## Required Skills
+
+- Basic LabVIEW knowledge (Lab 21)
+
+## Theory and Engineering Concepts
+
+A SubVI is a VI that can be called from another VI's block diagram, similar to a subroutine. Key concepts include:
+
+- **Connector Pane**: Defines the inputs and outputs of a SubVI, with terminals that map to front panel controls and indicators.
+- **Icon**: A graphical representation of the SubVI displayed on other block diagrams. Well-designed icons improve code readability.
+- **VI Hierarchy**: The calling relationship between VIs and SubVIs, viewable through the VI Hierarchy window.
+- **Reentrancy**: When enabled, allows multiple callers to run the same SubVI simultaneously with separate data spaces.
+
+## Project / Task
+
+Create a SubVI that converts temperature from Celsius to Fahrenheit, design a custom icon, configure the connector pane, and use the SubVI in a top-level temperature monitoring VI.
+
+## Procedure / Implementation
+
+### Step 1: Create the Temperature Conversion VI
+
+1. Create a new VI (File → New VI)
+2. On the Front Panel, add:
+   - Numeric Control named "Celsius"
+   - Numeric Indicator named "Fahrenheit"
+3. On the Block Diagram:
+   - Wire Celsius to a Multiply function (× 9/5 = 1.8)
+   - Wire the result to an Add function ( + 32 )
+   - Wire the Add output to Fahrenheit
+4. Test and save as `Celsius_to_Fahrenheit.vi`
+
+### Step 2: Configure the Connector Pane
+
+1. Right-click the Front Panel icon pane (top-right corner)
+2. Select **Show Connector** from the menu
+3. Choose a terminal pattern:
+   - A simple 2-terminal pattern (1 input, 1 output)
+   - Or a 4-terminal pattern for expandability
+4. Assign terminals:
+   - Click the left terminal (input)
+   - Click the "Celsius" control on the front panel
+   - Click the right terminal (output)
+   - Click the "Fahrenheit" indicator on the front panel
+5. Verify the terminals highlight when selected
+
+### Step 3: Design the Icon
+
+1. Right-click the icon pane and select **Edit Icon**
+2. In the Icon Editor:
+   - Use the tools to draw a thermometer symbol
+   - Add text: "°C → °F"
+   - Use colors to distinguish input (blue) and output (red)
+   - Keep the design simple and readable
+3. Click OK to save the icon
+4. Save the VI
+
+### Step 4: Create the Top-Level VI
+
+1. Create a new VI
+2. On the Front Panel:
+   - Numeric Control "Temperature_C"
+   - Numeric Indicator "Temperature_F"
+   - Boolean button "Convert" (optional)
+3. On the Block Diagram:
+   - Right-click → **Select a VI** → Navigate to `Celsius_to_Fahrenheit.vi`
+   - Place the SubVI on the diagram
+   - Wire "Temperature_C" to the SubVI's Celsius input
+   - Wire the SubVI's Fahrenheit output to "Temperature_F"
+4. Run the top-level VI and verify conversion
+
+### Step 5: Document the SubVI
+
+1. Select **File → VI Properties**
+2. Add documentation:
+   - Category: **Documentation**
+   - Help tag: Brief description of the SubVI
+3. Add comments to the block diagram using the Labeling Tool
+4. Create a VI description for Help
+
+## What Was Done
+
+Created a reusable Celsius-to-Fahrenheit conversion SubVI with a custom thermometer icon and a 2-terminal connector pane. The SubVI was successfully called from a top-level temperature monitoring VI. The VI hierarchy shows the top-level VI calling `Celsius_to_Fahrenheit.vi` as a SubVI.
+
+## What Was Learnt
+
+- Creating SubVIs by converting block diagram sections
+- Configuring the Connector Pane for proper I/O
+- Designing custom icons for SubVI identification
+- Calling SubVIs from higher-level VIs
+- Understanding VI hierarchy and execution flow
+
+## Industry Applications
+
+- Creating reusable measurement libraries
+- Building modular test sequences
+- Developing company-wide VI libraries
+- Encapsulating complex algorithms
+- Standardizing instrument control interfaces
+
+## Skills Developed
+
+- SubVI creation and configuration
+- Connector pane assignment
+- Icon design and editing
+- Modular programming principles
+- VI documentation practices
+
+## Related Topics
+
+- [LabVIEW Interface Introduction](/content/labs/labview-interface-introduction)
+- [Equations and Logic Implementation](/content/labs/labview-equations-logic-implementation)
+- [Loops and Timing](/content/labs/labview-loops-and-timing)
+
+## Media
+
+### Images
+
+<!-- Upload SubVI icon design from admin panel -->
+<!-- Upload connector pane configuration from admin panel -->
+<!-- Upload top-level VI block diagram from admin panel -->
+
+### Videos
+
+<!-- Upload SubVI creation tutorial from admin panel -->
+
+### Documents
+
+<!-- Upload LabVIEW modular programming guide from admin panel -->
+
+### Files
+
+<!-- Upload Celsius_to_Fahrenheit.vi from admin panel -->
+<!-- Upload Temperature_Monitor.vi from admin panel -->

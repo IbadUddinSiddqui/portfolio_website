@@ -17,6 +17,7 @@ const sidebarLinks = [
   { href: "/admin/skills", label: "Skills", icon: "⬡" },
   { href: "/admin/learning", label: "Learning", icon: "⊗" },
   { href: "/admin/media", label: "Media", icon: "⊟" },
+  { href: "/admin/mdx", label: "MDX Content", icon: "📄" },
   { href: "/admin/blog", label: "Blog", icon: "◇" },
   { href: "/admin/messages", label: "Messages", icon: "◎" },
   { href: "/admin/settings", label: "Settings", icon: "⚙" },
@@ -36,7 +37,7 @@ export default function AdminLayout({
   return (
     <div className="flex min-h-screen">
       {/* Sidebar */}
-      <aside className="hidden md:flex w-60 flex-col border-r border-border bg-card">
+      <aside className="hidden md:flex w-60 flex-col border-r border-border bg-card-background">
         <div className="p-4 border-b border-border">
           <Link href="/admin" className="flex items-center gap-2">
             <div className="w-7 h-7 rounded-md bg-primary flex items-center justify-center text-primary-foreground text-xs font-bold">
@@ -51,7 +52,7 @@ export default function AdminLayout({
             <Link
               key={href}
               href={href}
-              className="flex items-center gap-3 px-3 py-2 rounded-lg text-sm text-muted-foreground hover:text-foreground hover:bg-muted transition-colors"
+              className="flex items-center gap-3 px-3 py-2 rounded-lg text-sm text-muted-foreground hover:text-foreground hover:bg-surface-secondary transition-colors"
             >
               <span className="w-5 text-center text-xs">{icon}</span>
               {label}

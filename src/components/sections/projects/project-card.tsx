@@ -83,9 +83,9 @@ export function ProjectCard({ project, index = 0 }: ProjectCardProps) {
         {/* Card surface */}
         <div
           className={cn(
-            "relative h-full rounded-2xl border border-border/50 bg-card overflow-hidden",
+            "relative h-full rounded-2xl border border-card-border/50 bg-card-background overflow-hidden",
             "transition-all duration-300",
-            "group-hover:border-primary/30 group-hover:shadow-[0_8px_40px_rgb(99_102_241_/_0.12)]",
+            "group-hover:border-primary/30 group-hover:shadow-card-primary",
             "group-focus-within:border-primary/30"
           )}
         >
@@ -97,10 +97,10 @@ export function ProjectCard({ project, index = 0 }: ProjectCardProps) {
           />
 
           {/* Shimmer sweep */}
-          <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-700 bg-gradient-to-r from-transparent via-white/[0.03] to-transparent pointer-events-none z-10" />
+          <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-700 bg-gradient-to-r from-transparent via-white/5 to-transparent pointer-events-none z-10" />
 
           {/* Image */}
-          <div className="aspect-[16/9] overflow-hidden bg-muted/50">
+          <div className="aspect-[16/9] overflow-hidden bg-surface-secondary/50">
             {project.thumbnail ? (
               <Image
                 src={project.thumbnail}
@@ -126,23 +126,23 @@ export function ProjectCard({ project, index = 0 }: ProjectCardProps) {
             {/* Badges row */}
             <div className="flex items-center gap-2 mb-3 flex-wrap">
               {project.category && (
-                <span className="px-2 py-0.5 rounded-md bg-primary/8 text-primary text-[11px] font-medium border border-primary/15">
+                <span className="px-2 py-0.5 rounded-md bg-primary/8 text-primary text-micro font-medium border border-primary/15">
                   {project.category.name}
                 </span>
               )}
               {project.difficulty && (
                 <span
                   className={cn(
-                    "px-2 py-0.5 rounded-md text-[11px] font-medium border",
+                    "px-2 py-0.5 rounded-md text-micro font-medium border",
                     complexityColors[project.difficulty] ??
-                      "text-muted-foreground bg-muted border-border"
+                      "text-muted-foreground bg-surface-secondary border-border"
                   )}
                 >
                   {project.difficulty}
                 </span>
               )}
               {project.pinned && (
-                <span className="px-2 py-0.5 rounded-md bg-amber-400/10 text-amber-400 border border-amber-400/20 text-[11px] font-medium">
+                <span className="px-2 py-0.5 rounded-md bg-amber-400/10 text-amber-400 border border-amber-400/20 text-micro font-medium">
                   Pinned
                 </span>
               )}
@@ -166,13 +166,13 @@ export function ProjectCard({ project, index = 0 }: ProjectCardProps) {
               {project.technologies.slice(0, 4).map((tech) => (
                 <span
                   key={tech}
-                  className="px-2 py-0.5 rounded-md text-[11px] bg-muted/80 text-muted-foreground font-mono border border-border/50"
+                  className="px-2 py-0.5 rounded-md text-micro bg-surface-secondary/80 text-muted-foreground font-mono border border-border/50"
                 >
                   {tech}
                 </span>
               ))}
               {project.technologies.length > 4 && (
-                <span className="px-2 py-0.5 rounded-md text-[11px] bg-muted/80 text-muted-foreground border border-border/50">
+                <span className="px-2 py-0.5 rounded-md text-micro bg-surface-secondary/80 text-muted-foreground border border-border/50">
                   +{project.technologies.length - 4}
                 </span>
               )}

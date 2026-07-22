@@ -40,7 +40,7 @@ export function Footer() {
         className="absolute top-0 left-1/2 -translate-x-1/2 w-[60%] h-32 pointer-events-none"
         style={{
           background:
-            "radial-gradient(ellipse at top, rgb(99 102 241 / 0.05), transparent 70%)",
+            "radial-gradient(ellipse at top, rgb(56 189 248 / 0.05), transparent 70%)",
         }}
         aria-hidden="true"
       />
@@ -91,12 +91,12 @@ export function Footer() {
                   className={cn(
                     "flex items-center justify-center w-9 h-9 rounded-xl border transition-all duration-200",
                     hoveredSocial === label
-                      ? "border-primary/40 bg-primary/10 text-primary shadow-[0_0_12px_rgb(99_102_241_/_0.15)]"
-                      : "border-border/60 bg-card/50 text-muted-foreground hover:text-foreground"
+                      ? "border-primary/40 bg-primary/10 text-primary shadow-icon-primary"
+                      : "border-border/60 bg-card-background/50 text-muted-foreground hover:text-foreground"
                   )}
                   aria-label={label}
                 >
-                  <Icon className="h-[14px] w-[14px]" />
+                  <Icon className="h-3.5 w-3.5" />
                 </motion.a>
               ))}
             </div>
@@ -104,7 +104,7 @@ export function Footer() {
 
           {/* Navigation */}
           <div className="space-y-3">
-            <h3 className="text-[10px] font-semibold uppercase tracking-[0.15em] text-muted-foreground/70">
+            <h3 className="text-xxs font-semibold uppercase tracking-label text-muted-foreground/70">
               Navigation
             </h3>
             <nav className="flex flex-col gap-2" aria-label="Footer navigation">
@@ -122,7 +122,7 @@ export function Footer() {
 
           {/* Connect */}
           <div className="space-y-3">
-            <h3 className="text-[10px] font-semibold uppercase tracking-[0.15em] text-muted-foreground/70">
+            <h3 className="text-xxs font-semibold uppercase tracking-label text-muted-foreground/70">
               Connect
             </h3>
             <div className="flex flex-col gap-2">
@@ -163,7 +163,7 @@ export function Footer() {
             aria-label="Back to top"
           >
             <span>Back to top</span>
-            <div className="w-5 h-5 rounded-md border border-border/60 bg-muted/50 flex items-center justify-center group-hover:border-primary/30 group-hover:bg-primary/10 transition-all duration-200">
+            <div className="w-5 h-5 rounded-md border border-border/60 bg-surface-secondary/50 flex items-center justify-center group-hover:border-primary/30 group-hover:bg-primary/10 transition-all duration-200">
               <ArrowUp className="h-3 w-3" />
             </div>
           </motion.button>

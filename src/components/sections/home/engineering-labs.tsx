@@ -83,7 +83,7 @@ export async function EngineeringLabs() {
                       <Icon className="h-4 w-4" />
                     </div>
                     {lab.category && (
-                      <Badge variant="outline" className="text-[10px] uppercase tracking-wider">
+                      <Badge variant="outline" className="text-xxs uppercase tracking-wider">
                         {lab.category}
                       </Badge>
                     )}
@@ -104,12 +104,12 @@ export async function EngineeringLabs() {
                   {/* Footer */}
                   <div className="flex items-center justify-between pt-3 border-t border-border/30 mt-auto">
                     {lab.difficulty && (
-                      <span className="text-[10px] text-muted-foreground capitalize">
+                      <span className="text-xxs text-muted-foreground capitalize">
                         {lab.difficulty}
                       </span>
                     )}
                     {lab.year && (
-                      <span className="text-[10px] text-muted-foreground">{lab.year}</span>
+                      <span className="text-xxs text-muted-foreground">{lab.year}</span>
                     )}
                   </div>
                 </GlassCard>

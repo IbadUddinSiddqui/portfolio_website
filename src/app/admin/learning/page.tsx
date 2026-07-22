@@ -26,7 +26,7 @@ export default async function AdminLearningPage() {
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
         {/* Add form */}
-        <div className="rounded-xl border border-border bg-card p-6">
+        <div className="rounded-xl border border-card-border bg-card-background p-6">
           <h2 className="text-sm font-semibold mb-4">Add Technology</h2>
           <form action={async (fd: FormData) => {
             "use server";
@@ -53,7 +53,7 @@ export default async function AdminLearningPage() {
             </div>
             <div className="space-y-2">
               <Label htmlFor="status">Status</Label>
-              <select id="status" name="status" defaultValue="LEARNING" className="w-full h-10 px-3 rounded-lg border border-border bg-background text-sm">
+              <select id="status" name="status" defaultValue="LEARNING" className="w-full h-10 px-3 rounded-lg border border-input-border bg-input-background text-sm">
                 <option value="PLANNING">Planning</option>
                 <option value="LEARNING">Learning</option>
                 <option value="PRACTICING">Practicing</option>
@@ -65,14 +65,14 @@ export default async function AdminLearningPage() {
         </div>
 
         {/* List */}
-        <div className="lg:col-span-2 rounded-xl border border-border bg-card p-6">
+        <div className="lg:col-span-2 rounded-xl border border-card-border bg-card-background p-6">
           <h2 className="text-sm font-semibold mb-4">Currently Learning ({learning.length})</h2>
           {learning.length === 0 ? (
             <p className="text-sm text-muted-foreground">No learning entries yet. Add technologies you're studying.</p>
           ) : (
             <div className="space-y-3">
               {learning.map(item => (
-                <div key={item.id} className="flex items-center justify-between px-4 py-3 rounded-lg bg-muted/30">
+                <div key={item.id} className="flex items-center justify-between px-4 py-3 rounded-lg bg-surface-secondary/30">
                   <div className="flex-1">
                     <div className="flex items-center gap-2 mb-1">
                       <span className="text-sm font-medium">{item.technology}</span>
@@ -83,10 +83,10 @@ export default async function AdminLearningPage() {
                     )}
                     {item.progress != null && (
                       <div className="flex items-center gap-2 mt-2">
-                        <div className="w-24 h-1.5 rounded-full bg-muted">
-                          <div className="h-full rounded-full bg-primary" style={{ width: `${item.progress}%` }} />
+                        <div className="w-24 h-1.5 rounded-full bg-surface-secondary">
+                          <div className="h-full rounded-full bg-accent-engineering" style={{ width: `${item.progress}%` }} />
                         </div>
-                        <span className="text-[10px] text-muted-foreground">{item.progress}%</span>
+                        <span className="text-xxs text-muted-foreground">{item.progress}%</span>
                       </div>
                     )}
                   </div>
@@ -118,7 +118,7 @@ function StatusPill({ status }: { status: string }) {
     MASTERED: "bg-violet-500/10 text-violet-500",
   };
   return (
-    <span className={`text-[10px] px-2 py-0.5 rounded-full font-medium ${colors[status] || colors.LEARNING}`}>
+    <span className={`text-xxs px-2 py-0.5 rounded-full font-medium ${colors[status] || colors.LEARNING}`}>
       {status}
     </span>
   );

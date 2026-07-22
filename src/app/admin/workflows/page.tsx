@@ -24,15 +24,15 @@ export default async function AdminWorkflowsPage() {
       </div>
 
       {workflows.length === 0 ? (
-        <div className="rounded-xl border border-dashed border-border p-12 text-center">
+        <div className="rounded-xl border border-dashed border-card-border p-12 text-center">
           <p className="text-muted-foreground text-sm mb-4">No workflows yet.</p>
           <Button asChild><Link href="/admin/workflows/new">Create Workflow</Link></Button>
         </div>
       ) : (
-        <div className="rounded-xl border border-border overflow-hidden">
+        <div className="rounded-xl border border-card-border overflow-hidden">
           <table className="w-full">
             <thead>
-              <tr className="border-b border-border bg-muted/50">
+              <tr className="border-b border-border bg-surface-secondary/50">
                 <th className="text-left text-xs font-medium text-muted-foreground px-4 py-3">Title</th>
                 <th className="text-left text-xs font-medium text-muted-foreground px-4 py-3 hidden sm:table-cell">Category</th>
                 <th className="text-left text-xs font-medium text-muted-foreground px-4 py-3 hidden md:table-cell">Status</th>
@@ -41,7 +41,7 @@ export default async function AdminWorkflowsPage() {
             </thead>
             <tbody>
               {workflows.map((w, i) => (
-                <tr key={w.id} className={`border-b border-border last:border-0 hover:bg-muted/30 transition-colors ${i % 2 === 0 ? "bg-background" : "bg-muted/10"}`}>
+                <tr key={w.id} className={`border-b border-border last:border-0 hover:bg-surface-secondary/30 transition-colors ${i % 2 === 0 ? "bg-surface" : "bg-surface/5"}`}>
                   <td className="px-4 py-3">
                     <Link href={`/admin/workflows/${w.id}`} className="text-sm font-medium hover:text-primary">{w.title}</Link>
                     {w.summary && <p className="text-xs text-muted-foreground mt-0.5 line-clamp-1">{w.summary}</p>}

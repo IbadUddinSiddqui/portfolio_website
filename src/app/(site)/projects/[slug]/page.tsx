@@ -119,7 +119,7 @@ export default async function ProjectDetailPage({ params }: Props) {
               })}
             </div>
             {project.difficulty && (
-              <span className="px-2 py-0.5 rounded bg-muted text-xs capitalize">
+              <span className="px-2 py-0.5 rounded bg-surface-secondary text-xs capitalize">
                 {project.difficulty}
               </span>
             )}
@@ -134,7 +134,7 @@ export default async function ProjectDetailPage({ params }: Props) {
             {project.gallery.map((img, i) => (
               <div
                 key={i}
-                className="rounded-2xl overflow-hidden bg-muted aspect-video"
+                className="rounded-2xl overflow-hidden bg-surface-secondary aspect-video"
               >
                 <Image
                   src={img.url}
@@ -228,7 +228,7 @@ export default async function ProjectDetailPage({ params }: Props) {
               {project.technologies.map((tech) => (
                 <span
                   key={tech}
-                  className="px-3 py-1.5 rounded-lg bg-muted text-sm font-medium"
+                  className="px-3 py-1.5 rounded-lg bg-surface-secondary text-sm font-medium"
                 >
                   {tech}
                 </span>
@@ -267,7 +267,7 @@ export default async function ProjectDetailPage({ params }: Props) {
                     </p>
                     <div className="flex flex-wrap gap-1.5 mt-3">
                       {item.technologies.slice(0, 3).map((t) => (
-                        <span key={t} className="px-2 py-0.5 rounded text-xs bg-muted">
+                        <span key={t} className="px-2 py-0.5 rounded text-xs bg-surface-secondary">
                           {t}
                         </span>
                       ))}

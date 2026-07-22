@@ -20,15 +20,15 @@ export default async function AdminCertificationsPage() {
         <Button asChild><Link href="/admin/certifications/new">New Certification</Link></Button>
       </div>
       {certs.length === 0 ? (
-        <div className="rounded-xl border border-dashed border-border p-12 text-center">
+        <div className="rounded-xl border border-dashed border-card-border p-12 text-center">
           <p className="text-muted-foreground text-sm mb-4">No certifications yet.</p>
           <Button asChild><Link href="/admin/certifications/new">Add Certification</Link></Button>
         </div>
       ) : (
-        <div className="rounded-xl border border-border overflow-hidden">
+        <div className="rounded-xl border border-card-border overflow-hidden">
           <table className="w-full">
             <thead>
-              <tr className="border-b border-border bg-muted/50">
+              <tr className="border-b border-border bg-surface-secondary/50">
                 <th className="text-left text-xs font-medium text-muted-foreground px-4 py-3">Title</th>
                 <th className="text-left text-xs font-medium text-muted-foreground px-4 py-3 hidden sm:table-cell">Issuer</th>
                 <th className="text-left text-xs font-medium text-muted-foreground px-4 py-3 hidden md:table-cell">Featured</th>
@@ -37,7 +37,7 @@ export default async function AdminCertificationsPage() {
             </thead>
             <tbody>
               {certs.map((c, i) => (
-                <tr key={c.id} className={`border-b border-border last:border-0 hover:bg-muted/30 ${i % 2 === 0 ? "bg-background" : "bg-muted/10"}`}>
+                <tr key={c.id} className={`border-b border-border last:border-0 hover:bg-surface-secondary/30 ${i % 2 === 0 ? "bg-surface" : "bg-surface/5"}`}>
                   <td className="px-4 py-3">
                     <Link href={`/admin/certifications/${c.id}`} className="text-sm font-medium hover:text-primary">{c.title}</Link>
                   </td>

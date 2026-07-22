@@ -7,8 +7,8 @@ import * as THREE from "three";
  * ThreeBulbScene
  *
  * A premium 3D Edison-style light bulb hanging from a ceiling canopy.
- * - Vintage brass socket with glass teardrop globe
- * - Glowing filament with volumetric warm light
+ * - Steel-blue socket with glass teardrop globe
+ * - Glowing filament with volumetric cyan light
  * - Gentle pendulum swing physics
  * - Background starfield
  * - GPU-accelerated via WebGL
@@ -54,7 +54,7 @@ export function ThreeBulbScene() {
       new THREE.BufferAttribute(starPositions, 3)
     );
     const starMaterial = new THREE.PointsMaterial({
-      color: 0xffddaa,
+      color: 0x88ccff,
       size: 1.1,
       transparent: true,
       opacity: 0.45,
@@ -65,9 +65,9 @@ export function ThreeBulbScene() {
 
     /* ── Materials ── */
     const brassMaterial = new THREE.MeshStandardMaterial({
-      color: 0xd4af37,
-      metalness: 0.85,
-      roughness: 0.15,
+      color: 0x4a7db5,
+      metalness: 0.75,
+      roughness: 0.20,
       bumpScale: 0.05,
     });
 
@@ -141,7 +141,7 @@ export function ThreeBulbScene() {
     glassGlobeGeom.translate(0, -0.75, 0);
 
     const glassMaterial = new THREE.MeshPhysicalMaterial({
-      color: 0xfff6e5,
+      color: 0xe8f4ff,
       transmission: 0.95,
       opacity: 1.0,
       metalness: 0.05,
@@ -190,7 +190,7 @@ export function ThreeBulbScene() {
     /* ── Filament ── */
     const filamentGeom = new THREE.TorusGeometry(0.16, 0.015, 8, 24, Math.PI);
     const filamentMat = new THREE.MeshBasicMaterial({
-      color: 0xffaa11,
+      color: 0x7dd3fc,
     });
     const filament = new THREE.Mesh(filamentGeom, filamentMat);
     filament.rotation.x = Math.PI;
@@ -204,11 +204,11 @@ export function ThreeBulbScene() {
       canvas.height = 512;
       const context = canvas.getContext("2d")!;
       const gradient = context.createRadialGradient(256, 256, 0, 256, 256, 256);
-      gradient.addColorStop(0, "rgba(255, 245, 220, 1.0)");
-      gradient.addColorStop(0.08, "rgba(255, 210, 80, 0.8)");
-      gradient.addColorStop(0.2, "rgba(255, 140, 20, 0.4)");
-      gradient.addColorStop(0.45, "rgba(150, 60, 5, 0.1)");
-      gradient.addColorStop(0.75, "rgba(60, 20, 0, 0.02)");
+      gradient.addColorStop(0, "rgba(255, 255, 255, 1.0)");
+      gradient.addColorStop(0.08, "rgba(125, 211, 252, 0.8)");
+      gradient.addColorStop(0.2, "rgba(56, 189, 248, 0.4)");
+      gradient.addColorStop(0.45, "rgba(37, 99, 235, 0.08)");
+      gradient.addColorStop(0.75, "rgba(30, 60, 120, 0.02)");
       gradient.addColorStop(1, "rgba(0, 0, 0, 0)");
       context.fillStyle = gradient;
       context.fillRect(0, 0, 512, 512);
@@ -230,12 +230,12 @@ export function ThreeBulbScene() {
     bulbAssembly.add(glow);
 
     /* ── Point Light ── */
-    const bulbLight = new THREE.PointLight(0xff9922, 4.5, 45, 1.5);
+    const bulbLight = new THREE.PointLight(0x38bdf8, 4.5, 45, 1.5);
     bulbLight.position.set(0, -0.75, 0);
     bulbAssembly.add(bulbLight);
 
     /* ── Ambient Light ── */
-    const ambientLight = new THREE.AmbientLight(0xfff6e5, 0.08);
+    const ambientLight = new THREE.AmbientLight(0x88ccff, 0.08);
     scene.add(ambientLight);
 
     /* ── Pendulum Physics ── */

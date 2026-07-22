@@ -1,0 +1,236 @@
+---
+title: "Auto Routing, Design Rules Check, and Copper Pour"
+slug: "orcad-auto-routing-drc-copper-pour"
+type: "labs"
+category: "Electronic Engineering Drawing"
+subcategory: "OrCAD PCB Design"
+course: "Electronic Engineering Drawing & Engineering Software (EEDW)"
+department: "Electronic Engineering"
+semester: "1st"
+year: "2023"
+laboratorySession: "03"
+taxonomyLevel: "C3 (Applying) / C4 (Analyzing)"
+clo: "CLO-3: Perform auto-routing, DRC, and copper pour operations on a PCB layout."
+domain: "Electronic Design Automation (EDA) — PCB Routing"
+difficulty: "intermediate"
+status: "completed"
+featured: false
+tags:
+  - OrCAD
+  - PCB Editor
+  - Auto Routing
+  - DRC
+  - Copper Pour
+  - Design Rules
+  - Signal Integrity
+technologies:
+  - OrCAD PCB Editor
+  - OrCAD SPECCTRA Auto Router
+software:
+  - OrCAD PCB Editor 17.4
+  - OrCAD SPECCTRA 17.4
+hardware: []
+tools:
+  - SPECCTRA Auto Router
+  - DRC Engine
+  - Copper Pour Tool
+  - Thermal Relief Manager
+skills:
+  - Auto Routing
+  - Design Rules Check
+  - Copper Pour Creation
+  - Thermal Relief Design
+  - Signal Integrity Analysis
+seoTitle: "Auto Routing, DRC, and Copper Pour — EEDW Lab 03"
+seoDescription: "Learn auto-routing techniques, design rules check, and copper pour operations in OrCAD PCB Editor for professional PCB design."
+---
+
+# Auto Routing, Design Rules Check, and Copper Pour
+
+## Overview
+
+After placing components on a PCB, the next critical step is routing — creating copper traces that connect components according to the schematic netlist. This laboratory session covers automated routing using SPECCTRA, performing comprehensive design rules check (DRC), and creating copper pour areas for power distribution and EMI shielding.
+
+## Objective
+
+To route a PCB using the SPECCTRA auto-router, perform design rules check and resolve violations, create copper pour areas for power and ground nets, and understand thermal relief patterns for improved solderability.
+
+## Domain
+
+Electronic Design Automation (EDA) — PCB Routing and Design Verification.
+
+## CLO and Taxonomy Level
+
+- **CLO-3**: Perform auto-routing, DRC, and copper pour operations on a PCB layout.
+- **Taxonomy Level**: C3 (Applying) — Apply auto-routing and copper pour techniques. C4 (Analyzing) — Analyze DRC violations and determine corrective actions.
+
+## Tools and Software
+
+- **Software**: OrCAD PCB Editor 17.4, OrCAD SPECCTRA 17.4
+- **Operating System**: Windows 10/11
+
+## Required Skills
+
+- Successful completion of board setup and component placement (Lab 02)
+- Understanding of PCB layers and trace geometry
+- Knowledge of design constraints
+
+## Theory and Engineering Concepts
+
+- **Auto Routing**: The automated process of creating copper traces between component pins based on netlist connectivity. SPECCTRA uses routing algorithms to find optimal paths while respecting design constraints.
+- **Design Rules Check (DRC)**: Automated verification that the PCB layout adheres to manufacturing and electrical constraints including trace widths, clearances, via sizes, and net spacing.
+- **Copper Pour**: A large area of copper on a PCB layer used for power distribution (VCC), ground planes (GND), or EMI shielding. Copper pours provide low-impedance paths and reduce electromagnetic interference.
+- **Thermal Relief**: A pattern of narrow traces connecting a pad to a copper pour, allowing heat to dissipate during soldering while maintaining electrical connectivity. Without thermal relief, soldering becomes difficult due to heat sinking.
+- **Net Classes**: Groups of nets with specific routing constraints. Power nets typically use wider traces than signal nets.
+
+## Project / Task
+
+Route the LED driver PCB from Lab 02 using SPECCTRA auto-router, run DRC to verify the design, create copper pour areas for VCC and GND nets, and apply thermal relief patterns.
+
+## Procedure / Implementation
+
+### Step 1: Configure Auto-Router Setup
+
+1. Open the board file from Lab 02 in OrCAD PCB Editor
+2. Select **Route → PCB Router → Setup** to configure auto-router
+3. In the Routing Setup dialog:
+   - Select **SPECCTRA Smart Route** as the routing engine
+   - Set **Routing Layers**: Top and Bottom (for 2-layer board)
+   - Set **Direction**: Preferred horizontal on top, vertical on bottom
+   - Set **Via Type**: Through-hole vias
+4. Configure routing strategy:
+   - Route order: Power nets first, then signal nets
+   - Fan-out: Generate fan-outs for surface-mount components
+
+### Step 2: Run Auto-Router
+
+1. Select **Route → PCB Router → Route Automatic**
+2. Configure auto-route parameters:
+   - **Minimum via grid**: 25 mils
+   - **Attempt to route**: All nets
+   - **Routing effort**: Medium (balance between speed and quality)
+3. Click **Route** to start the auto-routing process
+4. Monitor routing progress in the status window
+5. Review routing results:
+   - Number of traces routed
+   - Number of failed connections (if any)
+   - Routing completion percentage
+
+### Step 3: Manual Touch-Up (If Needed)
+
+1. Review auto-routed traces for potential issues:
+   - Unnecessarily long traces
+   - Acute angles in traces (< 90 degrees)
+   - Traces too close to board edges
+2. Use **Slide** and **Edit Trace** tools to adjust problematic traces
+3. Use **Vertex** command to add or remove trace vertices for cleaner routing
+
+### Step 4: Run Design Rules Check (DRC)
+
+1. Select **Setup → Constraints → DRC**
+2. Configure DRC options:
+   - Check all constraints (physical, spacing, same-net)
+   - Report all violations
+   - Stop on first error (optional)
+3. Run DRC and review the report:
+   - **DRC Errors**: Critical violations that must be fixed
+   - **DRC Warnings**: Non-critical issues that should be reviewed
+4. Common DRC violations:
+   - Trace-to-trace spacing violation
+   - Trace-to-pad spacing violation
+   - Unrouted nets
+   - Silkscreen overlapping pads
+5. Fix all critical DRC errors before proceeding
+
+### Step 5: Create Copper Pour for Ground Plane
+
+1. Select the **Bottom Layer** as the active layer
+2. Select **Shape → Polygon** or **Shape → Rectangular**
+3. Draw a polygon covering the entire board area
+4. In the shape properties dialog:
+   - Assign net: **GND**
+   - Layer: **Bottom**
+   - Dynamic fill: **Smooth** or **Rough** (Smooth recommended for manufacturing)
+5. Set copper pour parameters:
+   - Clearance: **12 mils** from other nets
+   - Thermal relief connection: **4 spokes** at 45 degrees
+   - Minimum spoke width: **10 mils**
+
+### Step 6: Create Copper Pour for Power Plane
+
+1. Select the **Top Layer** as the active layer
+2. Select **Shape → Polygon**
+3. Draw a polygon in areas where VCC routing is concentrated
+4. Assign net: **VCC**
+5. Set same parameters as ground pour with appropriate clearance
+
+### Step 7: Apply Thermal Relief Patterns
+
+1. Select **Shape → Global Dynamic Params**
+2. In **Thermal Relief** tab:
+   - Enable thermal relief for all pads connecting to copper pours
+   - Set connection style: **Orthogonal** or **Diagonal**
+   - Spoke width: **12 mils**
+   - Air gap: **8 mils**
+3. Apply thermal relief to all through-hole pads
+
+### Step 8: Final DRC After Copper Pour
+
+1. Run DRC again after copper pour creation
+2. Verify no new violations were introduced by the copper pour
+3. Check thermal relief connections are properly formed
+4. Review copper pour edges for sharp corners or acute angles
+
+## What Was Done
+
+Successfully auto-routed the LED driver PCB with 100% routing completion using SPECCTRA. DRC was performed before and after copper pour creation, identifying and resolving all critical violations. Ground and power copper pours were created on bottom and top layers respectively, with thermal relief patterns applied to all through-hole pads for improved solderability.
+
+## What Was Learnt
+
+- Configuring and running SPECCTRA auto-router for optimal routing
+- Interpreting DRC reports and resolving violations systematically
+- Creating copper pour areas for power distribution and grounding
+- Applying thermal relief patterns for manufacturing reliability
+- The relationship between routing quality and design constraints
+
+## Industry Applications
+
+- High-volume PCB manufacturing requiring DRC-clean designs
+- Power electronics requiring wide traces and copper pours
+- High-speed digital design requiring impedance-controlled routing
+- RF design requiring ground planes for signal integrity
+- Automotive electronics requiring robust thermal management
+
+## Skills Developed
+
+- Auto-router configuration and operation
+- DRC analysis and violation resolution
+- Copper pour design and management
+- Thermal relief pattern design
+- Board finishing techniques
+
+## Related Topics
+
+- [Creating Layout Board in OrCAD](/content/labs/orcad-creating-layout-board)
+- [Manual Routing and Board Setup](/content/labs/orcad-manual-routing-board-setup)
+- [Component Footprint Creation](/content/labs/orcad-component-footprint-creation)
+
+## Media
+
+### Images
+
+<!-- Upload auto-routed board screenshot from admin panel -->
+<!-- Upload DRC results report from admin panel -->
+<!-- Upload copper pour visualization from admin panel -->
+
+### Videos
+
+<!-- Upload auto-routing tutorial video from admin panel -->
+
+### Documents
+
+<!-- Upload DRC report PDF from admin panel -->
+
+### Files
+
+<!-- Upload completed board file from admin panel -->

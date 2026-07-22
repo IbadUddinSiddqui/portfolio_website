@@ -1,0 +1,188 @@
+---
+title: "Integrator and Differentiator Circuits"
+slug: "bel-integrator-and-differentiator-circuits"
+type: "labs"
+category: "basic-electronics"
+subcategory: "Operational Amplifiers"
+course: "Basic Electronics Laboratory"
+department: "Electrical / Electronics Engineering"
+semester: "1st"
+year: "2023"
+laboratorySession: "10"
+domain: "Analog Electronics"
+taxonomyLevel: "P3"
+clo: "CLO-3"
+difficulty: "advanced"
+status: "completed"
+featured: false
+tags:
+  - Basic Electronics
+  - Op-Amp
+  - Integrator
+  - Differentiator
+  - Analog Computing
+  - Waveform Conversion
+technologies:
+  - Analog Electronics
+  - Operational Amplifiers
+software:
+  - Multisim (optional)
+hardware:
+  - Op-Amp IC (LM741 or TL081)
+  - Capacitor (0.1µF, 1µF)
+  - Resistors (1kΩ, 10kΩ, 100kΩ)
+  - Dual DC Power Supply (±12V)
+  - Function Generator
+  - Oscilloscope
+components:
+  - LM741 / TL081 Op-Amp
+  - 0.1µF Capacitor
+  - 1µF Capacitor
+  - 1kΩ Resistor
+  - 10kΩ Resistor
+  - 100kΩ Resistor
+tools:
+  - Breadboard
+  - Jumper Wires
+skills:
+  - Analog Circuit Design
+  - Mathematical Operation Implementation
+  - Waveform Conversion
+circuits:
+  - Op-Amp Integrator
+  - Op-Amp Differentiator
+seoTitle: "Integrator and Differentiator Circuits — BEL Lab 10"
+seoDescription: "Build op-amp integrator and differentiator circuits to perform mathematical operations and waveform conversion (square to triangle waves)."
+---
+
+# Integrator and Differentiator Circuits
+
+## Overview
+
+Op-amp integrator and differentiator circuits perform mathematical operations on input signals, forming the foundation of analog computing. An integrator produces an output proportional to the integral of the input signal, while a differentiator produces an output proportional to the derivative. These circuits can convert between waveform shapes, such as square waves to triangle waves.
+
+## Objective
+
+To practice mathematical operations (integration and differentiation) using op-amp circuits.
+
+## Domain
+
+Analog Electronics — Analog Computing and Signal Processing.
+
+## CLO and Taxonomy Level
+
+- **CLO-3**: Configure and analyze op-amp integrator and differentiator circuits for analog signal processing.
+- **Taxonomy Level**: P3 — Supervised Practice (Practical application of analog computing circuits under guidance).
+
+## Components and Equipment
+
+- **Active Components**: LM741 or TL081 op-amp IC
+- **Passive Components**: 0.1µF capacitor, 1µF capacitor, 1kΩ, 10kΩ, 100kΩ resistors
+- **Equipment**: Dual DC power supply (±12V), Function generator, Oscilloscope
+
+## Required Skills
+
+- Op-amp fundamentals (Lab 08)
+- Understanding of calculus concepts (integration, differentiation)
+- RC circuit behavior
+
+## Theory and Engineering Concepts
+
+- **Integrator Output**: Vout(t) = -(1/RC) × ∫Vin(t)dt. The output is the time integral of the input, inverted and scaled.
+- **Differentiator Output**: Vout(t) = -RC × dVin/dt. The output is the derivative of the input, inverted and scaled.
+- **Waveform Conversion**: A square wave input to an integrator produces a triangle wave output. A triangle wave input to a differentiator produces a square wave output.
+- **Practical Considerations**: Real integrators need a feedback resistor to prevent DC offset saturation. Real differentiators need a series input resistor to limit high-frequency gain and noise.
+
+## Circuit Configuration
+
+**Integrator**: Capacitor in feedback path (Rf replaced by C), input resistor (Rin) from signal to inverting input.
+
+**Differentiator**: Capacitor in series with input (Cin), feedback resistor (Rf) from output to inverting input.
+
+## Procedure / Implementation
+
+### Step 1: Integrator Circuit
+
+1. Connect the op-amp with ±12V power supply
+2. Connect a 10kΩ resistor from signal input to the inverting input
+3. Connect a 0.1µF capacitor from output to inverting input (feedback path)
+4. Connect a 100kΩ resistor in parallel with the capacitor (for DC stabilization)
+5. Apply a 1kHz square wave (2Vpp) input
+6. Observe the triangle wave output
+
+### Step 2: Differentiator Circuit
+
+1. Connect a 0.1µF capacitor in series with the signal input
+2. Connect a 100Ω resistor in series with the capacitor (stability)
+3. Connect a 10kΩ feedback resistor from output to inverting input
+4. Apply a 1kHz triangle wave (2Vpp) input
+5. Observe the square wave output
+
+### Step 3: Frequency Response
+
+1. Vary the input frequency and observe changes in output amplitude
+2. Note the integrator's low-pass characteristic
+3. Note the differentiator's high-pass characteristic
+
+## What Was Done
+
+Built circuits to perform mathematical integration and differentiation on input waveforms. Verified the square-to-triangle wave conversion using the integrator and triangle-to-square wave conversion using the differentiator.
+
+## Results and Observations
+
+| Circuit | Input (1kHz) | Output |
+|---------|-------------|--------|
+| Integrator | Square wave (2Vpp) | Triangle wave (≈0.6Vpp) |
+| Differentiator | Triangle wave (2Vpp) | Square wave (≈1.2Vpp) |
+| Integrator | Sine wave (2Vpp) | Cosine wave (-90° shift) |
+
+*Place waveform conversion screenshots here.*
+
+## What Was Learnt
+
+- Integrator and differentiator circuits are the foundation of analog computers
+- The integrator output is proportional to the integral of the input signal
+- The differentiator output is proportional to the derivative of the input signal
+- Square waves become triangle waves through integration
+- Practical limitations require compensation resistors for stable operation
+
+## Engineering Applications
+
+- Analog computers for solving differential equations
+- Waveform generation and conversion
+- PID controller implementation (proportional-integral-derivative)
+- Active filter design
+- Signal processing and conditioning
+
+## Skills Developed
+
+- Integrator circuit configuration and testing
+- Differentiator circuit configuration and testing
+- Waveform conversion observation
+- Analog computing principles
+
+## Related Topics
+
+- [Inverting and Non-Inverting Amplifiers](/content/labs/bel-inverting-and-non-inverting-amplifiers)
+- [Summing Amplifier](/content/labs/bel-summing-amplifier)
+- [Basic Electronics Open Ended Lab](/content/labs/bel-basic-electronics-open-ended-lab)
+
+## Media
+
+### Images
+
+<!-- Upload integrator circuit diagram from admin panel -->
+<!-- Upload triangle wave output screenshot from admin panel -->
+<!-- Upload differentiator square wave output from admin panel -->
+
+### Videos
+
+<!-- Upload integrator/differentiator demonstration from admin panel -->
+
+### Documents
+
+<!-- Upload lab report from admin panel -->
+
+### Simulation Files
+
+<!-- Upload Multisim simulation files from admin panel -->

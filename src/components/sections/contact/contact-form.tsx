@@ -88,7 +88,7 @@ function FloatingField({
           "absolute left-4 transition-all duration-200 pointer-events-none",
           "text-muted-foreground",
           isActive
-            ? "top-2 text-[10px] font-medium"
+            ? "top-2 text-xxs font-medium"
             : "top-1/2 -translate-y-1/2 text-sm",
           multiline && isActive && "top-2",
           multiline && !isActive && "top-5",
@@ -279,7 +279,7 @@ export function ContactForm() {
         />
         <div className="flex justify-end px-1">
           <span className={cn(
-            "text-[11px] transition-colors",
+            "text-micro transition-colors",
             formData.message.length > 4500
               ? "text-destructive"
               : "text-muted-foreground/50"

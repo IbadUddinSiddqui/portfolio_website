@@ -1,0 +1,185 @@
+---
+title: "Equations and Logic Implementation in LabVIEW"
+slug: "labview-equations-logic-implementation"
+type: "labs"
+category: "Electronic Engineering Drawing"
+subcategory: "LabVIEW"
+course: "Electronic Engineering Drawing & Engineering Software (EEDW)"
+department: "Electronic Engineering"
+semester: "1st"
+year: "2023"
+laboratorySession: "23"
+taxonomyLevel: "C3 (Applying)"
+clo: "CLO-23: Implement mathematical equations and logical operations in LabVIEW using graphical programming."
+domain: "Virtual Instrumentation — Mathematical Programming"
+difficulty: "intermediate"
+status: "completed"
+featured: false
+tags:
+  - LabVIEW
+  - Equations
+  - Logic Operations
+  - Formula Node
+  - Boolean Logic
+  - Comparison
+technologies:
+  - LabVIEW
+software:
+  - LabVIEW 2023 or later
+hardware: []
+tools:
+  - Formula Node
+  - Boolean Functions
+  - Comparison Functions
+  - Math Palette
+skills:
+  - Equation Implementation
+  - Boolean Logic
+  - Formula Node Usage
+  - Comparison Operations
+  - Engineering Calculations
+seoTitle: "Equations and Logic Implementation in LabVIEW — EEDW Lab 23"
+seoDescription: "Learn to implement mathematical equations and Boolean logic operations in LabVIEW using graphical programming and the Formula Node."
+---
+
+# Equations and Logic Implementation in LabVIEW
+
+## Overview
+
+Implementing mathematical equations and logical operations is fundamental to engineering programming. LabVIEW provides multiple methods for implementing equations, including graphical arithmetic functions and the Formula Node for text-based expressions. This laboratory session covers both approaches for engineering calculations.
+
+## Objective
+
+To implement arithmetic equations using LabVIEW's graphical math functions, use the Formula Node for complex text-based mathematical expressions, implement Boolean logic operations (AND, OR, NOT, XOR) for decision making, use comparison functions for conditional logic, and build a combined engineering calculator VI.
+
+## Domain
+
+Virtual Instrumentation — Mathematical and Logical Programming.
+
+## CLO and Taxonomy Level
+
+- **CLO-23**: Implement mathematical equations and logical operations in LabVIEW using graphical programming.
+- **Taxonomy Level**: C3 (Applying) — Apply graphical programming to implement engineering equations.
+
+## Tools and Software
+
+- **Software**: LabVIEW 2023 or later
+
+## Required Skills
+
+- Basic LabVIEW knowledge (Labs 21-22)
+- Understanding of engineering mathematics
+
+## Theory and Engineering Concepts
+
+LabVIEW offers two approaches for implementing equations:
+- **Graphical Functions**: Visual representation using Numeric palette functions (Add, Subtract, Multiply, Divide, Square Root, etc.)
+- **Formula Node**: A structure that accepts C-style text equations, useful for complex expressions with multiple variables.
+
+Boolean logic in LabVIEW uses functions from the Boolean palette (AND, OR, NOT, XOR, NAND, NOR, XNOR). These are essential for creating conditional program flow and decision-making logic.
+
+## Project / Task
+
+Create a VI that solves the quadratic equation ax² + bx + c = 0 and implements a component test decision system using Boolean logic.
+
+## Procedure / Implementation
+
+### Step 1: Implement Quadratic Formula (Graphical)
+
+1. Create a new VI with controls for a, b, c
+2. On the Block Diagram:
+   - Calculate discriminant: `disc = b^2 - 4*a*c`
+   - Calculate x1: `x1 = (-b + sqrt(disc)) / (2*a)`
+   - Calculate x2: `x2 = (-b - sqrt(disc)) / (2*a)`
+3. Wire all inputs to appropriate math functions
+
+### Step 2: Implement Quadratic Formula (Formula Node)
+
+1. Place **Formula Node** on the Block Diagram (Functions → Programming → Structures → Formula Node)
+2. Add input terminals: right-click border → Add Input (a, b, c)
+3. Add output terminals: right-click border → Add Output (x1, x2, discriminant, message)
+4. Enter the formula:
+   ```
+   discriminant = b*b - 4*a*c;
+   if (discriminant >= 0) {
+       x1 = (-b + sqrt(discriminant)) / (2*a);
+       x2 = (-b - sqrt(discriminant)) / (2*a);
+       message = "Real roots";
+   } else {
+       x1 = -999;
+       x2 = -999;
+       message = "Complex roots";
+   }
+   ```
+
+### Step 3: Boolean Logic for Component Testing
+
+1. Create a component test logic VI:
+   - Controls: Temperature_OK (Boolean), Voltage_OK (Boolean), Current_OK (Boolean)
+   - Indicators: System_Pass (LED), Warning (LED), Shutdown (LED)
+2. Implement logic:
+   - System_Pass = Temperature_OK AND Voltage_OK AND Current_OK
+   - Warning = (NOT Temperature_OK) OR (NOT Voltage_OK) OR (NOT Current_OK)
+   - Shutdown = (NOT Temperature_OK) AND (NOT Voltage_OK)
+
+### Step 4: Comparison Operations
+
+1. Implement threshold detection:
+   - Create numeric control for "Measured Value" and "Upper_Limit" and "Lower_Limit"
+   - Use comparison functions:
+     - `In_Range = (Measured >= Lower) AND (Measured <= Upper)`
+
+## What Was Done
+
+Created two implementations of the quadratic equation solver — one using graphical math functions and one using the Formula Node with C-style syntax. Both produced identical results for test inputs (a=1, b=-5, c=6 gave roots x1=3, x2=2). Built a component test decision system using Boolean logic with pass/warning/shutdown indicators. Implemented comparison-based threshold detection.
+
+## What Was Learnt
+
+- Two methods for implementing equations in LabVIEW
+- Formula Node syntax for complex expressions
+- Boolean logic for decision-making systems
+- Comparison functions for threshold detection
+- When to use graphical vs. text-based equation implementation
+
+## Industry Applications
+
+- Automated test system pass/fail criteria
+- Process control limit checking
+- Alarm and shutdown system logic
+- Sensor data validation
+- Quality control decision systems
+
+## Skills Developed
+
+- Graphical equation implementation
+- Formula Node programming
+- Boolean logic design
+- Comparison-based decision systems
+- Engineering calculator development
+
+## Related Topics
+
+- [Creating SubVIs](/content/labs/labview-creating-subvis)
+- [Conditional Execution and Dialogs](/content/labs/labview-conditional-execution-dialogs)
+- [Loops and Timing](/content/labs/labview-loops-and-timing)
+
+## Media
+
+### Images
+
+<!-- Upload Formula Node implementation from admin panel -->
+<!-- Upload Boolean logic diagram from admin panel -->
+<!-- Upload front panel with test results from admin panel -->
+
+### Videos
+
+<!-- Upload equation implementation tutorial from admin panel -->
+
+### Documents
+
+<!-- Upload Formula Node reference from admin panel -->
+
+### Files
+
+<!-- Upload Quadratic_Solver.vi from admin panel -->
+<!-- Upload Component_Tester.vi from admin panel -->

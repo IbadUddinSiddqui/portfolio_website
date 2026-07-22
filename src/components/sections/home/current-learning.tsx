@@ -45,7 +45,7 @@ export async function CurrentLearning() {
             <StaggerItem key={item.id}>
               <GlassCard className="p-5 group relative overflow-hidden" glow>
                 {/* Progress bar at top */}
-                <div className="h-1 w-full rounded-full bg-muted/60 mb-4 overflow-hidden">
+                <div className="h-1 w-full rounded-full bg-surface-secondary/60 mb-4 overflow-hidden">
                   <div
                     className="h-full rounded-full bg-gradient-to-r from-primary to-primary/60 transition-all duration-1000"
                     style={{ width: `${item.progress ?? 0}%` }}
@@ -56,7 +56,7 @@ export async function CurrentLearning() {
                   <h3 className="text-base font-semibold group-hover:text-primary transition-colors">
                     {item.technology}
                   </h3>
-                  <span className={`shrink-0 text-[10px] font-medium px-2 py-0.5 rounded-full border ${statusColors[item.status] || statusColors.LEARNING}`}>
+                  <span className={`shrink-0 text-xxs font-medium px-2 py-0.5 rounded-full border ${statusColors[item.status] || statusColors.LEARNING}`}>
                     {item.status}
                   </span>
                 </div>
@@ -68,13 +68,13 @@ export async function CurrentLearning() {
                 )}
 
                 <div className="flex items-center gap-2">
-                  <div className="flex-1 h-1.5 rounded-full bg-muted/40 overflow-hidden">
+                  <div className="flex-1 h-1.5 rounded-full bg-surface-secondary/40 overflow-hidden">
                     <div
                       className="h-full rounded-full bg-primary/70 transition-all duration-1000"
                       style={{ width: `${item.progress ?? 0}%` }}
                     />
                   </div>
-                  <span className="text-[11px] text-muted-foreground font-mono">
+                  <span className="text-micro text-muted-foreground font-mono">
                     {item.progress ?? 0}%
                   </span>
                 </div>

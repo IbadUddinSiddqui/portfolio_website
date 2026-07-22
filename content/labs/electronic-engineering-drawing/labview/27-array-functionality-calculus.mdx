@@ -1,0 +1,181 @@
+---
+title: "Array Functionality and Numerical Calculus in LabVIEW"
+slug: "labview-array-functionality-calculus"
+type: "labs"
+category: "Electronic Engineering Drawing"
+subcategory: "LabVIEW"
+course: "Electronic Engineering Drawing & Engineering Software (EEDW)"
+department: "Electronic Engineering"
+semester: "1st"
+year: "2023"
+laboratorySession: "27"
+taxonomyLevel: "C5 (Evaluating) / C6 (Creating)"
+clo: "CLO-27: Apply array functions and numerical calculus operations to analyze engineering data in LabVIEW."
+domain: "Virtual Instrumentation — Numerical Analysis"
+difficulty: "advanced"
+status: "completed"
+featured: false
+tags:
+  - LabVIEW
+  - Arrays
+  - Numerical Calculus
+  - Differentiation
+  - Integration
+  - Signal Analysis
+technologies:
+  - LabVIEW
+software:
+  - LabVIEW 2023 or later
+hardware: []
+tools:
+  - Calculus Functions
+  - Array Functions
+  - Integration VI
+  - Differentiation VI
+skills:
+  - Numerical Differentiation
+  - Numerical Integration
+  - Array Manipulation
+  - Signal Processing
+  - Data Analysis
+seoTitle: "Array Functionality and Numerical Calculus in LabVIEW — EEDW Lab 27"
+seoDescription: "Learn advanced array operations and numerical calculus in LabVIEW including differentiation, integration, and signal analysis."
+---
+
+# Array Functionality and Numerical Calculus in LabVIEW
+
+## Overview
+
+Numerical calculus operations — differentiation and integration — are essential for analyzing engineering data, particularly for converting between physical quantities like displacement, velocity, and acceleration. This laboratory session covers advanced array manipulation and numerical calculus operations in LabVIEW using the Mathematics palette.
+
+## Objective
+
+To perform advanced array operations including reshaping, transpose, and subset extraction, implement numerical differentiation on sampled data arrays, implement numerical integration (trapezoidal rule) on sampled data, apply calculus operations to convert position-velocity-acceleration data, and analyze signal characteristics using derivative and integral functions.
+
+## Domain
+
+Virtual Instrumentation — Numerical Methods for Engineering Analysis.
+
+## CLO and Taxonomy Level
+
+- **CLO-27**: Apply array functions and numerical calculus operations to analyze engineering data in LabVIEW.
+- **Taxonomy Level**: C5 (Evaluating) — Evaluate numerical method accuracy for data analysis. C6 (Creating) — Create a data analysis system using calculus operations.
+
+## Tools and Software
+
+- **Software**: LabVIEW 2023 or later
+
+## Required Skills
+
+- Array operations (Lab 26)
+- Understanding of calculus fundamentals
+
+## Theory and Engineering Concepts
+
+- **Numerical Differentiation**: Approximates the derivative of a function from sampled data points. The simplest method uses the difference formula: `dy/dx ≈ (y_{i+1} - y_i) / (x_{i+1} - x_i)`.
+- **Numerical Integration**: Approximates the definite integral using methods like the trapezoidal rule: `∫f(x)dx ≈ Σ[(f(x_i) + f(x_{i+1}))/2 × Δx]`.
+- **Integration (Cumulative)**: The running sum of a signal, used to convert acceleration to velocity or velocity to position.
+- **Sampling Rate**: The frequency at which data points are acquired. Higher sampling rates provide more accurate numerical calculus results.
+
+## Project / Task
+
+Create a VI that: generates a simulated acceleration signal, performs numerical integration to calculate velocity and position, performs numerical differentiation to verify the reverse operation, and displays all three signals on a single graph for comparison.
+
+## Procedure / Implementation
+
+### Step 1: Generate Simulated Acceleration Data
+
+1. Create a For Loop with N = 1000
+2. Generate a composite signal:
+   ```labview
+   t = i * dt  (dt = 0.01 seconds)
+   acceleration = 5 * sin(2*pi*2*t) + 2 * cos(2*pi*5*t)
+   ```
+3. Build an array of time values (t)
+4. Build an array of acceleration values
+
+### Step 2: Numerical Integration (Trapezoidal Rule)
+
+1. Implement using the Integration palette:
+   - Functions → Mathematics → Integration & Differentiation → Integral x(t)
+2. Wire acceleration array as input
+3. Wire dt (time step) array or constant
+4. Output is velocity array
+5. Apply integration again to get position
+
+### Step 3: Numerical Differentiation
+
+1. Implement using the Differentiation palette:
+   - Functions → Mathematics → Integration & Differentiation → Derivative x(t)
+2. Wire position array as input
+3. Output should match original velocity (verification)
+
+### Step 4: Display Results
+
+1. Create a Waveform Graph on the Front Panel
+2. Bundle acceleration, velocity, and position into a single graph display
+3. Use different colors for each signal
+4. Add legend labels
+
+### Step 5: Advanced Array Functions
+
+1. Array subset extraction:
+   - Extract a portion of the signal for analysis
+2. Array reshaping:
+   - Reshape a 1D array into a 2D array for multi-channel display
+3. Transpose:
+   - Transpose a 2D array for different data organization
+
+## What Was Done
+
+Created a complete data analysis VI that generates a simulated acceleration signal (composite of 2Hz and 5Hz sine components at 100 Hz sampling rate), performs numerical integration to calculate velocity and displacement, performs numerical differentiation to verify the reverse operation, and displays all three signals on a single waveform graph. The integration and differentiation operations showed consistent results with the original signals within numerical error bounds.
+
+## What Was Learnt
+
+- Numerical differentiation using LabVIEW's Derivative function
+- Numerical integration using the Integral x(t) function (trapezoidal rule)
+- Relationship between acceleration, velocity, and displacement
+- Verification of numerical methods through reverse operations
+- Advanced array manipulation for data organization
+
+## Industry Applications
+
+- Vibration analysis and condition monitoring
+- Vehicle dynamics testing
+- Seismic data processing
+- Robotics motion control
+- Structural health monitoring
+
+## Skills Developed
+
+- Numerical integration implementation
+- Numerical differentiation implementation
+- Advanced array manipulation
+- Multi-signal visualization
+- Data verification and validation techniques
+
+## Related Topics
+
+- [For Loops and Arrays](/content/labs/labview-for-loops-arrays)
+- [Waveform Visualization](/content/labs/labview-waveform-visualization)
+- [MATLAB Advanced Plotting](/content/labs/matlab-advanced-plotting-techniques)
+
+## Media
+
+### Images
+
+<!-- Upload numerical calculus VI block diagram from admin panel -->
+<!-- Upload acceleration-velocity-position graph from admin panel -->
+<!-- Upload array operation results from admin panel -->
+
+### Videos
+
+<!-- Upload numerical calculus tutorial from admin panel -->
+
+### Documents
+
+<!-- Upload numerical methods reference from admin panel -->
+
+### Files
+
+<!-- Upload Motion_Analysis.vi from admin panel -->

@@ -55,7 +55,7 @@ export default function ContactPage() {
 
         {/* Form */}
         <FadeIn delay={0.1}>
-          <div className="rounded-2xl border border-border/50 bg-card/50 backdrop-blur-sm p-8">
+          <div className="rounded-2xl border border-border/50 bg-card-background/50 backdrop-blur-sm p-8">
             <ContactForm />
           </div>
         </FadeIn>
@@ -88,13 +88,13 @@ export default function ContactPage() {
               ].map(({ icon: Icon, label, value, href }) => (
                 <div
                   key={label}
-                  className="flex items-center gap-4 rounded-xl border border-border/50 bg-card/40 px-4 py-3.5"
+                  className="flex items-center gap-4 rounded-xl border border-border/50 bg-card-background/40 px-4 py-3.5"
                 >
                   <div className="w-9 h-9 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
                     <Icon className="h-4 w-4 text-primary" aria-hidden="true" />
                   </div>
                   <div className="min-w-0">
-                    <p className="text-[11px] text-muted-foreground/60 uppercase tracking-wider font-medium">
+                    <p className="text-xxs text-muted-foreground/60 uppercase tracking-wider font-medium">
                       {label}
                     </p>
                     {href ? (
@@ -115,8 +115,8 @@ export default function ContactPage() {
 
           {/* Social links */}
           <FadeIn delay={0.2}>
-            <div className="rounded-xl border border-border/50 bg-card/40 p-4">
-              <p className="text-[11px] text-muted-foreground/60 uppercase tracking-wider font-medium mb-3">
+            <div className="rounded-xl border border-border/50 bg-card-background/40 p-4">
+              <p className="text-xxs text-muted-foreground/60 uppercase tracking-wider font-medium mb-3">
                 Social
               </p>
               <div className="flex flex-col gap-2">
@@ -126,7 +126,7 @@ export default function ContactPage() {
                     href={href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="group flex items-center justify-between rounded-lg px-3 py-2.5 hover:bg-muted/60 transition-colors duration-150"
+                    className="group flex items-center justify-between rounded-lg px-3 py-2.5 hover:bg-surface-secondary/60 transition-colors duration-150"
                   >
                     <div className="flex items-center gap-3">
                       <Icon className="h-4 w-4 text-muted-foreground group-hover:text-foreground transition-colors" />

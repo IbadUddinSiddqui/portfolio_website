@@ -1,0 +1,179 @@
+---
+title: "Summing Amplifier"
+slug: "bel-summing-amplifier"
+type: "labs"
+category: "basic-electronics"
+subcategory: "Operational Amplifiers"
+course: "Basic Electronics Laboratory"
+department: "Electrical / Electronics Engineering"
+semester: "1st"
+year: "2023"
+laboratorySession: "09"
+domain: "Analog Electronics"
+taxonomyLevel: "P3"
+clo: "CLO-3"
+difficulty: "intermediate"
+status: "completed"
+featured: false
+tags:
+  - Basic Electronics
+  - Op-Amp
+  - Summing Amplifier
+  - Analog Signal Processing
+  - Audio Mixing
+technologies:
+  - Analog Electronics
+  - Operational Amplifiers
+software:
+  - Multisim (optional)
+hardware:
+  - Op-Amp IC (LM741 or TL081)
+  - Resistors (1kΩ × 3, 10kΩ × 1)
+  - Dual DC Power Supply (±12V)
+  - Function Generator
+  - Oscilloscope
+  - DMM
+components:
+  - LM741 / TL081 Op-Amp
+  - 1kΩ Resistors (3)
+  - 10kΩ Feedback Resistor
+tools:
+  - Breadboard
+  - Jumper Wires
+skills:
+  - Summing Circuit Design
+  - Weighted Sum Operation
+  - Multi-Input Signal Combination
+circuits:
+  - Summing Amplifier
+seoTitle: "Summing Amplifier — BEL Lab 09"
+seoDescription: "Construct and analyze an op-amp summing amplifier circuit for combining multiple input voltages into a weighted sum output."
+---
+
+# Summing Amplifier
+
+## Overview
+
+The summing amplifier is a versatile op-amp configuration that combines multiple input voltages into a single output proportional to the weighted sum of the inputs. It is widely used in audio mixing, digital-to-analog conversion, and analog signal processing applications.
+
+## Objective
+
+To practice the operation of the summing amplifier circuit using an operational amplifier.
+
+## Domain
+
+Analog Electronics — Operational Amplifier Applications.
+
+## CLO and Taxonomy Level
+
+- **CLO-3**: Configure and analyze summing amplifier circuits for multi-input signal processing.
+- **Taxonomy Level**: P3 — Supervised Practice (Practical application of summing amplifier under guidance).
+
+## Components and Equipment
+
+- **Active Components**: LM741 or TL081 op-amp IC
+- **Passive Components**: 1kΩ resistors (3), 10kΩ feedback resistor
+- **Equipment**: Dual DC power supply (±12V), Function generator, Oscilloscope, DMM
+
+## Required Skills
+
+- Inverting amplifier configuration (Lab 08)
+- Understanding of weighted summation
+
+## Theory and Engineering Concepts
+
+- **Summing Amplifier Output**: Vout = -Rf × (V1/R1 + V2/R2 + V3/R3 + ...). For equal input resistors (R1 = R2 = R3 = R), Vout = -(Rf/R) × (V1 + V2 + V3).
+- **Weighted Sum**: Different input resistor values provide different weighting for each input channel.
+- **Inverting Configuration**: The summing amplifier is based on the inverting configuration, so the output is inverted.
+- **Virtual Ground**: The inverting input is at virtual ground, preventing interaction between different input channels.
+
+## Circuit Configuration
+
+The summing amplifier consists of:
+- Multiple input resistors (R1, R2, R3) connected from each input to the inverting input (-)
+- Feedback resistor (Rf) from output to inverting input
+- Non-inverting input (+) connected to ground
+- Output voltage equals the negative weighted sum of all inputs
+
+## Procedure / Implementation
+
+### Step 1: Circuit Construction
+
+1. Connect the op-amp with ±12V power supply
+2. Connect three 1kΩ resistors from three separate input sources to the inverting input
+3. Connect a 10kΩ feedback resistor from output to inverting input
+4. Connect the non-inverting input to ground
+
+### Step 2: Testing with DC Inputs
+
+1. Apply DC voltages to the inputs (e.g., V1 = 1V, V2 = 2V, V3 = 3V)
+2. Measure the output voltage
+3. Expected output: Vout = -10k/1k × (1 + 2 + 3) = -10 × 6 = -60V (but limited by supply rails)
+4. Use smaller input values to stay within the linear range
+
+### Step 3: Testing with AC Inputs
+
+1. Apply different frequency sine waves to each input
+2. Observe the combined output on the oscilloscope
+3. Verify the output is the sum (inverted) of all inputs
+
+## What Was Done
+
+Constructed an op-amp summing circuit to combine multiple input voltages into a single output. Tested with both DC and AC input signals at different amplitudes and frequencies.
+
+## Results and Observations
+
+| Input 1 (V1) | Input 2 (V2) | Input 3 (V3) | Theoretical Vout | Measured Vout |
+|-------------|-------------|-------------|-----------------|---------------|
+| 0.5V        | 0.3V        | 0.2V        | -10V            | ≈ -9.8V      |
+| 0.2V DC     | 0.5Vpp sine | 0.1V DC     | Summed output   | Verified      |
+
+*Place waveform screenshots of summed output here.*
+
+## What Was Learnt
+
+- The output is a weighted sum of the inputs, making it highly useful for audio mixing
+- Each input channel can be individually weighted by selecting different input resistors
+- The virtual ground at the inverting input prevents channel interaction
+- The output is inverted relative to the sum of inputs
+
+## Engineering Applications
+
+- Audio mixing consoles (multi-channel sound mixing)
+- Digital-to-analog converters (R-2R ladder networks)
+- Analog signal processing and computation
+- Multi-sensor data fusion
+- Level shifting and offset adjustment
+
+## Skills Developed
+
+- Summing amplifier configuration
+- Weighted input resistor selection
+- Multi-input signal observation
+- Summation verification
+
+## Related Topics
+
+- [Inverting and Non-Inverting Amplifiers](/content/labs/bel-inverting-and-non-inverting-amplifiers)
+- [Integrator and Differentiator Circuits](/content/labs/bel-integrator-and-differentiator-circuits)
+- [Basic Electronics Open Ended Lab](/content/labs/bel-basic-electronics-open-ended-lab)
+
+## Media
+
+### Images
+
+<!-- Upload summing amplifier circuit diagram from admin panel -->
+<!-- Upload summed output waveform screenshot from admin panel -->
+<!-- Upload breadboard circuit photo from admin panel -->
+
+### Videos
+
+<!-- Upload summing amplifier demonstration from admin panel -->
+
+### Documents
+
+<!-- Upload lab report from admin panel -->
+
+### Simulation Files
+
+<!-- Upload Multisim summing amplifier simulation from admin panel -->

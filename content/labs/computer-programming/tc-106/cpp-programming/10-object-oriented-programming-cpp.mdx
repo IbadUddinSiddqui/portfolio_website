@@ -1,0 +1,271 @@
+---
+title: "Object Oriented Programming in C++"
+slug: "tc106-object-oriented-programming-cpp"
+type: "labs"
+category: "Computer Programming"
+subcategory: "C++ Programming"
+course: "TC-106 Computer Programming Lab"
+department: "Computer Science / Engineering"
+semester: "1st"
+year: "2023"
+laboratorySession: "10"
+domain: "Software"
+taxonomyLevel: "P3"
+difficulty: "intermediate"
+status: "completed"
+featured: false
+tags:
+  - C++
+  - Object Oriented Programming
+  - Classes
+  - Objects
+  - Inheritance
+  - Abstraction
+technologies:
+  - C++ Language
+  - Turbo C++ IDE
+software:
+  - Turbo C++ IDE 3.0
+hardware: []
+tools:
+  - Turbo C++ IDE
+skills:
+  - OOP Paradigm Application
+  - Class Construction
+  - Object Instantiation
+  - Inheritance Implementation
+programmingLanguages:
+  - C++
+seoTitle: "Object Oriented Programming in C++ — TC-106 Lab 10"
+seoDescription: "Learn Object Oriented Programming in C++ including classes, objects, inheritance, and abstraction for transitioning from procedural to OOP."
+---
+
+# Object Oriented Programming in C++
+
+## Overview
+
+Object-Oriented Programming (OOP) is a programming paradigm that organizes code into objects containing both data (attributes) and functions (methods). C++ extends C with powerful OOP capabilities. This laboratory session introduces the fundamental OOP concepts and their implementation in C++.
+
+## Objective
+
+To introduce problem-solving ability using Object-Oriented Programming with C++. To transition from procedural programming (C) to object-oriented programming.
+
+## Domain
+
+Software — Object-Oriented Programming and Design.
+
+## Taxonomy Level
+
+P3 — Supervised Practice (Practical application of OOP concepts under guidance).
+
+## Tools and Technologies
+
+- **Software**: Turbo C++ IDE 3.0
+- **Language**: C++
+
+## Required Skills
+
+- C programming fundamentals (Labs 02-09)
+- Understanding of functions and data structures
+
+## Concepts Covered
+
+- **Class**: A blueprint or template for creating objects, containing data members and member functions
+- **Object**: An instance of a class with its own data values
+- **Encapsulation**: Bundling data and methods within a class, hiding internal details
+- **Inheritance**: Creating new classes from existing classes, reusing and extending functionality
+- **Abstraction**: Hiding complex implementation details and exposing only essential features
+- **Public/Private**: Access specifiers controlling visibility of class members
+
+## Project / Task
+
+Implement two programs using OOP: (1) a sorting program using classes and objects, and (2) a digit sum calculator using OOP principles.
+
+## Implementation
+
+### Step 1: Basic Class and Object
+
+1. Create a C++ program with a class:
+   ```cpp
+   #include <iostream.h>
+   #include <conio.h>
+
+   class Calculator {
+   private:
+       int num1, num2;
+
+   public:
+       void setData(int a, int b) {
+           num1 = a;
+           num2 = b;
+       }
+
+       int add() {
+           return num1 + num2;
+       }
+
+       int subtract() {
+           return num1 - num2;
+       }
+   };
+
+   void main() {
+       Calculator calc;
+       clrscr();
+
+       calc.setData(20, 10);
+       cout << "Addition: " << calc.add() << endl;
+       cout << "Subtraction: " << calc.subtract() << endl;
+
+       getch();
+   }
+   ```
+
+### Step 2: Sorting with Classes
+
+1. Create a class that sorts an array:
+   ```cpp
+   #include <iostream.h>
+   #include <conio.h>
+
+   class Sorter {
+   private:
+       int arr[10];
+       int size;
+
+   public:
+       void getData() {
+           cout << "Enter number of elements: ";
+           cin >> size;
+           cout << "Enter " << size << " elements:\n";
+           for(int i = 0; i < size; i++) {
+               cin >> arr[i];
+           }
+       }
+
+       void bubbleSort() {
+           int temp;
+           for(int i = 0; i < size - 1; i++) {
+               for(int j = 0; j < size - i - 1; j++) {
+                   if(arr[j] > arr[j + 1]) {
+                       temp = arr[j];
+                       arr[j] = arr[j + 1];
+                       arr[j + 1] = temp;
+                   }
+               }
+           }
+       }
+
+       void display() {
+           cout << "Sorted array: ";
+           for(int i = 0; i < size; i++) {
+               cout << arr[i] << " ";
+           }
+       }
+   };
+
+   void main() {
+       Sorter sorter;
+       clrscr();
+
+       sorter.getData();
+       sorter.bubbleSort();
+       sorter.display();
+
+       getch();
+   }
+   ```
+
+### Step 3: Digit Sum Using Classes
+
+1. Create a class to calculate sum of digits:
+   ```cpp
+   #include <iostream.h>
+   #include <conio.h>
+
+   class DigitSum {
+   private:
+       int number;
+
+   public:
+       void setNumber(int n) {
+           number = n;
+       }
+
+       int calculateSum() {
+           int sum = 0, temp = number;
+           while(temp > 0) {
+               sum += temp % 10;
+               temp /= 10;
+           }
+           return sum;
+       }
+   };
+
+   void main() {
+       DigitSum ds;
+       int n;
+       clrscr();
+
+       cout << "Enter a number: ";
+       cin >> n;
+       ds.setNumber(n);
+       cout << "Sum of digits: " << ds.calculateSum();
+
+       getch();
+   }
+   ```
+
+## What Was Done
+
+Utilized classes and objects to structure code, applying OOP concepts including encapsulation (private data with public methods), inheritance concepts, and abstraction. Implemented a sorting algorithm and digit sum calculator using class-based design.
+
+## What Was Learnt
+
+- Transitioning from procedural to object-oriented programming concepts
+- Understanding classes as blueprints and objects as instances
+- Using access specifiers (public/private) for encapsulation
+- Organizing code into logical class structures
+- The relationship between data (attributes) and behavior (methods)
+- Code reusability through class instantiation
+
+## Engineering Applications
+
+- Large-scale software system design
+- GUI application development using OOP frameworks
+- Game development with object-oriented architecture
+- Simulation and modeling systems
+- Database management system design
+
+## Skills Developed
+
+- Class definition and object creation
+- Access specifier usage (public/private)
+- Method definition within classes
+- Data encapsulation principles
+- OOP-based problem decomposition
+
+## Related Topics
+
+- [Features of Objects in C++](/content/labs/tc106-features-of-objects-in-cpp)
+- [Functions in C](/content/labs/tc106-functions-in-c)
+- [Array Concepts in C](/content/labs/tc106-array-concepts-in-c)
+
+## Media
+
+### Images
+
+<!-- Upload class vs object diagram from admin panel -->
+<!-- Upload OOP concept visualization from admin panel -->
+
+### Videos
+
+<!-- Upload OOP concepts demonstration from admin panel -->
+
+### Code Files
+
+<!-- Upload OOP programs source code from admin panel -->
+
+### Documents
+
+<!-- Upload lab report from admin panel -->

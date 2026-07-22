@@ -22,7 +22,7 @@ export function HeroSection() {
 
   return (
     <section
-      className="relative w-full h-screen bg-[#060709] overflow-hidden font-sans text-white"
+      className="relative w-full h-screen bg-hero-bg overflow-hidden font-sans text-text-primary"
       aria-label="Hero"
     >
       {/* ── Three.js 3D Bulb Scene ── */}
@@ -36,7 +36,7 @@ export function HeroSection() {
             style={{
               WebkitTextStroke: "1.5px rgba(255, 255, 255, 0.16)",
               textShadow:
-                "0 0 30px rgba(255, 170, 50, 0.12), 0 0 60px rgba(255, 170, 50, 0.04)",
+                "0 0 30px rgba(56, 189, 248, 0.12), 0 0 60px rgba(56, 189, 248, 0.04)",
             }}
             {...item(0)}
           >
@@ -44,7 +44,7 @@ export function HeroSection() {
           </motion.h1>
 
           <motion.p
-            className="text-gray-400 text-xs md:text-sm uppercase tracking-[0.45em] font-light mt-8"
+            className="text-gray-400 text-xs md:text-sm uppercase tracking-hero font-light mt-8"
             {...item(1)}
           >
             Full Stack Developer &bull; AI Engineer &bull; Electronics Innovator
@@ -65,7 +65,7 @@ export function HeroSection() {
           >
             <Link
               href="/projects"
-              className="px-8 py-3 border border-white/10 rounded-full hover:bg-white/5 transition-all backdrop-blur-md cursor-pointer hover:border-white/20 hover:scale-105 active:scale-95 shadow-[0_0_20px_rgba(255,170,50,0.03)] text-sm uppercase tracking-wider inline-block"
+              className="px-8 py-3 border border-white/10 rounded-full hover:bg-white/5 transition-all backdrop-blur-md cursor-pointer hover:border-white/20 hover:scale-105 active:scale-95 shadow-glow-cyan text-sm uppercase tracking-wider inline-block"
             >
               View Portfolio
             </Link>
@@ -87,7 +87,7 @@ export function HeroSection() {
         transition={{ delay: 2, duration: 0.8 }}
         aria-hidden="true"
       >
-        <span className="text-[10px] uppercase tracking-[0.2em] text-gray-500/40 font-medium">
+        <span className="text-xxs uppercase tracking-scroll text-gray-500/40 font-medium">
           Scroll
         </span>
         <motion.div

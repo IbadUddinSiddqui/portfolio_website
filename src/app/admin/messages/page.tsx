@@ -27,7 +27,7 @@ export default async function AdminMessagesPage() {
       </div>
 
       {messages.length === 0 ? (
-        <div className="rounded-xl border border-dashed border-border p-12 text-center">
+        <div className="rounded-xl border border-dashed border-card-border p-12 text-center">
           <p className="text-muted-foreground text-sm">
             No messages yet. Messages from the contact form will appear here.
           </p>
@@ -39,8 +39,8 @@ export default async function AdminMessagesPage() {
               key={message.id}
               className={`rounded-xl border p-5 transition-colors ${
                 !message.read
-                  ? "border-primary/30 bg-primary/5"
-                  : "border-border bg-card"
+                  ? "border-accent-engineering/30 bg-accent-engineering/5"
+                  : "border-card-border bg-card-background"
               }`}
             >
               <div className="flex items-start justify-between gap-4 mb-3">
@@ -50,7 +50,7 @@ export default async function AdminMessagesPage() {
                       {message.name}
                     </span>
                     {!message.read && (
-                      <Badge className="text-xs bg-primary text-primary-foreground">
+                      <Badge className="text-xs bg-accent-engineering text-accent-engineering-foreground">
                         New
                       </Badge>
                     )}

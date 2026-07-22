@@ -1,0 +1,213 @@
+---
+title: "Matrix Construction Techniques in MATLAB"
+slug: "matlab-matrix-construction"
+type: "labs"
+category: "Electronic Engineering Drawing"
+subcategory: "MATLAB"
+course: "Electronic Engineering Drawing & Engineering Software (EEDW)"
+department: "Electronic Engineering"
+semester: "1st"
+year: "2023"
+laboratorySession: "16"
+taxonomyLevel: "C3 (Applying)"
+clo: "CLO-16: Construct matrices using various MATLAB techniques including concatenation, reshaping, and indexing."
+domain: "Scientific Computing — Matrix Manipulation"
+difficulty: "intermediate"
+status: "completed"
+featured: false
+tags:
+  - MATLAB
+  - Matrix Construction
+  - Concatenation
+  - Indexing
+  - Reshaping
+  - Array Manipulation
+technologies:
+  - MATLAB
+software:
+  - MATLAB R2023a or later
+hardware: []
+tools:
+  - MATLAB IDE
+skills:
+  - Matrix Concatenation
+  - Subscript Indexing
+  - Linear Indexing
+  - Matrix Reshaping
+  - Colon Operator
+  - Logical Indexing
+seoTitle: "Matrix Construction Techniques in MATLAB — EEDW Lab 16"
+seoDescription: "Learn advanced matrix construction techniques in MATLAB including concatenation, indexing, reshaping, and the colon operator for efficient array manipulation."
+---
+
+# Matrix Construction Techniques in MATLAB
+
+## Overview
+
+Efficient matrix construction and manipulation are essential skills for MATLAB programming. This laboratory session covers advanced techniques for building matrices, accessing and modifying elements through various indexing methods, reshaping and reorganizing data, and using the colon operator effectively.
+
+## Objective
+
+To use the colon operator for generating sequences and extracting submatrices, perform horizontal and vertical matrix concatenation, access and modify matrix elements using subscript, linear, and logical indexing, reshape and reorganize matrices using `reshape` and `repmat`, and extract submatrices using range indexing.
+
+## Domain
+
+Scientific Computing — Data Structure Manipulation.
+
+## CLO and Taxonomy Level
+
+- **CLO-16**: Construct matrices using various MATLAB techniques including concatenation, reshaping, and indexing.
+- **Taxonomy Level**: C3 (Applying) — Apply matrix construction and manipulation techniques.
+
+## Tools and Software
+
+- **Software**: MATLAB R2023a or later
+
+## Required Skills
+
+- Basic matrix operations (Lab 15)
+- Understanding of array data structures
+
+## Theory and Engineering Concepts
+
+- **Colon Operator `:`**: The fundamental tool for generating sequences. Syntax: `start:step:end`. Default step = 1.
+- **Subscript Indexing**: Accessing elements using row and column indices: `A(row, column)`.
+- **Linear Indexing**: MATLAB stores matrices in column-major order. A single index counts down columns.
+- **Logical Indexing**: Using a logical mask (true/false array) to select elements.
+- **Concatenation**: Joining matrices along specified dimensions using `[A, B]` (horizontal) or `[A; B]` (vertical).
+- **Reshaping**: Changing matrix dimensions without changing data using `reshape()`.
+
+## Project / Task
+
+Construct several engineering data matrices using various techniques, extract and modify elements using different indexing methods, and reshape data structures for specific analysis purposes.
+
+## Procedure / Implementation
+
+### Step 1: Colon Operator and Sequences
+
+1. Generate sequences:
+   ```matlab
+   >> x = 1:10               % 1 2 3 4 5 6 7 8 9 10
+   >> y = 0:2:10             % 0 2 4 6 8 10
+   >> z = 10:-1:1            % 10 9 8 7 6 5 4 3 2 1
+   >> t = linspace(0, 1, 5)  % 0 0.25 0.5 0.75 1.0
+   ```
+
+### Step 2: Matrix Concatenation
+
+1. Horizontal concatenation:
+   ```matlab
+   >> A = [1, 2; 3, 4]
+   >> B = [5, 6; 7, 8]
+   >> C = [A, B]      % 2x4 matrix: [1 2 5 6; 3 4 7 8]
+   ```
+2. Vertical concatenation:
+   ```matlab
+   >> D = [A; B]      % 4x2 matrix: [1 2; 3 4; 5 6; 7 8]
+   ```
+
+### Step 3: Subscript Indexing
+
+1. Access specific elements:
+   ```matlab
+   >> M = [10, 20, 30; 40, 50, 60; 70, 80, 90]
+   >> M(2, 3)         % Element at row 2, column 3: 60
+   >> M(1, :)         % First row: 10 20 30
+   >> M(:, 2)         % Second column: 20; 50; 80
+   >> M(2:3, 1:2)     % Submatrix: rows 2-3, columns 1-2
+   ```
+
+### Step 4: Linear Indexing
+
+1. Access using linear index:
+   ```matlab
+   >> M(8)            % 8th element (col-major order): 80
+   >> M(end)          % Last element: 90
+   >> M(end, :)       % Last row: 70 80 90
+   ```
+
+### Step 5: Logical Indexing
+
+1. Use logical conditions to select elements:
+   ```matlab
+   >> data = [45, 78, 23, 91, 34, 67]
+   >> selected = data(data > 50)    % 78 91 67
+   >> mask = data >= 30 & data <= 70
+   >> result = data(mask)           % 45 34 67
+   ```
+
+### Step 6: Reshaping and Replication
+
+1. Reshape a matrix:
+   ```matlab
+   >> A = 1:12         % 1x12 row vector
+   >> B = reshape(A, 3, 4)  % 3x4 matrix
+   >> C = reshape(A, 2, [])  % 2x6 matrix ([] auto-calculates)
+   ```
+2. Replicate matrices:
+   ```matlab
+   >> M = [1, 2; 3, 4]
+   >> repmat(M, 2, 3)  % Replicate 2x3 times
+   ```
+
+### Step 7: Deleting and Inserting
+
+1. Delete rows or columns:
+   ```matlab
+   >> M = [1, 2, 3; 4, 5, 6; 7, 8, 9]
+   >> M(:, 2) = []     % Delete second column
+   >> M(2, :) = []     % Delete second row
+   ```
+
+## What Was Done
+
+Constructed matrices using the colon operator for sequences, horizontal and vertical concatenation of multiple matrices, and built-in functions. Accessed and modified matrix elements using subscript, linear, and logical indexing methods. Reshaped a 12-element vector into 3×4 and 2×6 matrices using `reshape`. Practiced deleting rows and columns using empty array assignment.
+
+## What Was Learnt
+
+- The colon operator as a versatile tool for sequence generation and submatrix extraction
+- Three indexing methods in MATLAB and their appropriate use cases
+- Matrix concatenation techniques for building larger structures
+- Reshaping operations for data reorganization
+- Replication using `repmat` for expanding matrices
+
+## Industry Applications
+
+- Sensor data array organization in IoT systems
+- Image processing pixel array manipulation
+- Financial data time-series analysis
+- Experimental data reorganization for statistical analysis
+- Machine learning dataset preparation
+
+## Skills Developed
+
+- Efficient matrix construction using colon operator
+- Subscript and linear indexing
+- Logical indexing for conditional selection
+- Matrix reshaping and dimension manipulation
+- Array concatenation techniques
+
+## Related Topics
+
+- [Matrix Operations](/content/labs/matlab-matrix-operations)
+- [Linear Systems and Array Operations](/content/labs/matlab-linear-systems-array-operations)
+- [Two-Dimensional Data Plotting](/content/labs/matlab-two-dimensional-data-plotting)
+
+## Media
+
+### Images
+
+<!-- Upload matrix construction screenshots from admin panel -->
+<!-- Upload indexing examples from admin panel -->
+
+### Videos
+
+<!-- Upload matrix manipulation tutorial from admin panel -->
+
+### Documents
+
+<!-- Upload MATLAB indexing reference from admin panel -->
+
+### Files
+
+<!-- Upload matrix_construction.m script from admin panel -->

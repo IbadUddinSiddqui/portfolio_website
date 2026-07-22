@@ -1,0 +1,236 @@
+---
+title: "Arithmetic and Logical Operators in C"
+slug: "tc106-arithmetic-and-logical-operators"
+type: "labs"
+category: "Computer Programming"
+subcategory: "C Programming"
+course: "TC-106 Computer Programming Lab"
+department: "Computer Science / Engineering"
+semester: "1st"
+year: "2023"
+laboratorySession: "04"
+domain: "Software"
+taxonomyLevel: "P3"
+difficulty: "beginner"
+status: "completed"
+featured: false
+tags:
+  - C Programming
+  - Arithmetic Operators
+  - Logical Operators
+  - Operator Precedence
+  - Expressions
+technologies:
+  - C Language
+  - Turbo C++ IDE
+software:
+  - Turbo C++ IDE 3.0
+hardware: []
+tools:
+  - Turbo C++ IDE
+skills:
+  - Expression Formulation
+  - Operator Precedence Handling
+  - Arithmetic Operations
+  - Logical Evaluation
+programmingLanguages:
+  - C
+seoTitle: "Arithmetic and Logical Operators in C — TC-106 Lab 04"
+seoDescription: "Learn arithmetic, unary, assignment, relational, and logical operators in C with operator precedence and associativity rules."
+---
+
+# Arithmetic and Logical Operators in C
+
+## Overview
+
+Operators are symbols that tell the compiler to perform specific mathematical or logical manipulations. C provides a rich set of operators that allow programmers to perform arithmetic calculations, make comparisons, and combine logical conditions. This laboratory session covers all major operator types and the rules that govern their evaluation order.
+
+## Objective
+
+To study the different types of arithmetic and logical operators in C, including their precedence and associativity rules.
+
+## Domain
+
+Software — Programming Language Fundamentals.
+
+## Taxonomy Level
+
+P3 — Supervised Practice (Practical application of operators under guidance).
+
+## Tools and Technologies
+
+- **Software**: Turbo C++ IDE 3.0
+- **Language**: C
+
+## Required Skills
+
+- Variable declaration and data types (Lab 03)
+- Basic mathematical concepts
+
+## Concepts Covered
+
+- **Arithmetic Operators**: + (addition), - (subtraction), * (multiplication), / (division), % (modulus/remainder)
+- **Unary Operators**: ++ (increment), -- (decrement), + (positive), - (negative)
+- **Assignment Operators**: =, +=, -=, *=, /=, %=
+- **Relational Operators**: == (equal to), != (not equal to), >, <, >=, <=
+- **Logical Operators**: && (AND), || (OR), ! (NOT)
+- **Operator Precedence**: The order in which operators are evaluated in an expression
+- **Associativity**: The direction (left-to-right or right-to-left) in which operators of equal precedence are evaluated
+
+## Project / Task
+
+Write programs that calculate sums, differences, quotients, and remainders using arithmetic operators, and evaluate expressions with multiple operators to understand precedence and associativity.
+
+## Implementation
+
+### Step 1: Arithmetic Operators
+
+1. Create a new file and write:
+   ```c
+   #include <stdio.h>
+   #include <conio.h>
+
+   void main() {
+       int a = 15, b = 4;
+       int sum, diff, prod, quot, rem;
+       clrscr();
+
+       sum = a + b;
+       diff = a - b;
+       prod = a * b;
+       quot = a / b;
+       rem = a % b;
+
+       printf("a = %d, b = %d\n", a, b);
+       printf("Sum = %d\n", sum);
+       printf("Difference = %d\n", diff);
+       printf("Product = %d\n", prod);
+       printf("Quotient = %d (integer division)\n", quot);
+       printf("Remainder = %d\n", rem);
+
+       getch();
+   }
+   ```
+
+### Step 2: Operator Precedence Experiment
+
+1. Write a program to test precedence:
+   ```c
+   #include <stdio.h>
+   #include <conio.h>
+
+   void main() {
+       int result;
+       clrscr();
+
+       result = 5 + 3 * 2;        // Multiplication first: 5 + 6 = 11
+       printf("5 + 3 * 2 = %d\n", result);
+
+       result = (5 + 3) * 2;      // Parentheses first: 8 * 2 = 16
+       printf("(5 + 3) * 2 = %d\n", result);
+
+       result = 10 / 2 + 3;       // Division first: 5 + 3 = 8
+       printf("10 / 2 + 3 = %d\n", result);
+
+       result = 10 / (2 + 3);     // Parentheses first: 10 / 5 = 2
+       printf("10 / (2 + 3) = %d\n", result);
+
+       getch();
+   }
+   ```
+
+### Step 3: Logical Operators
+
+1. Create a program using logical operators:
+   ```c
+   #include <stdio.h>
+   #include <conio.h>
+
+   void main() {
+       int x = 10, y = 20, z = 30;
+       clrscr();
+
+       printf("x = %d, y = %d, z = %d\n", x, y, z);
+       printf("(x < y) && (y < z) = %d\n", (x < y) && (y < z));  // 1 (true)
+       printf("(x > y) || (y < z) = %d\n", (x > y) || (y < z));  // 1 (true)
+       printf("!(x == y) = %d\n", !(x == y));                      // 1 (true)
+
+       getch();
+   }
+   ```
+
+### Step 4: Increment/Decrement Operators
+
+1. Experiment with prefix and postfix:
+   ```c
+   #include <stdio.h>
+   #include <conio.h>
+
+   void main() {
+       int a = 5, b;
+       clrscr();
+
+       b = a++;   // postfix: assign b = a first, then increment a
+       printf("After b = a++: b = %d, a = %d\n", b, a);
+
+       a = 5;
+       b = ++a;   // prefix: increment a first, then assign b = a
+       printf("After b = ++a: b = %d, a = %d\n", b, a);
+
+       getch();
+   }
+   ```
+
+## What Was Done
+
+Experimented with arithmetic operators (+, -, *, /, %), unary operators (++, --), assignment operators (=, +=), relational operators (==, !=, >, <), and logical operators (&&, ||, !). Analyzed their order of evaluation through multiple test expressions. Discovered how parentheses override default precedence.
+
+## What Was Learnt
+
+- Understanding of operator precedence and associativity in C expressions
+- The difference between prefix (++a) and postfix (a++) increment/decrement
+- How integer division truncates the decimal portion
+- The modulus operator (%) returns the remainder of division
+- Logical operators evaluate to 1 (true) or 0 (false)
+- Parentheses can override default operator precedence
+
+## Engineering Applications
+
+- Mathematical computation in scientific and engineering software
+- Conditional logic in control systems and automation
+- Bit manipulation in embedded systems programming
+- Expression evaluation in compilers and interpreters
+- Algorithm implementation requiring precise calculation ordering
+
+## Skills Developed
+
+- Expression formulation with multiple operator types
+- Operator precedence analysis and prediction
+- Logical condition evaluation
+- Increment/decrement operator usage
+- Code debugging through expression verification
+
+## Related Topics
+
+- [Basic Building Blocks of C](/content/labs/tc106-basic-building-blocks-of-c)
+- [Decision Making in C](/content/labs/tc106-decision-making-in-c)
+- [Looping Constructs in C](/content/labs/tc106-looping-constructs-in-c)
+
+## Media
+
+### Images
+
+<!-- Upload operator precedence table from admin panel -->
+<!-- Upload program output screenshots from admin panel -->
+
+### Videos
+
+<!-- Upload operators demonstration video from admin panel -->
+
+### Code Files
+
+<!-- Upload operator programs source code from admin panel -->
+
+### Documents
+
+<!-- Upload lab report from admin panel -->

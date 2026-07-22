@@ -1,0 +1,190 @@
+---
+title: "Inverting and Non-Inverting Amplifiers"
+slug: "bel-inverting-and-non-inverting-amplifiers"
+type: "labs"
+category: "basic-electronics"
+subcategory: "Operational Amplifiers"
+course: "Basic Electronics Laboratory"
+department: "Electrical / Electronics Engineering"
+semester: "1st"
+year: "2023"
+laboratorySession: "08"
+domain: "Analog Electronics"
+taxonomyLevel: "P3"
+clo: "CLO-3"
+difficulty: "intermediate"
+status: "completed"
+featured: false
+tags:
+  - Basic Electronics
+  - Op-Amp
+  - Operational Amplifier
+  - Inverting Amplifier
+  - Non-Inverting Amplifier
+  - Voltage Gain
+technologies:
+  - Analog Electronics
+  - Operational Amplifiers
+software:
+  - Multisim (optional)
+hardware:
+  - Op-Amp IC (LM741 or TL081)
+  - Resistors (1kΩ, 10kΩ, 100kΩ)
+  - Dual DC Power Supply (±12V or ±15V)
+  - Function Generator
+  - Oscilloscope
+  - DMM
+components:
+  - LM741 / TL081 Op-Amp
+  - 1kΩ Resistor
+  - 10kΩ Resistor
+  - 100kΩ Resistor
+tools:
+  - Breadboard
+  - Jumper Wires
+skills:
+  - Op-Amp Configuration
+  - Gain Measurement and Analysis
+  - Phase Measurement
+  - Feedback Analysis
+circuits:
+  - Inverting Amplifier
+  - Non-Inverting Amplifier
+seoTitle: "Inverting and Non-Inverting Amplifiers — BEL Lab 08"
+seoDescription: "Configure and analyze inverting and non-inverting operational amplifier circuits with resistor-ratio-based gain control."
+---
+
+# Inverting and Non-Inverting Amplifiers
+
+## Overview
+
+Operational amplifiers (op-amps) are versatile analog building blocks used extensively in signal processing, instrumentation, and control systems. The two most fundamental op-amp configurations — inverting and non-inverting amplifiers — demonstrate how external resistors determine voltage gain.
+
+## Objective
+
+To practice the configuration and gain analysis of inverting and non-inverting op-amp amplifiers.
+
+## Domain
+
+Analog Electronics — Operational Amplifier Applications.
+
+## CLO and Taxonomy Level
+
+- **CLO-3**: Configure and analyze inverting and non-inverting op-amp amplifier circuits.
+- **Taxonomy Level**: P3 — Supervised Practice (Practical application of op-amp circuits under guidance).
+
+## Components and Equipment
+
+- **Active Components**: LM741 or TL081 op-amp IC
+- **Passive Components**: 1kΩ, 10kΩ, 100kΩ resistors
+- **Equipment**: Dual DC power supply (±12V), Function generator, Oscilloscope, DMM
+
+## Required Skills
+
+- Understanding of voltage dividers and feedback concepts
+- Oscilloscope operation for gain and phase measurement
+
+## Theory and Engineering Concepts
+
+- **Inverting Amplifier Gain**: Av = -Rf / Rin (negative sign indicates 180° phase shift)
+- **Non-Inverting Amplifier Gain**: Av = 1 + (Rf / Rin) (positive gain, no phase shift)
+- **Virtual Ground**: In the inverting configuration, the inverting input is at approximately 0V due to negative feedback.
+- **Ideal Op-Amp Characteristics**: Infinite input impedance, zero output impedance, infinite open-loop gain.
+- **Feedback**: Negative feedback trades reduced gain for improved linearity, bandwidth, and stability.
+
+## Circuit Configuration
+
+**Inverting Amplifier**: Signal applied to inverting input (-) through Rin, Rf from output to inverting input, non-inverting input (+) to ground.
+
+**Non-Inverting Amplifier**: Signal applied to non-inverting input (+), Rin from inverting input to ground, Rf from output to inverting input.
+
+## Procedure / Implementation
+
+### Step 1: Inverting Amplifier Configuration
+
+1. Connect the op-amp with power supply (±12V):
+   - Pin 7 (V+) = +12V, Pin 4 (V-) = -12V
+2. Connect Rin = 1kΩ from the signal input to the inverting input (pin 2)
+3. Connect Rf = 10kΩ from output (pin 6) to inverting input (pin 2)
+4. Connect non-inverting input (pin 3) to ground
+5. Apply a 0.5Vpp, 1kHz sine wave input
+6. Observe input and output on oscilloscope
+
+### Step 2: Non-Inverting Amplifier Configuration
+
+1. Connect signal input to the non-inverting input (pin 3)
+2. Connect Rin = 1kΩ from inverting input (pin 2) to ground
+3. Connect Rf = 10kΩ from output (pin 6) to inverting input (pin 2)
+4. Apply a 0.5Vpp, 1kHz sine wave input
+5. Observe input and output on oscilloscope
+
+### Step 3: Gain Measurements
+
+1. Measure the peak-to-peak output voltage for each configuration
+2. Calculate the measured gain: Av = Vout/Vin
+3. Compare with theoretical gain: Av(inv) = -Rf/Rin, Av(non-inv) = 1 + Rf/Rin
+4. Change Rf values and record the corresponding gains
+
+## What Was Done
+
+Configured an op-amp (LM741) in both inverting and non-inverting modes and measured their voltage gain for different feedback resistor values.
+
+## Results and Observations
+
+| Configuration | Rf (kΩ) | Rin (kΩ) | Theoretical Gain | Measured Gain |
+|--------------|---------|---------|-----------------|---------------|
+| Inverting | 10 | 1 | -10 | ≈ -9.8 |
+| Inverting | 100 | 10 | -10 | ≈ -9.7 |
+| Non-Inverting | 10 | 1 | +11 | ≈ +10.8 |
+| Non-Inverting | 100 | 10 | +11 | ≈ +10.8 |
+
+*Place input/output waveform screenshots here.*
+
+## What Was Learnt
+
+- The gain of these amplifiers is determined solely by the external resistor ratio
+- The inverting configuration introduces a 180-degree phase shift (negative gain)
+- The non-inverting configuration has no phase shift (positive gain)
+- Real op-amp gain closely matches theoretical calculations
+- Negative feedback improves stability and linearity
+
+## Engineering Applications
+
+- Sensor signal amplification
+- Audio pre-amplifiers
+- Analog-to-digital converter front-end conditioning
+- Active filter design
+- Instrumentation amplifiers
+
+## Skills Developed
+
+- Inverting amplifier configuration and testing
+- Non-inverting amplifier configuration and testing
+- Gain measurement and verification
+- Phase relationship observation
+
+## Related Topics
+
+- [Summing Amplifier](/content/labs/bel-summing-amplifier)
+- [Integrator and Differentiator Circuits](/content/labs/bel-integrator-and-differentiator-circuits)
+- [Common Source Amplifier DC Analysis](/content/labs/bel-common-source-amplifier-dc-analysis)
+
+## Media
+
+### Images
+
+<!-- Upload inverting amplifier circuit diagram from admin panel -->
+<!-- Upload input/output waveform screenshots from admin panel -->
+<!-- Upload breadboard circuit photo from admin panel -->
+
+### Videos
+
+<!-- Upload op-amp amplifier demonstration from admin panel -->
+
+### Documents
+
+<!-- Upload lab report from admin panel -->
+
+### Simulation Files
+
+<!-- Upload Multisim op-amp simulation from admin panel -->

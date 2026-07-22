@@ -10,7 +10,7 @@ export default function AdminLoading() {
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
         {[...Array(4)].map((_, i) => (
-          <div key={i} className="rounded-xl border border-border bg-card p-5">
+          <div key={i} className="rounded-xl border border-card-border bg-card-background p-5">
             <Skeleton className="h-4 w-24 mb-3" />
             <Skeleton className="h-8 w-16 mb-2" />
             <Skeleton className="h-3 w-32" />
@@ -18,7 +18,7 @@ export default function AdminLoading() {
         ))}
       </div>
 
-      <div className="rounded-xl border border-border bg-card p-6">
+      <div className="rounded-xl border border-card-border bg-card-background p-6">
         <Skeleton className="h-5 w-32 mb-4" />
         <div className="flex gap-3">
           <Skeleton className="h-10 w-28 rounded-lg" />

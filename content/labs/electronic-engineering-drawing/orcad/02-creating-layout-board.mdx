@@ -1,0 +1,233 @@
+---
+title: "Creating Layout Board in OrCAD PCB Editor"
+slug: "orcad-creating-layout-board"
+type: "labs"
+category: "Electronic Engineering Drawing"
+subcategory: "OrCAD PCB Design"
+course: "Electronic Engineering Drawing & Engineering Software (EEDW)"
+department: "Electronic Engineering"
+semester: "1st"
+year: "2023"
+laboratorySession: "02"
+taxonomyLevel: "C3 (Applying)"
+clo: "CLO-2: Create a PCB layout board from a schematic using OrCAD PCB Editor."
+domain: "Electronic Design Automation (EDA) — PCB Layout"
+difficulty: "intermediate"
+status: "completed"
+featured: false
+tags:
+  - OrCAD
+  - PCB Editor
+  - PCB Layout
+  - Board Design
+  - Netlist
+  - Component Placement
+technologies:
+  - OrCAD Capture CIS
+  - OrCAD PCB Editor
+software:
+  - OrCAD Capture CIS 17.4
+  - OrCAD PCB Editor 17.4
+hardware: []
+tools:
+  - PCB Layout Editor
+  - Netlist Importer
+  - Design Constraint Manager
+skills:
+  - PCB Layout Design
+  - Board Outline Definition
+  - Component Placement
+  - Netlist Import
+  - Design Constraints Setup
+seoTitle: "Creating Layout Board in OrCAD PCB Editor — EEDW Lab 02"
+seoDescription: "Learn to create a PCB layout board from a schematic in OrCAD PCB Editor, including board outline definition, component placement, and design constraint setup."
+---
+
+# Creating Layout Board in OrCAD PCB Editor
+
+## Overview
+
+OrCAD PCB Editor is a professional PCB layout tool that transforms schematic designs into physical board layouts. This laboratory session covers the complete workflow of creating a layout board, from importing the netlist from Capture to defining board outline, placing components, and setting up design constraints for routing.
+
+## Objective
+
+To transfer a schematic design from OrCAD Capture to PCB Editor, define board outline and layer stackup, place components within the board boundary, set up design constraints including trace widths and clearances, and prepare the board for routing.
+
+## Domain
+
+Electronic Design Automation (EDA) — PCB Layout and Board Design.
+
+## CLO and Taxonomy Level
+
+- **CLO-2**: Create a PCB layout board from a schematic using OrCAD PCB Editor.
+- **Taxonomy Level**: C3 (Applying) — Apply schematic-to-layout transfer workflow.
+
+## Tools and Software
+
+- **Software**: OrCAD Capture CIS 17.4, OrCAD PCB Editor 17.4
+- **Operating System**: Windows 10/11
+
+## Required Skills
+
+- Completion of OrCAD Capture schematic (Lab 01)
+- Basic understanding of PCB layers (top, bottom, signal, power)
+- Familiarity with component packages and footprints
+
+## Theory and Engineering Concepts
+
+PCB layout is the process of arranging components and routing traces on a printed circuit board based on the schematic connectivity. Key concepts include:
+
+- **Netlist**: A data file containing the connectivity information extracted from the schematic. It defines which pins of which components are electrically connected.
+- **Board Outline**: The physical boundary of the PCB, defined using mechanical layers. It determines the board shape and size.
+- **Layer Stackup**: The arrangement of copper layers, insulating layers, and solder mask in a PCB. Common stackups include 2-layer and 4-layer boards.
+- **Footprint**: The physical land pattern on the PCB that corresponds to a component's pins. Includes pad locations, dimensions, and silkscreen outline.
+- **Design Constraints**: Rules that govern trace widths, clearances, via sizes, and other physical parameters to ensure manufacturability and signal integrity.
+- **Placement**: The process of positioning components on the board to optimize routing, thermal management, and signal integrity.
+
+## Project / Task
+
+Create a PCB layout board from the LED driver circuit schematic created in Lab 01. Define board outline, import the netlist, place components optimally, and set up design constraints.
+
+## Procedure / Implementation
+
+### Step 1: Prepare the Schematic for Layout
+
+1. Open the schematic project from Lab 01 in OrCAD Capture
+2. Verify all components have assigned footprints:
+   - Right-click each component → Edit Properties → Footprint field
+   - Assign standard footprints (e.g., `RESC1608X55N` for 0603 resistor, `LEDC1608X55N` for LED)
+3. Run DRC to ensure no connectivity errors
+4. Save the schematic project
+
+### Step 2: Generate Netlist
+
+1. In OrCAD Capture, select **Tools → Create Netlist**
+2. Choose **PCB Editor** as the netlist format
+3. Configure netlist options:
+   - Format: `PCB Editor v17.4`
+   - Output file: `Lab01_Basic_Circuit.net`
+4. Click **OK** to generate the netlist
+5. Verify the netlist file is created without errors
+
+### Step 3: Launch PCB Editor and Create Board
+
+1. Open **OrCAD PCB Editor** from the Start Menu
+2. Select **File → New → Board**
+3. Choose a board template or start with a blank board
+4. Set up the design parameters:
+   - Design units: **Mils** or **Millimeters**
+   - Accuracy: **2 decimal places** for mils, **4 decimal places** for mm
+   - Grid spacing: **25 mils** for component placement
+
+### Step 4: Import Netlist
+
+1. Select **File → Import → Logic/netlist**
+2. Choose the netlist file generated from Capture
+3. In the import dialog:
+   - Select **Place components** option
+   - Choose **Update board** to merge with existing design
+4. Click **Import** to bring in all components and connectivity
+5. Verify all components appear in the component list
+
+### Step 5: Define Board Outline
+
+1. Switch to **Board Geometry** layer
+2. Select **Add → Line** and draw the board outline:
+   - Typical dimensions: 50mm × 40mm (or 2000 mils × 1600 mils)
+   - Draw a rectangular outline using exact coordinates
+3. Select **Setup → Outline** to define the board shape from the drawn outline
+4. Verify the outline displays as a dashed line indicating the board boundary
+5. Add mounting holes if required (4 corners, 3.2mm diameter)
+
+### Step 6: Place Components
+
+1. Select **Place → Manually** or use the **Quickplace** tool
+2. Initial placement options:
+   - **Quickplace**: Automatically places all components on the board
+   - **Manual**: Place components individually for optimal positioning
+3. For manual placement, drag components from the component list to the board
+4. Follow placement guidelines:
+   - Place connectors at board edges
+   - Place decoupling capacitors close to IC power pins
+   - Group related components together
+   - Maintain adequate spacing between components
+5. Arrange the LED driver circuit components in a logical flow
+
+### Step 7: Set Up Design Constraints
+
+1. Open **Constraints Manager** from **Setup → Constraints**
+2. Define physical constraints:
+   - Default trace width: **12 mils** (0.3mm)
+   - Minimum trace width: **8 mils** (0.2mm)
+   - Default via diameter: **24 mils** (0.6mm)
+   - Default via hole size: **12 mils** (0.3mm)
+3. Define spacing constraints:
+   - Trace-to-trace clearance: **8 mils**
+   - Trace-to-pad clearance: **8 mils**
+   - Pad-to-pad clearance: **8 mils**
+4. Define net-specific constraints:
+   - Power nets (VCC): **20 mils** trace width
+   - Ground nets (GND): **20 mils** trace width
+5. Save the constraint set
+
+### Step 8: Review Board Setup
+
+1. Verify all components are within the board outline
+2. Check component placement for potential routing issues
+3. Review the layer stackup (default 2-layer board)
+4. Save the board file
+
+## What Was Done
+
+Successfully created a layout board in OrCAD PCB Editor from the Lab 01 schematic. The netlist was imported without errors, a 50mm × 40mm board outline was defined, all four components were placed within the board boundary with logical grouping, and design constraints were configured including trace widths, clearances, and via parameters. The board is now ready for routing.
+
+## What Was Learnt
+
+- The complete workflow from schematic to PCB layout setup
+- Proper board outline definition techniques
+- Component placement strategies for optimal routing
+- Design constraint configuration for manufacturability
+- Netlist import and verification procedures
+
+## Industry Applications
+
+- Professional PCB design workflow in electronics manufacturing
+- Rapid prototyping of electronic circuits
+- Consumer product development
+- Industrial control system design
+- Automotive electronics
+
+## Skills Developed
+
+- PCB Editor interface navigation and project setup
+- Board outline definition and layer stackup configuration
+- Component placement optimization
+- Design constraint management
+- Netlist import and verification
+
+## Related Topics
+
+- [Introduction to OrCAD Capture](/content/labs/orcad-introduction-to-orcad-capture)
+- [Auto Routing, DRC, and Copper Pour](/content/labs/orcad-auto-routing-drc-copper-pour)
+- [Manual Routing and Board Setup](/content/labs/orcad-manual-routing-board-setup)
+
+## Media
+
+### Images
+
+<!-- Upload PCB Editor interface screenshot from admin panel -->
+<!-- Upload board outline with placed components from admin panel -->
+<!-- Upload constraints manager screenshot from admin panel -->
+
+### Videos
+
+<!-- Upload PCB layout tutorial video from admin panel -->
+
+### Documents
+
+<!-- Upload design constraints report from admin panel -->
+
+### Files
+
+<!-- Upload board file (.brd) from admin panel -->
+<!-- Upload netlist file (.net) from admin panel -->

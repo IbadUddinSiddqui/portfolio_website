@@ -1,0 +1,194 @@
+---
+title: "Common Source Amplifier — AC Analysis"
+slug: "bel-common-source-amplifier-ac-analysis"
+type: "labs"
+category: "basic-electronics"
+subcategory: "Transistor Amplifiers"
+course: "Basic Electronics Laboratory"
+department: "Electrical / Electronics Engineering"
+semester: "1st"
+year: "2023"
+laboratorySession: "12"
+domain: "Transistor Amplifiers"
+taxonomyLevel: "P3"
+clo: "CLO-3"
+difficulty: "advanced"
+status: "completed"
+featured: false
+tags:
+  - Basic Electronics
+  - MOSFET
+  - Common Source Amplifier
+  - AC Analysis
+  - Voltage Gain
+  - Phase Shift
+technologies:
+  - Analog Electronics
+  - Transistor Amplifiers
+software:
+  - Multisim (optional)
+hardware:
+  - N-Channel MOSFET (IRF510 or 2N7000)
+  - Resistors (10kΩ, 100Ω, 220kΩ, 470kΩ)
+  - Capacitors (10µF × 2, 100µF)
+  - DC Power Supply
+  - Function Generator
+  - Oscilloscope
+components:
+  - IRF510 / 2N7000 MOSFET
+  - 10kΩ Resistor (RD)
+  - 100Ω Resistor (RS)
+  - 220kΩ Resistor (R1)
+  - 470kΩ Resistor (R2)
+  - 10µF Capacitors (coupling)
+  - 100µF Capacitor (bypass)
+tools:
+  - Breadboard
+  - Jumper Wires
+skills:
+  - AC Signal Analysis
+  - Voltage Gain Measurement
+  - Phase Measurement
+  - Small-Signal Operation
+circuits:
+  - Common Source Amplifier with AC Coupling
+seoTitle: "Common Source Amplifier AC Analysis — BEL Lab 12"
+seoDescription: "Perform AC analysis of a common source MOSFET amplifier including voltage gain measurement and phase shift observation."
+---
+
+# Common Source Amplifier — AC Analysis
+
+## Overview
+
+After establishing proper DC biasing, the common source amplifier can amplify AC signals. This laboratory session focuses on the AC analysis of the CS amplifier, including voltage gain measurement, input/output phase relationship, and the effect of the source bypass capacitor.
+
+## Objective
+
+To try the common source amplifier circuit operation to perform its AC signal analysis.
+
+## Domain
+
+Transistor Amplifiers — Small-Signal AC Analysis.
+
+## CLO and Taxonomy Level
+
+- **CLO-3**: Perform AC analysis of MOSFET common source amplifier circuits.
+- **Taxonomy Level**: P3 — Supervised Practice (Practical application of AC analysis under guidance).
+
+## Components and Equipment
+
+- **Active Components**: IRF510 or 2N7000 N-channel MOSFET
+- **Passive Components**: 10kΩ (RD), 100Ω (RS), 220kΩ (R1), 470kΩ (R2), 10µF capacitors (2), 100µF capacitor
+- **Equipment**: DC power supply (15V), Function generator, Oscilloscope
+
+## Required Skills
+
+- DC biasing of CS amplifier (Lab 11)
+- Oscilloscope AC coupling and measurement
+
+## Theory and Engineering Concepts
+
+- **Voltage Gain (Av)**: The ratio of output voltage change to input voltage change. For the CS amplifier, Av ≈ -gm × RD (with bypass capacitor).
+- **Transconductance (gm)**: The MOSFET's gain parameter, gm = 2 × ID / (VGS - Vth).
+- **Phase Shift**: The common source amplifier introduces a 180-degree phase inversion between input and output.
+- **Bypass Capacitor**: A large capacitor across RS creates an AC short circuit, eliminating the source degeneration and maximizing voltage gain.
+- **Coupling Capacitors**: Block DC while passing AC signals, allowing multiple amplifier stages to be cascaded.
+
+## Circuit Configuration
+
+The AC analysis adds to the DC bias circuit:
+- Input coupling capacitor (C1) from signal source to gate
+- Output coupling capacitor (C2) from drain to load
+- Source bypass capacitor (CS) across RS
+
+## Procedure / Implementation
+
+### Step 1: Add AC Components
+
+1. Use the DC biased circuit from Lab 11 as the foundation
+2. Add a 10µF input coupling capacitor between the function generator and gate
+3. Add a 10µF output coupling capacitor between drain and load
+4. Add a 100µF bypass capacitor across RS (observe polarity if electrolytic)
+
+### Step 2: AC Signal Application
+
+1. Set the function generator to output a 100mVpp, 1kHz sine wave
+2. Apply through the input coupling capacitor
+3. Connect oscilloscope Channel 1 to measure the input (after coupling capacitor)
+4. Connect oscilloscope Channel 2 to measure the output (after output coupling capacitor)
+
+### Step 3: Gain Measurement
+
+1. Observe both input and output waveforms on the oscilloscope
+2. Measure the peak-to-peak output voltage
+3. Calculate the voltage gain: Av = Vout(p-p) / Vin(p-p)
+4. Note the phase relationship between input and output
+
+### Step 4: Effect of Bypass Capacitor
+
+1. Remove the source bypass capacitor
+2. Observe the reduction in gain due to source degeneration
+3. Reconnect the bypass capacitor and note the gain restoration
+
+## What Was Done
+
+Applied an AC input signal (100mVpp, 1kHz sine wave) to the biased CS amplifier and measured the gain and phase shift. Observed the effect of the source bypass capacitor on voltage gain.
+
+## Results and Observations
+
+| Condition | Input (mVpp) | Output (mVpp) | Voltage Gain | Phase Shift |
+|-----------|-------------|--------------|--------------|-------------|
+| With Bypass Cap | 100 | ≈1200 | ≈12 | 180° |
+| Without Bypass Cap | 100 | ≈200 | ≈2 | 180° |
+
+*Place input/output waveform screenshots here.*
+
+## What Was Learnt
+
+- The CS amplifier provides a large voltage gain and an inverted output (180° phase shift)
+- The source bypass capacitor is critical for achieving maximum voltage gain
+- Without the bypass capacitor, source degeneration reduces gain but improves linearity
+- The amplifier operates correctly only within the linear region of the DC transfer curve
+- AC coupling capacitors successfully block DC while passing the AC signal
+
+## Engineering Applications
+
+- High-impedance sensor amplification
+- Microphone pre-amplifiers
+- RF amplifier stages
+- Analog signal processing front-ends
+- Multistage amplifier chain design
+
+## Skills Developed
+
+- AC signal injection and measurement
+- Voltage gain calculation
+- Phase relationship observation
+- Bypass capacitor effect analysis
+- Amplifier linearity verification
+
+## Related Topics
+
+- [Common Source Amplifier DC Analysis](/content/labs/bel-common-source-amplifier-dc-analysis)
+- [Inverting and Non-Inverting Amplifiers](/content/labs/bel-inverting-and-non-inverting-amplifiers)
+- [Basic Electronics Open Ended Lab](/content/labs/bel-basic-electronics-open-ended-lab)
+
+## Media
+
+### Images
+
+<!-- Upload CS amplifier AC circuit diagram from admin panel -->
+<!-- Upload input/output waveform screenshots from admin panel -->
+<!-- Upload breadboard circuit photo from admin panel -->
+
+### Videos
+
+<!-- Upload AC analysis demonstration from admin panel -->
+
+### Documents
+
+<!-- Upload lab report from admin panel -->
+
+### Simulation Files
+
+<!-- Upload Multisim AC analysis simulation from admin panel -->

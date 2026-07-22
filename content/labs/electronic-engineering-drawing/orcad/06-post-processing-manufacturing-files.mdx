@@ -1,0 +1,255 @@
+---
+title: "Post Processing and Manufacturing File Generation"
+slug: "orcad-post-processing-manufacturing-files"
+type: "labs"
+category: "Electronic Engineering Drawing"
+subcategory: "OrCAD PCB Design"
+course: "Electronic Engineering Drawing & Engineering Software (EEDW)"
+department: "Electronic Engineering"
+semester: "1st"
+year: "2023"
+laboratorySession: "06"
+taxonomyLevel: "C6 (Creating)"
+clo: "CLO-6: Generate complete manufacturing output files for PCB fabrication."
+domain: "Electronic Design Automation (EDA) — PCB Manufacturing Output"
+difficulty: "advanced"
+status: "completed"
+featured: false
+tags:
+  - OrCAD
+  - PCB Editor
+  - Gerber Files
+  - NC Drill
+  - Manufacturing
+  - CAM Output
+  - PCB Fabrication
+technologies:
+  - OrCAD PCB Editor
+  - RS-274X Gerber Format
+  - Excellon NC Drill Format
+software:
+  - OrCAD PCB Editor 17.4
+  - CAM350 or Gerber Viewer
+hardware: []
+tools:
+  - Artwork Control System
+  - NC Drill Module
+  - IPC-356 Netlist Generator
+  - CAM Output Manager
+skills:
+  - Gerber File Generation
+  - NC Drill Data
+  - IPC Netlist Output
+  - Manufacturing Documentation
+  - CAM File Management
+seoTitle: "Post Processing and Manufacturing File Generation — EEDW Lab 06"
+seoDescription: "Learn to generate Gerber files, NC drill data, and complete manufacturing output from OrCAD PCB Editor for PCB fabrication."
+---
+
+# Post Processing and Manufacturing File Generation
+
+## Overview
+
+The final step in PCB design is generating the manufacturing output files that PCB fabrication houses require. These include Gerber files for each copper layer, solder mask and silkscreen layers, NC drill data for hole drilling, and IPC netlist for electrical testing. This laboratory session covers the complete post-processing workflow in OrCAD PCB Editor.
+
+## Objective
+
+To generate Gerber (RS-274X) files for all PCB layers, create NC drill (Excellon) files for through-holes and vias, generate IPC-356 netlist for electrical testing, create assembly drawings and documentation, and verify all output files using a Gerber viewer.
+
+## Domain
+
+Electronic Design Automation (EDA) — CAM Output and Manufacturing Preparation.
+
+## CLO and Taxonomy Level
+
+- **CLO-6**: Generate complete manufacturing output files for PCB fabrication.
+- **Taxonomy Level**: C6 (Creating) — Create complete manufacturing documentation package.
+
+## Tools and Software
+
+- **Software**: OrCAD PCB Editor 17.4
+- **Verification**: CAM350, GC-Prevue, or any Gerber viewer
+- **Standards**: RS-274X (Gerber), Excellon (NC Drill), IPC-356 (Netlist)
+
+## Required Skills
+
+- Completed PCB layout with route completion
+- Understanding of PCB manufacturing process
+- Familiarity with layer stackup concepts
+
+## Theory and Engineering Concepts
+
+- **Gerber (RS-274X)**: The standard file format for PCB layer images. Extended Gerber includes aperture definitions within the file, eliminating the need for separate aperture files.
+- **NC Drill (Excellon)**: File format containing drill coordinates, hole sizes, and tool definitions for CNC drilling machines.
+- **IPC-356 Netlist**: A netlist format used for electrical testing of fabricated PCBs (bare-board testing).
+- **Solder Mask**: A protective layer applied over copper traces, with openings only at pads and vias where soldering occurs.
+- **Silkscreen**: The legend layer on a PCB showing component outlines, reference designators, and other textual information.
+- **Solder Paste**: A stencil layer used for surface-mount assembly, defining where solder paste is applied.
+
+## Project / Task
+
+Generate a complete set of manufacturing output files for the routed PCB design from Lab 05. Create all Gerber layers, NC drill data, IPC netlist, and assembly documentation. Verify all files using a Gerber viewer and create a manufacturing package.
+
+## Procedure / Implementation
+
+### Step 1: Review Board Finish
+
+1. Open the completed board file in OrCAD PCB Editor
+2. Perform final review:
+   - Verify all nets are routed (zero unrouted nets)
+   - Run final DRC
+   - Check board outline is closed and correctly defined
+   - Verify all text is on the correct layer
+3. Ensure the board is clean of any temporary markers or drafting artifacts
+
+### Step 2: Configure Artwork (Gerber) Output
+
+1. Select **Manufacture → Artwork** to open the Artwork Control System
+2. Add required Gerber layers:
+   - **Top Copper** (ETCH/TOP)
+   - **Bottom Copper** (ETCH/BOTTOM)
+   - **Top Solder Mask** (SOLDERMASK/TOP)
+   - **Bottom Solder Mask** (SOLDERMASK/BOTTOM)
+   - **Top Silkscreen** (SILKSCREEN/TOP)
+   - **Bottom Silkscreen** (SILKSCREEN/BOTTOM)
+   - **Board Outline** (BOARD GEOMETRY/OUTLINE)
+3. Configure each film:
+   - Format: **RS-274X** (Extended Gerber)
+   - Data format: **2:5** (2 integer, 5 decimal)
+   - Units: **Inches** or **Millimeters** (match your design)
+   - Film side: **Mirror** for bottom layers
+   - Aperture: **Load from design**
+
+### Step 3: Generate Gerber Files
+
+1. In the Artwork Control System dialog:
+2. Select all configured films
+3. Click **Create Artwork** to generate Gerber files
+4. Output files are saved to the project directory
+5. Verify file naming:
+   - `BoardName_TOP.art` — Top copper
+   - `BoardName_BOTTOM.art` — Bottom copper
+   - `BoardName_SMT.art` — Top solder mask
+   - `BoardName_SMB.art` — Bottom solder mask
+   - `BoardName_SST.art` — Top silkscreen
+   - `BoardName_SSB.art` — Bottom silkscreen
+   - `BoardName_OUTLINE.art` — Board outline
+
+### Step 4: Generate NC Drill Data
+
+1. Select **Manufacture → NC → Drill Legend**
+2. Configure drill legend:
+   - Choose a location for the drill legend on the board
+   - Set header text options
+3. Select **Manufacture → NC → NC Drill**
+4. Configure NC Drill parameters:
+   - Format: **2:5** (matching Gerber format)
+   - Units: **Inches** or **Millimeters**
+   - Tool numbering: **Auto**
+   - Optimize drill path: **Enabled**
+5. Click **Drill** to generate the Excellon file
+6. Output: `BoardName-1-1.drl` (NC Drill file)
+
+### Step 5: Generate IPC-356 Netlist
+
+1. Select **Manufacture → IPC-356 Netlist**
+2. Configure output options:
+   - Include test point data
+   - Generate netlist for bare-board testing
+3. Generate the IPC-356 file
+4. Output: `BoardName.ipc` (IPC netlist file)
+
+### Step 6: Generate Assembly Drawings
+
+1. Select **Manufacture → Assembly Drawing**
+2. Configure assembly drawing options:
+   - Top assembly view
+   - Include component reference designators
+   - Include mechanical outline
+3. Generate the assembly drawing
+4. Repeat for bottom assembly if required
+
+### Step 7: Verify Output Files
+
+1. Open generated Gerber files in a Gerber viewer (e.g., CAM350 or GC-Prevue)
+2. Verify each layer independently:
+   - Check layer alignment using composite view
+   - Verify solder mask openings align with pads
+   - Check silkscreen text is readable and not overlapping pads
+   - Verify board outline is closed
+3. Check drill file:
+   - Verify drill sizes and counts
+   - Confirm drill hits align with pad centers
+4. Visual inspection in composite view:
+   - Turn on all layers in different colors
+   - Verify no layer misalignment
+   - Check for missing features
+
+### Step 8: Package Manufacturing Files
+
+1. Collect all generated files in a single folder labeled `Manufacturing_Output`
+2. Rename files according to fabrication house requirements if needed
+3. Create a readme file describing:
+   - Board name and revision
+   - Layer stackup details
+   - Material specifications
+   - Surface finish requirements
+4. Compress the manufacturing folder into a ZIP archive
+
+## What Was Done
+
+Generated a complete set of manufacturing output files for the PCB design. Gerber RS-274X files were generated for all seven layers (top/bottom copper, solder mask, silkscreen, and board outline) with 2:5 data format. NC Drill data was generated in Excellon format with optimized drill paths. IPC-356 netlist was created for bare-board testing. All files were verified using a Gerber viewer in composite mode to confirm layer alignment and correctness. The complete manufacturing package was organized and archived.
+
+## What Was Learnt
+
+- The complete workflow for generating manufacturing output from a PCB design
+- Gerber RS-274X format configuration and generation
+- NC drill data generation for CNC drilling machines
+- IPC netlist generation for board testing
+- Manufacturing file verification using Gerber viewers
+- The importance of file organization for PCB fabrication houses
+
+## Industry Applications
+
+- PCB fabrication house submissions
+- Volume manufacturing of electronic products
+- Prototype PCB ordering from online services
+- Military and aerospace PCB documentation
+- Medical device manufacturing compliance
+
+## Skills Developed
+
+- Gerber file generation and configuration
+- NC drill data generation
+- Manufacturing documentation creation
+- CAM file verification and validation
+- PCB manufacturing workflow management
+
+## Related Topics
+
+- [Manual Routing and Board Setup](/content/labs/orcad-manual-routing-board-setup)
+- [PCB Drilling](/content/labs/pcb-manufacturing-pcb-drilling)
+- [Electroplating and Through-Hole Plating](/content/labs/pcb-manufacturing-electroplating-through-hole-plating)
+
+## Media
+
+### Images
+
+<!-- Upload Gerber viewer composite screenshot from admin panel -->
+<!-- Upload layer-by-layer Gerber screenshots from admin panel -->
+<!-- Upload drill file visualization from admin panel -->
+
+### Videos
+
+<!-- Upload post-processing workflow video from admin panel -->
+
+### Documents
+
+<!-- Upload manufacturing package readme from admin panel -->
+<!-- Upload fabrication drawing from admin panel -->
+
+### Files
+
+<!-- Upload Gerber file archive from admin panel -->
+<!-- Upload NC drill file from admin panel -->
+<!-- Upload IPC-356 netlist from admin panel -->

@@ -1,0 +1,225 @@
+---
+title: "Advanced Plotting Techniques in MATLAB"
+slug: "matlab-advanced-plotting-techniques"
+type: "labs"
+category: "Electronic Engineering Drawing"
+subcategory: "MATLAB"
+course: "Electronic Engineering Drawing & Engineering Software (EEDW)"
+department: "Electronic Engineering"
+semester: "1st"
+year: "2023"
+laboratorySession: "20"
+taxonomyLevel: "C5 (Evaluating) / C6 (Creating)"
+clo: "CLO-20: Create advanced 2D and 3D plots in MATLAB for comprehensive engineering data presentation."
+domain: "Scientific Computing — Advanced Visualization"
+difficulty: "advanced"
+status: "completed"
+featured: false
+tags:
+  - MATLAB
+  - Advanced Plotting
+  - 3D Plots
+  - Surface Plots
+  - Data Visualization
+  - Color Mapping
+technologies:
+  - MATLAB
+software:
+  - MATLAB R2023a or later
+hardware: []
+tools:
+  - MATLAB Plotting Tools
+  - Colormap Editor
+skills:
+  - 3D Plotting
+  - Surface Visualization
+  - Contour Plots
+  - Color Mapping
+  - Multi-Plot Layouts
+  - Animation
+seoTitle: "Advanced Plotting Techniques in MATLAB — EEDW Lab 20"
+seoDescription: "Master advanced MATLAB plotting techniques including 3D surfaces, contours, color mapping, subplot layouts, and animated plots for engineering visualization."
+---
+
+# Advanced Plotting Techniques in MATLAB
+
+## Overview
+
+Advanced data visualization techniques enable engineers to present complex multi-dimensional data in clear, informative ways. This laboratory session covers 3D plotting, surface visualization, contour plots, color mapping, and advanced figure composition for comprehensive engineering data communication.
+
+## Objective
+
+To create 3D line plots using `plot3()`, generate surface and mesh plots using `surf()` and `mesh()`, produce contour plots for 2D data representation, customize colormaps and color bars for enhanced visualization, create multi-panel figure layouts for comprehensive data presentation, and generate animated plots to show time-varying data.
+
+## Domain
+
+Scientific Computing — Advanced Data Visualization.
+
+## CLO and Taxonomy Level
+
+- **CLO-20**: Create advanced 2D and 3D plots in MATLAB for comprehensive engineering data presentation.
+- **Taxonomy Level**: C5 (Evaluating) — Evaluate visualization methods for data characteristics. C6 (Creating) — Create comprehensive multi-panel figures for engineering reports.
+
+## Tools and Software
+
+- **Software**: MATLAB R2023a or later
+
+## Required Skills
+
+- 2D plotting experience (Lab 19)
+- Understanding of engineering data characteristics
+
+## Theory and Engineering Concepts
+
+- **3D Plotting**: `plot3()` extends 2D plotting to three dimensions, useful for trajectory and parametric visualization.
+- **Surface Plots**: `surf()` creates colored 3D surfaces where color represents the Z-value. `mesh()` creates wireframe surfaces.
+- **Contour Plots**: `contour()` shows lines of constant Z value, useful for visualizing 2D scalar fields.
+- **Colormaps**: MATLAB provides built-in colormaps (parula, jet, hot, cool, etc.) that map data values to colors.
+
+## Project / Task
+
+Create a comprehensive data visualization figure for a bivariate Gaussian distribution, showing: a 3D surface, contour plot, mesh plot, and color-coded heat map in a 2×2 subplot layout.
+
+## Procedure / Implementation
+
+### Step 1: 3D Line Plot
+
+1. Create a 3D spiral:
+   ```matlab
+   t = linspace(0, 10*pi, 500);
+   x = t .* cos(t);
+   y = t .* sin(t);
+   z = t;
+   plot3(x, y, z, 'b-', 'LineWidth', 1.5);
+   grid on;
+   xlabel('X'); ylabel('Y'); zlabel('Z');
+   title('3D Spiral');
+   ```
+
+### Step 2: Surface and Mesh Plots
+
+1. Create a Gaussian surface:
+   ```matlab
+   [X, Y] = meshgrid(-3:0.1:3, -3:0.1:3);
+   Z = exp(-(X.^2 + Y.^2)/2);
+   
+   figure(1);
+   surf(X, Y, Z);
+   xlabel('X'); ylabel('Y'); zlabel('Z');
+   title('3D Surface Plot of Gaussian Distribution');
+   colorbar;
+   shading interp;  % Smooth shading
+   ```
+
+### Step 3: Contour Plot
+
+1. Create 2D contour:
+   ```matlab
+   figure(2);
+   contour(X, Y, Z, 20);  % 20 contour levels
+   xlabel('X'); ylabel('Y');
+   title('Contour Plot (20 Levels)');
+   colorbar;
+   grid on;
+   axis equal;
+   ```
+
+### Step 4: Multi-Panel Figure (2×2)
+
+1. Create comprehensive figure:
+   ```matlab
+   figure(3);
+   clf;
+   
+   % Subplot 1: Surface
+   subplot(2, 2, 1);
+   surf(X, Y, Z);
+   shading interp;
+   title('(a) 3D Surface');
+   colorbar;
+   
+   % Subplot 2: Mesh
+   subplot(2, 2, 2);
+   mesh(X, Y, Z);
+   title('(b) Wireframe Mesh');
+   colorbar;
+   
+   % Subplot 3: Contour
+   subplot(2, 2, 3);
+   contour(X, Y, Z, 15);
+   title('(c) Contour Plot');
+   colorbar;
+   axis equal;
+   
+   % Subplot 4: Heat Map
+   subplot(2, 2, 4);
+   imagesc(Z);
+   title('(d) Heat Map');
+   colorbar;
+   axis equal tight;
+   ```
+
+### Step 5: Custom Colormaps
+
+1. Apply different colormaps:
+   ```matlab
+   >> colormap(jet)       % Jet colormap
+   >> colormap(hot)       % Hot colormap
+   >> colormap(cool)      % Cool colormap
+   >> colormap(parula)    % Default MATLAB colormap
+   ```
+
+## What Was Done
+
+Created a comprehensive 2×2 subplot figure visualizing a bivariate Gaussian distribution from four perspectives: 3D surface with smooth shading, wireframe mesh for structural view, contour plot with 20 levels for 2D analysis, and imagesc heat map for color-coded intensity visualization. Additionally created a 3D spiral trajectory plot. Applied different colormaps and evaluated their effectiveness for conveying data characteristics.
+
+## What Was Learnt
+
+- 3D line and surface plotting techniques
+- Surface and mesh plot creation and customization
+- Contour plot generation for 2D field visualization
+- Multi-panel figure layout for comprehensive data presentation
+- Colormap selection and application for enhanced visualization
+- Advanced figure composition for publications
+
+## Industry Applications
+
+- Finite element analysis visualization
+- Electromagnetic field visualization
+- Fluid dynamics and CFD results presentation
+- Antenna radiation pattern display
+- Medical imaging data visualization
+
+## Skills Developed
+
+- 3D plotting techniques
+- Surface and mesh visualization
+- Contour and heat map creation
+- Multi-panel figure composition
+- Colormap selection and customization
+
+## Related Topics
+
+- [Two-Dimensional Data Plotting](/content/labs/matlab-two-dimensional-data-plotting)
+- [Programming Functions](/content/labs/matlab-programming-functions)
+- [Waveform Visualization in LabVIEW](/content/labs/labview-waveform-visualization)
+
+## Media
+
+### Images
+
+<!-- Upload 3D surface plot from admin panel -->
+<!-- Upload 2x2 subplot figure from admin panel -->
+<!-- Upload contour plot from admin panel -->
+
+### Videos
+
+<!-- Upload advanced plotting tutorial from admin panel -->
+
+### Documents
+
+<!-- Upload MATLAB colormap reference from admin panel -->
+
+### Files
+
+<!-- Upload advanced_plotting.m script from admin panel -->
