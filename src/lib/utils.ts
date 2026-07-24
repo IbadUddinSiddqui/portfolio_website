@@ -10,7 +10,7 @@ export function cn(...inputs: ClassValue[]) {
 }
 
 /**
- * Parse a JSON string field from Prisma (SQLite stores arrays as JSON strings).
+ * Parse a JSON string field from Prisma.
  * Returns the parsed array, or empty array if parsing fails.
  */
 export function parseJsonArray<T = string>(value: string | null | undefined): T[] {

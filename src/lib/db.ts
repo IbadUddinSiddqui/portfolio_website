@@ -1,16 +1,12 @@
 import { PrismaClient } from "@prisma/client";
-import { PrismaBetterSqlite3 } from "@prisma/adapter-better-sqlite3";
+import { PrismaPg } from "@prisma/adapter-pg";
+import { Pool } from "pg";
 
 /**
  * Prisma Client Singleton (Prisma v7)
  *
- * Uses the @prisma/adapter-better-sqlite3 adapter for SQLite support.
+ * Uses the @prisma/adapter-pg adapter for PostgreSQL support.
  * Prevents multiple instances during hot-reloading in development.
- * 
- * When migrating to PostgreSQL:
- * 1. Install @prisma/adapter-pg
- * 2. Change import to PrismaPg
- * 3. Update the adapter instantiation
  */
 
 const globalForPrisma = globalThis as unknown as {
@@ -18,10 +14,8 @@ const globalForPrisma = globalThis as unknown as {
 };
 
 function createPrismaClient() {
-  const adapter = new PrismaBetterSqlite3({
-    url: process.env.DATABASE_URL || "file:./dev.db",
-  });
-
+  const pool = new Pool({ connectionString: process.env.DATABASE_URL });
+  const adapter = new PrismaPg(pool);
   return new PrismaClient({ adapter });
 }
 

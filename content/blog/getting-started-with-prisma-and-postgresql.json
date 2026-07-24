@@ -1,0 +1,21 @@
+{
+  "id": "cmrnpgkqh0040esbc43xic9li",
+  "title": "Getting Started with Prisma and PostgreSQL",
+  "slug": "getting-started-with-prisma-and-postgresql",
+  "content": "# Getting Started with Prisma and PostgreSQL\n\nPrisma is a modern ORM that makes database access simple and type-safe. Combined with PostgreSQL, it's perfect for production applications of any scale.\n\n## Setup\n\nFirst, install the dependencies:\n\n```bash\nnpm install @prisma/client @prisma/adapter-pg pg\nnpm install -D prisma @types/pg\n```\n\n## Schema Design\nDesign your schema in Prisma's declarative format. The portfolio uses over 20 models including projects, skills, labs, workflows, and more.\n\n## CRUD Operations\nPrisma provides type-safe queries with full autocompletion, making it easy to create, read, update, and delete records.",
+  "excerpt": "A practical guide to setting up Prisma ORM with PostgreSQL for production applications.",
+  "coverImage": null,
+  "category": "Development",
+  "tags": [
+    "prisma",
+    "typescript",
+    "database"
+  ],
+  "readingTime": 3,
+  "published": true,
+  "featured": true,
+  "seo": null,
+  "publishedAt": "2026-07-16T16:10:19.000Z",
+  "createdAt": "2026-07-16T16:10:19.001Z",
+  "updatedAt": "2026-07-16T16:10:19.001Z"
+}

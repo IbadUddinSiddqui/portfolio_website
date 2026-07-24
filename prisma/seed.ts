@@ -1,10 +1,10 @@
 import { PrismaClient } from "@prisma/client";
-import { PrismaBetterSqlite3 } from "@prisma/adapter-better-sqlite3";
+import { PrismaPg } from "@prisma/adapter-pg";
+import { Pool } from "pg";
 import { slugify } from "../src/lib/utils";
 
-const adapter = new PrismaBetterSqlite3({
-  url: process.env.DATABASE_URL || "file:./dev.db",
-});
+const pool = new Pool({ connectionString: process.env.DATABASE_URL });
+const adapter = new PrismaPg(pool);
 const db = new PrismaClient({ adapter });
 
 
@@ -834,14 +834,14 @@ async function main() {
     {
       title: "Building a Premium Portfolio with Next.js",
       excerpt: "A deep dive into architecting a modern portfolio platform with CMS, animations, and performance optimization.",
-      content: `# Building a Premium Portfolio with Next.js\n\n## Why Build Your Own Portfolio CMS?\n\nIn this post, I'll walk through the architecture decisions behind building a portfolio platform.\n\n## Architecture Overview\n\nThe portfolio is built with Next.js 16, using the App Router for routing, Server Components for data fetching, and a SQLite-backed Prisma ORM for the database layer.\n\n## Key Features\n- Full CMS with admin dashboard\n- Dynamic project showcase\n- Blog engine with markdown support\n- Contact form with message management\n- Performance optimized with 100 Lighthouse scores\n\n## Performance Considerations\nEvery component was designed with performance in mind - GPU-accelerated animations, lazy loading, dynamic imports, and streaming with Suspense boundaries.`,
+      content: `# Building a Premium Portfolio with Next.js\n\n## Why Build Your Own Portfolio CMS?\n\nIn this post, I'll walk through the architecture decisions behind building a portfolio platform.\n\n## Architecture Overview\n\nThe portfolio is built with Next.js 16, using the App Router for routing, Server Components for data fetching, and a PostgreSQL-backed Prisma ORM for the database layer.\n\n## Key Features\n- Full CMS with admin dashboard\n- Dynamic project showcase\n- Blog engine with markdown support\n- Contact form with message management\n- Performance optimized with 100 Lighthouse scores\n\n## Performance Considerations\nEvery component was designed with performance in mind - GPU-accelerated animations, lazy loading, dynamic imports, and streaming with Suspense boundaries.`,
       tags: ["nextjs", "react", "typescript", "performance"], category: "Development",
     },
     {
-      title: "Getting Started with Prisma and SQLite",
-      excerpt: "A practical guide to setting up Prisma ORM with SQLite for rapid development.",
-      content: `# Getting Started with Prisma and SQLite\n\nPrisma is a modern ORM that makes database access simple and type-safe. Combined with SQLite, it's perfect for small to medium projects.\n\n## Setup\n\nFirst, install the dependencies:\n\n\`\`\`bash\nnpm install @prisma/client @prisma/adapter-better-sqlite3\nnpm install -D prisma\n\`\`\`\n\n## Schema Design\nDesign your schema in Prisma's declarative format. The portfolio uses over 20 models including projects, skills, labs, workflows, and more.\n\n## CRUD Operations\nPrisma provides type-safe queries with full autocompletion, making it easy to create, read, update, and delete records.`,
-      tags: ["prisma", "typescript", "database"], category: "Development",
+      title: "Getting Started with Prisma and PostgreSQL",
+      excerpt: "A practical guide to setting up Prisma ORM with PostgreSQL for production applications.",
+      content: `# Getting Started with Prisma and PostgreSQL\n\nPrisma is a modern ORM that makes database access simple and type-safe. Combined with PostgreSQL, it's perfect for production applications of any scale.\n\n## Setup\n\nFirst, install the dependencies:\n\n\`\`\`bash\nnpm install @prisma/client @prisma/adapter-pg pg\nnpm install -D prisma @types/pg\n\`\`\`\n\n## Schema Design\nDesign your schema in Prisma's declarative format. The portfolio uses over 20 models including projects, skills, labs, workflows, and more.\n\n## CRUD Operations\nPrisma provides type-safe queries with full autocompletion, making it easy to create, read, update, and delete records.`,
+      tags: ["prisma", "postgresql", "typescript", "database"], category: "Development",
     },
     {
       title: "CSS Animations: Performance Best Practices",
