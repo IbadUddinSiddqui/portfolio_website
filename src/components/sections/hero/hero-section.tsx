@@ -75,6 +75,12 @@ export function HeroSection() {
             >
               Contact Me
             </Link>
+            <Link
+              href="/demo"
+              className="px-8 py-3 border border-primary/30 rounded-full bg-primary/5 hover:bg-primary/10 transition-all backdrop-blur-md cursor-pointer hover:border-primary/50 hover:scale-105 active:scale-95 text-sm uppercase tracking-wider inline-block"
+            >
+              See it for your business &rarr;
+            </Link>
           </motion.div>
         </div>
       </main>
