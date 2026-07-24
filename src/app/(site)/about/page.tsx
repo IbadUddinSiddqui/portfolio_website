@@ -6,8 +6,8 @@ import { MapPin, Calendar, Download, GraduationCap, Code2, Sparkles, Terminal, C
 import Link from "next/link";
 import { db } from "@/lib/db";
 
-// ISR: revalidate every hour so the build doesn't fail when DB is unreachable.
-export const revalidate = 3600;
+// Force dynamic — build cannot reach Neon DB for static generation.
+export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
   title: "About",

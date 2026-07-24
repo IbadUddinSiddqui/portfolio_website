@@ -13,9 +13,9 @@ import { getPostBySlug, getLatestPosts, getPublishedPosts, getAllPostSlugs } fro
 import { CalendarDays, Clock, ArrowLeft } from "lucide-react";
 import "highlight.js/styles/github-dark.css";
 
-// ─── ISR — Revalidate daily ────────────────────────
+// ─── Force Dynamic ────────────────────────────────
 
-export const revalidate = 86400;
+export const dynamic = "force-dynamic";
 
 // ─── Generate Static Params ──────────────────────────
 

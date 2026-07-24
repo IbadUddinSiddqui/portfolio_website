@@ -9,8 +9,8 @@ import { SkillsShowcase } from "@/components/sections/home/skills-showcase";
 import { ClientWork } from "@/components/sections/home/client-work";
 import { getFeaturedProjects } from "@/data/projects";
 
-// ISR: revalidate every hour; falls back to dynamic if DB is unreachable during build.
-export const revalidate = 3600;
+// Force dynamic — build cannot reach Neon DB for static generation.
+export const dynamic = "force-dynamic";
 
 /**
  * Home Page

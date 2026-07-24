@@ -39,8 +39,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
  * - Related projects
  */
 
-// ISR: revalidate daily so content updates are picked up.
-export const revalidate = 86400;
+// Force dynamic — build cannot reach Neon DB for static generation.
+export const dynamic = "force-dynamic";
 
 /**
  * Generate static params for all published projects (SSG).

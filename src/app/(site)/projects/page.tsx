@@ -3,8 +3,8 @@ import { getPublishedProjects, getCategories } from "@/data/projects";
 import { ProjectGrid } from "@/components/sections/projects/project-grid";
 import { FadeIn } from "@/components/animations/fade-in";
 
-// ISR: revalidate every hour; falls back to dynamic if DB is unreachable during build.
-export const revalidate = 3600;
+// Force dynamic — build cannot reach Neon DB for static generation.
+export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
   title: "Projects",

@@ -20,9 +20,9 @@ const CONTENT_TYPE_LABELS: Record<string, string> = {
   blog: "Blog",
 };
 
-// ─── ISR — Revalidate daily ────────────────────────
+// ─── Force Dynamic ────────────────────────────────
 
-export const revalidate = 86400;
+export const dynamic = "force-dynamic";
 
 // ─── Generate Static Params ──────────────────────────
 
