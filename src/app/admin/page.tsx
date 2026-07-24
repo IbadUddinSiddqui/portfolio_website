@@ -1,6 +1,8 @@
 import { getDashboardStats } from "prisma/data-actions";
 import { FadeIn } from "@/components/animations/fade-in";
 
+export const dynamic = "force-dynamic";
+
 export default async function AdminDashboardPage() {
   const stats = await getDashboardStats();
 
