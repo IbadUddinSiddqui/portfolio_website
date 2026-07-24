@@ -6,6 +6,9 @@ import { MapPin, Calendar, Download, GraduationCap, Code2, Sparkles, Terminal, C
 import Link from "next/link";
 import { db } from "@/lib/db";
 
+// ISR: revalidate every hour so the build doesn't fail when DB is unreachable.
+export const revalidate = 3600;
+
 export const metadata: Metadata = {
   title: "About",
   description: "Learn about Ibad Uddin — Telecommunication Engineering student at NED University, building software, embedded systems, and automation.",
