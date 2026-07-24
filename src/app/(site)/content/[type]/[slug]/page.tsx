@@ -20,14 +20,26 @@ const CONTENT_TYPE_LABELS: Record<string, string> = {
   blog: "Blog",
 };
 
+// ─── ISR — Revalidate daily ────────────────────────
+
+export const revalidate = 86400;
+
 // ─── Generate Static Params ──────────────────────────
 
 export async function generateStaticParams() {
-  const entries = listEntries(undefined, "published");
-  return entries.map((e) => ({
-    type: e.type,
-    slug: e.slug,
-  }));
+  try {
+    const entries = listEntries(undefined, "published");
+    return entries.map((e) => ({
+      type: e.type,
+      slug: e.slug,
+    }));
+  } catch (error) {
+    console.warn(
+      "⚠️ [content] DB/FS unreachable during build — skipping static generation:",
+      error instanceof Error ? error.message : error
+    );
+    return [];
+  }
 }
 
 // ─── Metadata ────────────────────────────────────────

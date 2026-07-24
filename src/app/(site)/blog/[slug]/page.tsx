@@ -13,11 +13,23 @@ import { getPostBySlug, getLatestPosts, getPublishedPosts, getAllPostSlugs } fro
 import { CalendarDays, Clock, ArrowLeft } from "lucide-react";
 import "highlight.js/styles/github-dark.css";
 
+// ─── ISR — Revalidate daily ────────────────────────
+
+export const revalidate = 86400;
+
 // ─── Generate Static Params ──────────────────────────
 
 export async function generateStaticParams() {
-  const slugs = await getAllPostSlugs();
-  return slugs.map((slug) => ({ slug }));
+  try {
+    const slugs = await getAllPostSlugs();
+    return slugs.map((slug) => ({ slug }));
+  } catch (error) {
+    console.warn(
+      "⚠️ [blog] DB unreachable during build — skipping static generation:",
+      error instanceof Error ? error.message : error
+    );
+    return [];
+  }
 }
 
 // ─── Metadata ────────────────────────────────────────

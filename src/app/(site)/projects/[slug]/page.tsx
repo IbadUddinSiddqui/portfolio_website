@@ -39,12 +39,27 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
  * - Related projects
  */
 
+// ISR: revalidate daily so content updates are picked up.
+export const revalidate = 86400;
+
 /**
  * Generate static params for all published projects (SSG).
+ *
+ * Wrapped in try-catch so the build doesn't fail if the database
+ * is unreachable (e.g., during Vercel builds connecting to Neon).
+ * Falls back to dynamic rendering on first request.
  */
 export async function generateStaticParams() {
-  const projects = await getPublishedProjects();
-  return projects.map((p) => ({ slug: p.slug }));
+  try {
+    const projects = await getPublishedProjects();
+    return projects.map((p) => ({ slug: p.slug }));
+  } catch (error) {
+    console.warn(
+      "⚠️ [projects] DB unreachable during build — skipping static generation:",
+      error instanceof Error ? error.message : error
+    );
+    return [];
+  }
 }
 
 export default async function ProjectDetailPage({ params }: Props) {
