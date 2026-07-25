@@ -7,14 +7,12 @@
  * Usage: npx tsx scripts/export-content.ts
  */
 import { PrismaClient } from "@prisma/client";
-import { PrismaPg } from "@prisma/adapter-pg";
-import { Pool } from "pg";
+import { PrismaNeon } from "@prisma/adapter-neon";
 import * as fs from "fs";
 import * as path from "path";
 import { parseJsonArray } from "../src/lib/utils";
 
-const pool = new Pool({ connectionString: process.env.DATABASE_URL });
-const adapter = new PrismaPg(pool);
+const adapter = new PrismaNeon({ connectionString: process.env.DATABASE_URL });
 const db = new PrismaClient({ adapter });
 
 const CONTENT_DIR = path.resolve(__dirname, "..", "content");

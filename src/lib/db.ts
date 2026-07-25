@@ -1,12 +1,15 @@
 import { PrismaClient } from "@prisma/client";
-import { PrismaPg } from "@prisma/adapter-pg";
-import { Pool } from "pg";
+import { PrismaNeon } from "@prisma/adapter-neon";
 
 /**
  * Prisma Client Singleton (Prisma v7)
  *
- * Uses the @prisma/adapter-pg adapter for PostgreSQL support.
+ * Uses the @prisma/adapter-neon adapter with @neondatabase/serverless
+ * for optimal Neon PostgreSQL performance in serverless environments.
  * Prevents multiple instances during hot-reloading in development.
+ *
+ * Timeout and error-handling options are configured to prevent
+ * connection hangs — particularly important in serverless cold starts.
  */
 
 const globalForPrisma = globalThis as unknown as {
@@ -14,8 +17,21 @@ const globalForPrisma = globalThis as unknown as {
 };
 
 function createPrismaClient() {
-  const pool = new Pool({ connectionString: process.env.DATABASE_URL });
-  const adapter = new PrismaPg(pool);
+  const adapter = new PrismaNeon(
+    {
+      connectionString: process.env.DATABASE_URL,
+      idleTimeoutMillis: 10000,    // 10s idle before releasing client
+      maxLifetimeSeconds: 300,      // 5min max client lifetime
+    },
+    {
+      onPoolError: (err) => {
+        console.error("[Neon Pool Error]:", err.message);
+      },
+      onConnectionError: (err) => {
+        console.error("[Neon Connection Error]:", err.message);
+      },
+    },
+  );
   return new PrismaClient({ adapter });
 }
 
