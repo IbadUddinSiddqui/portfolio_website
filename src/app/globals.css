@@ -123,9 +123,9 @@
   --radius-xl: 1rem;
   --radius-2xl: 1.5rem;
 
-  /* ─── Fonts ─────────────────────────────────────── */
-  --font-heading: "Inter", "SF Pro Display", system-ui, sans-serif;
-  --font-body: "Inter", "SF Pro Text", system-ui, sans-serif;
+  /* ─── Fonts (dynamic via CSS variables so presets can override) ─── */
+  --font-heading: var(--font-heading-stack, "Inter", "SF Pro Display", system-ui, sans-serif);
+  --font-body: var(--font-body-stack, "Inter", "SF Pro Text", system-ui, sans-serif);
   --font-mono: "JetBrains Mono", "SF Mono", ui-monospace, monospace;
 
   /* ─── Typography Scale ──────────────────────────── */
@@ -346,6 +346,15 @@
   --particle-primary: #38BDF8;
   --particle-secondary: #2563EB;
   --particle-tertiary: #8B5CF6;
+
+  /* ─── Font Family Stacks (defaults, overridden per-preset) ── */
+  --font-heading-stack: "Inter", "SF Pro Display", system-ui, sans-serif;
+  --font-body-stack: "Inter", "SF Pro Text", system-ui, sans-serif;
+
+  /* ─── CTA — default (used by demo preset theme) ── */
+  --cta: var(--primary);
+  --cta-foreground: var(--primary-foreground);
+  --cta-hover: var(--primary);
 
   /* ─── Glass ──────────────────────────────────────── */
   --glass: rgba(255,255,255,0.05);

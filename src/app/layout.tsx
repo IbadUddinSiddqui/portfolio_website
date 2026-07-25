@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, JetBrains_Mono } from "next/font/google";
+import { Inter, JetBrains_Mono, Nunito, Bebas_Neue, Playfair_Display, Lato } from "next/font/google";
 import { ThemeProvider } from "@/providers/theme-provider";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { cn } from "@/lib/utils";
@@ -21,6 +21,42 @@ const jetbrainsMono = JetBrains_Mono({
   display: "swap",
   preload: false,
   fallback: ["ui-monospace", "monospace"],
+});
+
+const nunito = Nunito({
+  subsets: ["latin"],
+  variable: "--font-nunito",
+  display: "swap",
+  preload: true,
+  weight: ["400", "500", "600", "700"],
+  fallback: ["system-ui", "sans-serif"],
+});
+
+const bebasNeue = Bebas_Neue({
+  subsets: ["latin"],
+  variable: "--font-bebas-neue",
+  display: "swap",
+  preload: true,
+  weight: ["400"],
+  fallback: ["sans-serif"],
+});
+
+const playfairDisplay = Playfair_Display({
+  subsets: ["latin"],
+  variable: "--font-playfair-display",
+  display: "swap",
+  preload: true,
+  weight: ["400", "600", "700"],
+  fallback: ["Georgia", "serif"],
+});
+
+const lato = Lato({
+  subsets: ["latin"],
+  variable: "--font-lato",
+  display: "swap",
+  preload: true,
+  weight: ["400", "700"],
+  fallback: ["system-ui", "sans-serif"],
 });
 
 // ─── Metadata ────────────────────────────────────────
@@ -95,6 +131,10 @@ export default function RootLayout({
         className={cn(
           inter.variable,
           jetbrainsMono.variable,
+          nunito.variable,
+          bebasNeue.variable,
+          playfairDisplay.variable,
+          lato.variable,
           "font-body antialiased min-h-screen bg-background text-foreground"
         )}
       >

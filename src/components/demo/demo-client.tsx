@@ -2,7 +2,9 @@
 
 import { useState, useCallback } from "react";
 import type { BusinessPreset } from "@/types/preset";
+import type { IndustryTheme } from "@/theme/theme.types";
 import { presets } from "@/data/presets";
+import { getThemeById } from "@/theme";
 import { DemoPreview } from "./demo-preview";
 import { DemoSwitcher } from "./demo-switcher";
 import { DemoCustomForm } from "./demo-custom-form";
@@ -43,6 +45,9 @@ export function DemoClient() {
   );
 
   const displayPreset = isCustomMode && customPreset ? customPreset : activePreset;
+
+  /** Look up the matching theme for the active preset */
+  const activeTheme: IndustryTheme | undefined = getThemeById(displayPreset.themeId);
 
   const handleBackToPreset = useCallback(() => {
     setIsCustomMode(false);
@@ -104,7 +109,7 @@ export function DemoClient() {
           exit={{ opacity: 0 }}
           transition={{ duration: 0.2, ease: [0.25, 0.1, 0, 1] }}
         >
-          <DemoPreview preset={displayPreset} />
+          <DemoPreview preset={displayPreset} theme={activeTheme} />
         </motion.div>
       </AnimatePresence>
     </div>
