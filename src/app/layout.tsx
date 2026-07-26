@@ -127,6 +127,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning className="dark">
+    <head>
+      <link rel="stylesheet" href="https://chatzy-kb-store.s3.amazonaws.com/icons/5ab07987-b5db-477c-82ff-1287e0883acb"/>
+<script src="https://chatzy-kb-store.s3.amazonaws.com/icons/56706cc4-b3ba-4eba-9610-f2fb07008a5c" id="2536df02-4b1c-41ca-93b5-cbfbc380abf6" className="chatzy_widget_script" defer></script>
+    </head>
       <body
         className={cn(
           inter.variable,
